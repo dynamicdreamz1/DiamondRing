@@ -417,20 +417,62 @@ const RingSelector = () => {
           </div>
 
         {/* Ring Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {rings.map((ring) => (
-            <div key={ring.id} className="border rounded-lg p-4 relative">
-              <Heart className="absolute right-4 top-4 h-6 w-6 text-gray-400 hover:text-red-500 cursor-pointer" />
-              <img
-                src={ring.image}
-                alt={ring.name}
-                className="w-full h-64 object-cover mb-4"
-              />
-              <h3 className="text-lg font-semibold">{ring.name}</h3>
-              <p className="text-gray-600">${ring.price}</p>
+        <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {products.products.edges.map(({ node }) => {
+          const firstImage = node.images.edges[0]?.node;
+          const firstVariant = node.variants.edges[0]?.node;
+          const price = firstVariant?.price?.amount || "0.00";
+          const formattedPrice = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: firstVariant?.price?.currencyCode || 'USD'
+          }).format(price);
+
+          return (
+            <div key={node.id} className="border border-gray-200 rounded-lg p-4 relative group">
+              <button 
+                className="absolute right-4 top-4 z-10 transition-colors duration-200 ease-in-out"
+                aria-label="Add to wishlist"
+              >
+                <Heart className="h-6 w-6 text-gray-400 group-hover:text-red-500" />
+              </button>
+              
+              <div className="relative aspect-square mb-4 overflow-hidden rounded-md">
+                {firstImage ? (
+                  <img
+                    src={firstImage.src}
+                    alt={firstImage.altText || node.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <p className="text-gray-400">No image available</p>
+                  </div>
+                )}
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold truncate">{node.title}</h3>
+                <p className="text-gray-900 font-medium">{formattedPrice}</p>
+                
+                {firstVariant?.compareAtPrice && (
+                  <p className="text-sm text-gray-500 line-through">
+                    {new Intl.NumberFormat('en-US', {
+                      style: 'currency',
+                      currency: firstVariant.compareAtPrice.currencyCode
+                    }).format(firstVariant.compareAtPrice.amount)}
+                  </p>
+                )}
+
+                <button className="w-full mt-4 bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-colors duration-200">
+                  More Info
+                </button>
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
+      </div>
+    </div>
       </div>
     </div>
   );

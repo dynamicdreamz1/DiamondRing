@@ -14,19 +14,28 @@ const client = createStorefrontApiClient({
 
 
   const productQuery = `
-  query ProductQuery($first: Int!, $cursor: String) {
-    products(first: $first, after: $cursor) {
+  query ProductQuery {
+    products(first: 10) {
       edges {
         node {
           id
           title
-          description
-          images(first: 10) {
+          descriptionHtml
+          vendor
+          productType
+          createdAt
+          handle
+          updatedAt
+          tags
+          status: publishedAt
+          images(first: 1) {
             edges {
               node {
                 id
-                src
                 altText
+                src: url
+                width
+                height
               }
             }
           }
@@ -35,16 +44,37 @@ const client = createStorefrontApiClient({
               node {
                 id
                 title
-                price
+                price {
+                  amount
+                  currencyCode
+                }
+                compareAtPrice {
+                  amount
+                  currencyCode
+                }
+                sku
+                barcode
+                requiresShipping
+                weight
+                weightUnit
+                availableForSale
+                selectedOptions {
+                  name
+                  value
+                }
               }
             }
           }
+          options {
+            id
+            name
+            values
+          }
         }
-        cursor
       }
       pageInfo {
         hasNextPage
-        hasPreviousPage
+        endCursor
       }
     }
   }
@@ -55,6 +85,7 @@ export const fetchProducts = () => async (dispatch) => {
     dispatch(fetchProductsStart());
     const { data, errors, extensions } = await client.request(productQuery);
 
+    console.log("data",data);
     dispatch(fetchProductsSuccess(data));
   } catch (error) {
     dispatch(fetchProductsFailure(error.message));
