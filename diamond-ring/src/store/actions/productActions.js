@@ -15,7 +15,7 @@ const client = createStorefrontApiClient({
 
   const productQuery = `
   query ProductQuery {
-    products(first: 10) {
+    products(first: 250) {
       edges {
         node {
           id
