@@ -35,50 +35,6 @@ const RingSelector = () => {
         Order TODAY for Guaranteed Holiday Delivery!
       </div> */}
 
-      {/* Navigation */}
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4">
-          {/* <div className="flex items-center justify-between">
-            <div className="relative w-64">
-              <input
-                type="text"
-                placeholder="SEARCH..."
-                className="w-full pl-3 pr-10 py-2 border rounded-md"
-              />
-              <Search className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
-            </div>
-
-            <h1 className="text-3xl font-semibold">KEYZAR</h1>
-
-            <div className="flex items-center gap-4">
-              <User className="h-6 w-6" />
-              <ShoppingBag className="h-6 w-6" />
-            </div>
-          </div> */}
-
-          {/* <nav className="flex justify-center gap-6 mt-4 text-sm">
-            <a href="#" className="hover:text-gray-600">
-              FINE JEWELRY
-            </a>
-            <a href="#" className="hover:text-gray-600">
-              ENGAGEMENT RINGS
-            </a>
-            <a href="#" className="hover:text-gray-600">
-              WEDDING BANDS
-            </a>
-            <a href="#" className="hover:text-gray-600">
-              DIAMONDS
-            </a>
-            <a href="#" className="hover:text-gray-600">
-              GEMSTONES
-            </a>
-            <a href="#" className="hover:text-gray-600">
-              EDUCATION
-            </a>
-          </nav> */}
-        </div>
-      </header>
-
       <TabComponent />
 
       <div className="container mx-auto px-4">
