@@ -111,7 +111,7 @@ const RingSelector = () => {
 
       {/* Progress Steps */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-between">
+        <div className="steps-configuration-wrapper grid grid-cols-3 w-full items-center">
           <div className="flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-20 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg ">
             <div class="step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
               1
@@ -324,7 +324,7 @@ const RingSelector = () => {
           Discover our collection of made to order engagement rings and customize it to your preference
         </p> */}
 
-        <div class="px-5 md:pb-6">
+        <div class="px-5 pb-6">
           <header class="max-w-7xl mx-auto text-center">
             <h1
               class="text-black font-semibold text-1.5lg leading-none mb-1.5 md:text-3xl md:mb-2.5"
@@ -355,7 +355,7 @@ const RingSelector = () => {
         </div>
 
         {/* Filters */}
-        <div className="flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">
+        <div className="hidden md:flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">
           {/* <select className="border rounded-md px-4 py-2">
             <option>Select Metal</option>
           </select>
@@ -369,8 +369,8 @@ const RingSelector = () => {
           <div aria-expanded="true">
             <button type="button" className="fixed inset-0 cursor-default" data-close-filter-drawer="true" title="close filter"></button>
             <div className="relative z-10">
-            <button type="button" className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders"><span>Select Metal</span><svg className="w-3.5 h-3.5 transition-transform duration-300 rotate-180"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z" fill="currentColor"></path></svg></svg></button>
-            <div className="absolute top-full left-0 w-[22.5rem] pt-3 z-[60]">
+            <button type="button" className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders"><span>Select Metal</span><svg className="w-3.5 h-3.5 transition-transform duration-300"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z" fill="currentColor"></path></svg></svg></button>
+            <div className="absolute top-full left-0 w-[22.5rem] pt-3 invisible">
                 <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                     <button type="button" className="p-0 border-0 bg-transparent text-black opacity-50 absolute top-4 right-1 z-10" title="Preview"><svg className="block relative w-9 h-9"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M12.6201 12.62L23.3799 23.3798" stroke="currentColor" stroke-miterlimit="10"></path><path d="M12.6201 23.3798L23.3799 12.62" stroke="currentColor" stroke-miterlimit="10"></path></g></svg></svg></button>
                     <div className="flex gap-0.5 items-center mb-4">
@@ -414,7 +414,70 @@ const RingSelector = () => {
             </div>
             </div>
           </div>
+          <div className="ml-auto">
+            <div className="FilterRelativeContainer relative min-w-[10-rem]">
+                <button className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-shadow duration-300 ">
+                  <div className="flex-1">
+                      <div className="text-black text-sm leading-none">Price (low-to-high)</div>
+                  </div>
+                  <div className="relative w-6 h-6 text-black transition-transform duration-300 ">
+                      <svg className="w-2.5 h-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z" fill="currentColor"></path>
+                        </svg>
+                      </svg>
+                  </div>
+                </button>
+                <div className="pt-2 absolute top-full left-0 right-0 z-[60]">
+                  <div className="border-2 border-solid border-customGray-50 rounded-md bg-white overflow-hidden">
+                    <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 bg-customGray-50">Price (low-to-high)</button>
+                    <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 ">Price (high-to-low)</button>
+                  </div>
+                </div>
+            </div>
           </div>
+          </div>
+          <div className="px-5 pb-3 mt-3 md:hidden">
+   <div className="flex justify-start items-center flex-wrap gap-2 relative">
+      <button className="flex items-center justify-center gap-1.5 bg-white text-black text-xs leading-[0.875rem] py-1.25 px-2.5 rounded-md border border-borders">
+         <svg className="block w-2.5 h-2.5">
+            <svg viewBox="0 0 16 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+               <path d="M5 9C5 8.58579 5.33579 8.25 5.75 8.25H10.25C10.6642 8.25 11 8.58579 11 9C11 9.41421 10.6642 9.75 10.25 9.75H5.75C5.33579 9.75 5 9.41421 5 9Z"></path>
+               <path d="M2 5C2 4.58579 2.33579 4.25 2.75 4.25H13.25C13.6642 4.25 14 4.58579 14 5C14 5.41421 13.6642 5.75 13.25 5.75H2.75C2.33579 5.75 2 5.41421 2 5Z"></path>
+               <path d="M0 1C0 0.585786 0.335786 0.25 0.75 0.25H15.25C15.6642 0.25 16 0.585786 16 1C16 1.41421 15.6642 1.75 15.25 1.75H0.75C0.335786 1.75 0 1.41421 0 1Z"></path>
+            </svg>
+         </svg>
+         <span>Filters</span>
+      </button>
+      <div className="FilterRelativeContainer relative shrink-0 min-w-[8.75rem]">
+         <button className="flex items-center w-full gap-2 text-left py-px pr-0.5 pl-2 bg-white rounded-md transition-all duration-300 border border-borders">
+            <div className="flex-1">
+               <div className="text-black text-xs leading-none">Price (low-to-high)</div>
+            </div>
+            <div className="relative w-6 h-6 text-black transition-transform duration-300 ">
+               <svg className="w-2.5 h-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z" fill="currentColor"></path>
+                  </svg>
+               </svg>
+            </div>
+         </button>
+      </div>
+      <div className="ml-auto flex bg-white rounded-md border-borders border overflow-hidden relative md:hidden">
+         <button type="button" className="p-2 grid grid-cols-2 gap-0.5 w-6.5 h-6.5">
+            <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
+            <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
+            <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
+            <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
+         </button>
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-3.5 bg-[#D1D1D1]"></div>
+         <button type="button" className="p-2 grid grid-cols-1 gap-0.5 w-6.5 h-6.5">
+            <div className="border border-black transition-colors duration-300 h-full bg-transparent"></div>
+            <div className="border border-black transition-colors duration-300 h-full bg-transparent"></div>
+         </button>
+      </div>
+   </div>
+</div>
 
         {/* Ring Grid */}
         <div className="container mx-auto px-4">
@@ -431,7 +494,7 @@ const RingSelector = () => {
           return (
             <div key={node.id} className="border border-gray-200 rounded-lg p-4 relative group">
               <button 
-                className="absolute right-4 top-4 z-10 transition-colors duration-200 ease-in-out"
+                className="absolute right-4 top-4 z-[9] transition-colors duration-200 ease-in-out"
                 aria-label="Add to wishlist"
               >
                 <Heart className="h-6 w-6 text-gray-400 group-hover:text-red-500" />
