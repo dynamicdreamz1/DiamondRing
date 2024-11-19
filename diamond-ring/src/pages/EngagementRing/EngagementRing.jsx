@@ -171,7 +171,7 @@ const RingSelector = () => {
                   </svg>
                 </div>
               </button>
-              <div className={`pt-2 absolute top-full left-0 right-0 z-[60] ${showPriceFilter ? "invisible" : ""} `}>
+              <div className={`pt-2 absolute top-full left-0 right-0 z-[60] ${!showPriceFilter ? "invisible" : ""} `}>
                 <div className="border-2 border-solid border-customGray-50 rounded-md bg-white overflow-hidden">
                   <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 bg-customGray-50">Price (low-to-high)</button>
                   <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 ">Price (high-to-low)</button>
