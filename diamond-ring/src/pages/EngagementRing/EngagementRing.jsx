@@ -31,14 +31,14 @@ const RingSelector = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-black text-white text-center py-2 text-sm">
+      {/* <div className="bg-black text-white text-center py-2 text-sm">
         Order TODAY for Guaranteed Holiday Delivery!
-      </div>
+      </div> */}
 
       {/* Navigation */}
       <header className="border-b">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          {/* <div className="flex items-center justify-between">
             <div className="relative w-64">
               <input
                 type="text"
@@ -54,10 +54,9 @@ const RingSelector = () => {
               <User className="h-6 w-6" />
               <ShoppingBag className="h-6 w-6" />
             </div>
-          </div>
+          </div> */}
 
-          {/* Menu */}
-          <nav className="flex justify-center gap-6 mt-4 text-sm">
+          {/* <nav className="flex justify-center gap-6 mt-4 text-sm">
             <a href="#" className="hover:text-gray-600">
               FINE JEWELRY
             </a>
@@ -76,7 +75,7 @@ const RingSelector = () => {
             <a href="#" className="hover:text-gray-600">
               EDUCATION
             </a>
-          </nav>
+          </nav> */}
         </div>
       </header>
 

@@ -14,6 +14,8 @@ const EngagementRingDetail = () => {
 
       <TabComponent />
 
+      <img src='' />
+
    
     </div>
   )
