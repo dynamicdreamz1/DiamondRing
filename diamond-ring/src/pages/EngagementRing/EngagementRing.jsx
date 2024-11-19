@@ -8,6 +8,8 @@ import RingStyleFilter from './RingStyleFilter';
 
 const RingSelector = () => {
   const [showFilter, setShowFilter] = useState(false)
+  const [showPriceFilter, setShowPriceFilter] = useState(false)
+
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.products);
 
@@ -158,7 +160,7 @@ const RingSelector = () => {
           </div>
           <div className="ml-auto">
             <div className="FilterRelativeContainer relative min-w-[10-rem] ">
-              <button className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-shadow duration-300 ">
+              <button  onClick={()=>setShowPriceFilter(!showPriceFilter) } className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-shadow duration-300 ">
                 <div className="flex-1 ">
                   <div className="text-black text-sm leading-none">Price (low-to-high)</div>
                 </div>
@@ -170,7 +172,7 @@ const RingSelector = () => {
                   </svg>
                 </div>
               </button>
-              <div className="pt-2 absolute top-full left-0 right-0 z-[60] invisible">
+              <div className={`pt-2 absolute top-full left-0 right-0 z-[60] ${showPriceFilter ? "invisible" : ""} `}>
                 <div className="border-2 border-solid border-customGray-50 rounded-md bg-white overflow-hidden">
                   <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 bg-customGray-50">Price (low-to-high)</button>
                   <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 ">Price (high-to-low)</button>
