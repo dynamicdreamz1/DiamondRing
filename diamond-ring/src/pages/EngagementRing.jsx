@@ -398,9 +398,9 @@ const RingSelector = () => {
         {/* Ring Grid */}
         <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {products.products.edges.map(({ node }) => {
-          const firstImage = node.images.edges[0]?.node;
-          const firstVariant = node.variants.edges[0]?.node;
+        {products.products?.edges.map(({ node }) => {
+          const firstImage = node?.images?.edges[0]?.node;
+          const firstVariant = node?.variants?.edges[0]?.node;
           const price = firstVariant?.price?.amount || "0.00";
           const formattedPrice = new Intl.NumberFormat('en-US', {
             style: 'currency',
