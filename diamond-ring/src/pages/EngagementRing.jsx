@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { Search, ShoppingBag, User, Heart } from "lucide-react";
 import "./ringStyle.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../store/actions/productActions';
 
 const RingSelector = () => {
+  const dispatch = useDispatch();
+  const { products, loading, error } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+  
   const ringStyles = [
     {
       id: 1, name: "Solitaire", icon: (
@@ -44,6 +53,9 @@ const RingSelector = () => {
       image: "/api/placeholder/300/300",
     },
   ];
+
+
+  console.log("products",products);
 
   return (
     <div className="min-h-screen bg-white">
