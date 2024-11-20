@@ -8853,7 +8853,7 @@ input[type=search],[type=email] {
         position: absolute;
         display: block;
         width: 1px;
-        background-color: var(--icons_color);
+        background-color: #fff;
         height: 100%;
         left: calc(var(--column_gap) * -.5);
         top: 0
@@ -8906,7 +8906,7 @@ input[type=search],[type=email] {
         position: absolute;
         display: block;
         width: 1px;
-        background-color: var(--icons_color);
+        background-color: #fff;
         height: 100%;
         left: calc(var(--column_gap) * -.5);
         top: 0
