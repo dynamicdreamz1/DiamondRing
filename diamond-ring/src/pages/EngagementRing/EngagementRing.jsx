@@ -14,15 +14,16 @@ const RingSelector = () => {
   const [showPriceFilter, setShowPriceFilter] = useState(false)
 
   const dispatch = useDispatch();
-  const { 
-    products, 
-    loading, 
-    hasNextPage, 
-    sortOrder 
+  const {
+    products,
+    loading,
+    hasNextPage,
+    sortOrder
   } = useSelector((state) => state.products);
 
 
   const handleLoadMore = () => {
+    console.log("shubham");
     dispatch(fetchProducts(true)); // true indicates loading more products
   };
 
@@ -34,9 +35,10 @@ const RingSelector = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  console.log("products",products);
+  console.log("hasNextPage", hasNextPage);
 
   return (
+    <>
     <div className="min-h-screen bg-white">
       <TabComponent />
 
@@ -64,7 +66,7 @@ const RingSelector = () => {
           <div aria-expanded="true">
             <button type="button" className="fixed inset-0 cursor-default" data-close-filter-drawer="true" title="close filter"></button>
             <div className="relative z-10">
-              <button onClick={()=>setShowFilter(!showFilter) } type="button" className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders">
+              <button onClick={() => setShowFilter(!showFilter)} type="button" className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders">
                 <span>Select Metal</span>
                 <svg className="w-3.5 h-3.5 transition-transform duration-300">
                   <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z" fill="currentColor">
@@ -72,9 +74,9 @@ const RingSelector = () => {
                   </svg>
                 </svg>
               </button>
-              <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${!showFilter ? "invisible" :""} `}>
+              <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${!showFilter ? "invisible" : ""} `}>
                 <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
-                  <button onClick={()=>setShowFilter(false)} type="button" className="p-0 border-0 bg-transparent text-black opacity-50 absolute top-4 right-1 z-10" title="Preview"><svg className="block relative w-9 h-9"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M12.6201 12.62L23.3799 23.3798" stroke="currentColor" stroke-miterlimit="10"></path><path d="M12.6201 23.3798L23.3799 12.62" stroke="currentColor" stroke-miterlimit="10"></path></g></svg></svg></button>
+                  <button onClick={() => setShowFilter(false)} type="button" className="p-0 border-0 bg-transparent text-black opacity-50 absolute top-4 right-1 z-10" title="Preview"><svg className="block relative w-9 h-9"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M12.6201 12.62L23.3799 23.3798" stroke="currentColor" stroke-miterlimit="10"></path><path d="M12.6201 23.3798L23.3799 12.62" stroke="currentColor" stroke-miterlimit="10"></path></g></svg></svg></button>
                   <div className="flex gap-0.5 items-center mb-4">
                     <div className="text-base font-bold text-black leading-none">Metal</div>
                     <div className="text-base font-bold text-black leading-none ">:</div>
@@ -118,7 +120,7 @@ const RingSelector = () => {
           </div>
           <div className="ml-auto">
             <div className="FilterRelativeContainer relative min-w-[10-rem] ">
-              <button  onClick={()=>setShowPriceFilter(!showPriceFilter) } className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-shadow duration-300 ">
+              <button onClick={() => setShowPriceFilter(!showPriceFilter)} className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-shadow duration-300 ">
                 <div className="flex-1 ">
                   <div className="text-black text-sm leading-none">Price (low-to-high)</div>
                 </div>
@@ -185,8 +187,26 @@ const RingSelector = () => {
         <div className="container mx-auto px-4">
           <ProductGrid products={products} />
         </div>
+
+
       </div>
+      
+
+
     </div>
+    {hasNextPage && (
+      <div className="flex justify-center mt-6">
+        <button
+          onClick={handleLoadMore}
+          disabled={loading}
+          className={`px-6 py-3 text-sm font-medium rounded-lg shadow-md transition-colors duration-200 
+      ${loading ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "bg-yellow-400 text-black hover:bg-yellow-500"}`}
+        >
+          {loading ? "Loading..." : "Load More"}
+        </button>
+      </div>
+    )}
+    </>
   );
 };
 
