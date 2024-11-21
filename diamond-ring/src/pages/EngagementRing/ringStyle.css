@@ -10170,8 +10170,8 @@ textarea+.DAH-form-label {
     border: 1px solid black;
 }
 
-.product-detail-main-boxes {
-    transition: 0.5s;
+/* .product-detail-main-boxes {
+    transition: all 0.2s;
 }
 
 .product-detail-main-boxes:hover {
@@ -10186,6 +10186,30 @@ textarea+.DAH-form-label {
 
 .product-detail-main-boxes:hover .product-des-box {
     display: block;
+} */
+
+
+.product-detail-main-boxes .hidden {
+    visibility: hidden;
+    bottom: -14rem;
+}
+
+.product-detail-main-boxes:hover .hidden {
+    visibility: visible;
+}
+
+.product-detail-main-boxes:hover .product-des-box {
+    visibility: visible;
+    left: 0;
+}
+
+.product-detail-main-boxes:hover .aspect-square {
+    z-index: 1;
+    border: 1px solid rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.product-detail-main-boxes:hover .product-des-box {
+    background-color: white;
 }
 
 

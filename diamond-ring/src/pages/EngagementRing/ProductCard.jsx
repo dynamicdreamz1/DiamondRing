@@ -35,13 +35,13 @@ const ProductCard = ({ node }) => {
   return (
     <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">
       <button
-        className="absolute right-4 top-4 z-[9] transition-colors duration-200 ease-in-out"
+        className="absolute right-6 top-6 z-[9] transition-colors duration-200 ease-in-out"
         aria-label="Add to wishlist"
       >
         <Heart className="h-6 w-6 text-gray-400 group-hover:text-red-500" />
       </button>
-
-      <div className="relative aspect-square mb-4 overflow-hidden rounded-md">
+      <div class="hidden z-[1] bg-white  md:block absolute  -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl shadow-[0px_6px_20px_0_#00000060] -bottom-48"></div>
+      <div className="relative  aspect-square mb-4 overflow-hidden rounded-md ">
         <div className="flex flex-row justify-between items-center h-full">
           <button
             // className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
@@ -71,7 +71,9 @@ const ProductCard = ({ node }) => {
         </div>
       </div>
 
-      <div className="space-y-2 product-des-box">
+     
+
+      <div className="space-y-2 product-des-box md:absolute md:invisible md:w-full md:z-10">
         <div className="flex items-center space-x-2 justify-between">
           <div>
           <h3 className="text-lg text-sm font-semibold truncate">{node.title}</h3>
