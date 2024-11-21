@@ -19,12 +19,12 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
     return (
         <div className="hidden md:flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">
             <div aria-expanded="true">
-                <button
+                {/* <button
                     type="button"
                     className="fixed inset-0 cursor-default"
                     data-close-filter-drawer="true"
                     title="close filter"
-                ></button>
+                ></button> */}
                 <div className="relative z-10">
                     <button
                         onClick={() => setShowFilter(!showFilter)}
