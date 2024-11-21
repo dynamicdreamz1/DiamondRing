@@ -11,13 +11,33 @@ import SelectFilter from "./SelectFilter";
 const RingSelector = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [showPriceFilter, setShowPriceFilter] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [priceFilter, setPriceFilter] = useState(null);
 
   const dispatch = useDispatch();
-  const { products, loading, error } = useSelector((state) => state.products);
+  const { products, loading, error, pageInfo } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
+
+  console.log("products", products);
+
+
+  const handleLoadMore = () => {
+    if (pageInfo.hasNextPage) {
+      dispatch(fetchProducts({
+        after: pageInfo.endCursor,
+        priceRange: priceFilter // Optional price filter
+      }));
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePriceFilter = (min, max) => {
+    setPriceFilter({ min, max });
+    dispatch(fetchProducts({ priceRange: { min, max } }));
+  };
 
   console.log("products", products);
 
@@ -46,7 +66,7 @@ const RingSelector = () => {
         <RingStyleFilter />
 
         <SelectFilter showFilter={showFilter} setShowFilter={setShowFilter} showPriceFilter={showPriceFilter} setShowPriceFilter={setShowPriceFilter} />
-        
+
         <div className="px-5 pb-3 mt-3 md:hidden">
           <div className="flex justify-start items-center flex-wrap gap-2 relative">
             <button className="flex items-center justify-center gap-1.5 bg-white text-black text-xs leading-[0.875rem] py-1.25 px-2.5 rounded-md border border-borders">
@@ -113,14 +133,25 @@ const RingSelector = () => {
         {/* Ring Grid */}
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products?.products?.edges.length > 0 && products?.products?.edges?.map(({ node }) => {
+            {products?.edges?.length > 0 && products?.edges?.map(({ node }) => {
               return (
-              <ProductCard node={node} />
+                <ProductCard node={node} />
               );
             })}
           </div>
         </div>
-      </div>
+        {pageInfo?.hasNextPage && (
+          <div className="text-center mt-6">
+            <button
+              onClick={handleLoadMore}
+              disabled={loading}
+              className="px-4 py-2 bg-black text-white rounded"
+            >
+              {loading ? 'Loading...' : 'Load More'}
+            </button>
+          </div>
+        )}      
+        </div>
     </div>
   );
 };
