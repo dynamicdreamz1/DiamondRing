@@ -28,7 +28,7 @@ const client = createStorefrontApiClient({
           updatedAt
           tags
           status: publishedAt
-          images(first: 1) {
+          images(first: 5) {
             edges {
               node {
                 id
@@ -39,7 +39,7 @@ const client = createStorefrontApiClient({
               }
             }
           }
-          variants(first: 10) {
+          variants(first: 50) {
             edges {
               node {
                 id
@@ -62,13 +62,19 @@ const client = createStorefrontApiClient({
                   name
                   value
                 }
+                image {
+                  id
+                  altText
+                  src: url
+                  width
+                  height
+                }
               }
             }
           }
           options {
             id
             name
-            values
           }
         }
       }
@@ -85,7 +91,6 @@ export const fetchProducts = () => async (dispatch) => {
     dispatch(fetchProductsStart());
     const { data, errors, extensions } = await client.request(productQuery);
 
-    console.log("data",data);
     dispatch(fetchProductsSuccess(data));
   } catch (error) {
     dispatch(fetchProductsFailure(error.message));
