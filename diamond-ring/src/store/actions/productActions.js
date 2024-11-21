@@ -4,8 +4,6 @@ import {
   fetchProductsSuccess,
   fetchProductsFailure,
 } from "../slices/productSlice";
-import { gql } from 'graphql-request';
-
 
 const client = createStorefrontApiClient({
     storeDomain: process.env.REACT_APP_SHOP_DOMAIN,
@@ -15,19 +13,9 @@ const client = createStorefrontApiClient({
 
 
 
-  export const PRODUCT_QUERY = gql`
-  query ProductQuery(
-    $first: Int = 5, 
-    $after: String, 
-    $sortKey: ProductSortKeys = PRICE, 
-    $reverse: Boolean = false
-  ) {
-    products(
-      first: $first, 
-      after: $after, 
-      sortKey: $sortKey, 
-      reverse: $reverse
-    ) {
+  const productQuery = `
+  query ProductQuery {
+    products(first: 250) {
       edges {
         node {
           id
@@ -40,7 +28,7 @@ const client = createStorefrontApiClient({
           updatedAt
           tags
           status: publishedAt
-          images(first: 1) {
+          images(first: 5) {
             edges {
               node {
                 id
@@ -51,7 +39,7 @@ const client = createStorefrontApiClient({
               }
             }
           }
-          variants(first: 10) {
+          variants(first: 50) {
             edges {
               node {
                 id
@@ -74,13 +62,19 @@ const client = createStorefrontApiClient({
                   name
                   value
                 }
+                image {
+                  id
+                  altText
+                  src: url
+                  width
+                  height
+                }
               }
             }
           }
           options {
             id
             name
-            values
           }
         }
       }
@@ -92,29 +86,10 @@ const client = createStorefrontApiClient({
   }
 `;
 
-
-export const fetchProducts = (loadMore = false) => async (dispatch, getState) => {
+export const fetchProducts = () => async (dispatch) => {
   try {
-    const state = getState().products;
-    
-    // Determine sort parameters
-    const sortKey = state.sortOrder === 'lowToHigh' ? 'PRICE' : 'PRICE';
-    const reverse = state.sortOrder === 'highToLow';
-
     dispatch(fetchProductsStart());
-    
-    const variables = {
-      first: 5,
-      after: loadMore ? state.endCursor : null,
-      sortKey,
-      reverse
-    };
-
-    const { data, errors } = await client.request(PRODUCT_QUERY, variables);
-
-    if (errors) {
-      throw new Error(errors[0].message);
-    }
+    const { data, errors, extensions } = await client.request(productQuery);
 
     dispatch(fetchProductsSuccess(data));
   } catch (error) {
