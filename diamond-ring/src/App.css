@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+
+.range-main {
+  height: 4px;
+    width: 100%;
+    border-radius: 100px;
+    background: linear-gradient(to right, #F5F5F5 0%, #F5F5F5 0%, #000 0%, #000 100%, #F5F5F5 100%, #F5F5F5 100%);
+    border: 1px solid var(--color-borders);
+    align-self: center;
+    position: relative;
+}
+
+.range-circel-left {
+  position: absolute;
+    z-index: 0;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    height: 28px;
+    width: 28px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    transform: translate(-15px, -13px);
+}
+
+.range-circel-right {
+  position: absolute;
+  right: 0;
+    z-index: 1;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    height: 28px;
+    width: 28px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    /* transform: translate(455.344px, -13px); */
+    transform: translateY(-13px);
+}

@@ -64,7 +64,7 @@ const RingSelector = () => {
         <RingStyleFilter />
         <div className="hidden md:flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">
           <div aria-expanded="true">
-            <button type="button" className="fixed inset-0 cursor-default" data-close-filter-drawer="true" title="close filter"></button>
+            {/* <button type="button" className="fixed inset-0 cursor-default" data-close-filter-drawer="true" title="close filter"></button> */}
             <div className="relative z-10">
               <button onClick={() => setShowFilter(!showFilter)} type="button" className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders">
                 <span>Select Metal</span>
