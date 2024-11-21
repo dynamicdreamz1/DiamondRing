@@ -33,7 +33,7 @@ const ProductCard = ({ node }) => {
     : null;
 
   return (
-    <div className="border border-gray-200 rounded-lg p-4 relative group">
+    <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">
       <button
         className="absolute right-4 top-4 z-[9] transition-colors duration-200 ease-in-out"
         aria-label="Add to wishlist"
@@ -71,15 +71,37 @@ const ProductCard = ({ node }) => {
         </div>
       </div>
 
-      <div className="space-y-2">
-        <h3 className="text-lg font-semibold truncate">{node.title}</h3>
-        <div className="flex items-center space-x-2">
-          <p className="text-gray-900 font-medium">{formattedPrice}</p>
-          {compareAtPrice && (
-            <p className="text-sm line-through text-gray-500">
-              {formattedCompareAtPrice}
-            </p>
-          )}
+      <div className="space-y-2 product-des-box">
+        <div className="flex items-center space-x-2 justify-between">
+          <div>
+          <h3 className="text-lg text-sm font-semibold truncate">{node.title}</h3>
+          <div className="flex text-sm items-center space-x-2">
+            <p className="text-gray-900 font-medium">{formattedPrice}</p>
+            {compareAtPrice && (
+              <p className="text-sm line-through text-gray-500">
+                {formattedCompareAtPrice}
+              </p>
+            )}
+          </div>
+          </div>
+          <div className="shrink-0 flex flex-wrap gap-3 ">
+            <button type="button" className="p-0 border-0 cursor-pointer" aria-label="14k White Gold">
+                <div className="rounded-full w-4 h-4 relative" data-metal-color="14k White Gold">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 border-2 border-white rounded-full"></div>
+                </div>
+            </button>
+            <button type="button" className="p-0 border-0 cursor-pointer" aria-label="14k Yellow Gold">
+                <div className="rounded-full w-4 h-4 relative" data-metal-color="14k Yellow Gold"></div>
+            </button>
+            <button type="button" className="p-0 border-0 cursor-pointer" aria-label="14k Rose Gold">
+                <div className="rounded-full w-4 h-4 relative" data-metal-color="14k Rose Gold"></div>
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-2 py-3">
+        <a href="" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black"  aria-hidden="false">More Info</a>
+        <a href="" className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black"  aria-hidden="false">Complete your ring</a>
         </div>
 
         <div className="flex items-center space-x-2">
