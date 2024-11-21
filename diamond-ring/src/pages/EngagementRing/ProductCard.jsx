@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Heart } from 'react-feather';
+import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 
 const ProductCard = ({ node }) => {
-    console.log("node",node);
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(0);
 
@@ -47,7 +46,7 @@ const ProductCard = ({ node }) => {
             // className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
             onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)}
           >
-            {/* <ArrowLeft className="h-6 w-6 text-gray-500" /> */}
+            <ArrowLeft className="h-6 w-6 text-gray-500" />
           </button>
 
           {images.map((image, index) => (
@@ -66,7 +65,7 @@ const ProductCard = ({ node }) => {
             className="bg-white rounded-full p-2 shadow-md ml-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
             onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
           >
-            {/* <ArrowRight className="h-6 w-6 text-gray-500" /> */}
+            <ArrowRight className="h-6 w-6 text-gray-500" />
           </button>
         </div>
       </div>
@@ -102,7 +101,7 @@ const ProductCard = ({ node }) => {
         </div>
 
         <div className="flex items-center space-x-2 py-3">
-        <a href="" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black"  aria-hidden="false">More Info</a>
+        <a href="/ring-select/ring-detail-page" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black"  aria-hidden="false">More Info</a>
         <a href="" className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black"  aria-hidden="false">Complete your ring</a>
         </div>
 
