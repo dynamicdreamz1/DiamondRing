@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
 const metalOptions = [
-    { karat: '14K', metal: 'White Gold', color: 'rgb(218 167 60)' },
-    { karat: '14K', metal: 'Yellow Gold', color: 'gold' },
-    { karat: '14K', metal: 'Rose Gold', color: 'silver' },
-    { karat: '18K', metal: 'White Gold', color: 'gold' },
-    { karat: '18K', metal: 'Yellow Gold', color: 'silver' },
-    { karat: '18K', metal: 'Rose Gold', color: 'gold' },
-    { karat: 'PT', metal: 'Platinum', color: 'silver' },
+    { karat: '14K', metal: 'White Gold', color: '#d5d5d5' },
+    { karat: '14K', metal: 'Yellow Gold', color: '#c99c4a' },
+    { karat: '14K', metal: 'Rose Gold', color: '#ef968d' },
+    { karat: '18K', metal: 'White Gold', color: '#d5d5d5' },
+    { karat: '18K', metal: 'Yellow Gold', color: '#c99c4a' },
+    { karat: '18K', metal: 'Rose Gold', color: '#ef968d' },
+    { karat: 'PT', metal: 'Platinum', color: '#d5d5d5' },
 ];
 
 const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPriceFilter }) => {
@@ -101,9 +101,9 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                                             className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                                         ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
                                                         ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
-                                                        ring-1 `} // Conditional styles based on selection
+                                                        ring-1 border-borders`} // Conditional styles based on selection
                                         >
-                                            <p style={{color : option.color}} >{option.karat}</p>
+                                            <p style={{color : option.color , border : `1px solid ${option.color}`}} >{option.karat}</p>
                                             <div className={`-mt-0.5 md:mt-0 text-1.5sm leading-4 overflow-hidden text-ellipsis font-proximaNovaCondensed md:text-xs md:leading-tight 
                                                             electedIndex === index ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
                                                 {option.metal}

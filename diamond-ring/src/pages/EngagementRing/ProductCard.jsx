@@ -44,7 +44,7 @@ const ProductCard = ({ node }) => {
       <div className="relative aspect-square mb-4 overflow-hidden rounded-md">
         <div className="flex flex-row justify-between items-center h-full">
           <button
-            className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
+            // className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
             onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)}
           >
             {/* <ArrowLeft className="h-6 w-6 text-gray-500" /> */}
