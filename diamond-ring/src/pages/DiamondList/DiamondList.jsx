@@ -345,7 +345,7 @@ const DiamondList = () => {
       </div>
 
 
-      <div className='advance-quality-main-sec'> 
+      <div className='advance-quality-main-sec pb-5'> 
         <div className="flex gap-2 items-center justify-start md:justify-center">
           <div className="hidden md:block flex-1 h-px bg-borders"></div>
           <button type="button" className="flex gap-1 items-center text-1.5xl leading-tight text-black font-bold md:px-2 md:py-0.5 md:text-white md:bg-black md:font-normal md:gap-1.5 md:rounded-full md:text-1.5sm"><span>Advanced Quality Specs</span><span className="w-4 h-4 transition-transform duration-300 relative rotate-0 md:w-2 md:h-2"><span className="absolute top-1/2 left-1/2 w-full h-px bg-current -translate-x-1/2 -translate-y-1/2"></span><span className="absolute top-1/2 left-1/2 w-full h-px bg-current -translate-x-1/2 -translate-y-1/2 rotate-90"></span></span></button>
@@ -397,7 +397,7 @@ const DiamondList = () => {
         </div>
       </div>
 
-      <div className="hidden md:block text-right py-5 collection-filters-item-with-custom-width-and-order md:col-span-2 xl:w-full">
+      <div className="hidden md:block text-right collection-filters-item-with-custom-width-and-order md:col-span-2 xl:w-full">
           <div className="FilterRelativeContainer relative inline-flex min-w-[10rem]">
               <button className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-all duration-300">
                 <div className="flex-1">
@@ -417,6 +417,666 @@ const DiamondList = () => {
           </div>
       </div>
 
+
+      <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
+          <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
+              <div className=' border-borders border rounded-lg overflow-hidden md:block'>
+                  <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
+                      <div className="absolute right-2 top-2 z-20">
+                        <button type="button" className="WishlistButton ml-1 stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
+                            <div className="flex items-center gap-2">
+                              <div className="w-6 h-6 md:w-7 md:h-7 ">
+                                  <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                                    <mask id="wishlist-heart-mask">
+                                        <path d="M12,7.16613l3.01387-2.65371,4.7586,2.07432,1.0675,4.76126-8.83997,9.152L3.15997,11.348l1.06753-4.76126,4.75765-2.0739,3.01485,2.65329Z" fill="white" stroke="white"></path>
+                                    </mask>
+                                    <g mask="url(#wishlist-heart-mask)">
+                                        <polygon className="heart-bg-fill" fill="#fff" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                        <path className="heart-right" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-bottom" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-left" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <rect className="heart-bright-left" fill="rgba(255,255,255,0.2)" x="-4.9" y="-5" width="26.5" height="12.2" shape-rendering="crispEdges"></rect>
+                                        <rect className="heart-bright-right" fill="rgba(255,255,255,0.2)" x="10.1" y="-2.8" width="11.8" height="22.3" shape-rendering="crispEdges"></rect>
+                                        <polygon className="heart-outline" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                    </g>
+                                  </svg>
+                              </div>
+                            </div>
+                        </button>
+                      </div>
+                      <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
+                          <img className='absolute w-full h-full top-0 left-0 object-contain' src="/stone-diamond-img.webp" alt="" />
+                      </div>
+                      <a class="absolute inset-0 opacity-0 hidden md:block" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">0.5 Carat I SI1 Round Natural Diamond</a>
+                  </div>
+                  <div className="bg-white pt-0.5 md:hidden">
+                    <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                    </div>
+                    <div className="hidden md:hidden mt-auto text-center text-customGray-400 text-1.5xs leading-tight">GIA - Natural Diamond</div>
+                  </div>
+                  <div className="hidden md:block bg-white pt-4 ">
+                      <div className="px-4 flex items-start gap-1 justify-between mb-1">
+                          <div className="text-black text-sm leading-tight flex-grow whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                          <div className="shrink-0 flex items-center gap-1 flex-wrap">
+                            <div className="text-sm leading-tight text-customGray-500">$772</div>
+                          </div>
+                      </div>
+                      <div className="flex flex-wrap justify-center">
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                      </div>
+                    </div>
+              </div>
+              <div className="hidden md:block absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl -bottom-36"></div>
+              <div className="absolute top-full left-0 right-0 hidden md:group-hover:block pt-4 -mt-[4.75rem]">
+                  <div className="px-4 mb-1 flex items-start gap-1 justify-between">
+                      <div className="flex-grow">
+                        <div className="text-black text-sm leading-tight whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                        <div className="w-full text-customGray-300 text-sm leading-none mt-1"><span>With setting: </span><span>$1,522</span></div>
+                      </div>
+                      <div className="shrink-0 flex flex-col items-end gap-1 flex-wrap">
+                        <div className="text-sm leading-tight text-customGray-500">$772</div>
+                      </div>
+                  </div>
+                  <div className="flex flex-wrap justify-center">
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">carat</div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">I</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            color
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            clarity
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            cut
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                  </div>
+                  <div className="flex justify-center gap-2 flex-wrap mt-2">
+                      <a className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">More Info</a>
+                      <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+                        <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
+                            <span>Complete your ring</span>
+                            <svg className="w-3 h-3">
+                              <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
+                              </svg>
+                            </svg>
+                        </div>
+                      </button>
+                  </div>
+                  <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
+                </div>
+          </div>
+          <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
+              <div className=' border-borders border rounded-lg overflow-hidden md:block'>
+                  <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
+                      <div className="absolute right-2 top-2 z-20">
+                        <button type="button" className="WishlistButton ml-1 stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
+                            <div className="flex items-center gap-2">
+                              <div className="w-6 h-6 md:w-7 md:h-7 ">
+                                  <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                                    <mask id="wishlist-heart-mask">
+                                        <path d="M12,7.16613l3.01387-2.65371,4.7586,2.07432,1.0675,4.76126-8.83997,9.152L3.15997,11.348l1.06753-4.76126,4.75765-2.0739,3.01485,2.65329Z" fill="white" stroke="white"></path>
+                                    </mask>
+                                    <g mask="url(#wishlist-heart-mask)">
+                                        <polygon className="heart-bg-fill" fill="#fff" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                        <path className="heart-right" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-bottom" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-left" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <rect className="heart-bright-left" fill="rgba(255,255,255,0.2)" x="-4.9" y="-5" width="26.5" height="12.2" shape-rendering="crispEdges"></rect>
+                                        <rect className="heart-bright-right" fill="rgba(255,255,255,0.2)" x="10.1" y="-2.8" width="11.8" height="22.3" shape-rendering="crispEdges"></rect>
+                                        <polygon className="heart-outline" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                    </g>
+                                  </svg>
+                              </div>
+                            </div>
+                        </button>
+                      </div>
+                      <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
+                          <img className='absolute w-full h-full top-0 left-0 object-contain' src="/stone-diamond-img.webp" alt="" />
+                      </div>
+                  </div>
+                  <div className="bg-white pt-0.5 md:hidden">
+                    <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                    </div>
+                    <div className="hidden md:hidden mt-auto text-center text-customGray-400 text-1.5xs leading-tight">GIA - Natural Diamond</div>
+                  </div>
+                  <div className="hidden md:block bg-white pt-4 ">
+                      <div className="px-4 flex items-start gap-1 justify-between mb-1">
+                          <div className="text-black text-sm leading-tight flex-grow whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                          <div className="shrink-0 flex items-center gap-1 flex-wrap">
+                            <div className="text-sm leading-tight text-customGray-500">$772</div>
+                          </div>
+                      </div>
+                      <div className="flex flex-wrap justify-center">
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                      </div>
+                    </div>
+              </div>
+              <div className="hidden md:block absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl -bottom-36"></div>
+              <div className="absolute top-full left-0 right-0 hidden md:group-hover:block pt-4 -mt-[4.75rem]">
+                  <div className="px-4 mb-1 flex items-start gap-1 justify-between">
+                      <div className="flex-grow">
+                        <div className="text-black text-sm leading-tight whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                        <div className="w-full text-customGray-300 text-sm leading-none mt-1"><span>With setting: </span><span>$1,522</span></div>
+                      </div>
+                      <div className="shrink-0 flex flex-col items-end gap-1 flex-wrap">
+                        <div className="text-sm leading-tight text-customGray-500">$772</div>
+                      </div>
+                  </div>
+                  <div className="flex flex-wrap justify-center">
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">carat</div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">I</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            color
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            clarity
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            cut
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                  </div>
+                  <div className="flex justify-center gap-2 flex-wrap mt-2">
+                      <a className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">More Info</a>
+                      <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+                        <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
+                            <span>Complete your ring</span>
+                            <svg className="w-3 h-3">
+                              <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
+                              </svg>
+                            </svg>
+                        </div>
+                      </button>
+                  </div>
+                  <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
+                </div>
+          </div>
+          <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
+              <div className=' border-borders border rounded-lg overflow-hidden md:block'>
+                  <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
+                      <div className="absolute right-2 top-2 z-20">
+                        <button type="button" className="WishlistButton ml-1 stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
+                            <div className="flex items-center gap-2">
+                              <div className="w-6 h-6 md:w-7 md:h-7 ">
+                                  <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                                    <mask id="wishlist-heart-mask">
+                                        <path d="M12,7.16613l3.01387-2.65371,4.7586,2.07432,1.0675,4.76126-8.83997,9.152L3.15997,11.348l1.06753-4.76126,4.75765-2.0739,3.01485,2.65329Z" fill="white" stroke="white"></path>
+                                    </mask>
+                                    <g mask="url(#wishlist-heart-mask)">
+                                        <polygon className="heart-bg-fill" fill="#fff" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                        <path className="heart-right" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-bottom" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-left" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <rect className="heart-bright-left" fill="rgba(255,255,255,0.2)" x="-4.9" y="-5" width="26.5" height="12.2" shape-rendering="crispEdges"></rect>
+                                        <rect className="heart-bright-right" fill="rgba(255,255,255,0.2)" x="10.1" y="-2.8" width="11.8" height="22.3" shape-rendering="crispEdges"></rect>
+                                        <polygon className="heart-outline" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                    </g>
+                                  </svg>
+                              </div>
+                            </div>
+                        </button>
+                      </div>
+                      <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
+                          <img className='absolute w-full h-full top-0 left-0 object-contain' src="/stone-diamond-img.webp" alt="" />
+                      </div>
+                  </div>
+                  <div className="bg-white pt-0.5 md:hidden">
+                    <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                    </div>
+                    <div className="hidden md:hidden mt-auto text-center text-customGray-400 text-1.5xs leading-tight">GIA - Natural Diamond</div>
+                  </div>
+                  <div className="hidden md:block bg-white pt-4 ">
+                      <div className="px-4 flex items-start gap-1 justify-between mb-1">
+                          <div className="text-black text-sm leading-tight flex-grow whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                          <div className="shrink-0 flex items-center gap-1 flex-wrap">
+                            <div className="text-sm leading-tight text-customGray-500">$772</div>
+                          </div>
+                      </div>
+                      <div className="flex flex-wrap justify-center">
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                      </div>
+                    </div>
+              </div>
+              <div className="hidden md:block absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl -bottom-36"></div>
+              <div className="absolute top-full left-0 right-0 hidden md:group-hover:block pt-4 -mt-[4.75rem]">
+                  <div className="px-4 mb-1 flex items-start gap-1 justify-between">
+                      <div className="flex-grow">
+                        <div className="text-black text-sm leading-tight whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                        <div className="w-full text-customGray-300 text-sm leading-none mt-1"><span>With setting: </span><span>$1,522</span></div>
+                      </div>
+                      <div className="shrink-0 flex flex-col items-end gap-1 flex-wrap">
+                        <div className="text-sm leading-tight text-customGray-500">$772</div>
+                      </div>
+                  </div>
+                  <div className="flex flex-wrap justify-center">
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">carat</div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">I</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            color
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            clarity
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            cut
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                  </div>
+                  <div className="flex justify-center gap-2 flex-wrap mt-2">
+                      <a className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">More Info</a>
+                      <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+                        <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
+                            <span>Complete your ring</span>
+                            <svg className="w-3 h-3">
+                              <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
+                              </svg>
+                            </svg>
+                        </div>
+                      </button>
+                  </div>
+                  <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
+                </div>
+          </div>
+          <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
+              <div className=' border-borders border rounded-lg overflow-hidden md:block'>
+                  <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
+                      <div className="absolute right-2 top-2 z-20">
+                        <button type="button" className="WishlistButton ml-1 stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
+                            <div className="flex items-center gap-2">
+                              <div className="w-6 h-6 md:w-7 md:h-7 ">
+                                  <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                                    <mask id="wishlist-heart-mask">
+                                        <path d="M12,7.16613l3.01387-2.65371,4.7586,2.07432,1.0675,4.76126-8.83997,9.152L3.15997,11.348l1.06753-4.76126,4.75765-2.0739,3.01485,2.65329Z" fill="white" stroke="white"></path>
+                                    </mask>
+                                    <g mask="url(#wishlist-heart-mask)">
+                                        <polygon className="heart-bg-fill" fill="#fff" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                        <path className="heart-right" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-bottom" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <path className="heart-left" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
+                                        <rect className="heart-bright-left" fill="rgba(255,255,255,0.2)" x="-4.9" y="-5" width="26.5" height="12.2" shape-rendering="crispEdges"></rect>
+                                        <rect className="heart-bright-right" fill="rgba(255,255,255,0.2)" x="10.1" y="-2.8" width="11.8" height="22.3" shape-rendering="crispEdges"></rect>
+                                        <polygon className="heart-outline" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
+                                    </g>
+                                  </svg>
+                              </div>
+                            </div>
+                        </button>
+                      </div>
+                      <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
+                          <img className='absolute w-full h-full top-0 left-0 object-contain' src="/stone-diamond-img.webp" alt="" />
+                      </div>
+                  </div>
+                  <div className="bg-white pt-0.5 md:hidden">
+                    <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                        <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                          <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                          <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                        </div>
+                    </div>
+                    <div className="hidden md:hidden mt-auto text-center text-customGray-400 text-1.5xs leading-tight">GIA - Natural Diamond</div>
+                  </div>
+                  <div className="hidden md:block bg-white pt-4 ">
+                      <div className="px-4 flex items-start gap-1 justify-between mb-1">
+                          <div className="text-black text-sm leading-tight flex-grow whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                          <div className="shrink-0 flex items-center gap-1 flex-wrap">
+                            <div className="text-sm leading-tight text-customGray-500">$772</div>
+                          </div>
+                      </div>
+                      <div className="flex flex-wrap justify-center">
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                          <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                            <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                            <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                          </div>
+                      </div>
+                    </div>
+              </div>
+              <div className="hidden md:block absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl -bottom-36"></div>
+              <div className="absolute top-full left-0 right-0 hidden md:group-hover:block pt-4 -mt-[4.75rem]">
+                  <div className="px-4 mb-1 flex items-start gap-1 justify-between">
+                      <div className="flex-grow">
+                        <div className="text-black text-sm leading-tight whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                        <div className="w-full text-customGray-300 text-sm leading-none mt-1"><span>With setting: </span><span>$1,522</span></div>
+                      </div>
+                      <div className="shrink-0 flex flex-col items-end gap-1 flex-wrap">
+                        <div className="text-sm leading-tight text-customGray-500">$772</div>
+                      </div>
+                  </div>
+                  <div className="flex flex-wrap justify-center">
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">carat</div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">I</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            color
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            clarity
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                      <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
+                        <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                        <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
+                            cut
+                            <button className="w-3 h-3 cursor-help md:hidden" title="help">
+                              <svg className="w-3 h-3 text-customGray-100">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+                                    <g>
+                                        <path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path>
+                                    </g>
+                                  </svg>
+                              </svg>
+                            </button>
+                        </div>
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
+                      </div>
+                  </div>
+                  <div className="flex justify-center gap-2 flex-wrap mt-2">
+                      <a className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">More Info</a>
+                      <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+                        <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
+                            <span>Complete your ring</span>
+                            <svg className="w-3 h-3">
+                              <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
+                              </svg>
+                            </svg>
+                        </div>
+                      </button>
+                  </div>
+                  <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
+                </div>
+          </div>
+      </div>
 
         
 
