@@ -135,10 +135,12 @@ export const fetchProducts = (options = { first: 5, after: null }) => async (dis
       throw new Error(errors.map((e) => e.message).join(", "));
     }
 
+    const managePage = options.page ? true : false
+
     dispatch(
       fetchProductsSuccess({
         products: data.products,
-        append: !!options.after,
+        append: managePage,
       })
     );
 
