@@ -103,23 +103,32 @@ export const fetchProducts = (options = { first: 250, after: null }) => async (d
     dispatch(fetchProductsStart());
 
     const queryParts = [];
-
+    // Push tags into the array only if they are not already there.
     if (options.selectedMetal) {
-      queryParts.push(`tag:"${options.selectedMetal}"`);
+      queryParts.push(`"${options.selectedMetal}"`);
     }
     if (options.shape) {
-      queryParts.push(`tag:"${options.shape}"`);
+      queryParts.push(`"${options.shape}"`);
     }
     if (options.price) {
-      queryParts.push(options.price); // Adjust based on price query structure
+      queryParts.push(options.price); // Ensure price query structure matches requirements
     }
 
-    const query = queryParts.join(" AND ");
+    // Only construct the query if there are query parts
+    const query = queryParts.length > 0 ? `tag:${queryParts.join(",")}` : null;
 
-    const { data, errors } = await client.request(PRODUCT_QUERY, {
+    const variables = {
       first: options.first,
       after: options.after,
-      query,
+    };
+
+    // Add query to variables only if it exists
+    if (query) {
+      variables.query = query;
+    }
+
+    const { data, errors } = await client.request(PRODUCT_QUERY, {
+      variables,
     });
 
     if (errors) {
