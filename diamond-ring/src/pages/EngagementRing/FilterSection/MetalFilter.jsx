@@ -3,17 +3,21 @@ import { closeFilter, openFilter } from '../../../store/slices/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../../store/actions/productActions';
 import { metalOptions } from '../../../Utility/Constant';
+import { setFilter } from '../../../store/slices/productFilterSlice';
 
 const MetalFilter = () => {
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
     const { activeFilter } = useSelector((state) => state.products);
+    const filters = useSelector((state) => state.productFilter);
+
 
     const dispatch = useDispatch();
 
     const handleMetalSelection = (option, index) => {
         setSelectedIndex(index);
-        fetchProducts({ first: 250, selectedMetal: option })(dispatch);
-        dispatch(closeFilter({ metal: "" }));
+        dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
+        dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
+        fetchProducts({ first: 250, selectedMetal: option.value, ...filters })(dispatch); // Use current filters
     };
 
     const toggleFilter = (filter) => {
