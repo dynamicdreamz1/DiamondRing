@@ -220,7 +220,7 @@ const RingSelector = () => {
             <button
               onClick={handleLoadMore}
               disabled={loading}
-              className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-blue-300"
+              className="bg-white text-black leading-tight ring-1 ring-black md:ring-2 overflow-hidden whitespace-nowrap relative transition-all duration-300 text-center rounded-full min-h-[3rem] tangiblee-load-more py-3.5 px-8"
             >
               {loading ? 'Loading...' : 'Load More'}
             </button>
