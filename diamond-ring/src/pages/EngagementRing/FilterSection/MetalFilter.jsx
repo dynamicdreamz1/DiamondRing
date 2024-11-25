@@ -17,6 +17,7 @@ const MetalFilter = () => {
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         fetchProducts({ first: 250, selectedMetal: option.value, ...filters })(dispatch); // Use current filters
+        dispatch(closeFilter({  activeFilter : null }));
     };
 
     const toggleFilter = (filter) => {
