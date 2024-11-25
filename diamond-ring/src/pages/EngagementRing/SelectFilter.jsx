@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { fetchProducts } from '../../store/actions/productActions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { metalOptions } from '../../Utility/Constant';
+import { ShapeFilter } from './FilterSection/ShapeFilter';
+import { closeFilter, openFilter } from '../../store/slices/productSlice';
 
 
 
 const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPriceFilter }) => {
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
+    const { activeFilter } = useSelector((state) => state.products);
+
     const dispatch = useDispatch();
 
 
@@ -15,12 +19,21 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
         fetchProducts({ first: 250, selectedMetal: option })(dispatch);
     };
 
+    const toggleFilter = (filter) => {
+        dispatch(openFilter({ filter }));
+    };
+
+    const toggleClose = (filter) => {
+        dispatch(closeFilter({ filter }));
+    };
+
+
     return (
         <div className="hidden md:flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">
             <div aria-expanded="true">
                 <div className="relative z-10">
                     <button
-                        onClick={() => setShowFilter(!showFilter)}
+                        onClick={() => toggleFilter('metal')}
                         type="button"
                         className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders"
                     >
@@ -40,10 +53,10 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                             </svg>
                         </svg>
                     </button>
-                    <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${!showFilter ? "invisible" : ""} `}>
+                    <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${activeFilter === "metal" ? "" : "invisible"} `}>
                         <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                             <button
-                                onClick={() => setShowFilter(false)}
+                                onClick={() => toggleClose("")}
                                 type="button"
                                 className="p-0 border-0 bg-transparent text-black opacity-50 absolute top-4 right-1 z-10"
                                 title="Preview"
@@ -106,6 +119,8 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                     </div>
                 </div>
             </div>
+
+            <ShapeFilter />
             <div className="ml-auto">
                 <div className="FilterRelativeContainer relative min-w-[10-rem] ">
                     <button
@@ -134,7 +149,7 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                             </svg>
                         </div>
                     </button>
-                    <div className={`pt-2 absolute top-full left-0 right-0 z-[60] ${!showPriceFilter ? "invisible" : "" } `}>
+                    <div className={`pt-2 absolute top-full left-0 right-0 z-[60] ${!showPriceFilter ? "invisible" : ""} `}>
                         <div className="border-2 border-solid border-customGray-50 rounded-md bg-white overflow-hidden">
                             <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 bg-customGray-50">
                                 Price (low-to-high)

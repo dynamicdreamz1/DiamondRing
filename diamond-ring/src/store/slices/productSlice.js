@@ -7,7 +7,8 @@ const productSlice = createSlice({
     products: [],
     loading: false,
     error: null,
-    pageInfo: null
+    pageInfo: null,
+    activeFilter: null, // Tracks the currently open filter: 'metal', 'shape', or 'price'
   },
   reducers: {
     fetchProductsStart: (state) => {
@@ -34,14 +35,28 @@ const productSlice = createSlice({
     fetchProductsFailure: (state, action) => {
       state.loading = false;
       state.error = action.payload;
-    }
+    },
+    openFilter(state, action) {
+      const { filter } = action.payload;
+
+      if (state.activeFilter === filter) {
+        state.activeFilter = null; // Close the currently open filter
+      } else {
+        // Otherwise, set the new filter as active and close any other filter
+        state.activeFilter = filter;
+      }
+    },
+    closeFilter(state) {
+      state.activeFilter = null; // Close all filters
+    },
   }
 });
 
 export const {
   fetchProductsStart,
   fetchProductsSuccess,
-  fetchProductsFailure
+  fetchProductsFailure,
+  openFilter,closeFilter
 } = productSlice.actions;
 
 export default productSlice.reducer;

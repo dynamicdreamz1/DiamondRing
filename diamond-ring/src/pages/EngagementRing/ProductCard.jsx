@@ -26,9 +26,9 @@ const ProductCard = ({ node }) => {
   const compareAtPrice = firstVariant?.compareAtPrice;
   const formattedCompareAtPrice = compareAtPrice
     ? new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: firstVariant?.price?.currencyCode || "USD",
-      }).format(compareAtPrice)
+      style: "currency",
+      currency: firstVariant?.price?.currencyCode || "USD",
+    }).format(compareAtPrice)
     : null;
 
   return (
@@ -44,129 +44,123 @@ const ProductCard = ({ node }) => {
         <div className="flex flex-row justify-between items-center h-full">
 
           <div className='arrow-main flex justify-center items-center gap-2'>
-          <button
-            // className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
-            onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)} className='left-arrow text-customGray-500 bg-customGray-75 p-1 rounded-full shrink-0 flex items-center justify-center'
-          >
-            <ArrowLeft className="h-4 w-4 text-gray-500 " />
-          </button>
-          <button type="button" className="flex items-center gap-0.5 p-0.5 rounded-full text-1.5xs leading-none bg-customGray-75 text-customGray-500">
+            <button
+              // className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
+              onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)} className='left-arrow text-customGray-500 bg-customGray-75 p-1 rounded-full shrink-0 flex items-center justify-center'
+            >
+              <ArrowLeft className="h-4 w-4 text-gray-500 " />
+            </button>
+            <button type="button" className="flex items-center gap-0.5 p-0.5 rounded-full text-1.5xs leading-none bg-customGray-75 text-customGray-500">
               <div className="h-4 w-4 rounded-full bg-white overflow-hidden">
-                  <div className="transition-all duration-500" data-item-indicators-container="true" >
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">1</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">3</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">4</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">5</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">6</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">7</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">8</div>
-                    </div>
-                    <div className="relative pt-[100%] w-full">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">9</div>
-                    </div>
+                <div className="transition-all duration-500" data-item-indicators-container="true" >
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">1</div>
                   </div>
-              </div>
-              <div className="h-4 w-4">
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
+                  </div>
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">3</div>
+                  </div>
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">4</div>
+                  </div>
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">5</div>
+                  </div>
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">6</div>
+                  </div>
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">7</div>
+                  </div>
+                  <div className="relative pt-[100%] w-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">8</div>
+                  </div>
                   <div className="relative pt-[100%] w-full">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">9</div>
                   </div>
+                </div>
+              </div>
+              <div className="h-4 w-4">
+                <div className="relative pt-[100%] w-full">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">9</div>
+                </div>
               </div>
             </button>
-          <button
-            className="right-arrow ml-2 text-customGray-500 bg-customGray-75  rounded-full shrink-0 p-1 flex items-center justify-center"
-            onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
-          >
-            <ArrowRight className="h-4 w-4 text-gray-500" />
-          </button>
+            <button
+              className="right-arrow ml-2 text-customGray-500 bg-customGray-75  rounded-full shrink-0 p-1 flex items-center justify-center"
+              onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
+            >
+              <ArrowRight className="h-4 w-4 text-gray-500" />
+            </button>
           </div>
 
           <div className='mb-5'>
 
-          {images.map((image, index) => (
-            <img
-              key={image.node.id}
-              src={image.node.src}
-              alt={image.node.altText || node.title}
-              className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${
-                index === selectedImage ? 'block' : 'hidden'
-              }`}
-              onMouseEnter={() => handleImageHover(index)}
-            />
-          ))}
+            {images.map((image, index) => (
+              <img
+                key={image.node.id}
+                src={image.node.src}
+                alt={image.node.altText || node.title}
+                className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${index === selectedImage ? 'block' : 'hidden'
+                  }`}
+                onMouseEnter={() => handleImageHover(index)}
+              />
+            ))}
           </div>
         </div>
       </div>
 
-     
+
 
       <div className="space-y-2 product-des-box md:absolute md:invisible md:w-full md:z-10">
         <div className="flex items-center space-x-2 justify-between">
           <div>
-          <h3 className="text-lg text-sm font-semibold truncate">{node.title}</h3>
-          <div className="flex text-sm items-center space-x-2">
-            <p className="text-gray-900 font-medium">{formattedPrice}</p>
-            {compareAtPrice && (
-              <p className="text-sm line-through text-gray-500">
-                {formattedCompareAtPrice}
-              </p>
-            )}
-          </div>
+            <h3 className="text-lg text-sm font-semibold truncate">{node.title}</h3>
+            <div className="flex text-sm items-center space-x-2">
+              <p className="text-gray-900 font-medium">{formattedPrice}</p>
+              {compareAtPrice && (
+                <p className="text-sm line-through text-gray-500">
+                  {formattedCompareAtPrice}
+                </p>
+              )}
+            </div>
           </div>
           <div className="shrink-0 flex flex-wrap gap-3 ">
             <button type="button" className="p-0 border-0 cursor-pointer" aria-label="14k White Gold">
-                <div className="rounded-full w-4 h-4 relative" data-metal-color="14k White Gold">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 border-2 border-white rounded-full"></div>
-                </div>
+              <div className="rounded-full w-4 h-4 relative" data-metal-color="14k White Gold">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 border-2 border-white rounded-full"></div>
+              </div>
             </button>
             <button type="button" className="p-0 border-0 cursor-pointer" aria-label="14k Yellow Gold">
-                <div className="rounded-full w-4 h-4 relative" data-metal-color="14k Yellow Gold"></div>
+              <div className="rounded-full w-4 h-4 relative" data-metal-color="14k Yellow Gold"></div>
             </button>
             <button type="button" className="p-0 border-0 cursor-pointer" aria-label="14k Rose Gold">
-                <div className="rounded-full w-4 h-4 relative" data-metal-color="14k Rose Gold"></div>
+              <div className="rounded-full w-4 h-4 relative" data-metal-color="14k Rose Gold"></div>
             </button>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
-        <a href="/ring-select/ring-detail-page" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black"  aria-hidden="false">More Info</a>
-        <a href="" className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black"  aria-hidden="false">Complete your ring</a>
+          <a href="/ring-select/ring-detail-page" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">More Info</a>
+          <a href="" className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">Complete your ring</a>
         </div>
 
         <div className="flex items-center space-x-2">
           {variants.map((variant, index) => (
             <button
               key={variant.node.id}
-              className={`px-3 py-1 rounded-md transition-colors duration-200 ease-in-out ${
-                index === selectedVariant
+              className={`px-3 py-1 rounded-md transition-colors duration-200 ease-in-out ${index === selectedVariant
                   ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
               onClick={() => handleVariantClick(index)}
             >
               {variant.node.title}
             </button>
           ))}
         </div>
-
-        <button className="mt-2 bg-black text-white rounded-md py-2 px-4 w-full">
-          Add to Cart
-        </button>
       </div>
     </div>
   );
