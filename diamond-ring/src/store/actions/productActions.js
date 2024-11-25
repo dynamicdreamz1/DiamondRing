@@ -14,7 +14,7 @@ const client = createStorefrontApiClient({
 // Updated GraphQL query with pagination and filtering support
 export const PRODUCT_QUERY = `
   query ProductQuery(
-    $first: Int = 5, 
+    $first: Int = 6, 
     $after: String, 
     $sortKey: ProductSortKeys = CREATED_AT, 
     $reverse: Boolean = false,
@@ -97,7 +97,7 @@ export const PRODUCT_QUERY = `
   }
 `;
 
-export const fetchProducts = (options = { first: 5, after: null }) => async (dispatch) => {
+export const fetchProducts = (options = { first: 6, after: null }) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());
 
