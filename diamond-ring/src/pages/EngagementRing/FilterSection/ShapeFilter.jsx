@@ -2,17 +2,20 @@ import React, { useState } from 'react'
 import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../../store/actions/productActions';
-import { openFilter, closeFilter } from '../../../store/slices/productSlice';
+import { openFilter, closeFilter } from '../../../store/slices/productFilterSlice';
+import { setFilter } from '../../../store/slices/productFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();
-    const { activeFilter } = useSelector((state) => state.products);
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
+    const filters = useSelector((state) => state.productFilter);
 
-    const handleShapeSelectionSelection = (option, index) => {
+    
+    const handleShapeSelection = (option, index) => {
         setSelectedIndex(index)
-        fetchProducts({ first: 250, selectShape: option })(dispatch);
-        dispatch(closeFilter({ shape :"" }));
+        dispatch(setFilter({ key: 'shape', value: option.value })); // Update shape filter
+        dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
+        fetchProducts({ first: 250, selectShape: option.value, ...filters })(dispatch); // Use current filters
     };
 
 
@@ -48,7 +51,7 @@ export const ShapeFilter = () => {
                         </svg>
                     </svg>
                 </button>
-                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${activeFilter === 'shape' ? "" : "invisible"} `}>
+                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${filters.activeFilter === 'shape' ? "" : "invisible"} `}>
                     <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                         <button
                             onClick={() => toggleClose("")}
@@ -95,7 +98,7 @@ export const ShapeFilter = () => {
                                 {shapeOptions.map((option, index) => (
                                     <button
                                         key={index}
-                                        onClick={() => handleShapeSelectionSelection(option, index)}                                            // Set the selected button's index
+                                        onClick={() => handleShapeSelection(option, index)}                                            // Set the selected button's index
                                         className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                             ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
                                             ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 

@@ -98,14 +98,28 @@ export const PRODUCT_QUERY = `
 `;
 
 // Enhanced fetchProducts action with pagination and filtering
-export const fetchProducts = (options = {first: 250,after: null,selectedMetal : "" , selectShape : ""}) => async (dispatch) => {
+export const fetchProducts = (options = { first: 250, after: null }) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());
 
-    console.log("responseStream",options);
-  
-    const { data, errors } =  await client.request(PRODUCT_QUERY, {
-      variables: {query: options.selectedMetal.value},
+    const queryParts = [];
+
+    if (options.selectedMetal) {
+      queryParts.push(`tag:"${options.selectedMetal}"`);
+    }
+    if (options.shape) {
+      queryParts.push(`tag:"${options.shape}"`);
+    }
+    if (options.price) {
+      queryParts.push(options.price); // Adjust based on price query structure
+    }
+
+    const query = queryParts.join(" AND ");
+
+    const { data, errors } = await client.request(PRODUCT_QUERY, {
+      first: options.first,
+      after: options.after,
+      query,
     });
 
     if (errors) {
@@ -114,7 +128,7 @@ export const fetchProducts = (options = {first: 250,after: null,selectedMetal : 
 
     dispatch(fetchProductsSuccess({
       products: data.products,
-      append: !!options.after // Append new products if cursor is provided
+      append: !!options.after,
     }));
 
     return data.products.pageInfo;

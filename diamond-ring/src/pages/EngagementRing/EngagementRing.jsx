@@ -21,8 +21,6 @@ const RingSelector = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  console.log("products", products);
-
 
   const handleLoadMore = () => {
     if (pageInfo?.hasNextPage) {
