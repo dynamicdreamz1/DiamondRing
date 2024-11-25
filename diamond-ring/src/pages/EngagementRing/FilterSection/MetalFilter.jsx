@@ -12,7 +12,6 @@ const MetalFilter = () => {
 
     const handleMetalSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
-        dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         dispatch(closeFilter({  activeFilter : null }));
     };
 
@@ -23,8 +22,6 @@ const MetalFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
-
-    console.log("filteredOptions",filteredOptions);
 
 
     return (

@@ -4,7 +4,7 @@ const initialState = {
   selectedMetal: "",
   selectShape: "",
   price: "",
-  page: 1,
+  page: '',
   activeFilter: null, // Tracks the currently open filter: 'metal', 'shape', or 'price'
 };
 

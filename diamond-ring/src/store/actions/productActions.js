@@ -14,7 +14,7 @@ const client = createStorefrontApiClient({
 // Updated GraphQL query with pagination and filtering support
 export const PRODUCT_QUERY = `
   query ProductQuery(
-    $first: Int = 250, 
+    $first: Int = 5, 
     $after: String, 
     $sortKey: ProductSortKeys = CREATED_AT, 
     $reverse: Boolean = false,
@@ -97,10 +97,12 @@ export const PRODUCT_QUERY = `
   }
 `;
 
-export const fetchProducts = (options = { first: 250, after: null }) => async (dispatch) => {
+export const fetchProducts = (options = { first: 5, after: null }) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());
+
     const queryParts = [];
+
     // Push tags into the array only if they are not already there.
     if (options.selectedMetal) {
       queryParts.push(`"${options.selectedMetal}"`);
@@ -117,7 +119,7 @@ export const fetchProducts = (options = { first: 250, after: null }) => async (d
 
     const variables = {
       first: options.first,
-      after: options.after,
+      ...(options.page && { after: options.page }), // Dynamically include 'after' only if it exists
     };
 
     // Add query to variables only if it exists
@@ -130,13 +132,15 @@ export const fetchProducts = (options = { first: 250, after: null }) => async (d
     });
 
     if (errors) {
-      throw new Error(errors.map(e => e.message).join(', '));
+      throw new Error(errors.map((e) => e.message).join(", "));
     }
 
-    dispatch(fetchProductsSuccess({
-      products: data.products,
-      append: !!options.after,
-    }));
+    dispatch(
+      fetchProductsSuccess({
+        products: data.products,
+        append: !!options.after,
+      })
+    );
 
     return data.products.pageInfo;
   } catch (error) {
@@ -144,3 +148,4 @@ export const fetchProducts = (options = { first: 250, after: null }) => async (d
     throw error;
   }
 };
+

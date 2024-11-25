@@ -13,7 +13,6 @@ export const ShapeFilter = () => {
     
     const handleShapeSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
-        dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         dispatch(closeFilter({  activeFilter : null }));
     };
 
