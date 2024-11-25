@@ -2,16 +2,15 @@ import React, { useState } from 'react'
 import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../../store/actions/productActions';
-import { openFilter, closeFilter } from '../../../store/slices/productSlice';
+import { openFilter, closeFilter } from '../../../store/slices/productFilterSlice';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();
-    const { activeFilter } = useSelector((state) => state.products);
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
     const filters = useSelector((state) => state.productFilter);
 
-
+    
     const handleShapeSelection = (option, index) => {
         setSelectedIndex(index)
         dispatch(setFilter({ key: 'shape', value: option.value })); // Update shape filter
@@ -52,7 +51,7 @@ export const ShapeFilter = () => {
                         </svg>
                     </svg>
                 </button>
-                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${activeFilter === 'shape' ? "" : "invisible"} `}>
+                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${filters.activeFilter === 'shape' ? "" : "invisible"} `}>
                     <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                         <button
                             onClick={() => toggleClose("")}

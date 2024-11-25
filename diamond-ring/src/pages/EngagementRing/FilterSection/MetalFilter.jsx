@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { closeFilter, openFilter } from '../../../store/slices/productSlice';
+import { closeFilter, openFilter } from '../../../store/slices/productFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../../store/actions/productActions';
 import { metalOptions } from '../../../Utility/Constant';
@@ -7,7 +7,6 @@ import { setFilter } from '../../../store/slices/productFilterSlice';
 
 const MetalFilter = () => {
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
-    const { activeFilter } = useSelector((state) => state.products);
     const filters = useSelector((state) => state.productFilter);
 
 
@@ -52,7 +51,7 @@ const MetalFilter = () => {
                         </svg>
                     </svg>
                 </button>
-                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${activeFilter === "metal" ? "" : "invisible"} `}>
+                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${filters.activeFilter === "metal" ? "" : "invisible"} `}>
                     <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                         <button
                             onClick={() => toggleClose("")}
