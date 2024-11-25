@@ -17,6 +17,7 @@ const RingSelector = () => {
 
   const dispatch = useDispatch();
   const { products, loading, pageInfo } = useSelector((state) => state.products);
+  
 
   useEffect(() => {
     dispatch(fetchProducts(filters));
@@ -34,7 +35,6 @@ const RingSelector = () => {
   const handleClearFilter = (type) => {
     dispatch(setFilter({ key: type, value: "" })); // Update shape filter
     dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
-    fetchProducts({ first: 250, type: "", ...filters })(dispatch);
   }
 
 

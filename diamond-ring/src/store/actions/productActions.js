@@ -97,7 +97,6 @@ export const PRODUCT_QUERY = `
   }
 `;
 
-// Enhanced fetchProducts action with pagination and filtering
 export const fetchProducts = (options = { first: 250, after: null }) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());

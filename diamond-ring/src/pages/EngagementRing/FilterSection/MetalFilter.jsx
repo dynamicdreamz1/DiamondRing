@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { closeFilter, openFilter } from '../../../store/slices/productFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../../store/actions/productActions';
 import { metalOptions } from '../../../Utility/Constant';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
@@ -16,7 +15,6 @@ const MetalFilter = () => {
         setSelectedIndex(index);
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
-        fetchProducts({ first: 250, selectedMetal: option.value, ...filters })(dispatch); // Use current filters
         dispatch(closeFilter({  activeFilter : null }));
     };
 

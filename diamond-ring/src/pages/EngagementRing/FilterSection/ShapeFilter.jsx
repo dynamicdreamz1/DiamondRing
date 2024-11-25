@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../../store/actions/productActions';
 import { openFilter, closeFilter } from '../../../store/slices/productFilterSlice';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
@@ -15,7 +14,6 @@ export const ShapeFilter = () => {
         setSelectedIndex(index)
         dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
-        fetchProducts({ first: 250, selectShape: option.value, ...filters })(dispatch); // Use current filters
         dispatch(closeFilter({  activeFilter : null }));
     };
 
