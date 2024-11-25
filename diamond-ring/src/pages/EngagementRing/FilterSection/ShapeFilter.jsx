@@ -100,12 +100,12 @@ export const ShapeFilter = () => {
                                         onClick={() => handleShapeSelection(option, index)}                                            // Set the selected button's index
                                         className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                             ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
-                                            ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
+                                            ${filters.selectShape === option.value ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
                                             ring-1 border-borders`} // Conditional styles based on selection
                                     >
                                         <div className="mb-2"> {option.icon}</div>
                                         <div className={`-mt-0.5 md:mt-0 text-1.5sm leading-4 overflow-hidden text-ellipsis font-proximaNovaCondensed md:text-xs md:leading-tight 
-                                                electedIndex === index ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
+                                                ${filters?.selectedMetal === option.value ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
                                             {option.name}
                                         </div>
                                     </button>

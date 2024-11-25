@@ -100,9 +100,6 @@ export const PRODUCT_QUERY = `
 export const fetchProducts = (options = { first: 250, after: null }) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());
-
-    console.log("options",options);
-
     const queryParts = [];
     // Push tags into the array only if they are not already there.
     if (options.selectedMetal) {

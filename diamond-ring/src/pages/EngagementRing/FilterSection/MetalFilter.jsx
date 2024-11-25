@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { closeFilter, openFilter } from '../../../store/slices/productFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { metalOptions } from '../../../Utility/Constant';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
 const MetalFilter = () => {
-    const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
     const filters = useSelector((state) => state.productFilter);
-
-
     const dispatch = useDispatch();
 
     const handleMetalSelection = (option, index) => {
-        setSelectedIndex(index);
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         dispatch(closeFilter({  activeFilter : null }));
@@ -100,12 +96,12 @@ const MetalFilter = () => {
                                         onClick={() => handleMetalSelection(option, index)}                                            // Set the selected button's index
                                         className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                                         ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
-                                                        ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
+                                                        ${filters?.selectedMetal === option.value ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
                                                         ring-1 border-borders`} // Conditional styles based on selection
                                     >
                                         <p style={{ color: option.color, border: `1px solid ${option.color}` }} >{option.karat}</p>
                                         <div className={`-mt-0.5 md:mt-0 text-1.5sm leading-4 overflow-hidden text-ellipsis font-proximaNovaCondensed md:text-xs md:leading-tight 
-                                                            electedIndex === index ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
+                                                            ${filters?.selectedMetal === option.value ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
                                             {option.metal}
                                         </div>
                                     </button>
