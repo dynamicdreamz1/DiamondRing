@@ -75,7 +75,7 @@ const RingSelector = () => {
             {filteredOptions?.value &&
               <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
                 <button type="button" className="flex md:gap-0.5 items-center">
-                  <div className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center overflow-hidden">
+                  <div className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center overflow-hidden select-metal">
                     <p style={{ color: filteredOptions.color, border: `1px solid ${filteredOptions.color}` }} ></p>
                   </div>
                   <span>{filteredOptions.value}</span>
@@ -95,7 +95,7 @@ const RingSelector = () => {
             {filteredShape?.name &&
               <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
                 <button type="button" className="flex md:gap-0.5 items-center">
-                  <div className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center overflow-hidden">
+                  <div className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center overflow-hidden ">
                     {filteredShape.icon}
                   </div>
                   <span>{filteredShape?.name}</span>
