@@ -17,8 +17,6 @@ const productSlice = createSlice({
     },
     fetchProductsSuccess: (state, action) => {
       const { products, append } = action.payload;
-
-      console.log("append",append ,products);
       
       state.loading = false;
       state.pageInfo = products.pageInfo;

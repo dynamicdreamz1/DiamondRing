@@ -1,22 +1,23 @@
 import React, { useState } from 'react'
 import { ShapeFilter } from './FilterSection/ShapeFilter';
 import MetalFilter from './FilterSection/MetalFilter';
+import { setFilter } from '../../store/slices/productFilterSlice';
+import { useDispatch } from 'react-redux';
 
 
 
-const SelectFilter = ({ showPriceFilter, setShowPriceFilter }) => {
+const SelectFilter = ({ }) => {
 
+    const dispatch = useDispatch();
+    
     const handlePriceSort = (sortOrder) => {
-
-        console.log("sortOrder",sortOrder);
         if (sortOrder === "low-to-high") {
-          // Implement logic for sorting by low-to-high
-          console.log("Sorting: Low to High");
+            dispatch(setFilter({ key: "price", value: "PRICE" })); // Update shape filter
         } else if (sortOrder === "high-to-low") {
-          // Implement logic for sorting by high-to-low
-          console.log("Sorting: High to Low");
+            dispatch(setFilter({ key: "price", value: "" })); // Update shape filter
+
         }
-      };
+    };
 
     return (
         <div className="hidden md:flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">

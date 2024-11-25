@@ -110,17 +110,19 @@ export const fetchProducts = (options = { first: 6, after: null }) => async (dis
     if (options.selectShape) {
       queryParts.push(`"${options.selectShape}"`);
     }
-    if (options.price) {
-      queryParts.push(options.price); // Ensure price query structure matches requirements
-    }
 
+    console.log("options",options);
     // Only construct the query if there are query parts
-    const query = queryParts.length > 0 ? `tag:${queryParts.join(",")}` : null;
+    const query = queryParts.length > 0  ? `tag:${queryParts.join(",")}` : null;
+    
 
     const variables = {
       first: options.first,
       ...(options?.page && { after: options?.page }), // Dynamically include 'after' only if it exists
+      ...(options.price && { sortKey: options.price }),
     };
+
+    
 
     // Add query to variables only if it exists
     if (query) {
@@ -138,6 +140,7 @@ export const fetchProducts = (options = { first: 6, after: null }) => async (dis
       fetchProductsSuccess({
         products: data.products,
         append: managePage,
+        
       })
     );
 
