@@ -51,8 +51,10 @@ const SelectFilter = ({ showPriceFilter, setShowPriceFilter }) => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
+
 
 export default SelectFilter
