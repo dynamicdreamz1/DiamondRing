@@ -9,9 +9,9 @@ export const ShapeFilter = () => {
     const { activeFilter } = useSelector((state) => state.products);
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
 
-    const handleMetalSelection = (option, index) => {
+    const handleShapeSelectionSelection = (option, index) => {
         setSelectedIndex(index)
-        fetchProducts({ first: 250, selectedMetal: option })(dispatch);
+        fetchProducts({ first: 250, selectShape: option })(dispatch);
         dispatch(closeFilter({ shape :"" }));
     };
 
@@ -32,7 +32,7 @@ export const ShapeFilter = () => {
                     type="button"
                     className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-md border transition-colors duration-300 text-black cursor-pointer text-sm leading-none border-borders"
                 >
-                    <span>Select Metal</span>
+                    <span>Select Shape</span>
                     <svg className="w-3.5 h-3.5 transition-transform duration-300">
                         <svg
                             viewBox="0 0 12 7"
@@ -95,7 +95,7 @@ export const ShapeFilter = () => {
                                 {shapeOptions.map((option, index) => (
                                     <button
                                         key={index}
-                                        onClick={() => handleMetalSelection(option, index)}                                            // Set the selected button's index
+                                        onClick={() => handleShapeSelectionSelection(option, index)}                                            // Set the selected button's index
                                         className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                             ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
                                             ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 

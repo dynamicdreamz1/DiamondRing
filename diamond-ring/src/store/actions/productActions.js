@@ -98,10 +98,10 @@ export const PRODUCT_QUERY = `
 `;
 
 // Enhanced fetchProducts action with pagination and filtering
-export const fetchProducts = (options = {first: 250,after: null,selectedMetal : ""}) => async (dispatch) => {
+export const fetchProducts = (options = {first: 250,after: null,selectedMetal : "" , selectShape : ""}) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());
-    
+
     console.log("responseStream",options);
   
     const { data, errors } =  await client.request(PRODUCT_QUERY, {
