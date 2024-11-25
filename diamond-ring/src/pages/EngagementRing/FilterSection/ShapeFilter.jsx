@@ -6,9 +6,9 @@ import { setFilter } from '../../../store/slices/productFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();
-    const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
-
+    
     const filters = useSelector((state) => state.productFilter);
+    const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
 
     
     const handleShapeSelection = (option, index) => {
