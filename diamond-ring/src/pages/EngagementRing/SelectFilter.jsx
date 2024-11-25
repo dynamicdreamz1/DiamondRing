@@ -1,18 +1,31 @@
 import React, { useState } from 'react'
+import { fetchProducts } from '../../store/actions/productActions';
+import { useDispatch } from 'react-redux';
 
 const metalOptions = [
-    { karat: '14K', metal: 'White Gold', color: '#d5d5d5' },
-    { karat: '14K', metal: 'Yellow Gold', color: '#c99c4a' },
-    { karat: '14K', metal: 'Rose Gold', color: '#ef968d' },
-    { karat: '18K', metal: 'White Gold', color: '#d5d5d5' },
-    { karat: '18K', metal: 'Yellow Gold', color: '#c99c4a' },
-    { karat: '18K', metal: 'Rose Gold', color: '#ef968d' },
-    { karat: 'PT', metal: 'Platinum', color: '#d5d5d5' },
+    { karat: '14K', metal: 'White Gold', value: "14k White Gold", color: '#d5d5d5' },
+    { karat: '14K', metal: 'Yellow Gold', value: "14k Yellow Gold", color: '#c99c4a' },
+    { karat: '14K', metal: 'Rose Gold', value: "14K Rose Gold", color: '#ef968d' },
+    { karat: '18K', metal: 'White Gold', value: "18K White Gold", color: '#d5d5d5' },
+    { karat: '18K', metal: 'Yellow Gold', value: "18K Yellow Gold", color: '#c99c4a' },
+    { karat: '18K', metal: 'Rose Gold', value: "18K Rose Gold", color: '#ef968d' },
+    { karat: 'PT', metal: 'Platinum', value: "PT Platinum", color: '#d5d5d5' },
 ];
 
 const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPriceFilter }) => {
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
+    const dispatch = useDispatch();
 
+
+    const handleMetalSelection = (option, index) => {
+        setSelectedIndex(index);
+        
+        // Call fetchProducts with the entire option object
+        fetchProducts({
+          first: 250,
+          selectedMetal: option
+        })(dispatch);
+      };
 
 
 
@@ -97,13 +110,13 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                                     {metalOptions.map((option, index) => (
                                         <button
                                             key={index}
-                                            onClick={() => setSelectedIndex(index)} // Set the selected button's index
+                                            onClick={() => handleMetalSelection(option,index)}                                            // Set the selected button's index
                                             className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                                         ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
                                                         ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
                                                         ring-1 border-borders`} // Conditional styles based on selection
                                         >
-                                            <p style={{color : option.color , border : `1px solid ${option.color}`}} >{option.karat}</p>
+                                            <p style={{ color: option.color, border: `1px solid ${option.color}` }} >{option.karat}</p>
                                             <div className={`-mt-0.5 md:mt-0 text-1.5sm leading-4 overflow-hidden text-ellipsis font-proximaNovaCondensed md:text-xs md:leading-tight 
                                                             electedIndex === index ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
                                                 {option.metal}

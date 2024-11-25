@@ -25,21 +25,12 @@ const RingSelector = () => {
 
 
   const handleLoadMore = () => {
-    if (pageInfo.hasNextPage) {
-      dispatch(fetchProducts({
-        after: pageInfo.endCursor,
-        priceRange: priceFilter // Optional price filter
-      }));
-      setCurrentPage(currentPage + 1);
+    if (pageInfo?.hasNextPage) {
+      dispatch(fetchProducts(pageInfo.endCursor));
     }
   };
 
-  const handlePriceFilter = (min, max) => {
-    setPriceFilter({ min, max });
-    dispatch(fetchProducts({ priceRange: { min, max } }));
-  };
-
-  console.log("products", products);
+  if (!products?.edges) return null;
 
   return (
     <div className="min-h-screen bg-white">
@@ -141,16 +132,16 @@ const RingSelector = () => {
           </div>
         </div>
         {pageInfo?.hasNextPage && (
-          <div className="text-center mt-6">
-            <button
-              onClick={handleLoadMore}
-              disabled={loading}
-              className="px-4 py-2 bg-black text-white rounded"
-            >
-              {loading ? 'Loading...' : 'Load More'}
-            </button>
-          </div>
-        )}      
+        <div className="mt-8 text-center">
+          <button
+            onClick={handleLoadMore}
+            disabled={loading}
+            className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-blue-300"
+          >
+            {loading ? 'Loading...' : 'Load More'}
+          </button>
+        </div>
+      )}    
         </div>
     </div>
   );
