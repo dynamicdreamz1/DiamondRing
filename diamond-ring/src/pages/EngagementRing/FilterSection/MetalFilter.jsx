@@ -29,7 +29,7 @@ const MetalFilter = () => {
 
     return (
         <div aria-expanded="true">
-            <div className="relative z-10">
+            <div className={`relative z-10 ${filters.activeFilter === "metal" ? "active-model" : ""}`}>
                 <button
                     onClick={() => toggleFilter('metal')}
                     type="button"

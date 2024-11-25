@@ -27,9 +27,11 @@ export const ShapeFilter = () => {
         dispatch(closeFilter({ filter }));
     };
 
+    console.log("filters",filters);
+
     return (
         <div aria-expanded="true">
-            <div className="relative z-10">
+            <div className={`relative z-10 ${filters.activeFilter === "shape" ? "active-shape" : ""}`}>
                 <button
                     onClick={() => toggleFilter('shape')}
                     type="button"
