@@ -1,16 +1,9 @@
 import React, { useState } from 'react'
 import { fetchProducts } from '../../store/actions/productActions';
 import { useDispatch } from 'react-redux';
+import { metalOptions } from '../../Utility/Constant';
 
-const metalOptions = [
-    { karat: '14K', metal: 'White Gold', value: "14k White Gold", color: '#d5d5d5' },
-    { karat: '14K', metal: 'Yellow Gold', value: "14k Yellow Gold", color: '#c99c4a' },
-    { karat: '14K', metal: 'Rose Gold', value: "14K Rose Gold", color: '#ef968d' },
-    { karat: '18K', metal: 'White Gold', value: "18K White Gold", color: '#d5d5d5' },
-    { karat: '18K', metal: 'Yellow Gold', value: "18K Yellow Gold", color: '#c99c4a' },
-    { karat: '18K', metal: 'Rose Gold', value: "18K Rose Gold", color: '#ef968d' },
-    { karat: 'PT', metal: 'Platinum', value: "PT Platinum", color: '#d5d5d5' },
-];
+
 
 const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPriceFilter }) => {
     const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
@@ -19,25 +12,12 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
 
     const handleMetalSelection = (option, index) => {
         setSelectedIndex(index);
-        
-        // Call fetchProducts with the entire option object
-        fetchProducts({
-          first: 250,
-          selectedMetal: option
-        })(dispatch);
-      };
-
-
+        fetchProducts({ first: 250, selectedMetal: option })(dispatch);
+    };
 
     return (
         <div className="hidden md:flex gap-4 mb-8 mt-8 hidden md:flex gap-2 flex-wrap items-center pt-4 border-t border-borders col-span-2 w-full">
             <div aria-expanded="true">
-                {/* <button
-                    type="button"
-                    className="fixed inset-0 cursor-default"
-                    data-close-filter-drawer="true"
-                    title="close filter"
-                ></button> */}
                 <div className="relative z-10">
                     <button
                         onClick={() => setShowFilter(!showFilter)}
@@ -60,10 +40,7 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                             </svg>
                         </svg>
                     </button>
-                    <div
-                        className={`absolute top-full left-0 w-[22.5rem] pt-3 ${!showFilter ? "invisible" : ""
-                            } `}
-                    >
+                    <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${!showFilter ? "invisible" : ""} `}>
                         <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                             <button
                                 onClick={() => setShowFilter(false)}
@@ -110,7 +87,7 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                                     {metalOptions.map((option, index) => (
                                         <button
                                             key={index}
-                                            onClick={() => handleMetalSelection(option,index)}                                            // Set the selected button's index
+                                            onClick={() => handleMetalSelection(option, index)}                                            // Set the selected button's index
                                             className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                                         ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
                                                         ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
@@ -157,10 +134,7 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
                             </svg>
                         </div>
                     </button>
-                    <div
-                        className={`pt-2 absolute top-full left-0 right-0 z-[60] ${!showPriceFilter ? "invisible" : ""
-                            } `}
-                    >
+                    <div className={`pt-2 absolute top-full left-0 right-0 z-[60] ${!showPriceFilter ? "invisible" : "" } `}>
                         <div className="border-2 border-solid border-customGray-50 rounded-md bg-white overflow-hidden">
                             <button className="block w-full text-left text-sm leading-none py-2.5 px-4 border-t-2 border-solid border-customGray-50 text-black transition-colors duration-300 hover:bg-customGray-50 bg-customGray-50">
                                 Price (low-to-high)

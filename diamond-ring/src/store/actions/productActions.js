@@ -98,37 +98,15 @@ export const PRODUCT_QUERY = `
 `;
 
 // Enhanced fetchProducts action with pagination and filtering
-export const fetchProducts = (
-  options = {
-    first: 250,
-    after: null,
-    sortKey: 'CREATED_AT',
-    reverse: false,
-    priceRange: null,
-  }
-) => async (dispatch) => {
+export const fetchProducts = (options = {first: 250,after: null,selectedMetal : ""}) => async (dispatch) => {
   try {
     dispatch(fetchProductsStart());
-
-    // Build query parameters
-    const variables = { 
-      first: options.first,
-      sortKey: options.sortKey,
-      reverse: options.reverse
-    };
-
-    // Add after cursor if provided
-    if (options.after) {
-      variables.after = options.after;
-    }
-
-    // Build price range query if specified
-    if (options.priceRange) {
-      const { min, max } = options.priceRange;
-      variables.query = `price:>${min} price:<${max}`;
-    }
-
-    const { data, errors } = await client.request(PRODUCT_QUERY, variables);
+    
+    console.log("responseStream",options);
+  
+    const { data, errors } =  await client.request(PRODUCT_QUERY, {
+      variables: {query: options.selectedMetal.value},
+    });
 
     if (errors) {
       throw new Error(errors.map(e => e.message).join(', '));
