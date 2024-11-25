@@ -43,58 +43,51 @@ const ProductCard = ({ node }) => {
       <div className="relative  aspect-square mb-4 overflow-hidden rounded-md ">
         <div className="flex flex-row justify-between items-center h-full">
 
-          <div className='arrow-main flex justify-center items-center gap-2'>
+          <div className="arrow-main flex justify-center items-center gap-2">
+            {/* Left Arrow */}
+            {images.length > 1 && (
+              <button
+                onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)}
+                className="left-arrow text-customGray-500 bg-customGray-75 p-1 rounded-full shrink-0 flex items-center justify-center"
+              >
+                <ArrowLeft className="h-4 w-4 text-gray-500" />
+              </button>
+            )}
+
+            {/* Image Index and Total Count */}
             <button
-              // className="bg-white rounded-full p-2 shadow-md mr-2 z-10 transition-colors duration-200 ease-in-out hover:bg-gray-100"
-              onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)} className='left-arrow text-customGray-500 bg-customGray-75 p-1 rounded-full shrink-0 flex items-center justify-center'
+              type="button"
+              className="flex items-center gap-0.5 p-0.5 rounded-full text-1.5xs leading-none bg-customGray-75 text-customGray-500"
             >
-              <ArrowLeft className="h-4 w-4 text-gray-500 " />
-            </button>
-            <button type="button" className="flex items-center gap-0.5 p-0.5 rounded-full text-1.5xs leading-none bg-customGray-75 text-customGray-500">
               <div className="h-4 w-4 rounded-full bg-white overflow-hidden">
-                <div className="transition-all duration-500" data-item-indicators-container="true" >
+                <div className="transition-all duration-500" data-item-indicators-container="true">
                   <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">1</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">3</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">4</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">5</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">6</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">7</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">8</div>
-                  </div>
-                  <div className="relative pt-[100%] w-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">9</div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      {selectedImage + 1}
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="h-4 w-4">
                 <div className="relative pt-[100%] w-full">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">9</div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    {images.length}
+                  </div>
                 </div>
               </div>
             </button>
-            <button
-              className="right-arrow ml-2 text-customGray-500 bg-customGray-75  rounded-full shrink-0 p-1 flex items-center justify-center"
-              onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
-            >
-              <ArrowRight className="h-4 w-4 text-gray-500" />
-            </button>
+
+            {/* Right Arrow */}
+            {images.length > 1 && (
+              <button
+                onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
+                className="right-arrow ml-2 text-customGray-500 bg-customGray-75 rounded-full shrink-0 p-1 flex items-center justify-center"
+              >
+                <ArrowRight className="h-4 w-4 text-gray-500" />
+              </button>
+            )}
           </div>
+
 
           <div className='mb-5'>
 
@@ -152,8 +145,8 @@ const ProductCard = ({ node }) => {
             <button
               key={variant.node.id}
               className={`px-3 py-1 rounded-md transition-colors duration-200 ease-in-out ${index === selectedVariant
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-black text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               onClick={() => handleVariantClick(index)}
             >
