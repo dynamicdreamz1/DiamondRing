@@ -8,6 +8,8 @@ const MetalFilter = () => {
     const filters = useSelector((state) => state.productFilter);
     const dispatch = useDispatch();
 
+    const filteredOptions = metalOptions.filter(option => option.value === filters.selectedMetal)[0];
+
     const handleMetalSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
@@ -21,6 +23,9 @@ const MetalFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
+
+    console.log("filteredOptions",filteredOptions);
+
 
     return (
         <div aria-expanded="true">
@@ -85,7 +90,7 @@ const MetalFilter = () => {
                                 :
                             </div>
                             <div className="text-base text-customGray-500 leading-none ml-0.5 ">
-                                White Gold
+                               {filteredOptions?.metal ? filteredOptions?.metal : "All"  }
                             </div>
                         </div>
                         <div className="relative">

@@ -112,7 +112,7 @@ const RingSelector = () => {
                 </button>
               </div>
             }
-            {filteredShape?.name || filteredShape?.name ?
+            {(filteredShape?.name || filteredOptions?.value)?
               <button className="hidden md:flex py-0 pl-px pr-0.5 border-0 border-b border-customGray-300 bg-transparent text-customGray-300 gap-1.5 items-center text-sm leading-tight ml-1.5">
                 <span>Reset All</span>
                 <svg className="block w-2.5 h-2.5" viewBox="0 0 14 14">

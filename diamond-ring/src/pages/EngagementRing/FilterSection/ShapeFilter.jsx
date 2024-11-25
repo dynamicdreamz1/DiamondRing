@@ -6,12 +6,12 @@ import { setFilter } from '../../../store/slices/productFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();
-    const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
+    const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
+
     const filters = useSelector((state) => state.productFilter);
 
     
     const handleShapeSelection = (option, index) => {
-        setSelectedIndex(index)
         dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         dispatch(closeFilter({  activeFilter : null }));
@@ -25,6 +25,8 @@ export const ShapeFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
+
+
 
     return (
         <div aria-expanded="true">
@@ -89,7 +91,7 @@ export const ShapeFilter = () => {
                                 :
                             </div>
                             <div className="text-base text-customGray-500 leading-none ml-0.5 ">
-                                All
+                            {filteredShape?.name ? filteredShape?.name : "All"  }
                             </div>
                         </div>
                         <div className="relative">
