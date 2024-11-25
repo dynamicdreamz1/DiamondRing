@@ -16,6 +16,7 @@ export const ShapeFilter = () => {
         dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         fetchProducts({ first: 250, selectShape: option.value, ...filters })(dispatch); // Use current filters
+        dispatch(closeFilter({  activeFilter : null }));
     };
 
 
