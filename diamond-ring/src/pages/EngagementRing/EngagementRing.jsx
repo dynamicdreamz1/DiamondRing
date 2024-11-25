@@ -58,6 +58,8 @@ const RingSelector = () => {
 
         <SelectFilter showFilter={showFilter} setShowFilter={setShowFilter} showPriceFilter={showPriceFilter} setShowPriceFilter={setShowPriceFilter} />
 
+        sasa
+
         <div className="px-5 pb-3 mt-3 md:hidden">
           <div className="flex justify-start items-center flex-wrap gap-2 relative">
             <button className="flex items-center justify-center gap-1.5 bg-white text-black text-xs leading-[0.875rem] py-1.25 px-2.5 rounded-md border border-borders">
