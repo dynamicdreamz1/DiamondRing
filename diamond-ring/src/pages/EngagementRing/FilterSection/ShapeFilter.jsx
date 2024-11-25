@@ -1,21 +1,19 @@
 import React, { useState } from 'react'
 import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../../store/actions/productActions';
 import { openFilter, closeFilter } from '../../../store/slices/productFilterSlice';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();
-    const [selectedIndex, setSelectedIndex] = useState(null); // state to track selected button
+    
     const filters = useSelector((state) => state.productFilter);
+    const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
 
     
     const handleShapeSelection = (option, index) => {
-        setSelectedIndex(index)
         dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
-        fetchProducts({ first: 250, selectShape: option.value, ...filters })(dispatch); // Use current filters
         dispatch(closeFilter({  activeFilter : null }));
     };
 
@@ -27,6 +25,8 @@ export const ShapeFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
+
+
 
     return (
         <div aria-expanded="true">
@@ -91,7 +91,7 @@ export const ShapeFilter = () => {
                                 :
                             </div>
                             <div className="text-base text-customGray-500 leading-none ml-0.5 ">
-                                All
+                            {filteredShape?.name ? filteredShape?.name : "All"  }
                             </div>
                         </div>
                         <div className="relative">
@@ -102,12 +102,12 @@ export const ShapeFilter = () => {
                                         onClick={() => handleShapeSelection(option, index)}                                            // Set the selected button's index
                                         className={`min-w-[5.125rem] shrink-0 pt-1.25 p-2 pb-1.75 md:px-1 md:min-w-0 text-center text-black select-none rounded-lg border transition-colors 
                                             ${option.color === 'gold' ? 'bg-customGold' : 'bg-customSilver'} 
-                                            ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
+                                            ${filters.selectShape === option.value ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
                                             ring-1 border-borders`} // Conditional styles based on selection
                                     >
                                         <div className="mb-2"> {option.icon}</div>
                                         <div className={`-mt-0.5 md:mt-0 text-1.5sm leading-4 overflow-hidden text-ellipsis font-proximaNovaCondensed md:text-xs md:leading-tight 
-                                                electedIndex === index ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
+                                                ${filters?.selectedMetal === option.value ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
                                             {option.name}
                                         </div>
                                     </button>
