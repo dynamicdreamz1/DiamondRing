@@ -81,13 +81,13 @@ export const ShapeFilter = () => {
                         </button>
                         <div className="flex gap-0.5 items-center mb-4">
                             <div className="text-base font-bold text-black leading-none">
-                                Metal
+                                Shape
                             </div>
                             <div className="text-base font-bold text-black leading-none ">
                                 :
                             </div>
                             <div className="text-base text-customGray-500 leading-none ml-0.5 ">
-                                White Gold
+                                All
                             </div>
                         </div>
                         <div className="relative">
