@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   selectedMetal: "",
-  shape: "",
+  selectShape: "",
   price: "",
   page: 1,
   activeFilter: null, // Tracks the currently open filter: 'metal', 'shape', or 'price'

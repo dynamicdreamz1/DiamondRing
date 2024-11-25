@@ -107,8 +107,8 @@ export const fetchProducts = (options = { first: 250, after: null }) => async (d
     if (options.selectedMetal) {
       queryParts.push(`"${options.selectedMetal}"`);
     }
-    if (options.shape) {
-      queryParts.push(`"${options.shape}"`);
+    if (options.selectShape) {
+      queryParts.push(`"${options.selectShape}"`);
     }
     if (options.price) {
       queryParts.push(options.price); // Ensure price query structure matches requirements

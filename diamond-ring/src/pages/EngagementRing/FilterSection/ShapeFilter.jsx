@@ -13,7 +13,7 @@ export const ShapeFilter = () => {
     
     const handleShapeSelection = (option, index) => {
         setSelectedIndex(index)
-        dispatch(setFilter({ key: 'shape', value: option.value })); // Update shape filter
+        dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
         dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
         fetchProducts({ first: 250, selectShape: option.value, ...filters })(dispatch); // Use current filters
     };
@@ -26,8 +26,6 @@ export const ShapeFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
-
-    console.log("filters",filters);
 
     return (
         <div aria-expanded="true">

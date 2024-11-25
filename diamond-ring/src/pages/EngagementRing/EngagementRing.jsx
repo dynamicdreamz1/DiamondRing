@@ -13,13 +13,15 @@ const RingSelector = () => {
   const [showPriceFilter, setShowPriceFilter] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [priceFilter, setPriceFilter] = useState(null);
+  const filters = useSelector((state) => state.productFilter);
+
 
   const dispatch = useDispatch();
   const { products, loading, error, pageInfo } = useSelector((state) => state.products);
 
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+    dispatch(fetchProducts(filters));
+  }, [dispatch,filters]);
 
 
   const handleLoadMore = () => {
