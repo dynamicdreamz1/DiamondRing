@@ -30,8 +30,8 @@ const SelectFilter = ({ }) => {
                         onChange={(e) => handlePriceSort(e.target.value)}
                         className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md text-black text-sm leading-none transition-shadow duration-300"
                     >
-                        <option value="low-to-high">Price (low-to-high)</option>
                         <option value="high-to-low">Price (high-to-low)</option>
+                        <option value="low-to-high">Price (low-to-high)</option>
                     </select>
                 </div>
             </div>
