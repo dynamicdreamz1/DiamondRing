@@ -7,6 +7,7 @@ import RingStyleFilter from "./RingStyleFilter";
 import ProductCard from "./ProductCard";
 import SelectFilter from "./SelectFilter";
 import { metalOptions, shapeOptions } from "../../Utility/Constant";
+import { setFilter } from "../../store/slices/productFilterSlice";
 
 const RingSelector = () => {
   const [showFilter, setShowFilter] = useState(false);
@@ -15,7 +16,7 @@ const RingSelector = () => {
 
 
   const dispatch = useDispatch();
-  const { products, loading, error, pageInfo } = useSelector((state) => state.products);
+  const { products, loading, pageInfo } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(fetchProducts(filters));
@@ -27,6 +28,15 @@ const RingSelector = () => {
       dispatch(fetchProducts(pageInfo.endCursor));
     }
   };
+
+
+
+  const handleClearFilter = (type) => {
+    dispatch(setFilter({ key: type, value: "" })); // Update shape filter
+    dispatch(setFilter({ key: 'page', value: 1 })); // Reset page to 1
+    fetchProducts({ first: 250, type: "", ...filters })(dispatch);
+  }
+
 
   if (!products?.edges) return null;
 
@@ -70,7 +80,7 @@ const RingSelector = () => {
                   </div>
                   <span>{filteredOptions.value}</span>
                 </button>
-                <button type="button" className="shrink-0">
+                <button onClick={() => handleClearFilter("selectedMetal")} type="button" className="shrink-0">
                   <svg className="shrink-0 w-7 h-7 text-customGray-300" viewBox="0 0 36 36">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g>
@@ -90,7 +100,7 @@ const RingSelector = () => {
                   </div>
                   <span>{filteredShape?.name}</span>
                 </button>
-                <button type="button" className="shrink-0">
+                <button onClick={() => handleClearFilter("selectShape")} type="button" className="shrink-0">
                   <svg className="shrink-0 w-7 h-7 text-customGray-300" viewBox="0 0 36 36">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g>
