@@ -15,8 +15,8 @@ const SelectFilter = ({ }) => {
             dispatch(setFilter({ key: "price", value: "PRICE" })); // Update shape filter
         } else if (sortOrder === "high-to-low") {
             dispatch(setFilter({ key: "price", value: "" })); // Update shape filter
-
         }
+        dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
     };
 
     return (

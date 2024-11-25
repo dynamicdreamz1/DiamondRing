@@ -14,6 +14,7 @@ export const ShapeFilter = () => {
     const handleShapeSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
         dispatch(closeFilter({  activeFilter : null }));
+        dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
     };
 
 

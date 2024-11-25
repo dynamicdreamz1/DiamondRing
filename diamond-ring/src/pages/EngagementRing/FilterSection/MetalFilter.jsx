@@ -13,6 +13,8 @@ const MetalFilter = () => {
     const handleMetalSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
         dispatch(closeFilter({  activeFilter : null }));
+        dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
+
     };
 
     const toggleFilter = (filter) => {
