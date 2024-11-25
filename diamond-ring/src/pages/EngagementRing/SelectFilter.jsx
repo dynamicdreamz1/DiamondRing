@@ -17,6 +17,7 @@ const SelectFilter = ({ setShowFilter, showFilter, showPriceFilter, setShowPrice
     const handleMetalSelection = (option, index) => {
         setSelectedIndex(index);
         fetchProducts({ first: 250, selectedMetal: option })(dispatch);
+        dispatch(closeFilter({ metal: "" }));
     };
 
     const toggleFilter = (filter) => {

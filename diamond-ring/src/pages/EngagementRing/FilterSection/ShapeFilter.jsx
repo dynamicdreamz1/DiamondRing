@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { metalOptions } from '../../../Utility/Constant'
+import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../../store/actions/productActions';
 import { openFilter, closeFilter } from '../../../store/slices/productSlice';
@@ -12,6 +12,7 @@ export const ShapeFilter = () => {
     const handleMetalSelection = (option, index) => {
         setSelectedIndex(index)
         fetchProducts({ first: 250, selectedMetal: option })(dispatch);
+        dispatch(closeFilter({ shape :"" }));
     };
 
 
@@ -22,8 +23,6 @@ export const ShapeFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
-
-
 
     return (
         <div aria-expanded="true">
@@ -93,7 +92,7 @@ export const ShapeFilter = () => {
                         </div>
                         <div className="relative">
                             <div className="md:w-full gap-2 whitespace-nowrap snap-start hiddenScroll overflow-x-auto overflow-y-hidden scroll-smooth p-px md:p-0.5 flex md:grid md:grid-cols-4 md:justify-center md:snap-center">
-                                {metalOptions.map((option, index) => (
+                                {shapeOptions.map((option, index) => (
                                     <button
                                         key={index}
                                         onClick={() => handleMetalSelection(option, index)}                                            // Set the selected button's index
@@ -102,10 +101,10 @@ export const ShapeFilter = () => {
                                             ${selectedIndex === index ? 'border-4 border-black text-sm ring-black border-black' : 'border-1'} 
                                             ring-1 border-borders`} // Conditional styles based on selection
                                     >
-                                        <p style={{ color: option.color, border: `1px solid ${option.color}` }} >{option.karat}</p>
+                                        <div className="mb-2"> {option.icon}</div>
                                         <div className={`-mt-0.5 md:mt-0 text-1.5sm leading-4 overflow-hidden text-ellipsis font-proximaNovaCondensed md:text-xs md:leading-tight 
                                                 electedIndex === index ? 'text-sm' : 'text-base'}`}> {/* Adjust text size */}
-                                            {option.metal}
+                                            {option.name}
                                         </div>
                                     </button>
                                 ))}
