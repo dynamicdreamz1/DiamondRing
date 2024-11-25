@@ -119,7 +119,7 @@ export const fetchProducts = (options = { first: 5, after: null }) => async (dis
 
     const variables = {
       first: options.first,
-      ...(options.page && { after: options.page }), // Dynamically include 'after' only if it exists
+      ...(options?.page && { after: options?.page }), // Dynamically include 'after' only if it exists
     };
 
     // Add query to variables only if it exists
@@ -131,11 +131,8 @@ export const fetchProducts = (options = { first: 5, after: null }) => async (dis
       variables,
     });
 
-    if (errors) {
-      throw new Error(errors.map((e) => e.message).join(", "));
-    }
 
-    const managePage = options.page ? true : false
+    const managePage = options?.page ? true : false
 
     dispatch(
       fetchProductsSuccess({
@@ -144,7 +141,7 @@ export const fetchProducts = (options = { first: 5, after: null }) => async (dis
       })
     );
 
-    return data.products.pageInfo;
+    return data?.products?.pageInfo;
   } catch (error) {
     dispatch(fetchProductsFailure(error.message));
     throw error;
