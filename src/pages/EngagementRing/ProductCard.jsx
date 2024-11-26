@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import { addProduct } from "../../store/slices/productSlice"
@@ -26,10 +26,17 @@ const ProductCard = ({ node }) => {
   };
 
   const handleAddRingClick = (product) => {
-    dispatch(addProduct(product)); // Update metal filter
-    setselectedProductModel(true)
+    // Dispatch product to Redux store
+    dispatch(addProduct(product));
+    
+    // Save product to localStorage
+    const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+    savedProducts.push(product);
+    localStorage.setItem('cartProducts', JSON.stringify(savedProducts));
+  
+    // Show model
+    setselectedProductModel(true);
   };
-
   const firstVariant = variants[selectedVariant]?.node;
   const price = firstVariant?.price?.amount || "0.00";
   const formattedPrice = new Intl.NumberFormat("en-US", {
@@ -41,6 +48,23 @@ const ProductCard = ({ node }) => {
     style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
   }).format(compareAtPrice)
     : null;
+
+
+    console.log("productData",productData);
+
+    useEffect(() => {
+      // Retrieve products from localStorage
+      const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  
+      // Dispatch each product to Redux if there's any data in localStorage
+      if (savedProducts.length > 0) {
+        savedProducts.forEach(product => {
+          dispatch(addProduct(product));
+        });
+      }
+    }, [dispatch]);
+
+
 
   return (
     <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">

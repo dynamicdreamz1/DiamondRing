@@ -25,7 +25,6 @@ const RingSelector = () => {
       selectedMetal: params.get("selectedMetal") || "",
       selectShape: params.get("selectShape") || "",
       price: params.get("price") || "",
-      page: params.get("page") || "",
       ringType: params.get("ringType") || "",
       activeFilter: params.get("activeFilter") || "",
     };
@@ -45,7 +44,7 @@ const RingSelector = () => {
   
     // Add only non-empty filters to the query string
     Object.keys(filters).forEach((key) => {
-      if (filters[key]) {
+      if (filters[key] && !filters.page) {
         params.set(key, filters[key]);
       }
     });
