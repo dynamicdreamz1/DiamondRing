@@ -2,17 +2,14 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import { addProduct } from "../../store/slices/productSlice"
-import { useSelector } from 'react-redux';
 import LeftSideModal from './FilterSection/LeftSideModal';
 
 const ProductCard = ({ node }) => {
+  const dispatch = useDispatch();
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(0);
   const [selectedProductModel, setselectedProductModel] = useState(false);
 
-  const { productData } = useSelector((state) => state.products);
-
-  const dispatch = useDispatch();
 
   const images = node?.images?.edges;
   const variants = node?.variants?.edges;
@@ -49,8 +46,6 @@ const ProductCard = ({ node }) => {
   }).format(compareAtPrice)
     : null;
 
-
-    console.log("productData",productData);
 
     useEffect(() => {
       // Retrieve products from localStorage
