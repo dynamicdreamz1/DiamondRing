@@ -34,6 +34,7 @@ const ProductCard = ({ node }) => {
     // Show model
     setselectedProductModel(true);
   };
+  
   const firstVariant = variants[selectedVariant]?.node;
   const price = firstVariant?.price?.amount || "0.00";
   const formattedPrice = new Intl.NumberFormat("en-US", {
