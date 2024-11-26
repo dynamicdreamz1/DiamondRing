@@ -15,7 +15,7 @@ const TabComponent = () => {
         <>
         <div className="container mx-auto px-4 py-8">
             <div className="steps-configuration-wrapper grid grid-cols-3 w-full items-center">
-                <div className="flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-20 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg ">
+                <div className="flex items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-30 bg-white border-black z-20 pl-2.5 py-1.75 md:pl-6 md:py-1.5 border-2 rounded-l-lg ">
                     <div class="step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
                         1
                     </div>
@@ -81,10 +81,10 @@ const TabComponent = () => {
                             </svg>
                         </div>
                     </div>
-                    <div class="absolute left-full after:content-[''] after:absolute border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px"></div>
+                    <div class="absolute left-full after:content-[''] after:absolute border-y-[21px] border-l-[13px] border-y-[transparent] border-l-black after:border-y-[18px] after:border-l-[11px] after:border-y-[transparent] after:border-l-white after:-top-[18px] after:-left-[13px] md:border-l-[16px] md:border-y-[36px] md:after:border-y-[34px] md:after:border-l-[15px] md:after:-top-[34px] md:after:-left-[17px] -top-0.5 -bottom-0.5"></div>
                 </div>
                 {/* <div className="h-px bg-gray-300 flex-1 mx-4"></div> */}
-                <div className="flex w-full items-center gap-1 md:gap-4 md:p-2 relative border-r-0 pr-1 z-30 bg-white border-black z-20 pl-2.5 py-1.75 md:pl-6 md:py-1.5 border-2 rounded-l-lg">
+                <div className="flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-20 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg ">
                     <div class="step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-semibold">
                         2
                     </div>
@@ -149,7 +149,7 @@ const TabComponent = () => {
                             </svg>
                         </div>
                     </div>
-                    <div class="absolute left-full after:content-[''] after:absolute border-y-[21px] border-l-[13px] border-y-[transparent] border-l-black after:border-y-[18px] after:border-l-[11px] after:border-y-[transparent] after:border-l-white after:-top-[18px] after:-left-[13px] md:border-l-[16px] md:border-y-[36px] md:after:border-y-[34px] md:after:border-l-[15px] md:after:-top-[34px] md:after:-left-[17px] -top-0.5 -bottom-0.5"></div>
+                    <div class="absolute left-full after:content-[''] after:absolute border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px"></div>
                 </div>
                 {/* <div className="h-px bg-gray-300 flex-1 mx-4"></div> */}
                 <div className="flex w-full items-center gap-1 md:gap-4 md:p-2 relative border-r-0 pr-3 md:pr-4 bg-customGray-50 border-steps-configuration-border pl-4 py-1.25 md:pl-11 md:py-0.75 border">

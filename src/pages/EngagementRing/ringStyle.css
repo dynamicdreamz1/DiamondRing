@@ -4329,9 +4329,9 @@ input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search
 }
 
 .border-black {
-    /* --tw-border-opacity: 1; */
-    /* border-color:#000; */
-    /* border-color:rgba(0,0,0,var(--tw-border-opacity)); */
+    --tw-border-opacity: 1; 
+    border-color:#000 !important;
+     border-color:rgba(0,0,0,var(--tw-border-opacity));
 }
 
 .border-borders {
