@@ -14,7 +14,7 @@ const TabComponent = () => {
             <div className="container mx-auto px-4 py-8">
                 <div className="steps-configuration-wrapper grid grid-cols-3 w-full items-center">
                     <div className="flex w-full items-center gap-1 md:gap-4 md:p-2 relative border-r-0 pr-1 z-30 bg-white border-black z-20 pl-2.5 py-1.75 md:pl-6 md:py-1.5 border-2 rounded-l-lg">
-                        <div class="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
+                        <div className="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
                             1
                         </div>
                         <div className="ml-0 text-left step-config-titles overflow-hidden whitespace-nowrap">
@@ -25,27 +25,27 @@ const TabComponent = () => {
                                 SETTING
                             </div>
                         </div>
-                        <div class="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
-                            <div class="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
+                        <div className="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
+                            <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
                                 0.5 Carat I VS2 Round Natural Diamond
                             </div>
-                            <div class="step-config-price-and-buttons flex gap-2 items-center justify-end">
+                            <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
                                 <button
                                     type="button"
-                                    class="text-customGray-200 underline text-xs leading-none"
+                                    className="text-customGray-200 underline text-xs leading-none"
                                     onClick={() => toggleDrawer(true)}
                                 >
                                     View
                                 </button>
-                                <div class="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
+                                <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
                                     <div>$736</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="step-config-image-container">
-                            <div class="step-config-image relative w-5 h-5 md:w-10 md:h-14">
+                        <div className="step-config-image-container">
+                            <div className="step-config-image relative w-5 h-5 md:w-10 md:h-14">
                                 <svg
-                                    class="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:w-3/4 md:h-3/4"
+                                    className="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:w-3/4 md:h-3/4"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -79,11 +79,11 @@ const TabComponent = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute left-full after:content-[''] after:absolute border-y-[21px] border-l-[13px] border-y-[transparent] border-l-black after:border-y-[18px] after:border-l-[11px] after:border-y-[transparent] after:border-l-white after:-top-[18px] after:-left-[13px] md:border-l-[16px] md:border-y-[36px] md:after:border-y-[34px] md:after:border-l-[15px] md:after:-top-[34px] md:after:-left-[17px] -top-0.5 -bottom-0.5"></div>
+                        <div className="absolute left-full after:content-[''] after:absolute border-y-[21px] border-l-[13px] border-y-[transparent] border-l-black after:border-y-[18px] after:border-l-[11px] after:border-y-[transparent] after:border-l-white after:-top-[18px] after:-left-[13px] md:border-l-[16px] md:border-y-[36px] md:after:border-y-[34px] md:after:border-l-[15px] md:after:-top-[34px] md:after:-left-[17px] -top-0.5 -bottom-0.5"></div>
                     </div>
                     {/* <div className="h-px bg-gray-300 flex-1 mx-4"></div> */}
                     <div className="flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-20 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg">
-                        <div class="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-semibold">
+                        <div className="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-semibold">
                             2
                         </div>
                         <div className="ml-- text-left step-config-titles overflow-hidden whitespace-nowrap">
@@ -94,26 +94,26 @@ const TabComponent = () => {
                                 STONE
                             </div>
                         </div>
-                        <div class="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
-                            <div class="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
-                                The Lexie
+                        <div className="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
+                            <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
+                                {/* The Lexie */}
                             </div>
-                            <div class="step-config-price-and-buttons flex gap-2 items-center justify-end">
+                            <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
                                 <button
                                     type="button"
-                                    class="text-customGray-200 underline text-xs leading-none"
+                                    className="text-customGray-200 underline text-xs leading-none"
                                 >
-                                    Change
+                                    {/* Change */}
                                 </button>
-                                <div class="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
-                                    <div>$750</div>
+                                <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
+                                    {/* <div>$750</div> */}
                                 </div>
                             </div>
                         </div>
-                        <div class="step-config-image-container">
-                            <div class="step-config-image relative w-5 h-5 md:w-10 md:h-14">
+                        <div className="step-config-image-container">
+                            <div className="step-config-image relative w-5 h-5 md:w-10 md:h-14">
                                 <svg
-                                    class="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:w-3/4 md:h-3/4"
+                                    className="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:w-3/4 md:h-3/4"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -147,11 +147,11 @@ const TabComponent = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute left-full after:content-[''] after:absolute border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px"></div>
+                        <div className="absolute left-full after:content-[''] after:absolute border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px"></div>
                     </div>
                     {/* <div className="h-px bg-gray-300 flex-1 mx-4"></div> */}
                     <div className="flex w-full items-center gap-1 md:gap-4 md:p-2 relative border-r-0 pr-3 md:pr-4 bg-customGray-50 border-steps-configuration-border pl-4 py-1.25 md:pl-11 md:py-0.75 border">
-                        <div class="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
+                        <div className="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
                             3
                         </div>
                         <div className="ml-0 text-left step-config-titles overflow-hidden whitespace-nowrap">
@@ -162,20 +162,20 @@ const TabComponent = () => {
                                 RING
                             </div>
                         </div>
-                        <div class="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
-                            <div class="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
+                        <div className="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
+                            <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
                                 Total Price
                             </div>
-                            <div class="step-config-price-and-buttons flex gap-2 items-center justify-end">
-                                <div class="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
+                            <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
+                                <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
                                     <div>$1,486</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="step-config-image-container">
-                            <div class="step-config-image relative w-5 h-5 md:w-10 md:h-14">
+                        <div className="step-config-image-container">
+                            <div className="step-config-image relative w-5 h-5 md:w-10 md:h-14">
                                 <svg
-                                    class="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    className="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -214,7 +214,7 @@ const TabComponent = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute right-0  after:content-[''] after:absolute bg-white border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px"></div>
+                        <div className="absolute right-0  after:content-[''] after:absolute bg-white border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px"></div>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ const productSlice = createSlice({
     error: null,
     pageInfo: null,
     activeFilter: null, // Tracks the currently open filter: 'metal', 'shape', or 'price'
+    productData : {},
   },
   reducers: {
     fetchProductsStart: (state) => {
@@ -49,6 +50,9 @@ const productSlice = createSlice({
     closeFilter(state) {
       state.activeFilter = null; // Close all filters
     },
+    addProduct(state,action) {
+      state.productData = action.payload; // Close all filters
+    },
   }
 });
 
@@ -56,7 +60,8 @@ export const {
   fetchProductsStart,
   fetchProductsSuccess,
   fetchProductsFailure,
-  openFilter, closeFilter
+  openFilter, closeFilter,
+  addProduct
 } = productSlice.actions;
 
 export default productSlice.reducer;

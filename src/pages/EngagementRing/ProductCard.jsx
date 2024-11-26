@@ -1,9 +1,18 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
+import { useDispatch } from 'react-redux';
+import { addProduct } from "../../store/slices/productSlice"
+import { useSelector } from 'react-redux';
+import LeftSideModal from './FilterSection/LeftSideModal';
 
 const ProductCard = ({ node }) => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(0);
+  const [selectedProductModel, setselectedProductModel] = useState(false);
+
+  const { productData } = useSelector((state) => state.products);
+
+  const dispatch = useDispatch();
 
   const images = node?.images?.edges;
   const variants = node?.variants?.edges;
@@ -16,20 +25,24 @@ const ProductCard = ({ node }) => {
     setSelectedVariant(index);
   };
 
+  const handleAddRingClick = (product) => {
+    dispatch(addProduct(product)); // Update metal filter
+    setselectedProductModel(true)
+  };
+
   const firstVariant = variants[selectedVariant]?.node;
   const price = firstVariant?.price?.amount || "0.00";
   const formattedPrice = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: firstVariant?.price?.currencyCode || "USD",
+    style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
   }).format(price);
 
   const compareAtPrice = firstVariant?.compareAtPrice;
-  const formattedCompareAtPrice = compareAtPrice
-    ? new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: firstVariant?.price?.currencyCode || "USD",
-    }).format(compareAtPrice)
+  const formattedCompareAtPrice = compareAtPrice ? new Intl.NumberFormat("en-US", {
+    style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
+  }).format(compareAtPrice)
     : null;
+
+    console.log("productData",productData);
 
   return (
     <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">
@@ -39,12 +52,11 @@ const ProductCard = ({ node }) => {
       >
         <Heart className="h-6 w-6 text-gray-400 group-hover:text-red-500" />
       </button>
-      <div class="hidden z-[1] bg-white  md:block absolute  -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl shadow-[0px_6px_20px_0_#00000060] -bottom-48"></div>
+      <div className="hidden z-[1] bg-white  md:block absolute  -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl shadow-[0px_6px_20px_0_#00000060] -bottom-48"></div>
       <div className="relative  aspect-square mb-4 overflow-hidden rounded-md ">
         <div className="flex flex-row justify-between items-center h-full">
 
           <div className="arrow-main flex justify-center items-center gap-2">
-            {/* Left Arrow */}
             {images.length > 1 && (
               <button
                 onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)}
@@ -54,7 +66,6 @@ const ProductCard = ({ node }) => {
               </button>
             )}
 
-            {/* Image Index and Total Count */}
             <button
               type="button"
               className="flex items-center gap-0.5 p-0.5 rounded-full text-1.5xs leading-none bg-customGray-75 text-customGray-500"
@@ -90,7 +101,6 @@ const ProductCard = ({ node }) => {
 
 
           <div className='mb-5'>
-
             {images.map((image, index) => (
               <img
                 key={image.node.id}
@@ -137,7 +147,7 @@ const ProductCard = ({ node }) => {
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
           <a href="/ring-select/ring-detail-page" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">More Info</a>
-          <a href="" className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">Complete your ring</a>
+          <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">Add Diamond</button>
         </div>
 
         <div className="flex items-center space-x-2">
@@ -155,6 +165,7 @@ const ProductCard = ({ node }) => {
           ))}
         </div>
       </div>
+      <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
     </div>
   );
 };
