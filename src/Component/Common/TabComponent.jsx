@@ -1,13 +1,24 @@
 import React from 'react'
 import SidebarDimond from './SidebarDimond'
+import { useSelector } from 'react-redux';
 
 const TabComponent = () => {
 
     const [open, setOpen] = React.useState(false);
+    const { productData } = useSelector((state) => state.products);
 
-    const toggleDrawer = (newOpen)=> {
-      setOpen(newOpen);
+
+    const toggleDrawer = (newOpen) => {
+        setOpen(newOpen);
     };
+
+    const hasProductDetails = productData && productData.title && productData.variants?.edges?.length > 0;
+
+    // Get price if available
+    const price = hasProductDetails
+        ? productData.variants.edges[0].node.price.amount
+        : null;
+
 
     return (
         <>
@@ -25,22 +36,30 @@ const TabComponent = () => {
                                 SETTING
                             </div>
                         </div>
+
+
                         <div className="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
-                            <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
-                                0.5 Carat I VS2 Round Natural Diamond
-                            </div>
-                            <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
-                                <button
-                                    type="button"
-                                    className="text-customGray-200 underline text-xs leading-none"
-                                    onClick={() => toggleDrawer(true)}
-                                >
-                                    View
-                                </button>
-                                <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
-                                    <div>$736</div>
-                                </div>
-                            </div>
+                            {hasProductDetails && (
+                                <>
+                                    <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
+                                        {productData.title}
+                                    </div>
+                                    <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
+                                        <button
+                                            type="button"
+                                            className="text-customGray-200 underline text-xs leading-none"
+                                            onClick={() => toggleDrawer(true)}
+                                        >
+                                            Change
+                                        </button>
+                                        {price && (
+                                            <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
+                                                <div>${price}</div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </>
+                            )}
                         </div>
                         <div className="step-config-image-container">
                             <div className="step-config-image relative w-5 h-5 md:w-10 md:h-14">
