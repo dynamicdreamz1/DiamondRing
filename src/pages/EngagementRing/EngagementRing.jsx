@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./ringStyle.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/actions/productActions";
@@ -8,15 +8,54 @@ import ProductCard from "./ProductCard";
 import SelectFilter from "./SelectFilter";
 import { metalOptions, ringStyles, shapeOptions } from "../../Utility/Constant";
 import { resetFilters, setFilter } from "../../store/slices/productFilterSlice";
+import { useLocation ,useNavigate } from "react-router-dom";
 
 const RingSelector = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const filters = useSelector((state) => state.productFilter);
   const { products, loading, pageInfo } = useSelector((state) => state.products);
 
+
   useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const initialFilters = {
+      selectedMetal: params.get("selectedMetal") || "",
+      selectShape: params.get("selectShape") || "",
+      price: params.get("price") || "",
+      page: params.get("page") || "",
+      ringType: params.get("ringType") || "",
+      activeFilter: params.get("activeFilter") || "",
+    };
+  
+    // Dispatch individual actions only for non-empty values
+    Object.keys(initialFilters).forEach((key) => {
+      // Only dispatch if the filter value is not empty
+      if (initialFilters[key]) {
+        dispatch(setFilter({ key, value: initialFilters[key] }));
+      }
+    });
+  }, [location.search, dispatch]);
+  
+  useEffect(() => {
+    // Only update the query string and dispatch fetchProducts if filters have valid values
+    const params = new URLSearchParams();
+  
+    // Add only non-empty filters to the query string
+    Object.keys(filters).forEach((key) => {
+      if (filters[key]) {
+        params.set(key, filters[key]);
+      }
+    });
+  
+    // Update the URL with the current filters
+    navigate(`?${params.toString()}`, { replace: true });
+  
+    // Fetch products with the current filters
     dispatch(fetchProducts(filters));
-  }, [dispatch, filters]);
+  }, [filters, navigate, dispatch]);
 
 
   const handleLoadMore = () => {
@@ -38,7 +77,6 @@ const RingSelector = () => {
   const filteredOptions = metalOptions.filter(option => option.value === filters.selectedMetal)[0];
   const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
   const filteredRingType = ringStyles.filter(option => option.name === filters.ringType)[0];
-
 
   return (
     <div className="min-h-screen bg-white">

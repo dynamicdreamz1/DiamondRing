@@ -42,8 +42,6 @@ const ProductCard = ({ node }) => {
   }).format(compareAtPrice)
     : null;
 
-    console.log("productData",productData);
-
   return (
     <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">
       <button
