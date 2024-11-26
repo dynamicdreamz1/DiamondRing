@@ -1,7 +1,18 @@
 import React from 'react'
+import SidebarDimond from './SidebarDimond'
 
 const TabComponent = () => {
+
+
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('open');
+    }
+
+
+
     return (
+        <>
         <div className="container mx-auto px-4 py-8">
             <div className="steps-configuration-wrapper grid grid-cols-3 w-full items-center">
                 <div className="flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-20 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg ">
@@ -24,6 +35,7 @@ const TabComponent = () => {
                             <button
                                 type="button"
                                 class="text-customGray-200 underline text-xs leading-none"
+                                onclick={()=>toggleSidebar()}
                             >
                                 View
                             </button>
@@ -208,6 +220,9 @@ const TabComponent = () => {
                 </div>
             </div>
         </div>
+                                <SidebarDimond />
+                                </>
+
     )
 }
 

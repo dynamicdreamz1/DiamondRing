@@ -77,3 +77,12 @@
     /* transform: translate(455.344px, -13px); */
     transform: translateY(-13px);
 }
+
+
+#sidebar {
+  transform: translateX(-100%);
+}
+
+#sidebar.open {
+  transform: translateX(0);
+}
