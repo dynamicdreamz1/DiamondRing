@@ -6,7 +6,6 @@ const initialState = {
   price: "",
   page: "",
   ringType:"",
-  activeFilter: null, // Tracks the currently open filter: 'metal', 'shape', or 'price'
 };
 
 const filterSlice = createSlice({
