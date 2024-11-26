@@ -1,18 +1,20 @@
 import React from 'react'
-import { closeFilter, openFilter } from '../../../store/slices/productFilterSlice';
+import { openFilter, closeFilter } from '../../../store/slices/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { metalOptions } from '../../../Utility/Constant';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
 const MetalFilter = () => {
     const filters = useSelector((state) => state.productFilter);
+    const { activeFilter } = useSelector((state) => state.products);
+
     const dispatch = useDispatch();
 
     const filteredOptions = metalOptions.filter(option => option.value === filters.selectedMetal)[0];
 
     const handleMetalSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
-        dispatch(closeFilter({  activeFilter : null }));
+        dispatch(closeFilter({ activeFilter: null }));
         dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
 
     };
@@ -28,7 +30,7 @@ const MetalFilter = () => {
 
     return (
         <div aria-expanded="true">
-            <div className={`relative z-10 ${filters.activeFilter === "metal" ? "active-model" : ""}`}>
+            <div className={`relative z-10 ${activeFilter === "metal" ? "active-model" : ""}`}>
                 <button
                     onClick={() => toggleFilter('metal')}
                     type="button"
@@ -50,7 +52,7 @@ const MetalFilter = () => {
                         </svg>
                     </svg>
                 </button>
-                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${filters.activeFilter === "metal" ? "" : "invisible"} `}>
+                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${activeFilter === "metal" ? "" : "invisible"} `}>
                     <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                         <button
                             onClick={() => toggleClose("")}
@@ -89,7 +91,7 @@ const MetalFilter = () => {
                                 :
                             </div>
                             <div className="text-base text-customGray-500 leading-none ml-0.5 ">
-                               {filteredOptions?.metal ? filteredOptions?.metal : "All"  }
+                                {filteredOptions?.metal ? filteredOptions?.metal : "All"}
                             </div>
                         </div>
                         <div className="relative">

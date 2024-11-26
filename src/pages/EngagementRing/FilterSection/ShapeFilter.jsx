@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
-import { openFilter, closeFilter } from '../../../store/slices/productFilterSlice';
+import { openFilter, closeFilter } from '../../../store/slices/productSlice';
 import { setFilter } from '../../../store/slices/productFilterSlice';
 
 export const ShapeFilter = () => {
@@ -9,6 +9,7 @@ export const ShapeFilter = () => {
     
     const filters = useSelector((state) => state.productFilter);
     const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
+    const { activeFilter } = useSelector((state) => state.products);
 
     
     const handleShapeSelection = (option, index) => {
@@ -30,7 +31,7 @@ export const ShapeFilter = () => {
 
     return (
         <div aria-expanded="true">
-            <div className={`relative z-10 ${filters.activeFilter === "shape" ? "active-shape" : ""}`}>
+            <div className={`relative z-10 ${activeFilter === "shape" ? "active-shape" : ""}`}>
                 <button
                     onClick={() => toggleFilter('shape')}
                     type="button"
@@ -52,7 +53,7 @@ export const ShapeFilter = () => {
                         </svg>
                     </svg>
                 </button>
-                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${filters.activeFilter === 'shape' ? "" : "invisible"} `}>
+                <div className={`absolute top-full left-0 w-[22.5rem] pt-3 ${activeFilter === 'shape' ? "" : "invisible"} `}>
                     <div className="p-5.5 bg-white rounded-2xl shadow-filter-dropdown">
                         <button
                             onClick={() => toggleClose("")}

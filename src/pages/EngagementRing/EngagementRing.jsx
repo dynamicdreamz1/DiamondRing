@@ -6,16 +6,12 @@ import TabComponent from "../../Component/Common/TabComponent";
 import RingStyleFilter from "./RingStyleFilter";
 import ProductCard from "./ProductCard";
 import SelectFilter from "./SelectFilter";
-import { metalOptions, shapeOptions } from "../../Utility/Constant";
+import { metalOptions, ringStyles, shapeOptions } from "../../Utility/Constant";
 import { resetFilters, setFilter } from "../../store/slices/productFilterSlice";
 
 const RingSelector = () => {
-  const [showFilter, setShowFilter] = useState(false);
-  const [showPriceFilter, setShowPriceFilter] = useState(false);
-  const filters = useSelector((state) => state.productFilter);
-
-
   const dispatch = useDispatch();
+  const filters = useSelector((state) => state.productFilter);
   const { products, loading, pageInfo } = useSelector((state) => state.products);
 
 
@@ -30,12 +26,9 @@ const RingSelector = () => {
     }
   };
 
-
-
   const handleClearFilter = (type) => {
     dispatch(setFilter({ key: type, value: "" })); // Update shape filter
   }
-
 
   const handleResetFilters = () => {
     dispatch(resetFilters()); // Dispatch the reset action
@@ -45,6 +38,9 @@ const RingSelector = () => {
 
   const filteredOptions = metalOptions.filter(option => option.value === filters.selectedMetal)[0];
   const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
+  const filteredRingType = ringStyles.filter(option => option.name === filters.ringType)[0];
+
+  console.log("filteredRingType",filteredRingType,filteredShape);
 
 
   return (
@@ -71,10 +67,33 @@ const RingSelector = () => {
 
         <RingStyleFilter />
 
-        <SelectFilter showFilter={showFilter} setShowFilter={setShowFilter} showPriceFilter={showPriceFilter} setShowPriceFilter={setShowPriceFilter} />
+        <SelectFilter />
 
         <div className="hidden md:block col-span-2 mb-10">
           <div className="flex gap-2 flex-wrap items-center col-span-2">
+
+          {filteredRingType?.name &&
+              <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
+                <button type="button" className="flex md:gap-0.5 items-center">
+                  <div className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center overflow-hidden ">
+                    {filteredRingType.icon}
+                  </div>
+                  <span>{filteredRingType?.name}</span>
+                </button>
+                <button onClick={() => handleClearFilter("ringType")} type="button" className="shrink-0">
+                  <svg className="shrink-0 w-7 h-7 text-customGray-300" viewBox="0 0 36 36">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                        <path d="M12.6201 12.62L23.3799 23.3798" stroke="currentColor" stroke-miterlimit="10"></path>
+                        <path d="M12.6201 23.3798L23.3799 12.62" stroke="currentColor" stroke-miterlimit="10"></path>
+                      </g>
+                    </svg>
+                  </svg>
+                </button>
+              </div>
+            }
+
+
             {filteredOptions?.value &&
               <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
                 <button type="button" className="flex md:gap-0.5 items-center">
@@ -115,7 +134,7 @@ const RingSelector = () => {
                 </button>
               </div>
             }
-            {(filteredShape?.name || filteredOptions?.value) ?
+            {(filteredShape?.name || filteredOptions?.value || filteredRingType?.name) ?
               <button onClick={()=>handleResetFilters()} className="hidden md:flex py-0 pl-px pr-0.5 border-0 border-b border-customGray-300 bg-transparent text-customGray-300 gap-1.5 items-center text-sm leading-tight ml-1.5">
                 <span>Reset All</span>
                 <svg className="block w-2.5 h-2.5" viewBox="0 0 14 14">

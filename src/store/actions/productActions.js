@@ -107,40 +107,38 @@ export const fetchProducts = (options = { first: 6, after: null }) => async (dis
     if (options.selectedMetal) {
       queryParts.push(`"${options.selectedMetal}"`);
     }
+
     if (options.selectShape) {
       queryParts.push(`"${options.selectShape}"`);
     }
 
-    console.log("options",options);
-    // Only construct the query if there are query parts
+    if (options.ringType) {
+      queryParts.push(`"${options.ringType}"`);
+    }
+
     const query = queryParts.length > 0  ? `tag:${queryParts.join(",")}` : null;
     
-
     const variables = {
       first: options.first,
       ...(options?.page && { after: options?.page }), // Dynamically include 'after' only if it exists
       ...(options.price && { sortKey: options.price }),
     };
 
-    
-
     // Add query to variables only if it exists
     if (query) {
       variables.query = query;
     }
 
-    const { data, errors } = await client.request(PRODUCT_QUERY, {
+    const { data } = await client.request(PRODUCT_QUERY, {
       variables,
     });
-
 
     const managePage = options?.page ? true : false
 
     dispatch(
       fetchProductsSuccess({
         products: data.products,
-        append: managePage,
-        
+        append: managePage,        
       })
     );
 

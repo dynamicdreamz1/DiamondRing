@@ -5,6 +5,7 @@ const initialState = {
   selectShape: "",
   price: "",
   page: "",
+  ringType:"",
   activeFilter: null, // Tracks the currently open filter: 'metal', 'shape', or 'price'
 };
 
@@ -23,21 +24,9 @@ const filterSlice = createSlice({
     resetFilters(state) {
       Object.keys(state).forEach(key => (state[key] = key === "page" ? "" : "")); // Reset all filters except page
     },
-    openFilter(state, action) {
-      const { filter } = action.payload;
-
-      if (state.activeFilter === filter) {
-        state.activeFilter = null; // Close the currently open filter
-      } else {
-        // Otherwise, set the new filter as active and close any other filter
-        state.activeFilter = filter;
-      }
-    },
-    closeFilter(state) {
-      state.activeFilter = null; // Close all filters
-    },
+    
   },
 });
 
-export const { setFilter, clearFilter, resetFilters, openFilter, closeFilter } = filterSlice.actions;
+export const { setFilter, clearFilter, resetFilters } = filterSlice.actions;
 export default filterSlice.reducer;
