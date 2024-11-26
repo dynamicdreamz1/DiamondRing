@@ -192,7 +192,7 @@ const RingSelector = () => {
         </div>
 
         {/* Ring Grid */}
-        <div className="container mx-auto px-4">
+        <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products?.edges?.length > 0 ?
               products?.edges?.map(({ node }) => {

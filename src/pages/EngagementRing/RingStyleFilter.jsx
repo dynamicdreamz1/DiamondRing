@@ -3,7 +3,7 @@ import { ringStyles } from '../../Utility/Constant'
 
 const RingStyleFilter = () => {
   return (
-    <div className="md:w-full gap-2 whitespace-nowrap snap-start hiddenScroll overflow-x-auto overflow-y-hidden scroll-smooth p-px md:p-0.5 grid grid-cols-4 md:flex md:gap-6 md:justify-center md:snap-center">
+    <div className="md:w-full gap-2 whitespace-nowrap snap-start hiddenScroll overflow-x-auto overflow-y-hidden scroll-smooth p-px md:p-0.5  flex gap-6 md:justify-center snap-center">
           {ringStyles.map((style) => (
             <div
               key={style.id}
