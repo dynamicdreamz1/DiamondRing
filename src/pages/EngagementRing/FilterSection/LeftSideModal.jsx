@@ -1,19 +1,8 @@
 import React from "react";
-import { Modal, Box, Typography, Button } from "@mui/material";
-import { addProduct } from "../../../store/slices/productSlice";
+import { Modal, Box } from "@mui/material";
 
 const LeftSideModal = ({ selectedProductModel, setselectedProductModel }) => {
   const handleClose = () => setselectedProductModel(false);
-
-  // const handleRemoveRingClick = (product) => {
-  //   // 1. Dispatch the action to remove the product from Redux
-  //   dispatch(addProduct({}));
-  
-  //   // 2. Remove the product from localStorage
-  //   const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-  //   const updatedProducts = savedProducts.filter(item => item.id !== product.id); // Filter out the product by ID
-  //   localStorage.setItem('cartProducts', JSON.stringify(updatedProducts));
-  //   };
 
   return (
     <>
