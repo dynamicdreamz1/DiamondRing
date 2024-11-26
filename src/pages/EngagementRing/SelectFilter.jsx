@@ -3,10 +3,13 @@ import { ShapeFilter } from './FilterSection/ShapeFilter';
 import MetalFilter from './FilterSection/MetalFilter';
 import { setFilter } from '../../store/slices/productFilterSlice';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 
 const SelectFilter = ({ }) => {
+    const filters = useSelector((state) => state.productFilter);
+
 
     const dispatch = useDispatch();
     
@@ -30,8 +33,17 @@ const SelectFilter = ({ }) => {
                         onChange={(e) => handlePriceSort(e.target.value)}
                         className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md text-black text-sm leading-none transition-shadow duration-300"
                     >
-                        <option value="high-to-low">Price (high-to-low)</option>
-                        <option value="low-to-high">Price (low-to-high)</option>
+                      {filters?.price === "PRICE" ? (
+                            <>
+                                <option value="low-to-high">Price (low-to-high)</option>
+                                <option value="high-to-low">Price (high-to-low)</option>
+                            </>
+                        ) : (
+                            <>
+                                <option value="high-to-low">Price (high-to-low)</option>
+                                <option value="low-to-high">Price (low-to-high)</option>
+                            </>
+                        )}
                     </select>
                 </div>
             </div>

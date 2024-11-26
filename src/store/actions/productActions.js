@@ -116,12 +116,13 @@ export const fetchProducts = (options = { first: 8, after: null }) => async (dis
       queryParts.push(`"${options.ringType}"`);
     }
 
-    const query = queryParts.length > 0  ? `tag:${queryParts.join(",")}` : null;
-    
+    const query = queryParts.length > 0 ? `tag:${queryParts.join(",")}` : null;
+
+    // Check if price is blank, set the sortKey to "PRICE" and reverse to true
     const variables = {
       first: options.first,
       ...(options?.page && { after: options?.page }), // Dynamically include 'after' only if it exists
-      ...(options.price && { sortKey: options.price }),
+      ...(options.price ? { sortKey: options.price } : { sortKey: "PRICE", reverse: true }), // Handle blank price
     };
 
     // Add query to variables only if it exists
@@ -133,12 +134,12 @@ export const fetchProducts = (options = { first: 8, after: null }) => async (dis
       variables,
     });
 
-    const managePage = options?.page ? true : false
+    const managePage = options?.page ? true : false;
 
     dispatch(
       fetchProductsSuccess({
         products: data.products,
-        append: managePage,        
+        append: managePage,
       })
     );
 
