@@ -13,7 +13,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer }) => {
   const primaryImage = productData.images?.edges[0]?.node;
 
   return (
-    <Drawer open={open}>
+    <Drawer open={open} className='side-bar-main-sec' >
       <div id="sidebar" className='side-bar-main h-full w-full max-w-[300px] relative pointer-events-auto flex flex-col bg-white md:shadow-[0px_4px_32px_rgba(0,0,0,0.25)] md:shadow-[rgba(0,0,0,0.25)]' style={{ transform: "translateX(0px) translateZ(0px)" }}>
         <button 
           onClick={() => toggleDrawer(false)} 
