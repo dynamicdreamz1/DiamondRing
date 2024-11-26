@@ -11,7 +11,7 @@ const SidebarDimond = ({ toggleDrawer, open }) => {
         <div className='w-full h-full flex items-center justify-start pointer-events-none'>
           <div id="sidebar" className='side-bar-main h-full w-full max-w-[300px] relative pointer-events-auto flex flex-col bg-white md:shadow-[0px_4px_32px_rgba(0,0,0,0.25)] md:shadow-[rgba(0,0,0,0.25)]' style={{ transform: "translateX(0px) translateZ(0px)" }}>
             <button onClick={() => toggleDrawer(false)} type="button" className="bg-transparent absolute top-1 right-1 z-10 border-none outline-none w-9 h-9 text-black">
-              <svg class="block w-full h-full" aria-hidden="true" focusable="false" viewBox="0 0 36 36">
+              <svg className="block w-full h-full" aria-hidden="true" focusable="false" viewBox="0 0 36 36">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g>
                   <path d="M12.6201 12.62L23.3799 23.3798" stroke="currentColor" stroke-miterlimit="10"></path>
                   <path d="M12.6201 23.3798L23.3799 12.62" stroke="currentColor" stroke-miterlimit="10"></path></g>

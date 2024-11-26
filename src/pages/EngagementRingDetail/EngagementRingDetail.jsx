@@ -71,7 +71,7 @@ const EngagementRingDetail = () => {
                             <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>$1,486</span></p>
                             <a href="#" className='ExtrasButton inline-flex items-center gap-1'>
                               Extras
-                              <span class="ExtrasButton-circle rounded-full bg-white flex items-center justify-center"><svg class="svg-icon" viewBox="0 0 5 5"><svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.125" width="0.75" height="5" fill="currentColor"></rect><rect y="2.875" width="0.75" height="5" transform="rotate(-90 0 2.875)" fill="currentColor"></rect></svg></svg></span>
+                              <span className="ExtrasButton-circle rounded-full bg-white flex items-center justify-center"><svg className="svg-icon" viewBox="0 0 5 5"><svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.125" width="0.75" height="5" fill="currentColor"></rect><rect y="2.875" width="0.75" height="5" transform="rotate(-90 0 2.875)" fill="currentColor"></rect></svg></svg></span>
                             </a>
                         </div>
                         <div className="tangiblee-wrapper pdp">
@@ -80,7 +80,7 @@ const EngagementRingDetail = () => {
                         <div className='drop-hint'>
                           <a href="#" className='inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto DropAHint-button flex flex-col items-center justify-center gap-1 p-0 ml-2 mt-1'>
                           <svg className="block w-8 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 53 40"><svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.9778 1.02103H3.02218C1.90536 1.02103 1 1.92639 1 3.04321V17.9568C1 19.0736 1.90536 19.979 3.02218 19.979H24.9778C26.0946 19.979 27 19.0736 27 17.9568V3.04321C27 1.92639 26.0946 1.02103 24.9778 1.02103Z" stroke="black" stroke-linejoin="round"></path><path d="M20.0291 8.04699L26.2125 1.81387" stroke="black" stroke-linejoin="round"></path><path d="M1.78687 1.81387L7.97045 8.04716" stroke="black" stroke-linejoin="round"></path><path d="M6.51971 9.45243L10.1554 5.93039H17.8442L21.4799 9.45243L13.9962 15.8809L6.51971 9.45243Z" stroke="black" stroke-miterlimit="10"></path><path d="M10.5456 9.45032L13.0569 12.6644L9.44366 9.55854L11.5477 7.52084L10.5456 9.45032Z" fill="black"></path><path d="M13.9963 15.7924L17.3264 9.48366L14.773 5.94107" stroke="black" stroke-miterlimit="10"></path></svg></svg>
-                          <span class="text-1.5xs leading-tight whitespace-nowrap text-black">Drop a Hint</span>
+                          <span className="text-1.5xs leading-tight whitespace-nowrap text-black">Drop a Hint</span>
                           </a>
                         </div>
                     </div>
@@ -92,22 +92,7 @@ const EngagementRingDetail = () => {
                             <h3 className='py-1 px-2 cmsi-item-options-header-title text-customGray-500 md:text-black md:font-bold md:p-0 md:mb-1.5'>Center Stone Shape: <span className='text-customGray-500 font-normal ml-1'>Round</span></h3>
                             <div className='production-item-option -mx-1 flex overflow-auto ccfi-round-buttons-wrapper lg:-mx-1 lg:overflow-hidden lg:flex-wrap gap-2'>
                                 <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                                <div class="hidden md:block w-full pb-square"></div>
-                                    <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
-                                      <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
-                                          <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
-                                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M22.5923 15.1672L23.9519 20.5252L20 14.0347L22.5923 15.1672H22.5923ZM30.5 20C30.5 27.732 25.799 34 20 34C14.201 34 9.5 27.732 9.5 20C9.5 12.268 14.201 6 20 6C25.799 6 30.5 12.268 30.5 20ZM23.9814 25.7606L25.6885 19.9999L23.9814 14.2396L20 11.9335L16.0186 14.2396L14.3115 19.9999L16.0186 25.7606L20 28.0668L23.9814 25.7606ZM15.2859 14.0709L13.0123 11.2233C11.5161 13.4522 10.5818 16.389 10.5139 19.6249H13.6414L15.2859 14.0709V14.0709ZM10.5139 20.3749C10.5818 23.6108 11.5161 26.5476 13.0122 28.7766L15.2859 25.9293L13.6414 20.3749H10.5139ZM24.7141 25.9293L26.9878 28.7766C28.4839 26.5476 29.4182 23.6108 29.4861 20.3749H26.3587L24.7141 25.9293ZM29.4861 19.6249C29.4182 16.3892 28.484 13.4526 26.988 11.2238L24.7141 14.0709L26.3586 19.6249H29.4861L29.4861 19.6249ZM24.0477 8.25654L20.6271 11.4296L24.2075 13.5038L26.5353 10.5891C25.8059 9.64027 24.9673 8.85267 24.0477 8.25654ZM20 7.00001C18.8118 7.00001 17.6783 7.3133 16.6289 7.86103L20 10.9882L23.3713 7.86122C22.3219 7.31337 21.1885 7.00001 20 7.00001ZM13.4651 10.5887L15.7926 13.5038L19.3731 11.4296L15.9526 8.25635C15.033 8.85236 14.1943 9.63996 13.4651 10.5887H13.4651ZM15.8887 31.7015L19.3665 28.5665L15.7926 26.4964L13.465 29.4111C14.1772 30.3378 14.9941 31.1104 15.8887 31.7015V31.7015ZM20 33C21.1884 33 22.3218 32.6867 23.3713 32.1389L19.9961 29.0082L16.5608 32.1047C17.6289 32.6751 18.7861 33 20 33H20ZM26.535 29.4111L24.2074 26.4964L20.6271 28.5702L24.0476 31.7435C24.9672 31.1475 25.8057 30.3599 26.535 29.4111Z" fill="black"></path>
-                                            </svg>
-                                          </svg>
-                                      </div>
-                                      <div className="cmsi-item-option-title font-proximaNovaCondensed mx-auto text-customGray-500 md:text-black">
-                                          <div>Oval</div>
-                                      </div>
-                                    </a>
-                                </div>
-                                <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                                <div class="hidden md:block w-full pb-square"></div>
+                                <div className="hidden md:block w-full pb-square"></div>
                                     <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
                                       <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
                                           <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
@@ -137,7 +122,22 @@ const EngagementRingDetail = () => {
                                     </a>
                                 </div>
                                 <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                                <div class="hidden md:block w-full pb-square"></div>
+                                <div className="hidden md:block w-full pb-square"></div>
+                                    <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
+                                      <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
+                                          <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
+                                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.5923 15.1672L23.9519 20.5252L20 14.0347L22.5923 15.1672H22.5923ZM30.5 20C30.5 27.732 25.799 34 20 34C14.201 34 9.5 27.732 9.5 20C9.5 12.268 14.201 6 20 6C25.799 6 30.5 12.268 30.5 20ZM23.9814 25.7606L25.6885 19.9999L23.9814 14.2396L20 11.9335L16.0186 14.2396L14.3115 19.9999L16.0186 25.7606L20 28.0668L23.9814 25.7606ZM15.2859 14.0709L13.0123 11.2233C11.5161 13.4522 10.5818 16.389 10.5139 19.6249H13.6414L15.2859 14.0709V14.0709ZM10.5139 20.3749C10.5818 23.6108 11.5161 26.5476 13.0122 28.7766L15.2859 25.9293L13.6414 20.3749H10.5139ZM24.7141 25.9293L26.9878 28.7766C28.4839 26.5476 29.4182 23.6108 29.4861 20.3749H26.3587L24.7141 25.9293ZM29.4861 19.6249C29.4182 16.3892 28.484 13.4526 26.988 11.2238L24.7141 14.0709L26.3586 19.6249H29.4861L29.4861 19.6249ZM24.0477 8.25654L20.6271 11.4296L24.2075 13.5038L26.5353 10.5891C25.8059 9.64027 24.9673 8.85267 24.0477 8.25654ZM20 7.00001C18.8118 7.00001 17.6783 7.3133 16.6289 7.86103L20 10.9882L23.3713 7.86122C22.3219 7.31337 21.1885 7.00001 20 7.00001ZM13.4651 10.5887L15.7926 13.5038L19.3731 11.4296L15.9526 8.25635C15.033 8.85236 14.1943 9.63996 13.4651 10.5887H13.4651ZM15.8887 31.7015L19.3665 28.5665L15.7926 26.4964L13.465 29.4111C14.1772 30.3378 14.9941 31.1104 15.8887 31.7015V31.7015ZM20 33C21.1884 33 22.3218 32.6867 23.3713 32.1389L19.9961 29.0082L16.5608 32.1047C17.6289 32.6751 18.7861 33 20 33H20ZM26.535 29.4111L24.2074 26.4964L20.6271 28.5702L24.0476 31.7435C24.9672 31.1475 25.8057 30.3599 26.535 29.4111Z" fill="black"></path>
+                                            </svg>
+                                          </svg>
+                                      </div>
+                                      <div className="cmsi-item-option-title font-proximaNovaCondensed mx-auto text-customGray-500 md:text-black">
+                                          <div>Oval</div>
+                                      </div>
+                                    </a>
+                                </div>
+                                <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
+                                <div className="hidden md:block w-full pb-square"></div>
                                     <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
                                       <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
                                           <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">

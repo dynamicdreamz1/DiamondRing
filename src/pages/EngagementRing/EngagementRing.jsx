@@ -14,7 +14,6 @@ const RingSelector = () => {
   const filters = useSelector((state) => state.productFilter);
   const { products, loading, pageInfo } = useSelector((state) => state.products);
 
-
   useEffect(() => {
     dispatch(fetchProducts(filters));
   }, [dispatch, filters]);
@@ -39,8 +38,6 @@ const RingSelector = () => {
   const filteredOptions = metalOptions.filter(option => option.value === filters.selectedMetal)[0];
   const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
   const filteredRingType = ringStyles.filter(option => option.name === filters.ringType)[0];
-
-  console.log("filteredRingType",filteredRingType,filteredShape);
 
 
   return (
@@ -72,7 +69,7 @@ const RingSelector = () => {
         <div className="hidden md:block col-span-2 mb-10">
           <div className="flex gap-2 flex-wrap items-center col-span-2">
 
-          {filteredRingType?.name &&
+            {filteredRingType?.name &&
               <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
                 <button type="button" className="flex md:gap-0.5 items-center">
                   <div className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center overflow-hidden ">
@@ -135,7 +132,7 @@ const RingSelector = () => {
               </div>
             }
             {(filteredShape?.name || filteredOptions?.value || filteredRingType?.name) ?
-              <button onClick={()=>handleResetFilters()} className="hidden md:flex py-0 pl-px pr-0.5 border-0 border-b border-customGray-300 bg-transparent text-customGray-300 gap-1.5 items-center text-sm leading-tight ml-1.5">
+              <button onClick={() => handleResetFilters()} className="hidden md:flex py-0 pl-px pr-0.5 border-0 border-b border-customGray-300 bg-transparent text-customGray-300 gap-1.5 items-center text-sm leading-tight ml-1.5">
                 <span>Reset All</span>
                 <svg className="block w-2.5 h-2.5" viewBox="0 0 14 14">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,74 +140,10 @@ const RingSelector = () => {
                     <path d="M1 1V5H5" stroke="currentColor"></path>
                   </svg>
                 </svg>
-              </button> : ""}
+              </button> : ("")}
           </div>
         </div>
 
-        {/* <div className="px-5 pb-3 mt-3 md:hidden">
-          <div className="flex justify-start items-center flex-wrap gap-2 relative">
-            <button className="flex items-center justify-center gap-1.5 bg-white text-black text-xs leading-[0.875rem] py-1.25 px-2.5 rounded-md border border-borders">
-              <svg className="block w-2.5 h-2.5">
-                <svg
-                  viewBox="0 0 16 10"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M5 9C5 8.58579 5.33579 8.25 5.75 8.25H10.25C10.6642 8.25 11 8.58579 11 9C11 9.41421 10.6642 9.75 10.25 9.75H5.75C5.33579 9.75 5 9.41421 5 9Z"></path>
-                  <path d="M2 5C2 4.58579 2.33579 4.25 2.75 4.25H13.25C13.6642 4.25 14 4.58579 14 5C14 5.41421 13.6642 5.75 13.25 5.75H2.75C2.33579 5.75 2 5.41421 2 5Z"></path>
-                  <path d="M0 1C0 0.585786 0.335786 0.25 0.75 0.25H15.25C15.6642 0.25 16 0.585786 16 1C16 1.41421 15.6642 1.75 15.25 1.75H0.75C0.335786 1.75 0 1.41421 0 1Z"></path>
-                </svg>
-              </svg>
-              <span>Filters</span>
-            </button>
-            <div className="FilterRelativeContainer relative shrink-0 min-w-[8.75rem]">
-              <button className="flex items-center w-full gap-2 text-left py-px pr-0.5 pl-2 bg-white rounded-md transition-all duration-300 border border-borders">
-                <div className="flex-1">
-                  <div className="text-black text-xs leading-none">
-                    Price (low-to-high)
-                  </div>
-                </div>
-                <div className="relative w-6 h-6 text-black transition-transform duration-300 ">
-                  <svg className="w-2.5 h-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <svg
-                      viewBox="0 0 12 7"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </svg>
-                </div>
-              </button>
-            </div>
-            <div className="ml-auto flex bg-white rounded-md border-borders border overflow-hidden relative md:hidden">
-              <button
-                type="button"
-                className="p-2 grid grid-cols-2 gap-0.5 w-6.5 h-6.5"
-              >
-                <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
-                <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
-                <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
-                <div className="border border-black transition-colors duration-300 h-full bg-black"></div>
-              </button>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-3.5 bg-[#D1D1D1]"></div>
-              <button
-                type="button"
-                className="p-2 grid grid-cols-1 gap-0.5 w-6.5 h-6.5"
-              >
-                <div className="border border-black transition-colors duration-300 h-full bg-transparent"></div>
-                <div className="border border-black transition-colors duration-300 h-full bg-transparent"></div>
-              </button>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Ring Grid */}
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products?.edges?.length > 0 ?
