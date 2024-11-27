@@ -1656,7 +1656,7 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
     }
 
     .CustomProduct__container {
-        grid-template-columns: 1fr 31.125rem
+        grid-template-columns: 1fr 31.125rem !important;
     }
 
     .cpst-details-container {
@@ -3014,6 +3014,7 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 .newsletter-benefit-main {
     margin-top: 80px;
 }
+
 
 @media (max-width:1199px) {
     .product-common-sec {

@@ -88,4 +88,12 @@
 }
 
 
+.diamond-quality-shape-sec .grid-with-variables {
+  display: flex;
+  justify-content: space-between;
+}
+
+.diamond-quality-shape-sec .grid-with-variables button {
+  width: 100%;
+}
 

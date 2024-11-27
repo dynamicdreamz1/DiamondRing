@@ -73,7 +73,7 @@ const EngagementRingDetail = () => {
             <div className='customer-product-side-text-sec'>
               <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
                 <div className='the-lexie-detail flex-1'>
-                  <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>{product.title}</h2>
+                  <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>{product?.title}</h2>
                   <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>$750</h3>
                   <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>$1,486</span></p>
                   <a href="#" className='ExtrasButton inline-flex items-center gap-1'>
@@ -94,11 +94,11 @@ const EngagementRingDetail = () => {
               <div className='cpst-description-container md:mb-8 hidden md:block'>
                 <p className='cpst-description text-customGray-500'>{product.description}</p>
               </div>
-              {/* <div className='production-option-main'>
+              <div className='production-option-main'>
                 <div className='production-option-heading-img'>
                   <h3 className='py-1 px-2 cmsi-item-options-header-title text-customGray-500 md:text-black md:font-bold md:p-0 md:mb-1.5'>Center Stone Shape: <span className='text-customGray-500 font-normal ml-1'>Round</span></h3>
                   <div className='production-item-option -mx-1 flex overflow-auto ccfi-round-buttons-wrapper lg:-mx-1 lg:overflow-hidden lg:flex-wrap gap-2'>
-                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
+                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative'>
                       <div className="hidden md:block w-full pb-square"></div>
                       <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
                         <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
@@ -113,7 +113,7 @@ const EngagementRingDetail = () => {
                         </div>
                       </a>
                     </div>
-                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
+                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative'>
                       <div className="hidden md:block w-full pb-square"></div>
                       <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
                         <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
@@ -128,7 +128,7 @@ const EngagementRingDetail = () => {
                         </div>
                       </a>
                     </div>
-                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
+                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative'>
                       <div className="hidden md:block w-full pb-square"></div>
                       <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
                         <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
@@ -143,7 +143,7 @@ const EngagementRingDetail = () => {
                         </div>
                       </a>
                     </div>
-                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
+                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative'>
                       <div className="hidden md:block w-full pb-square"></div>
                       <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
                         <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
@@ -158,13 +158,13 @@ const EngagementRingDetail = () => {
                         </div>
                       </a>
                     </div>
-                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
+                    <div className='production-item  cmsi-item-option md:px-1  inline-flex relative'>
                       <div className="hidden md:block w-full pb-square"></div>
                       <button type="button" className="group flex items-center justify-center absolute top-0 left-0 w-full h-full rounded-lg cursor-pointer cmsi-item-option-button md:pb-0 border border-customGray-350 transition-all duration-300 hover:bg-customGray-150" aria-label="left"><div className="ToggleMoreOptions flex items-center justify-center rounded-full w-8 h-8 bg-customGray-150 p-2.5 transition-all duration-300 group-hover:bg-white"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1.60834 6H13.6083" stroke="#231F20" stroke-miterlimit="10"></path><path d="M6 13.6083V-1.60834" stroke="#231F20" stroke-miterlimit="10"></path></svg></div></button>
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
               <div className='production-button mt-8'>
                 <a href="#" className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
                   <div className="transition-transform duration-500 text-ellipsis overflow-hidden flex items-center justify-between gap-2 md:gap-4 ">
