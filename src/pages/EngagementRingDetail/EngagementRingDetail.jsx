@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import TabComponent from '../../Component/Common/TabComponent'
 // import ringImg from '../../public/lexie-side-img1.webp'
+import "../EngagementRing/ringStyle.css";
 import "./productRingStyle.css";
 import { useSelector ,useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";

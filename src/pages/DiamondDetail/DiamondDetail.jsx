@@ -27,116 +27,54 @@ const DiamondDetail = () => {
                       <img src="/lexie-side-img1.webp" />
                     </div>
                 </div>
-                <div className='made-in-heaven-sec EngagementCompleteYourLook lg:pt-8 lg:pb-0 grid gap-2.5 grid-cols-1 py-6 bg-white mx-auto w-full relative md:gap-4 xl:gap-8'>
-                    <h2 className='CustomProduct__section-title'>Match Made in Heaven</h2>
-                    <div className='made-in-heaven-img-box-main grid grid-cols-3 w-full items-center gap-3'>
-                        <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                          <img src="/lexie-side-img1.webp" />
-                        </div>
-                        <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                          <img src="/lexie-side-img1.webp" />
-                        </div>
-                        <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                          <img src="/lexie-side-img1.webp" />
-                        </div>
-                    </div>
-                </div>
               </div>
               <div className='customer-product-side-text-sec'>
                   <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
                       <div className='the-lexie-detail flex-1'>
-                          <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>The Lexie</h2>
-                          <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>$750</h3>
-                          <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>$1,486</span></p>
-                          <a href="#" className='ExtrasButton inline-flex items-center gap-1'>
-                            Extras
-                            <span className="ExtrasButton-circle rounded-full bg-white flex items-center justify-center"><svg className="svg-icon" viewBox="0 0 5 5"><svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.125" width="0.75" height="5" fill="currentColor"></rect><rect y="2.875" width="0.75" height="5" transform="rotate(-90 0 2.875)" fill="currentColor"></rect></svg></svg></span>
-                          </a>
+                          <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>0.5 Carat F VVS2 Round Natural Diamond</h2>
+                          <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>$1,146</h3>
+                          <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With setting:<span>$2,096</span></p>
                       </div>
-                      <div className="tangiblee-wrapper pdp">
-                        <div className="tangiblee-cta font-medium" data-click-and-touch-bound="true" role="button" tabindex="0" aria-label="tangiblee cta" aria-hidden="false">Try-On</div>
-                      </div>
-                      <div className='drop-hint'>
-                        <a href="#" className='inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto DropAHint-button flex flex-col items-center justify-center gap-1 p-0 ml-2 mt-1'>
-                        <svg className="block w-8 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 53 40"><svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.9778 1.02103H3.02218C1.90536 1.02103 1 1.92639 1 3.04321V17.9568C1 19.0736 1.90536 19.979 3.02218 19.979H24.9778C26.0946 19.979 27 19.0736 27 17.9568V3.04321C27 1.92639 26.0946 1.02103 24.9778 1.02103Z" stroke="black" stroke-linejoin="round"></path><path d="M20.0291 8.04699L26.2125 1.81387" stroke="black" stroke-linejoin="round"></path><path d="M1.78687 1.81387L7.97045 8.04716" stroke="black" stroke-linejoin="round"></path><path d="M6.51971 9.45243L10.1554 5.93039H17.8442L21.4799 9.45243L13.9962 15.8809L6.51971 9.45243Z" stroke="black" stroke-miterlimit="10"></path><path d="M10.5456 9.45032L13.0569 12.6644L9.44366 9.55854L11.5477 7.52084L10.5456 9.45032Z" fill="black"></path><path d="M13.9963 15.7924L17.3264 9.48366L14.773 5.94107" stroke="black" stroke-miterlimit="10"></path></svg></svg>
-                        <span className="text-1.5xs leading-tight whitespace-nowrap text-black">Drop a Hint</span>
-                        </a>
+                      <div className="cpst-title-icon-container flex items-start gap-1 shrink-0">
+                        <svg className="cpst-title-icon w-16 h-auto shrink-0" viewBox="0 0 81 77">
+                            <svg width="81" height="77" viewBox="0 0 81 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M31.4922 40.5023L31.4523 37.147C31.4227 36.7135 31.3543 36.2851 31.2763 35.859C31.2757 35.8504 31.2706 35.843 31.2703 35.8342C31.27 35.8316 31.2717 35.8288 31.2717 35.8262C31.1629 35.242 31.0217 34.6647 30.8234 34.1027C30.3768 32.8449 29.8732 31.4184 28.7931 31.3546C28.7658 31.3546 28.7407 31.3524 28.7157 31.3524C27.8042 31.3524 27.2186 32.3572 26.6991 33.2459C26.5527 33.4966 26.447 33.7671 26.3294 34.0315C25.6025 32.3176 25.1929 30.4423 25.1342 28.4804C25.5104 28.6621 25.9223 28.7798 26.3983 28.7798C26.4461 28.7798 26.494 28.7798 26.5418 28.7775C28.1323 28.7205 29.0028 27.1961 29.2876 26.6971C29.5838 26.1821 29.6659 25.8175 29.8436 25.0223C29.9097 24.7306 29.9894 24.3706 30.1034 23.908C30.2788 23.1811 30.4474 22.5636 30.5796 22.0965L33.7651 21.5496C35.408 20.9617 36.4744 19.8315 36.4858 18.674C36.5018 17.2749 35.0549 16.4067 33.7743 15.6365C33.3236 15.3665 32.852 15.1346 32.3643 14.9387C34.7455 13.4393 37.5534 12.5581 40.5692 12.5581C44.0942 12.5581 47.3368 13.7569 49.9401 15.7505H46.3979C42.8615 15.7505 39.9858 18.6261 39.9858 22.1626L41.5914 26.2499H42.8227L41.1525 22.0532C41.2117 19.2117 43.5428 16.9171 46.3979 16.9171H51.3041C53.8115 19.343 55.5008 22.6046 55.9195 26.2499H56.0511C56.5151 26.2499 56.9603 26.4342 57.2884 26.7626L57.7365 27.211C57.3115 18.0975 49.7857 10.8081 40.5692 10.8081C31.0809 10.8081 23.3608 18.5281 23.3608 28.0164C23.3608 37.5047 31.0809 45.2248 40.5692 45.2248C40.7136 45.2248 40.8534 45.2065 40.997 45.2031L38.8964 43.3386C36.1532 43.0364 33.6159 42.0506 31.4922 40.5023H31.4922ZM31.159 15.7801C31.8636 15.992 32.5467 16.2629 33.1773 16.6392C34.1844 17.2453 35.326 17.9311 35.3192 18.6626C35.3124 19.3075 34.5126 20.0435 33.4735 20.4263L29.6613 21.0688L29.5588 21.4198C29.4152 21.9165 29.1987 22.6844 28.9686 23.6323C28.8547 24.1017 28.7726 24.4686 28.7066 24.7671C28.5402 25.5054 28.4833 25.7537 28.2759 26.116C28.0685 26.4783 27.4396 27.5767 26.4985 27.6108C25.9289 27.6339 25.4974 27.4701 25.1581 27.081C25.4353 22.4836 27.7216 18.4296 31.159 15.7801V15.7801ZM27.0437 35.4853C27.2001 34.9082 27.4055 34.3488 27.7085 33.8338C27.8976 33.508 28.4741 32.519 28.718 32.519C28.718 32.519 28.7202 32.5213 28.7225 32.5213C29.0324 32.5396 29.5519 34.0093 29.7251 34.4969C30.035 35.3742 30.2242 36.2948 30.2879 37.1948L30.3147 39.5527C29.0102 38.3917 27.8965 37.0234 27.0437 35.4853L27.0437 35.4853ZM56.0512 27.9999H40.8013L33.0195 35.7821L48.4197 49.4517L63.8077 35.8049H63.808L63.8333 35.7821L56.0512 27.9999ZM41.5262 29.7499H49.7721L54.0314 35.8504L48.32 47.0232L35.5701 35.7063L41.5262 29.7499H41.5262ZM50.5528 45.2208L55.3895 35.7593L51.1962 29.7499H55.3263L61.2821 35.7057L50.5528 45.2208ZM47.6848 42.9325L39.8195 35.951L43.794 31.9762L42.3197 35.6562L47.6848 42.9325Z" fill="black"></path>
+                              <g>
+                                  <path d="M27.1852 73H26.0652L20.6192 65.552V73H19.4572V63.662H20.6472L26.0232 70.956V63.662H27.1852V73ZM34.6053 73H33.5553V72.23C32.986 72.8553 32.2393 73.168 31.3153 73.168C30.69 73.168 30.1393 72.9673 29.6633 72.566C29.1873 72.1647 28.9493 71.6187 28.9493 70.928C28.9493 70.2187 29.1827 69.6727 29.6493 69.29C30.1253 68.898 30.6807 68.702 31.3153 68.702C32.2767 68.702 33.0233 69.01 33.5553 69.626V68.408C33.5553 67.96 33.3967 67.61 33.0793 67.358C32.762 67.106 32.3513 66.98 31.8473 66.98C31.054 66.98 30.3633 67.2927 29.7753 67.918L29.2853 67.19C30.004 66.4433 30.9047 66.07 31.9873 66.07C32.762 66.07 33.392 66.2567 33.8773 66.63C34.3627 67.0033 34.6053 67.5773 34.6053 68.352V73ZM31.6933 72.412C32.5333 72.412 33.154 72.132 33.5553 71.572V70.298C33.154 69.738 32.5333 69.458 31.6933 69.458C31.208 69.458 30.8067 69.598 30.4893 69.878C30.1813 70.1487 30.0273 70.5033 30.0273 70.942C30.0273 71.3713 30.1813 71.726 30.4893 72.006C30.8067 72.2767 31.208 72.412 31.6933 72.412ZM38.4182 73.168C37.9235 73.168 37.5502 73.0327 37.2982 72.762C37.0462 72.4913 36.9202 72.0993 36.9202 71.586V67.162H35.8002V66.238H36.9202V64.39H37.9702V66.238H39.3422V67.162H37.9702V71.362C37.9702 71.6233 38.0262 71.8333 38.1382 71.992C38.2595 72.1507 38.4322 72.23 38.6562 72.23C38.9642 72.23 39.2022 72.1367 39.3702 71.95L39.6782 72.734C39.3702 73.0233 38.9502 73.168 38.4182 73.168ZM46.4394 73H45.3894V72.048C45.1094 72.3653 44.7547 72.6313 44.3254 72.846C43.9054 73.0607 43.4574 73.168 42.9814 73.168C41.5441 73.168 40.8254 72.4493 40.8254 71.012V66.238H41.8754V70.69C41.8754 71.25 42.0014 71.6467 42.2534 71.88C42.5147 72.1133 42.8927 72.23 43.3874 72.23C43.7794 72.23 44.1574 72.132 44.5214 71.936C44.8947 71.74 45.1841 71.4973 45.3894 71.208V66.238H46.4394V73ZM49.5863 73H48.5363V66.238H49.5863V67.33C50.2117 66.5087 50.963 66.098 51.8403 66.098V67.176C51.7097 67.148 51.5697 67.134 51.4203 67.134C51.103 67.134 50.7577 67.246 50.3843 67.47C50.011 67.694 49.745 67.9413 49.5863 68.212V73ZM58.4354 73H57.3854V72.23C56.8161 72.8553 56.0694 73.168 55.1454 73.168C54.5201 73.168 53.9694 72.9673 53.4934 72.566C53.0174 72.1647 52.7794 71.6187 52.7794 70.928C52.7794 70.2187 53.0128 69.6727 53.4794 69.29C53.9554 68.898 54.5108 68.702 55.1454 68.702C56.1068 68.702 56.8534 69.01 57.3854 69.626V68.408C57.3854 67.96 57.2268 67.61 56.9094 67.358C56.5921 67.106 56.1814 66.98 55.6774 66.98C54.8841 66.98 54.1934 67.2927 53.6054 67.918L53.1154 67.19C53.8341 66.4433 54.7348 66.07 55.8174 66.07C56.5921 66.07 57.2221 66.2567 57.7074 66.63C58.1928 67.0033 58.4354 67.5773 58.4354 68.352V73ZM55.5234 72.412C56.3634 72.412 56.9841 72.132 57.3854 71.572V70.298C56.9841 69.738 56.3634 69.458 55.5234 69.458C55.0381 69.458 54.6368 69.598 54.3194 69.878C54.0114 70.1487 53.8574 70.5033 53.8574 70.942C53.8574 71.3713 54.0114 71.726 54.3194 72.006C54.6368 72.2767 55.0381 72.412 55.5234 72.412ZM61.5902 73H60.5402V63.662H61.5902V73Z" fill="black"></path>
+                              </g>
+                            </svg>
+                        </svg>
                       </div>
                   </div>
-                  <div className='cpst-description-container md:mb-8 hidden md:block'>
-                      <p className='cpst-description text-customGray-500'>The Lexie is a timeless solitaire that blends classic design with subtle sophistication. Its smooth cathedral band flows seamlessly around the delicate prongs, offering both support and elegance while ensuring the center stone takes center stage. As the light catches the diamond, The Lexie radiates brilliance from every angle, wrapping your finger in a display of sparkle that’s as enduring as your love.</p>
-                  </div>
-                  <div className='production-option-main'>
-                      <div className='production-option-heading-img'>
-                          <h3 className='py-1 px-2 cmsi-item-options-header-title text-customGray-500 md:text-black md:font-bold md:p-0 md:mb-1.5'>Center Stone Shape: <span className='text-customGray-500 font-normal ml-1'>Round</span></h3>
-                          <div className='production-item-option -mx-1 flex overflow-auto ccfi-round-buttons-wrapper lg:-mx-1 lg:overflow-hidden lg:flex-wrap gap-2'>
-                              <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                              <div className="hidden md:block w-full pb-square"></div>
-                                  <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
-                                    <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
-                                        <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
-                                          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M22.5923 15.1672L23.9519 20.5252L20 14.0347L22.5923 15.1672H22.5923ZM30.5 20C30.5 27.732 25.799 34 20 34C14.201 34 9.5 27.732 9.5 20C9.5 12.268 14.201 6 20 6C25.799 6 30.5 12.268 30.5 20ZM23.9814 25.7606L25.6885 19.9999L23.9814 14.2396L20 11.9335L16.0186 14.2396L14.3115 19.9999L16.0186 25.7606L20 28.0668L23.9814 25.7606ZM15.2859 14.0709L13.0123 11.2233C11.5161 13.4522 10.5818 16.389 10.5139 19.6249H13.6414L15.2859 14.0709V14.0709ZM10.5139 20.3749C10.5818 23.6108 11.5161 26.5476 13.0122 28.7766L15.2859 25.9293L13.6414 20.3749H10.5139ZM24.7141 25.9293L26.9878 28.7766C28.4839 26.5476 29.4182 23.6108 29.4861 20.3749H26.3587L24.7141 25.9293ZM29.4861 19.6249C29.4182 16.3892 28.484 13.4526 26.988 11.2238L24.7141 14.0709L26.3586 19.6249H29.4861L29.4861 19.6249ZM24.0477 8.25654L20.6271 11.4296L24.2075 13.5038L26.5353 10.5891C25.8059 9.64027 24.9673 8.85267 24.0477 8.25654ZM20 7.00001C18.8118 7.00001 17.6783 7.3133 16.6289 7.86103L20 10.9882L23.3713 7.86122C22.3219 7.31337 21.1885 7.00001 20 7.00001ZM13.4651 10.5887L15.7926 13.5038L19.3731 11.4296L15.9526 8.25635C15.033 8.85236 14.1943 9.63996 13.4651 10.5887H13.4651ZM15.8887 31.7015L19.3665 28.5665L15.7926 26.4964L13.465 29.4111C14.1772 30.3378 14.9941 31.1104 15.8887 31.7015V31.7015ZM20 33C21.1884 33 22.3218 32.6867 23.3713 32.1389L19.9961 29.0082L16.5608 32.1047C17.6289 32.6751 18.7861 33 20 33H20ZM26.535 29.4111L24.2074 26.4964L20.6271 28.5702L24.0476 31.7435C24.9672 31.1475 25.8057 30.3599 26.535 29.4111Z" fill="black"></path>
-                                          </svg>
-                                        </svg>
-                                    </div>
-                                    <div className="cmsi-item-option-title font-proximaNovaCondensed mx-auto text-customGray-500 md:text-black">
-                                        <div>Oval</div>
-                                    </div>
-                                  </a>
-                              </div>
-                              <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                              <div className="hidden md:block w-full pb-square"></div>
-                                  <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
-                                    <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
-                                        <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
-                                          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M22.5923 15.1672L23.9519 20.5252L20 14.0347L22.5923 15.1672H22.5923ZM30.5 20C30.5 27.732 25.799 34 20 34C14.201 34 9.5 27.732 9.5 20C9.5 12.268 14.201 6 20 6C25.799 6 30.5 12.268 30.5 20ZM23.9814 25.7606L25.6885 19.9999L23.9814 14.2396L20 11.9335L16.0186 14.2396L14.3115 19.9999L16.0186 25.7606L20 28.0668L23.9814 25.7606ZM15.2859 14.0709L13.0123 11.2233C11.5161 13.4522 10.5818 16.389 10.5139 19.6249H13.6414L15.2859 14.0709V14.0709ZM10.5139 20.3749C10.5818 23.6108 11.5161 26.5476 13.0122 28.7766L15.2859 25.9293L13.6414 20.3749H10.5139ZM24.7141 25.9293L26.9878 28.7766C28.4839 26.5476 29.4182 23.6108 29.4861 20.3749H26.3587L24.7141 25.9293ZM29.4861 19.6249C29.4182 16.3892 28.484 13.4526 26.988 11.2238L24.7141 14.0709L26.3586 19.6249H29.4861L29.4861 19.6249ZM24.0477 8.25654L20.6271 11.4296L24.2075 13.5038L26.5353 10.5891C25.8059 9.64027 24.9673 8.85267 24.0477 8.25654ZM20 7.00001C18.8118 7.00001 17.6783 7.3133 16.6289 7.86103L20 10.9882L23.3713 7.86122C22.3219 7.31337 21.1885 7.00001 20 7.00001ZM13.4651 10.5887L15.7926 13.5038L19.3731 11.4296L15.9526 8.25635C15.033 8.85236 14.1943 9.63996 13.4651 10.5887H13.4651ZM15.8887 31.7015L19.3665 28.5665L15.7926 26.4964L13.465 29.4111C14.1772 30.3378 14.9941 31.1104 15.8887 31.7015V31.7015ZM20 33C21.1884 33 22.3218 32.6867 23.3713 32.1389L19.9961 29.0082L16.5608 32.1047C17.6289 32.6751 18.7861 33 20 33H20ZM26.535 29.4111L24.2074 26.4964L20.6271 28.5702L24.0476 31.7435C24.9672 31.1475 25.8057 30.3599 26.535 29.4111Z" fill="black"></path>
-                                          </svg>
-                                        </svg>
-                                    </div>
-                                    <div className="cmsi-item-option-title font-proximaNovaCondensed mx-auto text-customGray-500 md:text-black">
-                                        <div>Oval</div>
-                                    </div>
-                                  </a>
-                              </div>
-                              <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                              <div className="hidden md:block w-full pb-square"></div>
-                                  <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
-                                    <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
-                                        <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
-                                          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M22.5923 15.1672L23.9519 20.5252L20 14.0347L22.5923 15.1672H22.5923ZM30.5 20C30.5 27.732 25.799 34 20 34C14.201 34 9.5 27.732 9.5 20C9.5 12.268 14.201 6 20 6C25.799 6 30.5 12.268 30.5 20ZM23.9814 25.7606L25.6885 19.9999L23.9814 14.2396L20 11.9335L16.0186 14.2396L14.3115 19.9999L16.0186 25.7606L20 28.0668L23.9814 25.7606ZM15.2859 14.0709L13.0123 11.2233C11.5161 13.4522 10.5818 16.389 10.5139 19.6249H13.6414L15.2859 14.0709V14.0709ZM10.5139 20.3749C10.5818 23.6108 11.5161 26.5476 13.0122 28.7766L15.2859 25.9293L13.6414 20.3749H10.5139ZM24.7141 25.9293L26.9878 28.7766C28.4839 26.5476 29.4182 23.6108 29.4861 20.3749H26.3587L24.7141 25.9293ZM29.4861 19.6249C29.4182 16.3892 28.484 13.4526 26.988 11.2238L24.7141 14.0709L26.3586 19.6249H29.4861L29.4861 19.6249ZM24.0477 8.25654L20.6271 11.4296L24.2075 13.5038L26.5353 10.5891C25.8059 9.64027 24.9673 8.85267 24.0477 8.25654ZM20 7.00001C18.8118 7.00001 17.6783 7.3133 16.6289 7.86103L20 10.9882L23.3713 7.86122C22.3219 7.31337 21.1885 7.00001 20 7.00001ZM13.4651 10.5887L15.7926 13.5038L19.3731 11.4296L15.9526 8.25635C15.033 8.85236 14.1943 9.63996 13.4651 10.5887H13.4651ZM15.8887 31.7015L19.3665 28.5665L15.7926 26.4964L13.465 29.4111C14.1772 30.3378 14.9941 31.1104 15.8887 31.7015V31.7015ZM20 33C21.1884 33 22.3218 32.6867 23.3713 32.1389L19.9961 29.0082L16.5608 32.1047C17.6289 32.6751 18.7861 33 20 33H20ZM26.535 29.4111L24.2074 26.4964L20.6271 28.5702L24.0476 31.7435C24.9672 31.1475 25.8057 30.3599 26.535 29.4111Z" fill="black"></path>
-                                          </svg>
-                                        </svg>
-                                    </div>
-                                    <div className="cmsi-item-option-title font-proximaNovaCondensed mx-auto text-customGray-500 md:text-black">
-                                        <div>Oval</div>
-                                    </div>
-                                  </a>
-                              </div>
-                              <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                              <div className="hidden md:block w-full pb-square"></div>
-                                  <a className="shrink-0 basis-22 text-center w-22 h-22 px-2 pt-2 pb-2.5 rounded-lg transition-colors relative block md:rounded-lg cmsi-item-option-button group md:pb-0 md:absolute md:top-0 md:left-0 md:h-full md:w-full md:min-h-0 md:p-0 bg-customGray-150 md:border md:bg-white md:border-customGray-350 md:hover:bg-customGray-150 cursor-pointer" href="/products/the-lexie-setting-oval-14k-white-gold-solitaire" aria-hidden="false">
-                                    <div className="mb-1 relative w-12 h-12 mx-auto cmsi-item-option-icon-container shape p-0.5 md:mb-0">
-                                        <svg className="w-full h-full cmsi-item-option-icon" aria-hidden="true" focusable="false" data-test="Oval">
-                                          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M22.5923 15.1672L23.9519 20.5252L20 14.0347L22.5923 15.1672H22.5923ZM30.5 20C30.5 27.732 25.799 34 20 34C14.201 34 9.5 27.732 9.5 20C9.5 12.268 14.201 6 20 6C25.799 6 30.5 12.268 30.5 20ZM23.9814 25.7606L25.6885 19.9999L23.9814 14.2396L20 11.9335L16.0186 14.2396L14.3115 19.9999L16.0186 25.7606L20 28.0668L23.9814 25.7606ZM15.2859 14.0709L13.0123 11.2233C11.5161 13.4522 10.5818 16.389 10.5139 19.6249H13.6414L15.2859 14.0709V14.0709ZM10.5139 20.3749C10.5818 23.6108 11.5161 26.5476 13.0122 28.7766L15.2859 25.9293L13.6414 20.3749H10.5139ZM24.7141 25.9293L26.9878 28.7766C28.4839 26.5476 29.4182 23.6108 29.4861 20.3749H26.3587L24.7141 25.9293ZM29.4861 19.6249C29.4182 16.3892 28.484 13.4526 26.988 11.2238L24.7141 14.0709L26.3586 19.6249H29.4861L29.4861 19.6249ZM24.0477 8.25654L20.6271 11.4296L24.2075 13.5038L26.5353 10.5891C25.8059 9.64027 24.9673 8.85267 24.0477 8.25654ZM20 7.00001C18.8118 7.00001 17.6783 7.3133 16.6289 7.86103L20 10.9882L23.3713 7.86122C22.3219 7.31337 21.1885 7.00001 20 7.00001ZM13.4651 10.5887L15.7926 13.5038L19.3731 11.4296L15.9526 8.25635C15.033 8.85236 14.1943 9.63996 13.4651 10.5887H13.4651ZM15.8887 31.7015L19.3665 28.5665L15.7926 26.4964L13.465 29.4111C14.1772 30.3378 14.9941 31.1104 15.8887 31.7015V31.7015ZM20 33C21.1884 33 22.3218 32.6867 23.3713 32.1389L19.9961 29.0082L16.5608 32.1047C17.6289 32.6751 18.7861 33 20 33H20ZM26.535 29.4111L24.2074 26.4964L20.6271 28.5702L24.0476 31.7435C24.9672 31.1475 25.8057 30.3599 26.535 29.4111Z" fill="black"></path>
-                                          </svg>
-                                        </svg>
-                                    </div>
-                                    <div className="cmsi-item-option-title font-proximaNovaCondensed mx-auto text-customGray-500 md:text-black">
-                                        <div>Oval</div>
-                                    </div>
-                                  </a>
-                              </div>
-                              <div className='production-item  cmsi-item-option md:px-1  inline-flex relative w-full'>
-                              <div className="hidden md:block w-full pb-square"></div>
-                              <button type="button" className="group flex items-center justify-center absolute top-0 left-0 w-full h-full rounded-lg cursor-pointer cmsi-item-option-button md:pb-0 border border-customGray-350 transition-all duration-300 hover:bg-customGray-150" aria-label="left"><div className="ToggleMoreOptions flex items-center justify-center rounded-full w-8 h-8 bg-customGray-150 p-2.5 transition-all duration-300 group-hover:bg-white"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1.60834 6H13.6083" stroke="#231F20" stroke-miterlimit="10"></path><path d="M6 13.6083V-1.60834" stroke="#231F20" stroke-miterlimit="10"></path></svg></div></button>
-                              </div>
+                  <div className="DiamondInfo__container my-4 md:my-6">
+                      <div className="DiamondInfo__wrapper flex flex-wrap justify-center items-center text-center">
+                          <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
+                            <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">0.5</p>
+                            <p className="DiamondInfo__block-title" tabindex="-1">Carat</p>
+                          </div>
+                          <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
+                            <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">F</p>
+                            <p className="DiamondInfo__block-title" tabindex="-1">Color</p>
+                          </div>
+                          <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
+                            <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">VVS2</p>
+                            <p className="DiamondInfo__block-title" tabindex="-1">Clarity</p>
+                          </div>
+                          <div className="DiamondInfoDivider hidden md:block"></div>
+                          <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
+                            <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">Good</p>
+                            <p className="DiamondInfo__block-title" tabindex="-1">Cut</p>
+                          </div>
+                          <div className="DiamondInfo__block px-2 relative hidden w-1/3 md:block">
+                            <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">1</p>
+                            <p className="DiamondInfo__block-title" tabindex="-1">Ratio</p>
+                          </div>
+                          <div className="DiamondInfo__block px-2 relative hidden w-1/3 md:block">
+                            <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">4.9/4.88</p>
+                            <p className="DiamondInfo__block-title" tabindex="-1">L/W (mm)</p>
                           </div>
                       </div>
-                  </div>
+                    </div>
                   <div className='production-button mt-8'>
                         <a href="#" className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
                         <div className="transition-transform duration-500 text-ellipsis overflow-hidden flex items-center justify-between gap-2 md:gap-4 ">
@@ -157,11 +95,11 @@ const DiamondDetail = () => {
                           </svg>
                         </div>
                         </a>
-                        <a href="#" className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
+                        {/* <a href="#" className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
                           <div className="text-sm leading-tight font-semibold">Buy Setting Only*</div>
                           <div className="text-1.5xs leading-tight">*center stone not included</div>
-                        </a>
-                        <h5 className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$187.50</span> <button type="button" className="underline cursor-pointer">Learn more</button></h5>
+                        </a> */}
+                        <h5 className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 12 interest-free installments of <span>$95.50</span> <button type="button" className="underline cursor-pointer">Learn more</button></h5>
                   </div>
                   <div className="hidden lg:block mt-6 text-center">
                         <a href="#" type="button" className="WishlistButton  stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
@@ -213,81 +151,154 @@ const DiamondDetail = () => {
                       </a>
                   </div>
                   <div className="StoneProductInfo rounded-2.5xl p-3 bg-customGray-150 mt-4 mb-4">
-                      <h3 className="StoneProductInfo__title flex items-center gap-2 mb-2" tabindex="-1">
-                        <svg className="w-8 h-8 p-1.5 rounded-full bg-white overflow-visible" aria-hidden="true" focusable="false">
-                          <svg viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.1578 4.461L18.3882 10.0077L24.6247 4.461" stroke="currentColor" stroke-miterlimit="10"></path>
-                              <path d="M23.7463 9.99799C26.107 11.2008 27.9939 13.1634 29.1032 15.5695C30.2124 17.9756 30.4792 20.685 29.8607 23.2613C29.2422 25.8376 27.7744 28.1306 25.6937 29.7708C23.6131 31.4111 21.0408 32.3031 18.3913 32.3031C15.7418 32.3031 13.1695 31.4111 11.0889 29.7708C9.0082 28.1305 7.54036 25.8375 6.92185 23.2613C6.30335 20.685 6.57021 17.9756 7.67943 15.5695C8.78866 13.1634 10.6756 11.2008 13.0363 9.99799" stroke="currentColor" stroke-linecap="round"></path>
+                    <h3 className="StoneProductInfo__title flex items-center gap-2 mb-2" tabindex="-1">
+                      <svg className="w-8 h-8 p-1.5 rounded-full bg-white" aria-hidden="true" focusable="false">
+                          <svg viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01367 4.89352L4.89544 1H13.1046L16.9864 4.89352L8.99616 12L1.01367 4.89352Z" stroke="currentColor" stroke-width="0.75" stroke-miterlimit="10"></path>
+                            <path d="M7.2402 7.01938L4.95605 4.9178L6.46358 3.40613" stroke="currentColor" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path>
+                            <path d="M8.99658 11.9023L12.5521 4.92818L9.82583 1.01196" stroke="currentColor" stroke-width="0.75" stroke-miterlimit="10"></path>
                           </svg>
-                        </svg>
-                        Know your setting
-                      </h3>
-                      <div className='cpcst-details-wrapper grid grid-cols-2 gap-2 items-stretch md:grid-cols-2'>
-                          <div className='StoneDetailBlock  p-3 flex flex-col justify-between'>
-                              <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
-                                <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6.5H3C2.17157 6.5 1.5 7.17157 1.5 8C1.5 8.82843 2.17157 9.5 3 9.5H13C13.8284 9.5 14.5 8.82843 14.5 8C14.5 7.17157 13.8284 6.5 13 6.5Z" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.71289 3.60535L8.16648 5.06315L10.6201 3.60535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 4.85535V1.10535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M10.6201 12.3946L8.16648 10.9368L5.71289 12.3946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 11.1446V14.8946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path></svg></svg>
-                                <p className="cpcst-detail-title" tabindex="-1">Width</p>
+                      </svg>
+                      Your  Diamond Info
+                    </h3>
+                    <div className='cpcst-info-container'>
+                    <div className='cpcst-details-wrapper grid grid-cols-2 gap-2 items-stretch'>
+                      <div className="StoneDetailBlock p-3 flex flex-col justify-between" data-current-block="carat">
+                        <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2">
+                            <div className="StoneDetailBlock__title-container flex items-center gap-1">
+                              <svg className="w-4 h-4" aria-hidden="true" focusable="false">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.91838 7.2041H5.77426C5.77426 8.22221 4.93648 9.05998 3.91838 9.05998C2.90028 9.05998 2.0625 8.22221 2.0625 7.2041H3.91838Z" stroke="#EF8D33" stroke-width="0.75" stroke-linejoin="round"></path>
+                                    <path d="M3.9185 3.59375L2.1626 7.2042H5.6744L3.9185 3.59375Z" stroke="#EF8D33" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M11.082 7.2041H12.9378C12.9378 8.22221 12.1001 9.05998 11.082 9.05998C10.0639 9.05998 9.22607 8.2222 9.22607 7.2041H11.082V7.2041Z" stroke="#EF8D33" stroke-width="0.75" stroke-linejoin="round"></path>
+                                    <path d="M11.0816 3.59375L9.32568 7.2042H12.8375L11.0816 3.59375Z" stroke="#EF8D33" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.91846 3.59375H11.0815" stroke="#EF8D33" stroke-width="0.75" stroke-linejoin="round"></path>
+                                    <path d="M7.49951 2.8125V9.87541" stroke="#EF8D33" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.49978 9.87549L4.23486 12.1876H10.7647L7.49978 9.87549Z" stroke="#EF8D33" stroke-width="0.75" stroke-linejoin="round"></path>
+                                  </svg>
+                              </svg>
+                              <p className="cpcst-detail-title" tabindex="-1">Carat</p>
+                            </div>
+                        </div>
+                        <div className="StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3">
+                            <p className="StoneDetailBlock__content-value" tabindex="-1">0.5</p>
+                        </div>
+                        <div className="StoneDetailBlock__desc">Universal measurement unit for diamonds</div>
+                      </div>
+                      <div className='StoneDetailBlock p-3 flex flex-col justify-between' data-current-block="color">
+                            <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2"><div className="StoneDetailBlock__title-container flex items-center gap-1"><svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.65441 8.86331C5.85951 8.86331 6.03403 8.78887 6.17799 8.63998C6.32195 8.49109 6.39393 8.31902 6.39393 8.12379C6.39393 7.92856 6.32195 7.7565 6.17799 7.60761C6.03403 7.45872 5.8595 7.38428 5.65441 7.38428C5.45918 7.38428 5.28959 7.45872 5.14562 7.60761C5.00166 7.7565 4.92969 7.92856 4.92969 8.12379C4.92969 8.31902 5.00166 8.49109 5.14562 8.63998C5.28959 8.78887 5.45919 8.86331 5.65441 8.86331Z" fill="#B71B9E"></path><path d="M6.86648 6.37464C7.06171 6.37464 7.23106 6.30267 7.37452 6.1587C7.51849 6.01524 7.59046 5.84589 7.59046 5.65066C7.59046 5.44507 7.51849 5.2703 7.37452 5.12634C7.23106 4.98287 7.06171 4.91113 6.86648 4.91113C6.66089 4.91113 6.48612 4.98287 6.34216 5.12634C6.19869 5.2703 6.12695 5.44507 6.12695 5.65066C6.12695 5.84589 6.19869 6.01524 6.34216 6.1587C6.48612 6.30267 6.66089 6.37464 6.86648 6.37464Z" fill="#B71B9E"></path><path d="M9.73376 5.98743C9.929 5.98743 10.1011 5.91546 10.2499 5.7715C10.3988 5.62803 10.4733 5.45868 10.4733 5.26345C10.4733 5.05787 10.4015 4.88309 10.2581 4.73913C10.1141 4.59566 9.93933 4.52393 9.73375 4.52393C9.53851 4.52393 9.36917 4.59566 9.2257 4.73913C9.08174 4.88309 9.00977 5.05787 9.00977 5.26345C9.00977 5.45869 9.08174 5.62803 9.2257 5.7715C9.36917 5.91546 9.53852 5.98743 9.73375 5.98743H9.73376Z" fill="#B71B9E"></path><path d="M11.1047 8.22366C11.3 8.22366 11.4696 8.14922 11.6135 8.00033C11.7575 7.85144 11.8295 7.67937 11.8295 7.48414C11.8295 7.28892 11.7575 7.11685 11.6135 6.96796C11.4696 6.81907 11.3 6.74463 11.1047 6.74463C10.8997 6.74463 10.7251 6.81907 10.5812 6.96796C10.4372 7.11685 10.3652 7.28892 10.3652 7.48414C10.3652 7.67937 10.4372 7.85144 10.5812 8.00033C10.7251 8.14922 10.8997 8.22366 11.1047 8.22366Z" fill="#B71B9E"></path><path d="M8.48364 13C8.6135 13 8.71376 12.954 8.78441 12.8621C8.85453 12.7696 8.8896 12.6857 8.8896 12.6104C8.8896 12.4369 8.81116 12.2907 8.65428 12.1717C8.49741 12.0528 8.41897 11.7985 8.41897 11.4089C8.41897 10.9975 8.55974 10.6458 8.84128 10.3539C9.1223 10.0615 9.46307 9.91522 9.86357 9.91522H10.9677C11.725 9.91522 12.3364 9.6555 12.8018 9.13604C13.2673 8.61659 13.5 8.01609 13.5 7.33458C13.5 6.10087 13.0237 5.07001 12.071 4.24201C11.1188 3.41401 9.97733 3 8.64649 3C7.20708 3 5.98948 3.48699 4.99368 4.46097C3.9979 5.43494 3.5 6.61462 3.5 8C3.5 9.38538 3.98699 10.5651 4.96097 11.539C5.93494 12.513 7.10917 13 8.48364 13V13Z" stroke="#B71B9E" stroke-width="0.75" stroke-miterlimit="10"></path></svg></svg><p class="cpcst-detail-title" tabindex="-1">Color</p></div><button type="button" data-container=".cped-container" class="cpcst-details-item-tip cursor-pointer" data-click="colorRange" title="details"><svg class="cpcst-details-item-tip-icon cursor-pointer text-inherit opacity-30 w-4 h-4" aria-hidden="true" focusable="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none"><g><path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path></g></svg></svg></button></div>
+                            <div className='StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3'>
+                              <p className='StoneDetailBlock__content-value'>F</p>
+                              <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
+                                <img className='StoneDetailBlock__content-image' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneColorBG-HNKUR277.png" alt="" />
                               </div>
-                              <p className='StoneDetailBlock__content-value  flex-1 mb-2 lg:mb-3'>1.8mm</p>
-                              <span className='StoneDetailBlock__desc'>Measured at the base of the ring</span>
-                          </div>
-                          <div className='StoneDetailBlock  p-3 flex flex-col justify-between'>
-                              <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
-                                <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6.5H3C2.17157 6.5 1.5 7.17157 1.5 8C1.5 8.82843 2.17157 9.5 3 9.5H13C13.8284 9.5 14.5 8.82843 14.5 8C14.5 7.17157 13.8284 6.5 13 6.5Z" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.71289 3.60535L8.16648 5.06315L10.6201 3.60535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 4.85535V1.10535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M10.6201 12.3946L8.16648 10.9368L5.71289 12.3946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 11.1446V14.8946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path></svg></svg>
-                                <p className="cpcst-detail-title" tabindex="-1">PROFILE</p>
+                            </div>
+                            <div className="StoneDetailBlock__desc">Completely colorless</div>
+                      </div>
+                      <div className='StoneDetailBlock p-3 flex flex-col justify-between' data-current-block="clarity">
+                            <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2">
+                              <div className="StoneDetailBlock__title-container flex items-center gap-1">
+                                <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.65441 8.86331C5.85951 8.86331 6.03403 8.78887 6.17799 8.63998C6.32195 8.49109 6.39393 8.31902 6.39393 8.12379C6.39393 7.92856 6.32195 7.7565 6.17799 7.60761C6.03403 7.45872 5.8595 7.38428 5.65441 7.38428C5.45918 7.38428 5.28959 7.45872 5.14562 7.60761C5.00166 7.7565 4.92969 7.92856 4.92969 8.12379C4.92969 8.31902 5.00166 8.49109 5.14562 8.63998C5.28959 8.78887 5.45919 8.86331 5.65441 8.86331Z" fill="#B71B9E"></path><path d="M6.86648 6.37464C7.06171 6.37464 7.23106 6.30267 7.37452 6.1587C7.51849 6.01524 7.59046 5.84589 7.59046 5.65066C7.59046 5.44507 7.51849 5.2703 7.37452 5.12634C7.23106 4.98287 7.06171 4.91113 6.86648 4.91113C6.66089 4.91113 6.48612 4.98287 6.34216 5.12634C6.19869 5.2703 6.12695 5.44507 6.12695 5.65066C6.12695 5.84589 6.19869 6.01524 6.34216 6.1587C6.48612 6.30267 6.66089 6.37464 6.86648 6.37464Z" fill="#B71B9E"></path><path d="M9.73376 5.98743C9.929 5.98743 10.1011 5.91546 10.2499 5.7715C10.3988 5.62803 10.4733 5.45868 10.4733 5.26345C10.4733 5.05787 10.4015 4.88309 10.2581 4.73913C10.1141 4.59566 9.93933 4.52393 9.73375 4.52393C9.53851 4.52393 9.36917 4.59566 9.2257 4.73913C9.08174 4.88309 9.00977 5.05787 9.00977 5.26345C9.00977 5.45869 9.08174 5.62803 9.2257 5.7715C9.36917 5.91546 9.53852 5.98743 9.73375 5.98743H9.73376Z" fill="#B71B9E"></path><path d="M11.1047 8.22366C11.3 8.22366 11.4696 8.14922 11.6135 8.00033C11.7575 7.85144 11.8295 7.67937 11.8295 7.48414C11.8295 7.28892 11.7575 7.11685 11.6135 6.96796C11.4696 6.81907 11.3 6.74463 11.1047 6.74463C10.8997 6.74463 10.7251 6.81907 10.5812 6.96796C10.4372 7.11685 10.3652 7.28892 10.3652 7.48414C10.3652 7.67937 10.4372 7.85144 10.5812 8.00033C10.7251 8.14922 10.8997 8.22366 11.1047 8.22366Z" fill="#B71B9E"></path><path d="M8.48364 13C8.6135 13 8.71376 12.954 8.78441 12.8621C8.85453 12.7696 8.8896 12.6857 8.8896 12.6104C8.8896 12.4369 8.81116 12.2907 8.65428 12.1717C8.49741 12.0528 8.41897 11.7985 8.41897 11.4089C8.41897 10.9975 8.55974 10.6458 8.84128 10.3539C9.1223 10.0615 9.46307 9.91522 9.86357 9.91522H10.9677C11.725 9.91522 12.3364 9.6555 12.8018 9.13604C13.2673 8.61659 13.5 8.01609 13.5 7.33458C13.5 6.10087 13.0237 5.07001 12.071 4.24201C11.1188 3.41401 9.97733 3 8.64649 3C7.20708 3 5.98948 3.48699 4.99368 4.46097C3.9979 5.43494 3.5 6.61462 3.5 8C3.5 9.38538 3.98699 10.5651 4.96097 11.539C5.93494 12.513 7.10917 13 8.48364 13V13Z" stroke="#B71B9E" stroke-width="0.75" stroke-miterlimit="10"></path></svg></svg><p class="cpcst-detail-title" tabindex="-1">CLARITY</p></div><button type="button" data-container=".cped-container" class="cpcst-details-item-tip cursor-pointer" data-click="colorRange" title="details"><svg class="cpcst-details-item-tip-icon cursor-pointer text-inherit opacity-30 w-4 h-4" aria-hidden="true" focusable="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none"><g><path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path></g></svg></svg></button></div>
+                            <div className='StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3'>
+                              <p className='StoneDetailBlock__content-value'>VVS2</p>
+                              <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
+                                <img className='StoneDetailBlock__content-image' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneClarityBG-EISDTFPI.png" alt="" />
                               </div>
-                              <p className='StoneDetailBlock__content-value   mb-2'>Medium</p>
-                              <div className='StoneDetailBlock__content-image-container mb-2 relative flex items-center gap-1'>
-                              <svg className="StoneDetailBlock__content-image w-auto h-7.5" aria-hidden="true" focusable="false" viewBox="0 0 44 26"><svg width="44" height="26" viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.0918 13.4185H37.5088C35.449 13.4185 32.6711 13.6237 30.1885 14.461C30.4879 13.8228 30.7239 13.1499 30.8757 12.4443H41.0918C42.1943 12.4443 43.0918 11.5474 43.0918 10.4443C43.0918 9.34131 42.1943 8.44434 41.0918 8.44434H30.8757C29.9543 4.16388 26.1437 0.944336 21.5918 0.944336C17.0399 0.944336 13.2292 4.16388 12.3079 8.44434H2.0918C0.989258 8.44434 0.0917975 9.34131 0.0917975 10.4443C0.0917975 11.5474 0.989258 12.4443 2.0918 12.4443H12.3079C12.46 13.1511 12.6965 13.825 12.9966 14.4641C10.2085 13.5418 7.05835 13.4185 5.6748 13.4185H2.08594C0.983158 13.4185 0.0859375 14.3156 0.0859375 15.4185C0.0859375 16.5212 0.983158 17.4185 2.08594 17.4185H5.67481C6.74427 17.4185 10.4186 17.5089 12.7955 18.673C14.684 19.5978 18.4863 22.8961 20.2332 24.511C20.6024 24.8539 21.0854 25.0435 21.5918 25.0435C22.0981 25.0435 22.5812 24.8539 22.9519 24.5097C24.6973 22.8961 28.4996 19.5978 30.3881 18.673C32.5061 17.6361 35.4294 17.4185 37.5088 17.4185H41.0918C42.1946 17.4185 43.0918 16.5212 43.0918 15.4185C43.0918 14.3156 42.1946 13.4185 41.0918 13.4185L41.0918 13.4185ZM13.0918 10.4443C13.0918 8.98774 13.4609 7.61609 14.1094 6.41651L15.3184 7.27534V13.6397L13.9707 14.1846C13.4134 13.0541 13.0918 11.7875 13.0918 10.4443L13.0918 10.4443ZM14.3345 14.8465L15.6646 14.3088L21.2168 17.5145V18.9254C18.3003 18.7972 15.766 17.1973 14.3345 14.8465H14.3345ZM21.5918 4.10938L27.1152 7.29834V13.6763L21.5918 16.8647L16.0684 13.6763V7.29834L21.5918 4.10938ZM21.5918 19.9443C21.7601 19.9443 21.9243 19.9277 22.0906 19.9191C21.9177 20.0684 21.7454 20.2176 21.592 20.3527C21.4349 20.2141 21.2656 20.0671 21.095 19.9192C21.2605 19.9278 21.4241 19.9443 21.5918 19.9443ZM21.9668 18.9254V17.5145L27.4773 14.3329L28.6808 15.1232C27.223 17.3244 24.7688 18.8022 21.9668 18.9253V18.9254ZM31.0918 9.44434H41.0918C41.6436 9.44434 42.0918 9.89307 42.0918 10.4443C42.0918 10.9956 41.6436 11.4443 41.0918 11.4443H31.0918V9.44434ZM29.0698 14.4811L27.8652 13.6901V7.27533L29.0742 6.4165C29.7227 7.61608 30.0918 8.98773 30.0918 10.4443C30.0918 11.9045 29.7212 13.2795 29.0698 14.4811V14.4811ZM28.6855 5.77325L27.4695 6.63714L21.9668 3.45971V1.96332C24.7721 2.08661 27.2284 3.56787 28.6855 5.77326V5.77325ZM21.2168 1.96331V3.45971L15.7141 6.63714L14.498 5.77325C15.9552 3.56787 18.4115 2.0866 21.2168 1.96331ZM12.0918 11.4443H2.0918C1.54004 11.4443 1.0918 10.9956 1.0918 10.4443C1.0918 9.89307 1.54004 9.44434 2.0918 9.44434H12.0918V11.4443ZM41.0918 16.4185H37.5088C35.3232 16.4185 32.2383 16.6538 29.9482 17.7749C27.4268 19.0098 22.3232 23.729 22.2715 23.7769C22.0801 23.9546 21.8359 24.0435 21.5918 24.0435C21.3476 24.0435 21.1035 23.9546 20.9121 23.7769C20.8603 23.729 15.7568 19.0098 13.2353 17.7749C10.665 16.5161 6.79882 16.4185 5.67479 16.4185H2.08594C1.53321 16.4185 1.08594 15.9707 1.08594 15.4185C1.08594 14.8662 1.53321 14.4185 2.08594 14.4185H5.67481C7.19642 14.4185 10.9388 14.5709 13.7817 15.8394C15.0604 17.6845 16.9756 19.0489 19.2065 19.629C20.1719 20.4345 21.0332 21.1896 21.5918 21.6914C22.15 21.1898 23.0073 20.4354 23.9704 19.6307C26.2059 19.0511 28.1252 17.6843 29.405 15.835C31.988 14.6773 35.2109 14.4185 37.5088 14.4185H41.0918C41.6445 14.4185 42.0918 14.8662 42.0918 15.4185C42.0918 15.9707 41.6445 16.4185 41.0918 16.4185H41.0918ZM24.8435 8.969L21.8435 5.969L25.8435 7.969V12.8832L24.8435 8.969Z" fill="black"></path></svg></svg>
-                              </div>
-                              <span className='StoneDetailBlock__desc'>Only stacks with a <br /> chevron/curved band</span>
-                          </div>
-                          <div className='StoneDetailBlock StoneDetailBlock__fullwidth p-3 flex flex-col justify-between'>
-                              <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
-                              <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.52005 11.0862L0.930664 9.00729L1.6538 6.88812" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M2.73948 6.25928L1.65369 6.88816L4.5099 8.54243" stroke="#668BAD" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.24255 8.38739L4.52016 11.0862" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M13.9753 7.21783L15.0694 9.13377L8.10916 13.1651L4.51978 11.0862L5.62773 9.18988" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M5.2428 8.96701L8.09901 10.6213L13.9752 7.21785L12.5718 6.40503" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M8.09924 10.6213L8.10928 13.1651" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M11.4784 4.48907L12.5725 6.40501L6.70633 9.81426L3.11694 7.73534L3.84008 5.61618" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M6.69618 7.27048L11.4783 4.48911L8.62205 2.83484L3.83997 5.61622L6.69618 7.27048Z" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M6.69641 7.27045L6.70645 9.81426" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path></svg></svg>
-                                <p className="cpcst-detail-title" tabindex="-1">METAL</p>
-                              </div>
-                              <p className='StoneDetailBlock__content-value  flex-1 mb-2 lg:mb-3'>14k White Gold</p>
-                              <div className="SettingDetailBlock__graph-container mt-3 flex items-center gap-4 mb-2 lg:mb-3">
-                              <div className="SettingDetailBlock__graph">
-                              <svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 500 500">
-                                <g transform="translate(250, 250)">
-                                  <path d="M250,0A250,250,0,1,1,-214.716,-128.051L-137.418,-81.953A160,160,0,1,0,160,0Z" style={{fill: 'rgb(240, 230, 140)'}}></path>
-                                  <path d="M250,0L160,0Z" style={{fill: 'rgb(232, 232, 232)'}}></path>
-                                  <path d="M133.744,-211.217A250,250,0,0,1,224.109,-110.792L143.43,-70.907A160,160,0,0,0,85.596,-135.179Z" style={{fill: 'rgb(186, 196, 200)'}}></path>
-                                  <path d="M224.109,-110.792A250,250,0,0,1,250,0L160,0A160,160,0,0,0,143.43,-70.907Z" style={{fill: 'rgb(189, 186, 174)'}}></path>
-                                  <path d="M-214.716,-128.051A250,250,0,0,1,133.744,-211.217L85.596,-135.179A160,160,0,0,0,-137.418,-81.953Z" style={{fill: 'rgb(184, 115, 51)'}}></path>
-                                </g>
-                            </svg>
-                              </div>
-                                <div className="SettingDetailBlock__graph-text-container grid grid-cols-2 gap-x-4 gap-y-2">
-                                  <div className="SettingDetailBlock__graph-text flex items-center gap-2">
-                                      <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full gold"></div>
-                                      58.5% Gold
-                                  </div>
-                                  <div className="SettingDetailBlock__graph-text flex items-center gap-2">
-                                      <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full copper"></div>
-                                      25.4% Copper
-                                  </div>
-                                  <div className="SettingDetailBlock__graph-text flex items-center gap-2">
-                                      <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full zinc"></div>
-                                      8.7% Zinc
-                                  </div>
-                                  <div className="SettingDetailBlock__graph-text flex items-center gap-2">
-                                      <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full nickel"></div>
-                                      7.3% Nickel
-                                  </div>
-                                </div>
-                              </div>
-                              <span className='StoneDetailBlock__desc'>The secret sauce that makes this piece. <br /> *All white gold pieces are Rhodium plated</span>
+                            </div>
+                            <div className="StoneDetailBlock__desc">Hard to see inclusions even under 10x magnification</div>
+                      </div>
+                      <div className="StoneDetailBlock p-3 flex flex-col justify-between" data-current-block="cut">
+                        <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2">
+                            <div className="StoneDetailBlock__title-container flex items-center gap-1">
+                            <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M1.50781 7.30243L4.37667 4.43262H10.4437L13.3126 7.30243L7.40733 12.5404L1.50781 7.30243Z" stroke="#1A93C7" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.17558 7.23696L7.10057 10.3052L3.81494 7.38886L5.47519 5.72852L5.17558 7.23696Z" fill="#1A93C7"></path><path d="M7.40771 12.4684L10.0354 7.32795L8.02057 4.44141" stroke="#1A93C7" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M15.2645 9.25526L7.71191 1.7002" stroke="#1A93C7" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.42334 14.3001L15.4926 5.36865" stroke="#1A93C7" stroke-width="0.75" stroke-miterlimit="10"></path></g></svg></svg>
+                              <p className="cpcst-detail-title" tabindex="-1">cut</p>
+                            </div>
+                            <button type="button" data-container=".cped-container" className="cpcst-details-item-tip cursor-pointer" data-click="cutRange" title="details"><svg className="cpcst-details-item-tip-icon cursor-pointer text-inherit opacity-30 w-4 h-4" aria-hidden="true" focusable="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none"><g><path d="M5 0C4.0111 0 3.0444 0.293245 2.22215 0.842652C1.39991 1.39206 0.759043 2.17295 0.380605 3.08658C0.00216642 4.00021 -0.0968503 5.00555 0.0960759 5.97545C0.289002 6.94536 0.765206 7.83627 1.46447 8.53553C2.16373 9.2348 3.05465 9.711 4.02455 9.90393C4.99446 10.0969 5.99979 9.99784 6.91342 9.6194C7.82705 9.24096 8.60794 8.6001 9.15735 7.77785C9.70676 6.95561 10 5.98891 10 5C9.99952 3.67407 9.47258 2.40257 8.53501 1.465C7.59743 0.527418 6.32594 0.000479728 5 0V0ZM5.5 7.75696C5.5 7.82142 5.47439 7.88323 5.42881 7.92881C5.38324 7.97439 5.32142 8 5.25696 8H4.74304C4.67859 8 4.61677 7.97439 4.57119 7.92881C4.52561 7.88323 4.50001 7.82142 4.5 7.75696V7.24304C4.50001 7.17858 4.52561 7.11677 4.57119 7.07119C4.61677 7.02561 4.67859 7 4.74304 7H5.25696C5.32142 7 5.38324 7.02561 5.42881 7.07119C5.47439 7.11677 5.5 7.17858 5.5 7.24304V7.75696ZM5.51685 6.30023C5.50554 6.35715 5.47464 6.40831 5.42953 6.44481C5.38441 6.48131 5.32792 6.50084 5.2699 6.5H4.7721C4.73536 6.49956 4.69914 6.49132 4.66583 6.47584C4.63251 6.46035 4.60287 6.43797 4.57885 6.41017C4.55483 6.38237 4.53699 6.34979 4.5265 6.31459C4.51601 6.27938 4.51312 6.24235 4.51801 6.20594C4.68335 4.92078 5.93256 4.93372 5.99738 4.07094C6.01172 3.8312 5.9405 3.59415 5.79638 3.40202C5.65227 3.2099 5.44463 3.07517 5.21045 3.02185C5.07892 2.99399 4.94313 2.99285 4.81116 3.01851C4.67918 3.04417 4.55371 3.0961 4.4422 3.17121C4.33068 3.24632 4.23541 3.34308 4.16204 3.45574C4.08866 3.5684 4.03869 3.69467 4.01508 3.82703C4.00945 3.87363 3.98734 3.91668 3.95274 3.94841C3.91814 3.98013 3.87333 3.99843 3.82642 4H3.21497C3.18714 4.00043 3.15952 3.99507 3.13388 3.98426C3.10823 3.97346 3.0851 3.95745 3.06597 3.93724C3.04683 3.91703 3.0321 3.89306 3.02271 3.86686C3.01332 3.84066 3.00947 3.8128 3.01142 3.78504C3.04047 3.51637 3.12365 3.25638 3.25593 3.02074C3.38821 2.7851 3.56684 2.5787 3.78107 2.41398C3.99529 2.24926 4.24066 2.12965 4.50238 2.06235C4.76409 1.99505 5.03673 1.98146 5.30384 2.0224C5.72467 2.09364 6.1125 2.29528 6.41253 2.59886C6.71257 2.90243 6.90965 3.29259 6.97595 3.71424C7.2075 5.14838 5.69422 5.28296 5.51685 6.30023Z" fill="currentColor"></path></g></svg></svg></button>
+                        </div>
+                        <div className="StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3">
+                            <p className="StoneDetailBlock__content-value" tabindex="-1">Good</p>
+                        </div>
+                        <div className="StoneDetailBlock__desc">Decent fire and sparkle</div>
+                      </div>
+                      <div className="StoneDetailBlock p-3 flex flex-col justify-between" data-current-block="dimensions (mm)">
+                        <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2">
+                            <div className="StoneDetailBlock__title-container flex items-center gap-1">
+                            <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4203 5.07471H3.57971C3.25955 5.07471 3 5.43744 3 5.8849V10.1384C3 10.5859 3.25955 10.9486 3.57971 10.9486H12.4203C12.7405 10.9486 13 10.5859 13 10.1384V5.8849C13 5.43744 12.7405 5.07471 12.4203 5.07471Z" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.5 5.05176V7.99292" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M8 5.05176V7.99292" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M10.5 5.05176V7.99292" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path></svg></svg>
+                              <p className="cpcst-detail-title" tabindex="-1">DIMENSIONS (MM)</p>
+                            </div>
+                           
+                        </div>
+                        <div className="StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3">
+                            <p className="StoneDetailBlock__content-value" tabindex="-1">4.9x4.88</p>
+                            <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
+                              <img className="StoneDetailBlock__content-image" src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneDimensions-V2IG3DFU.png" alt="" />
+                            </div>
+                        </div>
+                        <div className="StoneDetailBlock__desc">Ratio: 1</div>
+                      </div>
+                      <div className="StoneDetailBlock p-3 flex flex-col justify-between" data-current-block="dimensions (mm)">
+                        <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2">
+                            <div className="StoneDetailBlock__title-container flex items-center gap-1">
+                            <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4203 5.07471H3.57971C3.25955 5.07471 3 5.43744 3 5.8849V10.1384C3 10.5859 3.25955 10.9486 3.57971 10.9486H12.4203C12.7405 10.9486 13 10.5859 13 10.1384V5.8849C13 5.43744 12.7405 5.07471 12.4203 5.07471Z" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.5 5.05176V7.99292" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M8 5.05176V7.99292" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M10.5 5.05176V7.99292" stroke="#0E98A0" stroke-width="0.75" stroke-miterlimit="10"></path></svg></svg>
+                              <p className="cpcst-detail-title" tabindex="-1">CERTIFICATION</p>
+                            </div>
+                           
+                        </div>
+                        <div className="StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3">
+                            <p className="StoneDetailBlock__content-value" tabindex="-1">GIA</p>
+                            <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
+                              <img className="StoneDetailBlock__content-image" src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg" alt="" />
+                              <div className="StoneDetailBlock__certificate-title whitespace-pre-line">Natural Diamond</div>
+                            </div>
+                        </div>
+                        <div className="StoneDetailBlock__desc">
+                          <a href="#">View Certificate</a>
+                        </div>
+                      </div>
+                    </div> 
+                    </div>  
+                  </div>
+              </div>
+          </div>
+                {/* <div className='made-in-heaven-sec EngagementCompleteYourLook pb-10 grid gap-2.5 grid-cols-1  bg-white mx-auto w-full relative md:gap-4 xl:gap-8'>
+                    <h2 className='CustomProduct__section-title'>Match Made in Heaven</h2>
+                    <div className='made-in-heaven-img-box-main grid grid-cols-3 w-full items-center gap-3'>
+                        <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
+                          <img src="/lexie-side-img1.webp" />
+                        </div>
+                        <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
+                          <img src="/lexie-side-img1.webp" />
+                        </div>
+                        <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
+                          <img src="/lexie-side-img1.webp" />
+                        </div>
+                    </div>
+                </div> */}
+          <div className='StoneEducationItems__Wrapper md:flex md:flex-wrap md:justify-center md:gap-4'>
+              <div className='colorRangeBlock  md:flex md:flex-col md:justify-between md:w-1/2-gap-4 md:p-3 xl:w-1/3-gap-4 md:bg-customGray-50 md:rounded-2.5xl'>
+                  <div className='hidden md:block mb-2'>
+                      <div className='flex flex-wrap gap-2 items-center whitespace-nowrap'>
+                          <div className='flex items-center gap-2 text-base leading-none rounded-lg justify-between py-2 pl-3 pr-2 text-customGray-600 bg-white shadow shrink-0 font-semibold'>
+                          <span className="uppercase">Color</span> 
+                          <span className="text-black font-bold py-1.5 px-2 bg-borders rounded-sm">F</span>
                           </div>
                       </div>
-                      <div className='add-extra-feature-sec StoneDetailBlock StoneDetailBlock__extras mt-2 p-3 flex items-center justify-between gap-2 text-customGray-500'>
-                        <div className='extra-star-icon flex items-center gap-1'>
-                           <svg className="w-4 h-4" aria-hidden="true" focusable="false" viewBox="0 0 14 14"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.90022 1.46712L8.09914 4.77441L8.21738 5.10059L8.56431 5.10399L12.2173 5.13974L9.31681 7.14024L9.00637 7.35436L9.12693 7.71169L10.226 10.969L7.17558 8.95637L6.90021 8.77468L6.62485 8.95637L3.57446 10.969L4.67351 7.71169L4.79407 7.35436L4.48363 7.14024L1.58315 5.13974L5.23613 5.10399L5.58306 5.10059L5.7013 4.77441L6.90022 1.46712Z" stroke="#D89571"></path></svg></svg>
-                           <p className="cpcst-detail-title" tabindex="-1">Extras</p>
-                        </div>
-                        <a href="#" className='ExtrasText text-black underline'>Add Extra Features</a>
+                  </div>
+                  <div className='StoneEducationItem__ImageContainer mb-2 w-full'>
+                      <div className='StoneEducationItem__ImageWrapper relative pt-[60%]  '>
+                          <img className='absolute w-full h-full object-contain top-0 left-0 z-10' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg" alt="" />
+                          <img className='absolute w-full h-full object-contain transition-opacity duration-300 top-0 left-0' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg" alt="" />
+                      </div>
+                      <div className='mb-2 '>
+                          <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative'>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-customGray-500 font-proximaNovaCondensed"><span>J</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-customGray-500 font-proximaNovaCondensed"><span>I</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-customGray-500 font-proximaNovaCondensed"><span>H</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-customGray-500 font-proximaNovaCondensed"><span>G</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black font-proximaNovaCondensed"><span>F</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-customGray-500 font-proximaNovaCondensed"><span>H</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          <button type="button" className="px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-customGray-500 font-proximaNovaCondensed"><span>G</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button>
+                          </div>
                       </div>
                   </div>
               </div>
@@ -322,7 +333,7 @@ const DiamondDetail = () => {
     </section>
 
 
-    <section className='our-coupeles-sec py-16 px-5 md:py-24'>
+    {/* <section className='our-coupeles-sec py-16 px-5 md:py-24'>
         <div className='container mx-auto px-4'>
             <div className='our-coupeles-heading text-center uppercase mb-8 md:mb-12 xl:mb-20 md:flex md:justify-between md:gap-4'>
               <h2 className="cfpb-fib-title font-seasons font-bold text-white" tabindex="-1">OUR COUPLES</h2>
@@ -388,7 +399,7 @@ const DiamondDetail = () => {
                 </a>
             </div>
         </div>
-    </section>
+    </section> */}
 
 
     <section className='sai-container newsletter-sec'>
