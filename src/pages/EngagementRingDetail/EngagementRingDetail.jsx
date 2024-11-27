@@ -16,20 +16,18 @@ import EngagementRingDetailSlider from './EngagementRingDetailSlider';
 const EngagementRingDetail = () => {
   const dispatch = useDispatch();
   const { productId } = useParams(); // Get product ID from the URL
-  const [selectedVariant, setSelectedVariant] = useState(0);
+  const [selectedVariant] = useState(0);
   
   const { product, loading, error } = useSelector((state) => state.singleProduct);
   
   const variants = product?.variants?.edges;
   const images = product?.images?.edges.map((edge) => edge.node);
   
-
-
-
   useEffect(() => {
     if (productId) {
       // Reconstruct the full GraphQL ID
       const graphQLId = `gid://shopify/Product/${productId}`;
+      console.log('productId');
       dispatch(fetchSingleProducts(graphQLId));
     }
   }, [dispatch, productId]);
@@ -38,7 +36,7 @@ const EngagementRingDetail = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  const firstVariant = variants[selectedVariant]?.node;
+  const firstVariant =variants && variants[selectedVariant]?.node;
   const price = firstVariant?.price?.amount || "0.00";
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
