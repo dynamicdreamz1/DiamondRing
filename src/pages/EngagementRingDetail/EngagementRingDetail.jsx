@@ -7,8 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";
 import { fetchSingleProducts } from '../../store/actions/singleProductAction';
 import BadgeComponent from '../../Component/Common/BadgeComponent';
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css'
+import InnerImageZoom from 'react-inner-image-zoom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 
 
 
@@ -48,16 +48,14 @@ const EngagementRingDetail = () => {
             <div className='customer-product-side-img-sec'>
               <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
                 {images?.map((image) => (
-                  <div key={image.id}>
-                    <Zoom>
-                      <img
-                        src={image.src}
-                        alt={image.altText || product.title}
-                        width={image.width / 2} // Adjust the width
-                        height={image.height / 2} // Adjust the height
-                        style={{ maxWidth: '100%', transition: 'transform 0.3s ease' }} // Smooth zoom transition
-                      />
-                    </Zoom>
+                  <div key={image.id} style={{ border: '1px solid #ccc', padding: '5px' }}>
+                    <InnerImageZoom
+                      src={image.src}
+                      alt={image.altText || product.title}
+                      zoomType="click" // Enable zoom on click only
+                      zoomScale={1.5} // Scale the zoom level
+                      className="custom-image"
+                    />
                   </div>
                 ))}
               </div>
