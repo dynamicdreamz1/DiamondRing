@@ -57,3 +57,16 @@ export const productBadges = [
     icon: (<svg width="61" height="54" viewBox="0 0 61 54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.43727 1.24023H8.8402C8.8402 3.20287 8.05972 5.08711 6.67193 6.47491C5.28414 7.86271 3.39989 8.64318 1.43726 8.64318V1.24023H1.43727Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M59.5629 1.24025V8.64318C57.6002 8.64318 55.716 7.86269 54.3282 6.47491C52.9404 5.08712 52.1599 3.20287 52.1599 1.24023H59.5628L59.5629 1.24025Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M1.43726 42.9391V35.5361C3.39989 35.5361 5.28413 36.3166 6.67193 37.7044C8.05973 39.0922 8.8402 40.9764 8.8402 42.9391H1.43726V42.9391Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M59.5628 42.9391H52.1599C52.1599 40.9764 52.9404 39.0922 54.3282 37.7044C55.716 36.3166 57.6002 35.5361 59.5629 35.5361V42.9391L59.5628 42.9391Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M19.9424 42.939H1.43726V1.24023H59.5628V42.939H41.0576" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M11.5459 15.1399H49.4539" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M16.6003 20.1941H44.3995" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M22.9185 10.0854H38.0816" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M39.5826 27.7759H21.4174L12.1477 36.4087L30.5 51.7843L48.8523 36.4087L39.5826 27.7759Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path><path d="M30.5 51.7843L44.0369 31.9242L39.5826 27.7759L24.1992 35.1293" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M12.1477 36.4087L21.4174 27.7759L30.5 51.7843L12.1477 36.4087Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>),  // Replace with the actual SVG path or relevant icon data
   },
 ];
+
+
+
+
+export const productSliderBadges = [
+  {
+    title: "Overnight Shipping",
+    description: "All Keyzar packages are fully insured and shipped with FedEx Priority Overnight. Orders within US are delivered in about 24 hours and outside US 48-72 hours.",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/f…g?v=1692183215&width=1124&height=1406&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  
+];
+

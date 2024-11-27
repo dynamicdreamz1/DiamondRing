@@ -48,7 +48,7 @@ const EngagementRingDetail = () => {
             <div className='customer-product-side-img-sec'>
               <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
                 {images?.map((image) => (
-                  <div key={image.id} style={{ border: '1px solid #ccc', padding: '5px' }}>
+                  <div key={image.id}>
                     <Zoom>
                       <img
                         src={image.src}
@@ -340,6 +340,7 @@ const EngagementRingDetail = () => {
               <button type="button" className="w-8 h-8 flex justify-center items-center text-current"><svg class="w-8 h-8" aria-hidden="true" focusable="false"><svg viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.87891 24.5722L18.1213 14.3298L7.87891 4.0874" stroke="currentColor" stroke-width="2.5"></path></svg></svg></button>
             </div>
           </div>
+
           <div className='our-coupeles-box-main'>
             <a href='#' className='our-coupeles-boxes cpucb-slide relative rounded-xl overflow-hidden'>
               <div className='cpucb-image-container absolute-picture-container overflow-hidden'>
@@ -396,6 +397,7 @@ const EngagementRingDetail = () => {
               </div>
             </a>
           </div>
+
         </div>
       </section>
 
