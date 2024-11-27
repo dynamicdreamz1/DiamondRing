@@ -18,7 +18,7 @@ const BadgeComponent = () => {
     return (
         <div className="product-badge-main flex flex-wrap justify-center gap-y-2 my-6 md:my-8">
             {productBadges.map((badge, index) => (
-                <a key={index} className="product-badge-item CustomProductBadge" onClick={() => handleClickOpen(badge)}>
+                <a  key={index} className="product-badge-item CustomProductBadge" onClick={() => handleClickOpen(badge)}>
                     <div className="CustomBadge__image h-8 mx-auto">
                         {badge.icon}
                     </div>
@@ -35,22 +35,29 @@ const BadgeComponent = () => {
                     }
                 }}
             >
-                <DialogTitle>{selectedBadge ? selectedBadge.title : 'Badge'}</DialogTitle>
-                <DialogContent>
+                <DialogContent className='productBadges_model CustomBadge__content w-full max-h-full z-10 text-center mx-auto'>
                     <div className="flex justify-center">
-                        <div className="h-16 w-16 mx-auto">
+                        <div className="CustomBadge__popup-image CustomBadge__image h-16 mx-auto">
                             {selectedBadge ? selectedBadge.icon : null}
                         </div>
                     </div>
-                    <p className="mt-4 text-center">
+                    <DialogTitle className='CustomBadge__popup-title mt-6 md:mt-8'>
+                        {selectedBadge ? selectedBadge.title : 'Badge'}
+                    </DialogTitle>
+                    <p className="CustomBadge__popup-text mt-3 ">
                         {selectedBadge ? selectedBadge.description : 'Description goes here.'}
                     </p>
+                    <DialogActions>
+                    <Button onClick={handleClose} color="secondary" className='CustomBadge__popup-button great-button w-full'>
+                        great
+                    </Button>
+                    </DialogActions>
                 </DialogContent>
-                <DialogActions>
+                {/* <DialogActions>
                     <Button onClick={handleClose} color="secondary">
                         Great
                     </Button>
-                </DialogActions>
+                </DialogActions> */}
             </Dialog>
         </div>
     );

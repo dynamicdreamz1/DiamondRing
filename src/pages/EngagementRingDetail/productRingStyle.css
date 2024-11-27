@@ -2235,7 +2235,8 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 
 .CustomProductBadge {
     width: 25%;
-    padding: 0 2px
+    padding: 0 5px;
+    cursor: pointer;
 }
 
 .CustomBadge__title {
@@ -3160,6 +3161,47 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 
 .pdp .tangiblee-cta {
     font-size: 10px!important
+}
+
+.great-button {
+    display: inline-block;
+    background-color:#000 !important;
+    color: #fff!important;
+    border-radius:60px !important;
+    padding: 14px !important;
+    margin-top: 32px !important;
+}
+
+.great-button:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.productBadges_model {
+    padding: 48px 64px !important;
+}
+
+.css-141axou-MuiModal-root-MuiDialog-root .MuiDialog-paper {
+    border-radius: 16px;
+}
+
+@media (max-width:991px) {
+    .productBadges_model {
+        padding: 30px !important;
+    }
+
+    .great-button {
+        margin-top: 20px !important;
+    }
+}
+
+@media (max-width:767px) {
+    .productBadges_model {
+        padding: 20px !important;
+    }
+    .great-button {
+        padding: 10px 12px;
+    }
 }
 
 /*# sourceMappingURL=https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/products-MEJ2Z3LT.css.map */
