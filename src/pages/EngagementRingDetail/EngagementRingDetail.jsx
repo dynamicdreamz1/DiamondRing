@@ -72,7 +72,7 @@ const EngagementRingDetail = () => {
             <div className='customer-product-side-text-sec'>
               <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
                 <div className='the-lexie-detail flex-1'>
-                  <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>The Lexie</h2>
+                  <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>{product.title}</h2>
                   <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>$750</h3>
                   <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>$1,486</span></p>
                   <a href="#" className='ExtrasButton inline-flex items-center gap-1'>
@@ -91,7 +91,7 @@ const EngagementRingDetail = () => {
                 </div>
               </div>
               <div className='cpst-description-container md:mb-8 hidden md:block'>
-                <p className='cpst-description text-customGray-500'>The Lexie is a timeless solitaire that blends classic design with subtle sophistication. Its smooth cathedral band flows seamlessly around the delicate prongs, offering both support and elegance while ensuring the center stone takes center stage. As the light catches the diamond, The Lexie radiates brilliance from every angle, wrapping your finger in a display of sparkle that’s as enduring as your love.</p>
+                <p className='cpst-description text-customGray-500'>{product.description}</p>
               </div>
               <div className='production-option-main'>
                 <div className='production-option-heading-img'>
