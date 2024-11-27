@@ -93,7 +93,7 @@ const EngagementRingDetail = () => {
               <div className='cpst-description-container md:mb-8 hidden md:block'>
                 <p className='cpst-description text-customGray-500'>{product.description}</p>
               </div>
-              <div className='production-option-main'>
+              {/* <div className='production-option-main'>
                 <div className='production-option-heading-img'>
                   <h3 className='py-1 px-2 cmsi-item-options-header-title text-customGray-500 md:text-black md:font-bold md:p-0 md:mb-1.5'>Center Stone Shape: <span className='text-customGray-500 font-normal ml-1'>Round</span></h3>
                   <div className='production-item-option -mx-1 flex overflow-auto ccfi-round-buttons-wrapper lg:-mx-1 lg:overflow-hidden lg:flex-wrap gap-2'>
@@ -163,7 +163,7 @@ const EngagementRingDetail = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className='production-button mt-8'>
                 <a href="#" className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
                   <div className="transition-transform duration-500 text-ellipsis overflow-hidden flex items-center justify-between gap-2 md:gap-4 ">

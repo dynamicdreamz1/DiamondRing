@@ -23,7 +23,7 @@ function App() {
           <Route path="/diamond-list/diamond-detail-page" element={<DiamondDetail />} />
 
           {/* Redirect to default route */}
-          {/* <Route path="*" element={<RingSelector />} /> */}
+          <Route path="*" element={<RingSelector />} />
         </Routes>
       </Router>
     </Provider>
