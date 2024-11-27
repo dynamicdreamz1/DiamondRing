@@ -61,7 +61,7 @@ export const productBadges = [
 
 
 
-export const productSliderBadges = [
+export const productSliderBadgesData = [
   {
     title: "Shea & Josh Schmidt",
     description: "Our day was so special filled with family and so much love! My fiancé Josh told me we were going to...",

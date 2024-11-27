@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import TabComponent from '../../Component/Common/TabComponent'
 // import ringImg from '../../public/lexie-side-img1.webp'
 import "../EngagementRing/ringStyle.css";
@@ -9,6 +9,7 @@ import { fetchSingleProducts } from '../../store/actions/singleProductAction';
 import BadgeComponent from '../../Component/Common/BadgeComponent';
 import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import EngagementRingDetailSlider from './EngagementRingDetailSlider';
 
 
 
@@ -29,7 +30,6 @@ const EngagementRingDetail = () => {
     }
   }, [dispatch, productId]);
 
-  console.log("product", product);
 
 
   if (loading) return <p>Loading...</p>;
@@ -48,12 +48,12 @@ const EngagementRingDetail = () => {
             <div className='customer-product-side-img-sec'>
               <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
                 {images?.map((image) => (
-                  <div key={image.id} style={{ border: '1px solid #ccc', padding: '5px' }}>
+                  <div key={image.id}>
                     <InnerImageZoom
                       src={image.src}
                       alt={image.altText || product.title}
                       zoomType="click" // Enable zoom on click only
-                      zoomScale={1.5} // Scale the zoom level
+                      zoomScale={5} // Scale the zoom level
                       className="custom-image"
                     />
                   </div>
@@ -329,75 +329,7 @@ const EngagementRingDetail = () => {
       </section>
 
 
-      <section className='our-coupeles-sec py-16 px-5 md:py-24'>
-        <div className='container mx-auto px-4'>
-          <div className='our-coupeles-heading text-center uppercase mb-8 md:mb-12 xl:mb-20 md:flex md:justify-between md:gap-4'>
-            <h2 className="cfpb-fib-title font-seasons font-bold text-white" tabindex="-1">OUR COUPLES</h2>
-            <div className='hidden shrink-0 md:flex gap-5 inherit-title-color'>
-              <button type="button" className="w-8 h-8 flex justify-center items-center text-current"><svg class="w-8 h-8" aria-hidden="true" focusable="false"><svg viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1212 4.08742L7.87879 14.3298L18.1212 24.5723" stroke="currentColor" stroke-width="2.5"></path></svg></svg></button>
-              <button type="button" className="w-8 h-8 flex justify-center items-center text-current"><svg class="w-8 h-8" aria-hidden="true" focusable="false"><svg viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.87891 24.5722L18.1213 14.3298L7.87891 4.0874" stroke="currentColor" stroke-width="2.5"></path></svg></svg></button>
-            </div>
-          </div>
-
-          <div className='our-coupeles-box-main'>
-            <a href='#' className='our-coupeles-boxes cpucb-slide relative rounded-xl overflow-hidden'>
-              <div className='cpucb-image-container absolute-picture-container overflow-hidden'>
-                <img className='cpucb-image absolute-image ' src="/our-coupel-slide-img1.webp" />
-              </div>
-              <div className='cpucb-text-container absolute bottom-0 px-6 py-5 w-full'>
-                <h4 className="cpucb-slide-title uppercase" tabindex="-1">Sarah & Jalen Bailey</h4>
-                <p className='cpucb-slide-text mt-2'>Jay and I met on a hinge, and within a day we had our first date at a coffee shop. One of our favorites...</p>
-                <span className="cpucb-slide-link mt-4 flex justify-between items-center gap-3">
-                  Read More
-                  <svg className="w-8 h-3" viewBox="0 0 34 14">
-                    <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect y="6.5" width="32" height="1" rx="0.5" fill="currentColor"></rect>
-                      <path d="M26.3555 12.7271L32.1226 7.00005L26.3555 1.27295" stroke="currentColor" stroke-linecap="round"></path>
-                    </svg>
-                  </svg>
-                </span>
-              </div>
-            </a>
-            <a href='#' className='our-coupeles-boxes cpucb-slide relative rounded-xl overflow-hidden'>
-              <div className='cpucb-image-container absolute-picture-container overflow-hidden'>
-                <img className='cpucb-image absolute-image ' src="/our-coupel-slide-img1.webp" />
-              </div>
-              <div className='cpucb-text-container absolute bottom-0 px-6 py-5 w-full'>
-                <h4 className="cpucb-slide-title uppercase" tabindex="-1">Sarah & Jalen Bailey</h4>
-                <p className='cpucb-slide-text mt-2'>Jay and I met on a hinge, and within a day we had our first date at a coffee shop. One of our favorites...</p>
-                <span className="cpucb-slide-link mt-4 flex justify-between items-center gap-3">
-                  Read More
-                  <svg className="w-8 h-3" viewBox="0 0 34 14">
-                    <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect y="6.5" width="32" height="1" rx="0.5" fill="currentColor"></rect>
-                      <path d="M26.3555 12.7271L32.1226 7.00005L26.3555 1.27295" stroke="currentColor" stroke-linecap="round"></path>
-                    </svg>
-                  </svg>
-                </span>
-              </div>
-            </a>
-            <a href='#' className='our-coupeles-boxes cpucb-slide relative rounded-xl overflow-hidden'>
-              <div className='cpucb-image-container absolute-picture-container overflow-hidden'>
-                <img className='cpucb-image absolute-image ' src="/our-coupel-slide-img1.webp" />
-              </div>
-              <div className='cpucb-text-container absolute bottom-0 px-6 py-5 w-full'>
-                <h4 className="cpucb-slide-title uppercase" tabindex="-1">Sarah & Jalen Bailey</h4>
-                <p className='cpucb-slide-text mt-2'>Jay and I met on a hinge, and within a day we had our first date at a coffee shop. One of our favorites...</p>
-                <span className="cpucb-slide-link mt-4 flex justify-between items-center gap-3">
-                  Read More
-                  <svg className="w-8 h-3" viewBox="0 0 34 14">
-                    <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect y="6.5" width="32" height="1" rx="0.5" fill="currentColor"></rect>
-                      <path d="M26.3555 12.7271L32.1226 7.00005L26.3555 1.27295" stroke="currentColor" stroke-linecap="round"></path>
-                    </svg>
-                  </svg>
-                </span>
-              </div>
-            </a>
-          </div>
-
-        </div>
-      </section>
+      <EngagementRingDetailSlider />
 
 
       <section className='sai-container newsletter-sec'>
