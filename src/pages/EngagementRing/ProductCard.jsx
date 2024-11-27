@@ -25,16 +25,16 @@ const ProductCard = ({ node }) => {
   const handleAddRingClick = (product) => {
     // Dispatch product to Redux store
     dispatch(addProduct(product));
-    
+
     // Save product to localStorage
     const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
     savedProducts.push(product);
     localStorage.setItem('cartProducts', JSON.stringify(savedProducts));
-  
+
     // Show model
     setselectedProductModel(true);
   };
-  
+
   const firstVariant = variants[selectedVariant]?.node;
   const price = firstVariant?.price?.amount || "0.00";
   const formattedPrice = new Intl.NumberFormat("en-US", {
@@ -48,18 +48,17 @@ const ProductCard = ({ node }) => {
     : null;
 
 
-    useEffect(() => {
-      // Retrieve products from localStorage
-      const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-  
-      // Dispatch each product to Redux if there's any data in localStorage
-      if (savedProducts.length > 0) {
-        savedProducts.forEach(product => {
-          dispatch(addProduct(product));
-        });
-      }
-    }, [dispatch]);
+  useEffect(() => {
+    // Retrieve products from localStorage
+    const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
 
+    // Dispatch each product to Redux if there's any data in localStorage
+    if (savedProducts.length > 0) {
+      savedProducts.forEach(product => {
+        dispatch(addProduct(product));
+      });
+    }
+  }, [dispatch]);
 
 
   return (
@@ -164,7 +163,9 @@ const ProductCard = ({ node }) => {
         </div>
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
-          <a href="/ring-select/ring-detail-page" className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">More Info</a>
+          <a href={`/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
+            More Info
+          </a>
           <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">Add Diamond</button>
         </div>
 

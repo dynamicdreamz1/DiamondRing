@@ -18,12 +18,12 @@ function App() {
           {/* Default Route */}
           <Route path="ring-select" element={<RingSelector />} />
           {/* Route with ID */}
-          <Route path="/ring-select/ring-detail-page" element={<RingDetails />} />
+          <Route path="/ring-select/:productId" element={<RingDetails />} />
           <Route path="/diamond-list" element={<DiamondList />} />
           <Route path="/diamond-list/diamond-detail-page" element={<DiamondDetail />} />
 
           {/* Redirect to default route */}
-          <Route path="*" element={<RingSelector />} />
+          {/* <Route path="*" element={<RingSelector />} /> */}
         </Routes>
       </Router>
     </Provider>
