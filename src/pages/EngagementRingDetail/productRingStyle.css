@@ -31,6 +31,21 @@
     overflow: hidden
 }
 
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.MuiDialog-paper {
+    animation: slideUp 0.5s ease-out;
+}
+
 .ZoomMediaContainer.overflow-visible .slick-current {
     overflow: visible
 }
