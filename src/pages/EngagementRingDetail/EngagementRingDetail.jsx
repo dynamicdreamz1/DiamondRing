@@ -53,7 +53,7 @@ const EngagementRingDetail = () => {
                       src={image.src}
                       alt={image.altText || product.title}
                       zoomType="click" // Enable zoom on click only
-                      zoomScale={5} // Scale the zoom level
+                      zoomScale={1} // Scale the zoom level
                       className="custom-image"
                     />
                   </div>
