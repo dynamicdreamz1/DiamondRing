@@ -3,6 +3,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { addProduct } from '../../store/slices/productSlice';
 import { useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
+
 
 const ProductDetailsDrawer = ({ open, toggleDrawer }) => {
   const { productData } = useSelector((state) => state.products);
@@ -123,14 +125,14 @@ const ProductDetailsDrawer = ({ open, toggleDrawer }) => {
               </svg>
               <span className="hidden md:block">Remove</span>
             </button>
-            <a
+            <Link
               className="grow rounded-full text-base font-semibold leading-tight bg-black text-white p-3.5 text-center flex justify-center items-center md:w-full md:px-5 md:font-normal shadow-floating-button md:shadow-none"
-              href={`/ring-select/${productData?.id?.split("/").pop()}`}
+              to={`/ring-select/${productData?.id?.split("/").pop()}`}
               aria-hidden="false"
             >
               <div className="hidden md:block">View / Edit</div>
               <div className="md:hidden">More Info</div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import { addProduct } from "../../store/slices/productSlice"
 import LeftSideModal from './FilterSection/LeftSideModal';
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ node }) => {
   const dispatch = useDispatch();
@@ -62,6 +63,7 @@ const ProductCard = ({ node }) => {
 
 
   return (
+      // 
     <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">
       <button
         className="absolute right-6 top-6 z-[9] transition-colors duration-200 ease-in-out"
@@ -119,6 +121,7 @@ const ProductCard = ({ node }) => {
 
           <div className='mb-5'>
             {images.map((image, index) => (
+               <Link to={`/ring-select/${node?.id?.split("/").pop()}`} >
               <img
                 key={image.node.id}
                 src={image.node.src}
@@ -127,6 +130,7 @@ const ProductCard = ({ node }) => {
                   }`}
                 onMouseEnter={() => handleImageHover(index)}
               />
+              </Link>
             ))}
           </div>
         </div>
@@ -163,9 +167,9 @@ const ProductCard = ({ node }) => {
         </div>
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
-          <a href={`/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
+          <Link to={`/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
             More Info
-          </a>
+          </Link>
           <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">Add Diamond</button>
         </div>
 
@@ -186,6 +190,7 @@ const ProductCard = ({ node }) => {
       </div>
       <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
     </div>
+      // </Link>
   );
 };
 
