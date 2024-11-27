@@ -63,10 +63,54 @@ export const productBadges = [
 
 export const productSliderBadges = [
   {
-    title: "Overnight Shipping",
-    description: "All Keyzar packages are fully insured and shipped with FedEx Priority Overnight. Orders within US are delivered in about 24 hours and outside US 48-72 hours.",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/f…g?v=1692183215&width=1124&height=1406&crop=center",  // Replace with the actual SVG path or relevant icon data
+    title: "Shea & Josh Schmidt",
+    description: "Our day was so special filled with family and so much love! My fiancé Josh told me we were going to...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0185_1_1_1.webp?v=1689797224&width=760&height=938&crop=center",  // Replace with the actual SVG path or relevant icon data
   },
-  
+  {
+    title: "Nicole & Joel Van Dyk",
+    description: "My fiancée and I flew out east to PEI to visit his family and explore the island. When we decided...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/Couple_2.webp?v=1689797482&width=398&height=508&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Cristina & Kyle Rankin",
+    description: "We got engaged while on vacation in Exuma. Kyle proposed on the most beautiful beach...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/D6B77B56-548D-42F3-BE1B-7723AA89B29C_1_2.webp?v=1689797904&width=807&height=663&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Sarah & Jalen Bailey",
+    description: "Jay and I met on a hinge, and within a day we had our first date at a coffee shop. One of our favorites...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/Couple_1.webp?v=1692182685&width=426&height=508&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Grace Anne & Chad Byrd",
+    description: "We had talked about getting engaged for a while and Chad wanted to surprise me. He knew...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/857927EE-5DBD-4043-9BD6-0E8A8E94DA89_1_1.webp?v=1692182889&width=576&height=864&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Kiley & Robbie Reynolds",
+    description: "About 3 years ago, my mom and sister told me they worked with a guy who would be a perfect...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/383C03F9-2E6D-432B-8693-CEFD8DB1620A_3_1.jpg?v=1692183093&width=1440&height=2160&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Baylee & Colin Trach",
+    description: "We met at a New Year’s Eve party in 2017 and started dating 5 months later, after talking to each other...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/BAE2A357-44DD-4A4F-9A12-C548A9A02EB7_2_1.jpg?v=1692183215&width=1124&height=1406&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Meagan & Michael Campbell",
+    description: "Michael and I had been dating for almost 4 years when he popped the question in Chicago by...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0166_1.jpg?v=1692183479&width=1170&height=1441&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Dana & Chris Baum",
+    description: "Chris and I had been together 5 years, so the proposal wasn’t a surprise, I mean right...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0087_2_1.webp?v=1692183614&width=585&height=669&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
+  {
+    title: "Chloe & Zach Squire",
+    description: "We are from Denver, Colorado, and moved to Austin in July of 2022. So the majority of our friends...",
+    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0122_3_1.jpg?v=1692183787&width=1170&height=1444&crop=center",  // Replace with the actual SVG path or relevant icon data
+  },
 ];
 
