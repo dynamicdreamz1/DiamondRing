@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RingSelector from './pages/EngagementRing/EngagementRing';
 import RingDetails from './pages/EngagementRingDetail/EngagementRingDetail'; // Create this component for detailed view
 import DiamondList from './pages/DiamondList/DiamondList'; // Create this component for detailed view
+import DiamondDetail from './pages/DiamondDetail/DiamondDetail'; // Create this component for detailed view
+
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
           {/* Route with ID */}
           <Route path="/ring-select/ring-detail-page" element={<RingDetails />} />
           <Route path="/diamond-list" element={<DiamondList />} />
+          <Route path="/diamond-list/diamond-detail-page" element={<DiamondDetail />} />
+
           {/* Redirect to default route */}
           <Route path="*" element={<RingSelector />} />
         </Routes>
