@@ -16,10 +16,14 @@ import EngagementRingDetailSlider from './EngagementRingDetailSlider';
 const EngagementRingDetail = () => {
   const dispatch = useDispatch();
   const { productId } = useParams(); // Get product ID from the URL
-
+  const [selectedVariant, setSelectedVariant] = useState(0);
+  
   const { product, loading, error } = useSelector((state) => state.singleProduct);
-
+  
+  const variants = product?.variants?.edges;
   const images = product?.images?.edges.map((edge) => edge.node);
+  
+
 
 
   useEffect(() => {
@@ -31,9 +35,22 @@ const EngagementRingDetail = () => {
   }, [dispatch, productId]);
 
 
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
+
+  const firstVariant = variants[selectedVariant]?.node;
+  const price = firstVariant?.price?.amount || "0.00";
+  const formattedPrice = new Intl.NumberFormat("en-US", {
+    style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
+  }).format(price);
+
+
+
+  const compareAtPrice = firstVariant?.compareAtPrice;
+  const formattedCompareAtPrice = compareAtPrice ? new Intl.NumberFormat("en-US", {
+    style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
+  }).format(compareAtPrice)
+    : null;
 
   return (
     <div className="min-h-screen bg-white">
@@ -78,8 +95,8 @@ const EngagementRingDetail = () => {
               <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
                 <div className='the-lexie-detail flex-1'>
                   <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>{product?.title}</h2>
-                  <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>$750</h3>
-                  <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>$1,486</span></p>
+                  <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>{formattedPrice}</h3>
+                  <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>{formattedCompareAtPrice}</span></p>
                   <a href="#" className='ExtrasButton inline-flex items-center gap-1'>
                     Extras
                     <span className="ExtrasButton-circle rounded-full bg-white flex items-center justify-center"><svg className="svg-icon" viewBox="0 0 5 5"><svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.125" width="0.75" height="5" fill="currentColor"></rect><rect y="2.875" width="0.75" height="5" transform="rotate(-90 0 2.875)" fill="currentColor"></rect></svg></svg></span>

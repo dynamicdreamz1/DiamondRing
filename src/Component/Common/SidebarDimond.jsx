@@ -20,8 +20,6 @@ const ProductDetailsDrawer = ({ open, toggleDrawer }) => {
     toggleDrawer(false)
   };
 
-  console.log("productData",productData);
-
   if (!productData) return null;
 
   // Extract product details
