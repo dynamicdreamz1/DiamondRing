@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button, Slide } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, Button } from '@mui/material';
 import { productBadges } from '../../Utility/Constant';
 
 const BadgeComponent = () => {

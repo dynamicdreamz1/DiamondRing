@@ -63,7 +63,6 @@ const ProductCard = ({ node }) => {
 
 
   return (
-      // 
     <div className="border border-gray-200 rounded-lg p-4 relative group product-detail-main-boxes">
       <button
         className="absolute right-6 top-6 z-[9] transition-colors duration-200 ease-in-out"
@@ -74,7 +73,6 @@ const ProductCard = ({ node }) => {
       <div className="hidden z-[1] bg-white  md:block absolute  -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl shadow-[0px_6px_20px_0_#00000060] -bottom-48"></div>
       <div className="relative  aspect-square mb-4 overflow-hidden rounded-md ">
         <div className="flex flex-row justify-between items-center h-full">
-
           <div className="arrow-main flex justify-center items-center gap-2">
             {images.length > 1 && (
               <button
@@ -84,7 +82,6 @@ const ProductCard = ({ node }) => {
                 <ArrowLeft className="h-4 w-4 text-gray-500" />
               </button>
             )}
-
             <button
               type="button"
               className="flex items-center gap-0.5 p-0.5 rounded-full text-1.5xs leading-none bg-customGray-75 text-customGray-500"
@@ -107,7 +104,6 @@ const ProductCard = ({ node }) => {
               </div>
             </button>
 
-            {/* Right Arrow */}
             {images.length > 1 && (
               <button
                 onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
@@ -121,22 +117,20 @@ const ProductCard = ({ node }) => {
 
           <div className='mb-5'>
             {images.map((image, index) => (
-               <Link to={`/ring-select/${node?.id?.split("/").pop()}`} >
-              <img
-                key={image.node.id}
-                src={image.node.src}
-                alt={image.node.altText || node.title}
-                className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${index === selectedImage ? 'block' : 'hidden'
-                  }`}
-                onMouseEnter={() => handleImageHover(index)}
-              />
+              <Link to={`/ring-select/${node?.id?.split("/").pop()}`} >
+                <img
+                  key={image.node.id}
+                  src={image.node.src}
+                  alt={image.node.altText || node.title}
+                  className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${index === selectedImage ? 'block' : 'hidden'
+                    }`}
+                  onMouseEnter={() => handleImageHover(index)}
+                />
               </Link>
             ))}
           </div>
         </div>
       </div>
-
-
 
       <div className="space-y-2 product-des-box md:absolute md:invisible md:w-full md:z-10">
         <div className="flex items-center space-x-2 justify-between">
@@ -190,7 +184,6 @@ const ProductCard = ({ node }) => {
       </div>
       <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
     </div>
-      // </Link>
   );
 };
 

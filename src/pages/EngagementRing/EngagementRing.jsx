@@ -8,7 +8,8 @@ import ProductCard from "./ProductCard";
 import SelectFilter from "./SelectFilter";
 import { metalOptions, ringStyles, shapeOptions } from "../../Utility/Constant";
 import { resetFilters, setFilter } from "../../store/slices/productFilterSlice";
-import { useLocation ,useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import NewsletterFooter from "../../Component/Common/Footer/NewsletterFooter";
 
 const RingSelector = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const RingSelector = () => {
       ringType: params.get("ringType") || "",
       activeFilter: params.get("activeFilter") || "",
     };
-  
+
     // Dispatch individual actions only for non-empty values
     Object.keys(initialFilters).forEach((key) => {
       // Only dispatch if the filter value is not empty
@@ -37,21 +38,21 @@ const RingSelector = () => {
       }
     });
   }, [location.search, dispatch]);
-  
+
   useEffect(() => {
     // Only update the query string and dispatch fetchProducts if filters have valid values
     const params = new URLSearchParams();
-  
+
     // Add only non-empty filters to the query string
     Object.keys(filters).forEach((key) => {
       if (filters[key] && !filters.page) {
         params.set(key, filters[key]);
       }
     });
-  
+
     // Update the URL with the current filters
     navigate(`?${params.toString()}`, { replace: true });
-  
+
     // Fetch products with the current filters
     dispatch(fetchProducts(filters));
   }, [filters, navigate, dispatch]);
@@ -220,6 +221,11 @@ const RingSelector = () => {
           </div>
         )}
       </div>
+      <div className="mt-8">
+        <NewsletterFooter />
+      </div>
+
+
     </div>
   );
 };

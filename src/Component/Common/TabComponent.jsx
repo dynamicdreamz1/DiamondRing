@@ -1,12 +1,10 @@
 import React from 'react'
-import SidebarDimond from './SidebarDimond'
+import ProductDetailsDrawer from './ProductDetailsDrawer'
 import { useSelector } from 'react-redux';
 
 const TabComponent = () => {
-
     const [open, setOpen] = React.useState(false);
     const { productData } = useSelector((state) => state.products);
-
 
     const toggleDrawer = (newOpen) => {
         setOpen(newOpen);
@@ -14,10 +12,7 @@ const TabComponent = () => {
 
     const hasProductDetails = productData && productData.title && productData.variants?.edges?.length > 0;
 
-    // Get price if available
-    const price = hasProductDetails
-        ? productData.variants.edges[0].node.price.amount
-        : null;
+    const price = hasProductDetails ? productData.variants.edges[0].node.price.amount : null;
 
 
     return (
@@ -136,31 +131,10 @@ const TabComponent = () => {
                                     aria-hidden="true"
                                     focusable="false"
                                 >
-                                    <svg
-                                        viewBox="0 0 29 28"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <rect
-                                            x="1.16663"
-                                            y="0.5"
-                                            width="27"
-                                            height="27"
-                                            rx="13.5"
-                                            fill="#EBFAE8"
-                                        ></rect>
-                                        <rect
-                                            x="1.16663"
-                                            y="0.5"
-                                            width="27"
-                                            height="27"
-                                            rx="13.5"
-                                            stroke="#58A23E"
-                                        ></rect>
-                                        <path
-                                            d="M20.1666 10.6957L13.558 17.3044L9.16663 12.913"
-                                            stroke="#58A23E"
-                                            stroke-miterlimit="10"
+                                    <svg viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                        <rect x="1.16663" y="0.5" width="27" height="27" rx="13.5" fill="#EBFAE8"></rect>
+                                        <rect x="1.16663" y="0.5" width="27" height="27" rx="13.5" stroke="#58A23E"></rect>
+                                        <path d="M20.1666 10.6957L13.558 17.3044L9.16663 12.913" stroke="#58A23E" stroke-miterlimit="10"
                                         ></path>
                                     </svg>
                                 </svg>
@@ -237,7 +211,7 @@ const TabComponent = () => {
                     </div>
                 </div>
             </div>
-            <SidebarDimond toggleDrawer={toggleDrawer} open={open} />
+            <ProductDetailsDrawer toggleDrawer={toggleDrawer} open={open} />
         </>
 
     )
