@@ -8,16 +8,16 @@ const DiamondList = () => {
     <TabComponent />
 
     <div className="container mx-auto px-4">
-      <div class="px-5 pb-6">
-        <header class="max-w-7xl mx-auto text-center">
+      <div className="px-5 pb-6">
+        <header className="max-w-7xl mx-auto text-center">
           <h1
-            class="text-black font-semibold text-1.5lg leading-none mb-1.5 md:text-3xl md:mb-2.5"
+            className="text-black font-semibold text-1.5lg leading-none mb-1.5 md:text-3xl md:mb-2.5"
             tabindex="-1"
           >
             Engagement Rings
           </h1>
           <p
-            class="leading-tighter text-black/50 text-1.5sm md:text-xl"
+            className="leading-tighter text-black/50 text-1.5sm md:text-xl"
             tabindex="-1"
           >
             Discover our collection of made to order engagement rings and
@@ -27,7 +27,7 @@ const DiamondList = () => {
       </div>
 
       <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative md:px-2 md:max-w-[31rem] mx-auto md:z-10 px-5 my-3 md:my-6'>
-        <div class="absolute w-1/2 top-0 -bottom-0 pointer-events-none bg-white ring-1 md:ring-2 ring-black transition-all duration-300 rounded-md left-1/2"></div>
+        <div className="absolute w-1/2 top-0 -bottom-0 pointer-events-none bg-white ring-1 md:ring-2 ring-black transition-all duration-300 rounded-md left-1/2"></div>
         <button className="bg-transparent flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs text-black before:absolute before:inset-0 md:p-2.5 md:gap-1.5 md:text-sm before:visible">
             <svg className="block relative w-5 h-5 md:w-7 md:h-7">
                 <svg viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +204,7 @@ const DiamondList = () => {
               </div>
           </div>
           <div className='collection-range-item'>
-            <div class="mb-2"><div class="text-base font-bold text-black leading-none">Budget</div></div>
+            <div className="mb-2"><div className="text-base font-bold text-black leading-none">Budget</div></div>
             <div className="flex justify-between gap-2 items-center pt-1">
                   <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
                       <div className="relative flex-grow border-r border-borders">
@@ -256,7 +256,7 @@ const DiamondList = () => {
 </div>
           </div>
           <div className='collection-range-item'>
-            <div class="mb-2"><div class="text-base font-bold text-black leading-none">Certificate</div></div>
+            <div className="mb-2"><div className="text-base font-bold text-black leading-none">Certificate</div></div>
             <div className="flex flex-wrap gap-1.5 md:gap-2 md:mt-3"><button className="flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders text-customGray-500 bg-customGray-75 md:min-h-[4rem]">IGI</button><button className="flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders text-customGray-500 bg-customGray-75 md:min-h-[4rem]">GIA</button></div>
           </div>
       </div>
@@ -364,7 +364,7 @@ const DiamondList = () => {
                       <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
                           <img className='absolute w-full h-full top-0 left-0 object-contain' src="/stone-diamond-img.webp" alt="" />
                       </div>
-                      <a class="absolute inset-0 opacity-0 hidden md:block" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">0.5 Carat I SI1 Round Natural Diamond</a>
+                      <a className="absolute inset-0 opacity-0 hidden md:block" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">0.5 Carat I SI1 Round Natural Diamond</a>
                   </div>
                   <div className="bg-white pt-0.5 md:hidden">
                     <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
