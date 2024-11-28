@@ -114,3 +114,47 @@ export const productSliderBadgesData = [
   },
 ];
 
+
+
+export const diamondData = 
+  {
+      "markup_price": 925,
+      "diamond": {
+          "video": "https://loupe360.com/diamond/e248b8e1-19d1-5480-ac85-f0c39f1db0d8/video/500/500?d_id=d7ce98b0-af92-46dd-930d-dd648d8ec80e&c_id=02f40d8b-7100-4006-8e13-89775d7689ff&f_id=1&type=api",
+          "v360": {
+              "url": "https://nivoda-images.nivodaapi.net/aHR0cHM6Ly9kaWFtb25kLmJsaXNzdmlkZW9zLmNvbS8/ZD1NLTI4Ni0yODU=",
+              "frame_count": 256,
+              "top_index": "71"
+          },
+          "image": null,
+          "brown": "No",
+          "green": "No",
+          "milky": "No",
+          "eyeClean": "100%",
+          "mine_of_origin": null,
+          "certificate": {
+              "pdfUrl": "https://nivoda-certificates.s3.eu-west-2.amazonaws.com/pdf/LG663412988.pdf",
+              "labgrown": true,
+              "lab": "IGI",
+              "shape": "ROUND",
+              "certNumber": "LG663412988",
+              "cut": "EX",
+              "carats": "1.00",
+              "clarity": "VS1",
+              "polish": "EX",
+              "symmetry": "EX",
+              "color": "D",
+              "width": "6.50",
+              "length": "6.48",
+              "depth": "3.83",
+              "girdle": "MED to STK",
+              "floInt": "NON",
+              "floCol": null,
+              "depthPercentage": "58.00",
+              "table": "61.00",
+              "f_intensity": null,
+              "f_color": null
+          }
+      },
+      "price": 925
+  }

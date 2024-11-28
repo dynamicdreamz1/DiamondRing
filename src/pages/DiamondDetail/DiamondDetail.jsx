@@ -6,8 +6,12 @@ import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter'
 import BadgeComponent from '../../Component/Common/BadgeComponent'
 import AccordianforDetail from '../../Component/Common/AccordianforDetail'
 import VirtualAppointment from '../../Component/Common/VirtualAppointment'
+import { diamondData } from '../../Utility/Constant'
 
 const DiamondDetail = () => {
+
+  console.log("diamondData", diamondData);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -24,22 +28,35 @@ const DiamondDetail = () => {
                   <img src="/lexie-side-img1.webp" />
                 </div>
                 <div className='customer-product-zoom-img'>
-                  <img src="/lexie-side-img2.webp" />
+                  <iframe
+                    src={diamondData.diamond.video}
+                    width="100%" // Set the width to full
+                    height="100%" // Set the height to full
+                    frameBorder="0" // Removes the border
+                    allow="autoplay; fullscreen" // Allows autoplay and fullscreen
+                    allowFullScreen
+                    className="w-full h-full"
+                  >
+                    Your browser does not support iframes.
+                  </iframe>
                 </div>
+
+
                 <div className='customer-product-zoom-img'>
                   <img src="/lexie-side-img2.webp" />
                 </div>
                 <div className='customer-product-zoom-img'>
-                  <img src="/lexie-side-img1.webp" />
+                  <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1164770/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg" />
                 </div>
               </div>
             </div>
             <div className='customer-product-side-text-sec'>
               <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
                 <div className='the-lexie-detail flex-1'>
-                  <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>0.5 Carat F VVS2 Round Natural Diamond</h2>
-                  <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>$1,146</h3>
-                  <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With setting:<span>$2,096</span></p>
+                  <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>
+                    {diamondData.diamond.certificate.carats} Carat F {diamondData.diamond.certificate.clarity} {diamondData.diamond.certificate.shape} Natural Diamond</h2>
+                  <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>${diamondData.price}</h3>
+                  <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With setting:<span>${diamondData.markup_price}</span></p>
                 </div>
                 <div className="cpst-title-icon-container flex items-start gap-1 shrink-0">
                   <svg className="cpst-title-icon w-16 h-auto shrink-0" viewBox="0 0 81 77">
@@ -246,7 +263,7 @@ const DiamondDetail = () => {
               <VirtualAppointment />
             </div>
           </div>
-          
+
           <div className='diamond-quality-main-sec pb-8'>
             <h2 className="text-3.25xl leading-1.1 font-light capitalize mb-4 md:mb-8 md:text-4xl md:leading-none md:font-semibold" tabindex="-1">Understand Your Diamond Qualities</h2>
             <div className='StoneEducationItems__Wrapper md:flex md:flex-wrap md:justify-center md:gap-4'>
