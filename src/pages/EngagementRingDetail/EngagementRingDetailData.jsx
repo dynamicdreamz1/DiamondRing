@@ -3,6 +3,8 @@ import InnerImageZoom from 'react-inner-image-zoom'
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import { useSelector } from 'react-redux';
 import BadgeComponent from '../../Component/Common/BadgeComponent';
+import AccordianforDetail from '../../Component/Common/AccordianforDetail';
+
 
 const EngagementRingDetailData = () => {
     const { product, loading, error } = useSelector((state) => state.singleProduct);
@@ -297,7 +299,10 @@ const EngagementRingDetailData = () => {
                                 </div>
                                 <a href="#" className='ExtrasText text-black underline'>Add Extra Features</a>
                             </div>
+                            <AccordianforDetail />
                         </div>
+
+
                     </div>
                 </div>
             </div>
