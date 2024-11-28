@@ -3,7 +3,6 @@ import InnerImageZoom from 'react-inner-image-zoom'
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import { useSelector } from 'react-redux';
 import BadgeComponent from '../../Component/Common/BadgeComponent';
-import { Skeleton } from '@mui/material';
 
 const EngagementRingDetailData = () => {
     const { product, loading, error } = useSelector((state) => state.singleProduct);
@@ -31,7 +30,6 @@ const EngagementRingDetailData = () => {
 
     if (loading)
         return (
-
             <div className="ring-loader-main-sec">
                 <p>
                     <div className="ring-loader">
