@@ -114,6 +114,7 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
                         <div className="text-base font-bold text-black leading-none">Color</div>
@@ -137,7 +138,7 @@ const DiamondFilter = () => {
 
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
-                        <div className="text-base font-bold text-black leading-none">Color</div>
+                        <div className="text-base font-bold text-black leading-none">Cut</div>
                         <button className="w-4 h-4 md:w-3 md:h-3 mb-1 cursor-help" title="help">
                             <svg className="w-4 h-4 md:w-3 md:h-3 text-customGray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
