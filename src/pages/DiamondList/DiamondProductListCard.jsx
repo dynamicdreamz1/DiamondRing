@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import WishList from './WishList';
+import WishList from './DiamondWishList';
 
 const DiamondProductListCard = () => {
     const { diamonds, loading, error } = useSelector((state) => state.diamond);

@@ -1,7 +1,7 @@
 import React from 'react'
-import { shapeStyles } from '../../Utility/Constant'
+import { shapeStyles } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
-import { updateFilter } from '../../store/slices/diamondFilterSlice';
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
 
 const DiamondShapeFilter = () => {
   const dispatch = useDispatch();
