@@ -10,6 +10,9 @@ import { diamondData } from '../../Utility/Constant'
 
 const DiamondDetail = () => {
 
+  console.log("diamondData",diamondData );
+  
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -70,11 +73,11 @@ const DiamondDetail = () => {
               <div className="DiamondInfo__container my-4 md:my-6">
                 <div className="DiamondInfo__wrapper flex flex-wrap justify-center items-center text-center">
                   <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">0.5</p>
+                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">{diamondData.diamond.certificate.carats}</p>
                     <p className="DiamondInfo__block-title" tabindex="-1">Carat</p>
                   </div>
                   <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">F</p>
+                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">{diamondData.diamond.certificate.color }</p>
                     <p className="DiamondInfo__block-title" tabindex="-1">Color</p>
                   </div>
                   <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
