@@ -10,11 +10,11 @@ const productSlice = createSlice({
     pageInfo: null,
   },
   reducers: {
-    fetchSingleProductsStart: (state) => {
+    fetchSingleRingStart: (state) => {
       state.loading = true;
       state.error = null;
     },
-    fetchSingleProductsSuccess: (state, action) => {
+    fetchSingleRingSuccess: (state, action) => {
       const { product } = action.payload;
 
       state.loading = false;
@@ -22,7 +22,7 @@ const productSlice = createSlice({
         state.product = product;
 
     },
-    fetchSingleProductsFailure: (state, action) => {
+    fetchSingleRingFailure: (state, action) => {
       state.loading = false;
       state.error = action.payload;
     },
@@ -30,9 +30,9 @@ const productSlice = createSlice({
 });
 
 export const {
-  fetchSingleProductsStart,
-  fetchSingleProductsSuccess,
-  fetchSingleProductsFailure
+  fetchSingleRingStart,
+  fetchSingleRingSuccess,
+  fetchSingleRingFailure
 } = productSlice.actions;
 
 export default productSlice.reducer;
