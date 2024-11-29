@@ -28,7 +28,7 @@ const DiamondList = () => {
 
     fetchProduct();
   }, [dispatch, filters]);
-
+  
 
   return (
     <div className="min-h-screen bg-white">
@@ -82,8 +82,8 @@ const DiamondList = () => {
           </button>
           <button
             className={`flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs md:p-2.5 md:gap-1.5 md:text-sm ${filters.labgrown
-              ? 'bg-white text-black ring-1 md:ring-2 ring-black'
-              : 'bg-transparent text-gray-500'
+                ? 'bg-white text-black ring-1 md:ring-2 ring-black'
+                : 'bg-transparent text-gray-500'
               }`}
             onClick={() => handleRingTypeSelection(true)}
           >            <svg className="block relative w-5 h-5 md:w-7 md:h-7">
