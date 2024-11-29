@@ -21,6 +21,7 @@ const DiamondDetailsImagesInfo = () => {
           frameBorder="0" // Removes the border
           allow="autoplay; fullscreen" // Allows autoplay and fullscreen
           allowFullScreen
+          scrolling="no"
           className="w-full h-full"
         >
           Your browser does not support iframes.
