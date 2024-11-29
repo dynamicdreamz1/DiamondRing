@@ -3,9 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     labgrown: false, // Single string for diamond type
     shape: 'ROUND', // Single string for shape
-    lab : [],
+    lab: [],
     price_from: 200,
-    price_to: 100000
+    price_to: 100000,
+    carat_from: "",
+    carat_from: 1,
+    carat_to: 10
     // color: [], // Array for multiple colors
     // clarity: [], // Array for multiple clarity values
     // cut: [], // Array for multiple cut values

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import DiamondShapeFilter from './DiamondShapeFilter';
 import CertificateFilter from './CertificateFilter';
 import PriceFilter from './PriceFilter';
+import CaratFilter from './CaratFilter';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
@@ -13,7 +14,7 @@ const DiamondFilter = () => {
     const handleRingTypeSelection = (isLabGrown) => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
     };
-    
+
 
     return (
         <>
@@ -148,66 +149,9 @@ const DiamondFilter = () => {
 
 
             <div className='collection-range-main grid grid-cols-1 md:grid-cols-3 w-full items-center gap-6 py-6'>
-                <div className='collection-range-item'>
-                    <div className="mb-6"><div className="text-base font-bold text-black leading-none">Carat</div></div>
-                    <div class="px-3.5">
-                        <div className='range-main'>
-                            <div className='range-circel-left'></div>
-                            <div className='range-circel-right'></div>
-                        </div>
-                    </div>
-                    <div className="flex justify-between gap-2 items-center pt-6">
-                        <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
-                            <div className="relative flex-grow border-r border-borders">
-                                <div className="absolute top-3 left-3 right-3 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none xl:top-1/2 xl:left-auto xl:-translate-y-1/2 xl:text-1.5xs">Minimum</div>
-                                <input type="text" inputmode="decimal" className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent xl:text-sm xl:leading-none xl:py-1.5 xl:pl-3 xl:pr-18" value="0.5 ct" />
-                            </div>
-                            <div className="w-8 flex flex-col shrink-0 xl:w-5">
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center border-b border-borders text-customGray-300">
-                                    <svg className="w-3 h-3 -rotate-90 xl:w-2 xl:h-2">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center text-customGray-300">
-                                    <svg className="w-3 h-3 rotate-90 xl:w-2 xl:h-2">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="flex-1 h-2 border-r border-l border-borders flex items-center">
-                            <div className="h-px w-full bg-borders"></div>
-                        </div>
-                        <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
-                            <div className="relative flex-grow border-r border-borders">
-                                <div className="absolute top-3 left-3 right-3 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none xl:top-1/2 xl:left-auto xl:-translate-y-1/2 xl:text-1.5xs">Maximum</div>
-                                <input type="text" inputmode="decimal" className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent xl:text-sm xl:leading-none xl:py-1.5 xl:pl-3 xl:pr-18" value="11 ct" />
-                            </div>
-                            <div className="w-8 flex flex-col shrink-0 xl:w-5">
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center border-b border-borders text-customGray-300">
-                                    <svg className="w-3 h-3 -rotate-90 xl:w-2 xl:h-2">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center text-customGray-300">
-                                    <svg className="w-3 h-3 rotate-90 xl:w-2 xl:h-2">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <PriceFilter />
-               <CertificateFilter />
+                <CaratFilter />
+                <PriceFilter />
+                <CertificateFilter />
             </div>
 
 
