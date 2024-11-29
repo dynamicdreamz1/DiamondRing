@@ -81,12 +81,12 @@ const DiamondDetail = () => {
                     <p className="DiamondInfo__block-title" tabindex="-1">Color</p>
                   </div>
                   <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">VVS2</p>
+                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">{diamondData.diamond.certificate.clarity}</p>
                     <p className="DiamondInfo__block-title" tabindex="-1">Clarity</p>
                   </div>
                   <div className="DiamondInfoDivider hidden md:block"></div>
                   <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">Good</p>
+                    <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">{diamondData.diamond.certificate.cut}</p>
                     <p className="DiamondInfo__block-title" tabindex="-1">Cut</p>
                   </div>
                   <div className="DiamondInfo__block px-2 relative hidden w-1/3 md:block">
