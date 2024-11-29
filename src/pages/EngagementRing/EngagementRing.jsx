@@ -101,12 +101,9 @@ const RingSelector = () => {
         </div>
 
         <RingStyleFilter />
-
         <SelectFilter />
-
         <div className="hidden md:block col-span-2 mb-10">
           <div className="flex gap-2 flex-wrap items-center col-span-2">
-
             {filteredRingType?.name &&
               <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
                 <button type="button" className="flex md:gap-0.5 items-center">
@@ -127,7 +124,6 @@ const RingSelector = () => {
                 </button>
               </div>
             }
-
 
             {filteredOptions?.value &&
               <div className="flex bg-customGray-50 ring-1 ring-borders items-center md:gap-0.5 md:py-0.5 md:pl-0.5 md:pr-1 rounded-md text-xs leading-none md:text-sm md:leading-tight text-black">
@@ -167,8 +163,8 @@ const RingSelector = () => {
                     </svg>
                   </svg>
                 </button>
-              </div>
-            }
+              </div>}
+
             {(filteredShape?.name || filteredOptions?.value || filteredRingType?.name) ?
               <button onClick={() => handleResetFilters()} className="hidden md:flex py-0 pl-px pr-0.5 border-0 border-b border-customGray-300 bg-transparent text-customGray-300 gap-1.5 items-center text-sm leading-tight ml-1.5">
                 <span>Reset All</span>
@@ -224,8 +220,6 @@ const RingSelector = () => {
       <div className="mt-8">
         <NewsletterFooter />
       </div>
-
-
     </div>
   );
 };
