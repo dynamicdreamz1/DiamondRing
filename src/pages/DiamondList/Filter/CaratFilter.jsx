@@ -54,8 +54,8 @@ const CaratFilter = () => {
           onChange={handleSliderChange}
           onChangeCommitted={handleSliderCommit}
           valueLabelDisplay="auto"
-          min={0.5}
-          max={15}
+          min={1}
+          max={10}
           step={0.01}
           sx={{
             color: '#0f834d',

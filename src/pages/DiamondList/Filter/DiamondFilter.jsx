@@ -126,6 +126,7 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
                         <div className="text-base font-bold text-black leading-none">Color</div>
