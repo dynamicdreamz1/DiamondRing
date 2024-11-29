@@ -19,7 +19,7 @@ function App() {
           <Route path="ring-select" element={<RingSelector />} />
           <Route path="/ring-select/:productId" element={<RingDetails />} />
           <Route path="/diamond-list" element={<DiamondList />} />
-          <Route path="/diamond-list/diamond-detail-page" element={<DiamondDetail />} />
+          <Route path="/diamond-list/:diamondId" element={<DiamondDetail />} />
           <Route path="*" element={<RingSelector />} />
         </Routes>
       </Router>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { updateFilter } from '../../../store/slices/diamondFilterSlice';
+import { resetFilters, updateFilter } from '../../../store/slices/diamondFilterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import DiamondShapeFilter from './DiamondShapeFilter';
 import CertificateFilter from './CertificateFilter';
@@ -15,6 +15,14 @@ const DiamondFilter = () => {
     const handleRingTypeSelection = (isLabGrown) => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
     };
+
+
+    const handleResetFilter = () => {
+        dispatch(resetFilters()); // Update the Redux state with true/false
+    };
+
+    console.log("filters",filters);
+    
 
 
     return (
@@ -72,7 +80,7 @@ const DiamondFilter = () => {
 
             <div className="w-full hidden md:flex justify-center items-center col-span-2 xl:w-full collection-filters-item-with-custom-width-and-order gap-1.5 py-6">
                 <div className="flex-1 h-px bg-borders"></div>
-                <button type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">
+                <button onClick={()=>handleResetFilter()}  type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">
                     <span>Reset</span>
                     <svg className="block w-2.5 h-2.5" viewBox="0 0 14 14">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +148,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    
+
                     <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative md:mt-4">
                         <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
                             <span>Good</span>
