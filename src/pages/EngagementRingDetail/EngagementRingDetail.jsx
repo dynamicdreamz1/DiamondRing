@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import TabComponent from '../../Component/Common/TabComponent'
-// import ringImg from '../../public/lexie-side-img1.webp'
 import "../EngagementRing/ringStyle.css";
 import "./productRingStyle.css";
 import { useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";
-import { fetchSingleProducts } from '../../store/actions/singleProductAction';
-
-import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import { fetchSingleProducts } from '../../store/actions/singleRingAction';
 import EngagementRingDetailSlider from './EngagementRingDetailSlider';
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter';
 import EngagementRingDetailData from './EngagementRingDetailData';
 import GetInTouch from '../../Component/Common/GetInTouch';
 import OurWork from '../../Component/Common/OurWork';
-
-
-
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 
 const EngagementRingDetail = () => {
   const dispatch = useDispatch();
