@@ -28,9 +28,12 @@ const DiamondProductListCard = () => {
     return (
         <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
             {diamonds?.data?.diamonds_by_query?.items.length > 0 && diamonds?.data?.diamonds_by_query?.items.map((diamond) => (
+
+
                 <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
+                    {console.log("diamond", diamond.diamond.certificate.carats)}
                     <>
-                        <div className=' border-borders border rounded-lg overflow-hidden md:block'>
+                        <div className='border-borders border rounded-lg overflow-hidden md:block'>
                             <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
                                 <div className="absolute right-2 top-2 z-20">
                                     <button type="button" className="WishlistButton ml-1 stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
@@ -62,16 +65,22 @@ const DiamondProductListCard = () => {
                             <div className="bg-white pt-0.5 md:hidden">
                                 <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">
+                                            {diamond.diamond.certificate.carats}
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
                                     </div>
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">
+                                            {diamond.diamond.certificate.color}
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
                                         <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                     </div>
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">
+                                            {diamond?.diamond.certificate.clarity}
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
                                         <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                     </div>
@@ -85,28 +94,36 @@ const DiamondProductListCard = () => {
                             </div>
                             <div className="hidden md:block bg-white pt-4 ">
                                 <div className="px-4 flex items-start gap-1 justify-between mb-1">
-                                    <div className="text-black text-sm leading-tight flex-grow whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                                    <div className="text-black text-sm leading-tight flex-grow whitespace-nowrap overflow-hidden text-ellipsis">{diamond?.diamond.certificate.shape}</div>
                                     <div className="shrink-0 flex items-center gap-1 flex-wrap">
-                                        <div className="text-sm leading-tight text-customGray-500">$772</div>
+                                        <div className="text-sm leading-tight text-customGray-500">${diamond.price}</div>
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap justify-center">
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">
+                                            {diamond.diamond.certificate.carats}
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">carat</div>
                                     </div>
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">I</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">
+                                            {diamond.diamond.certificate.color}
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">color</div>
                                         <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                     </div>
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis uppercase">
+                                            {diamond?.diamond.certificate.clarity}
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">clarity</div>
                                         <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                     </div>
                                     <div className="p-1.5 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">Excellent</div>
+                                        <div className="font-semibold text-1.5xs leading-none mb-0.5 md:text-xs md:leading-none md:font-medium text-black overflow-hidden text-ellipsis capitalize">
+                                            Excellent
+                                        </div>
                                         <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.75xs md:text-1.5xs md:leading-tight">cut</div>
                                         <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                     </div>
@@ -117,20 +134,24 @@ const DiamondProductListCard = () => {
                         <div className="absolute top-full left-0 right-0 hidden md:group-hover:block pt-4 -mt-[4.75rem]">
                             <div className="px-4 mb-1 flex items-start gap-1 justify-between">
                                 <div className="flex-grow">
-                                    <div className="text-black text-sm leading-tight whitespace-nowrap overflow-hidden text-ellipsis">Round</div>
+                                    <div className="text-black text-sm leading-tight whitespace-nowrap overflow-hidden text-ellipsis"> {diamond?.diamond.certificate.shape}</div>
                                     <div className="w-full text-customGray-300 text-sm leading-none mt-1"><span>With setting: </span><span>$1,522</span></div>
                                 </div>
                                 <div className="shrink-0 flex flex-col items-end gap-1 flex-wrap">
-                                    <div className="text-sm leading-tight text-customGray-500">$772</div>
+                                    <div className="text-sm leading-tight text-customGray-500">${diamond.price}</div>
                                 </div>
                             </div>
                             <div className="flex flex-wrap justify-center">
                                 <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                    <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">0.5</div>
+                                    <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">
+                                        {diamond.diamond.certificate.carats}
+                                    </div>
                                     <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">carat</div>
                                 </div>
                                 <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                    <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">I</div>
+                                    <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis capitalize">
+                                        {diamond.diamond.certificate.color}
+                                    </div>
                                     <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
                                         color
                                         <button className="w-3 h-3 cursor-help md:hidden" title="help">
@@ -146,7 +167,9 @@ const DiamondProductListCard = () => {
                                     <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                 </div>
                                 <div className="p-2 w-1/4 whitespace-nowrap relative flex-grow md:max-w-[25%] text-center">
-                                    <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis uppercase">SI1</div>
+                                    <div className="font-bold text-base leading-tight tracking-wide mb-1 text-black overflow-hidden text-ellipsis uppercase">
+                                        {diamond?.diamond.certificate.clarity}
+                                    </div>
                                     <div className="text-customGray-500 capitalize leading-tight overflow-hidden text-ellipsis text-1.25xs flex gap-0.5 items-start justify-center">
                                         clarity
                                         <button className="w-3 h-3 cursor-help md:hidden" title="help">
