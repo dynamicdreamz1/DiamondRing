@@ -67,11 +67,11 @@ const CaratFilter = () => {
       </div>
 
       {/* Input Fields */}
-      <div className="flex justify-between gap-2 items-center pt-6">
+      <div className="flex justify-between gap-2 items-center pt-2">
         {/* Minimum Carat Input */}
         <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
           <div className="relative flex-grow border-r border-borders">
-            <div className="absolute top-3 left-3 right-3 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none">
+            <div className="absolute top-3 right-10 md:left-3 xl:left-[100px]  text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none">
               Minimum
             </div>
             <input
@@ -79,7 +79,7 @@ const CaratFilter = () => {
               step="0.01"
               min={0.5}
               max={values[1]}
-              className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent"
+              className="reset-input reset-styles border-none p-3 py-2 md:py-6 xl:py-2 focus:shadow-none	 text-base leading-tight text-black tracking-wide w-full bg-transparent"
               value={values[0]}
               onChange={handleMinInputChange}
               onBlur={handleBlur}
@@ -94,7 +94,7 @@ const CaratFilter = () => {
         {/* Maximum Carat Input */}
         <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
           <div className="relative flex-grow border-r border-borders">
-            <div className="absolute top-3 left-3 right-3 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none">
+            <div className="absolute top-3 md:left-3 xl:left-[100px] right-10 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none">
               Maximum
             </div>
             <input
@@ -102,7 +102,7 @@ const CaratFilter = () => {
               step="0.01"
               min={values[0]}
               max={15}
-              className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent"
+              className="reset-input reset-styles border-none p-3 py-2 md:py-6 xl:py-2  text-base leading-tight text-black tracking-wide w-full bg-transparent"
               value={values[1]}
               onChange={handleMaxInputChange}
               onBlur={handleBlur}

@@ -10347,6 +10347,23 @@ textarea+.DAH-form-label {
     height: 28px;
 }
 
+.collection-range-item [type=number]:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.advance-quality-main-sec > div {
+    box-shadow: none;
+}
+
+.advance-quality-main-sec .MuiSvgIcon-root  {
+    display: none;
+}
+
+.advance-quality-main-sec .Mui-expanded  span.rotate {
+    transform: rotate(45deg);
+} 
+
 @media (max-width:767px) {
     .load-more-btn-sec {
         margin-top: 50px;

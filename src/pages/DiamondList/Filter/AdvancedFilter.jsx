@@ -18,7 +18,7 @@ const AdvancedFilter = () => {
                     >
                         <button type="button" className="flex gap-1 items-center text-1.5xl leading-tight text-black font-bold md:px-2 md:py-0.5 md:text-white md:bg-black md:font-normal md:gap-1.5 md:rounded-full md:text-1.5sm">
                             <span>Advanced Quality Specs</span>
-                            <span className="w-4 h-4 transition-transform duration-300 relative rotate-0 md:w-2 md:h-2">
+                            <span className="w-4 h-4 transition-transform duration-300 relative rotate md:w-2 md:h-2">
                                 <span className="absolute top-1/2 left-1/2 w-full h-px bg-current -translate-x-1/2 -translate-y-1/2">
                                 </span>
                                 <span className="absolute top-1/2 left-1/2 w-full h-px bg-current -translate-x-1/2 -translate-y-1/2 rotate-90"
