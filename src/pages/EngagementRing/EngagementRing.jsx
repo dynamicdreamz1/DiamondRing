@@ -206,7 +206,7 @@ const RingSelector = () => {
         </div>
 
         {pageInfo?.hasNextPage && (
-          <div className="mt-8 text-center">
+          <div className="load-more-btn-sec text-center">
             <button
               onClick={handleLoadMore}
               disabled={loading}

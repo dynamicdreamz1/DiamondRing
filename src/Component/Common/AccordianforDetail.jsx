@@ -106,7 +106,7 @@ const AccordianforDetail = () => {
                 <AccordionDetails>
                     <div className='cpst-tab-content'>
                     <div className="cpst-tab-content-wrapper text-customGray-450 py-4 pr-10 pl-3">
-                    <p tabindex="-1">Received an item you don't like? KEYZAR is proud to offer free returns within <strong>30 days from receiving your item</strong>. Contact our support team to issue a return.</p>
+                        <p tabindex="-1">Received an item you don't like? KEYZAR is proud to offer free returns within <strong>30 days from receiving your item</strong>. Contact our support team to issue a return.</p>
                     </div>
                     </div>
                 </AccordionDetails>

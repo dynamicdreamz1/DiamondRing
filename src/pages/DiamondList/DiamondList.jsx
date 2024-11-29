@@ -51,7 +51,7 @@ const DiamondList = () => {
           </header>
         </div>
 
-        <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative md:px-2 md:max-w-[31rem] mx-auto md:z-10 px-5 my-3 md:my-6'>
+        <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative  md:max-w-[31rem] mx-auto md:z-10 my-3 md:my-6'>
           <div
             className={`absolute w-1/2 top-0 bottom-0 pointer-events-none transition-all duration-300 rounded-md ${!filters.labgrown
               ? 'left-0 bg-white ring-1 md:ring-2 ring-black'
