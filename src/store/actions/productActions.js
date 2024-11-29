@@ -1,9 +1,9 @@
 import { createStorefrontApiClient } from "@shopify/storefront-api-client";
 import {
-  fetchProductsStart,
-  fetchProductsSuccess,
-  fetchProductsFailure,
-} from "../slices/productSlice";
+  fetchRingsStart,
+  fetchRingsSuccess,
+  fetchRingsFailure,
+} from "../slices/ringsSlice";
 
 const client = createStorefrontApiClient({
   storeDomain: process.env.REACT_APP_SHOP_DOMAIN,
@@ -99,7 +99,7 @@ export const PRODUCT_QUERY = `
 
 export const fetchProducts = (options = { first: 8, after: null }) => async (dispatch) => {
   try {
-    dispatch(fetchProductsStart());
+    dispatch(fetchRingsStart());
 
     const queryParts = [];
 
@@ -137,7 +137,7 @@ export const fetchProducts = (options = { first: 8, after: null }) => async (dis
     const managePage = options?.page ? true : false;
 
     dispatch(
-      fetchProductsSuccess({
+      fetchRingsSuccess({
         products: data.products,
         append: managePage,
       })
@@ -145,7 +145,7 @@ export const fetchProducts = (options = { first: 8, after: null }) => async (dis
 
     return data?.products?.pageInfo;
   } catch (error) {
-    dispatch(fetchProductsFailure(error.message));
+    dispatch(fetchRingsFailure(error.message));
     throw error;
   }
 };

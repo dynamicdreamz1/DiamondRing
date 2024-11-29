@@ -9,11 +9,11 @@ const diamondSlice = createSlice({
     // pageInfo: null,
   },
   reducers: {
-    diamondFetchStart: (state) => {
+    diamondsFetchStart: (state) => {
       state.loading = true;
       state.error = null;
     },
-    diamondFetchSuccess: (state, action) => {
+    diamondsFetchSuccess: (state, action) => {
       const { diamonds, append } = action.payload;
 
       state.loading = false;
@@ -30,7 +30,7 @@ const diamondSlice = createSlice({
         state.diamonds = diamonds;
       }
     },
-    diamondFetchFailure: (state, action) => {
+    diamondsFetchFailure: (state, action) => {
       state.loading = false;
       state.error = action.payload;
     },
@@ -38,9 +38,9 @@ const diamondSlice = createSlice({
 });
 
 export const {
-  diamondFetchStart,
-  diamondFetchSuccess,
-  diamondFetchFailure,
+  diamondsFetchStart,
+  diamondsFetchSuccess,
+  diamondsFetchFailure,
 } = diamondSlice.actions;
 
 export default diamondSlice.reducer;

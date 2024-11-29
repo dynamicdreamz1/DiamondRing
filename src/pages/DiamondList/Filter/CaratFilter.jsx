@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from '@mui/material/Slider';
 import { updateFilter } from '../../../store/slices/diamondFilterSlice';
@@ -41,6 +41,11 @@ const CaratFilter = () => {
     dispatch(updateFilter({ carat_from: values[0], carat_to: values[1] }));
   };
 
+
+  useEffect(() => {
+    setValues([carat_from || 1, carat_to || 10]);
+  }, [carat_from, carat_to]);
+
   return (
     <div className="collection-range-item">
       <div className="mb-6">
@@ -54,8 +59,8 @@ const CaratFilter = () => {
           onChange={handleSliderChange}
           onChangeCommitted={handleSliderCommit}
           valueLabelDisplay="auto"
-          min={0.5}
-          max={15}
+          min={1}
+          max={10}
           step={0.01}
           sx={{
             color: '#0f834d',

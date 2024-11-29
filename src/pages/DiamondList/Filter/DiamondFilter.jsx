@@ -1,5 +1,5 @@
 import React from 'react'
-import { updateFilter } from '../../../store/slices/diamondFilterSlice';
+import { resetFilters, updateFilter } from '../../../store/slices/diamondFilterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import DiamondShapeFilter from './DiamondShapeFilter';
 import CertificateFilter from './CertificateFilter';
@@ -15,6 +15,14 @@ const DiamondFilter = () => {
     const handleRingTypeSelection = (isLabGrown) => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
     };
+
+
+    const handleResetFilter = () => {
+        dispatch(resetFilters()); // Update the Redux state with true/false
+    };
+
+    console.log("filters",filters);
+    
 
 
     return (
@@ -72,7 +80,7 @@ const DiamondFilter = () => {
 
             <div className="w-full hidden md:flex justify-center items-center col-span-2 xl:w-full collection-filters-item-with-custom-width-and-order gap-1.5 py-6">
                 <div className="flex-1 h-px bg-borders"></div>
-                <button type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">
+                <button onClick={()=>handleResetFilter()}  type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">
                     <span>Reset</span>
                     <svg className="block w-2.5 h-2.5" viewBox="0 0 14 14">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,6 +114,7 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
                         <div className="text-base font-bold text-black leading-none">Color</div>
@@ -126,9 +135,10 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
-                        <div className="text-base font-bold text-black leading-none">Color</div>
+                        <div className="text-base font-bold text-black leading-none">Cut</div>
                         <button className="w-4 h-4 md:w-3 md:h-3 mb-1 cursor-help" title="help">
                             <svg className="w-4 h-4 md:w-3 md:h-3 text-customGray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
@@ -139,8 +149,20 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
+
                     <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative md:mt-4">
-                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>J</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>I</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>H</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>G</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>F</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>E</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>D</span></button>
+                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
+                            <span>Good</span>
+                            <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
+                        </button>
+                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
+                            <span>Very Good</span>
+                            <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
+                        </button>
+                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
+                            <span>Excellent</span>
+                            <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
+                        </button>
                         <div className="absolute top-0 bottom-0 transition-position-width duration-500 pointer-events-none rounded-lg bg-white" style={{ left: "0%", right: "0%" }}>
                             <div className="absolute w-full h-full transition-width duration-500 border border-black ring-1 ring-black rounded-lg z-20"></div>
                         </div>

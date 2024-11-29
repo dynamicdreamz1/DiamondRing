@@ -1,8 +1,8 @@
 import { createStorefrontApiClient } from "@shopify/storefront-api-client";
 import {
-    fetchSingleProductsStart,
-    fetchSingleProductsSuccess,
-    fetchSingleProductsFailure,
+    fetchSingleRingStart,
+    fetchSingleRingSuccess,
+    fetchSingleRingFailure,
 } from "../slices/singleProductSlice";
 
 const client = createStorefrontApiClient({
@@ -80,7 +80,7 @@ query GetProductById($id: ID!) {
 
 export const fetchSingleProducts = (id) => async (dispatch) => {
     try {
-      dispatch(fetchSingleProductsStart());
+      dispatch(fetchSingleRingStart());
   
       const variables = {
         id: id // Pass the product ID
@@ -91,14 +91,14 @@ export const fetchSingleProducts = (id) => async (dispatch) => {
       });  
   
       dispatch(
-        fetchSingleProductsSuccess({
+        fetchSingleRingSuccess({
           product: data.product, // Access the `product` field in the response
         })
       );
   
       return data?.product;
     } catch (error) {
-      dispatch(fetchSingleProductsFailure(error.message));
+      dispatch(fetchSingleRingFailure(error.message));
       console.error("Error fetching product:", error);
       throw error;
     }

@@ -1,8 +1,8 @@
 import React from 'react'
-import { openFilter, closeFilter } from '../../../store/slices/productSlice';
+import { openFilter, closeFilter } from '../../../store/slices/ringsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { metalOptions } from '../../../Utility/Constant';
-import { setFilter } from '../../../store/slices/productFilterSlice';
+import { setFilter } from '../../../store/slices/ringsFilterSlice';
 
 const MetalFilter = () => {
     const filters = useSelector((state) => state.productFilter);

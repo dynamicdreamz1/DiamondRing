@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import WishList from './DiamondWishList';
+import { Link } from "react-router-dom"
 
 const DiamondProductListCard = () => {
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
@@ -24,18 +25,20 @@ const DiamondProductListCard = () => {
     return (
         <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
             {diamonds?.data?.diamonds_by_query?.items.length > 0 && diamonds?.data?.diamonds_by_query?.items.map((diamond) => (
+
                 <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
                     <>
                         <div className='border-borders border rounded-lg overflow-hidden md:block'>
                             <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
                                 <WishList />
                                 <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
-                                    <img className='absolute w-full h-full top-0 left-0 object-cover' 
-                                        src={diamond?.diamond?.v360?.url ? `${diamond?.diamond?.v360?.url}/${diamond?.diamond?.v360?.top_index ? diamond?.diamond?.v360?.top_index : "0"}.jpg` : diamond?.diamond?.image}
-                                        alt="diamond"
-                                    />
+                                    <Link to={`/diamond-list/${diamond.diamond.certificate.certNumber}`}>
+                                        <img className='absolute w-full h-full top-0 left-0 object-cover'
+                                            src={diamond?.diamond?.v360?.url ? `${diamond?.diamond?.v360?.url}/${diamond?.diamond?.v360?.top_index ? diamond?.diamond?.v360?.top_index : "0"}.jpg` : diamond?.diamond?.image}
+                                            alt="diamond"
+                                        />
+                                    </Link>
                                 </div>
-                                <a className="absolute inset-0 opacity-0 hidden md:block" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">0.5 Carat I SI1 Round Natural Diamond</a>
                             </div>
                             <div className="bg-white pt-0.5 md:hidden">
                                 <div className="CenterStoneProductCard__StoneInfo flex flex-wrap">
@@ -177,7 +180,9 @@ const DiamondProductListCard = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center gap-2 flex-wrap mt-2">
-                                <a className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">More Info</a>
+                                <Link to={`/diamond-list/${diamond.diamond.certificate.certNumber}`} className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" aria-hidden="false">
+                                    More Info
+                                </Link>
                                 <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
                                     <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
                                         <span>Complete your ring</span>
