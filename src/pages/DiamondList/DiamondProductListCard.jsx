@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import WishList from './WishList';
 
 const DiamondProductListCard = () => {
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
@@ -23,39 +24,15 @@ const DiamondProductListCard = () => {
     return (
         <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
             {diamonds?.data?.diamonds_by_query?.items.length > 0 && diamonds?.data?.diamonds_by_query?.items.map((diamond) => (
-
-
                 <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
-                    {console.log("diamond", diamond.diamond.v360.url)}
                     <>
                         <div className='border-borders border rounded-lg overflow-hidden md:block'>
                             <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
-                                <div className="absolute right-2 top-2 z-20">
-                                    <button type="button" className="WishlistButton ml-1 stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-6 h-6 md:w-7 md:h-7 ">
-                                                <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-                                                    <mask id="wishlist-heart-mask">
-                                                        <path d="M12,7.16613l3.01387-2.65371,4.7586,2.07432,1.0675,4.76126-8.83997,9.152L3.15997,11.348l1.06753-4.76126,4.75765-2.0739,3.01485,2.65329Z" fill="white" stroke="white"></path>
-                                                    </mask>
-                                                    <g mask="url(#wishlist-heart-mask)">
-                                                        <polygon className="heart-bg-fill" fill="#fff" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
-                                                        <path className="heart-right" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
-                                                        <path className="heart-bottom" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
-                                                        <path className="heart-left" fill="#e86c5c" d="M12,1.7h0c6.2,0,11.2,5,11.2,11.2h0c0,6.2-5,11.2-11.2,11.2h0C5.8,24,.8,19,.8,12.8h0C.8,6.7,5.8,1.7,12,1.7Z"></path>
-                                                        <rect className="heart-bright-left" fill="rgba(255,255,255,0.2)" x="-4.9" y="-5" width="26.5" height="12.2" shape-rendering="crispEdges"></rect>
-                                                        <rect className="heart-bright-right" fill="rgba(255,255,255,0.2)" x="10.1" y="-2.8" width="11.8" height="22.3" shape-rendering="crispEdges"></rect>
-                                                        <polygon className="heart-outline" points="2.61308 11.50098 3.7957 6.22949 9.07695 3.92773 12.00029 6.5 14.92216 3.92773 20.20536 6.22949 21.387 11.50098 12.00029 21.21973 2.61308 11.50098"></polygon>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
+                                <WishList />
                                 <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
-                                    <img className='absolute w-full h-full top-0 left-0 object-contain' 
-                                    src={diamond?.diamond?.v360?.url ? `${diamond?.diamond?.v360?.url}/${diamond?.diamond?.v360?.top_index ? diamond?.diamond?.v360?.top_index : "0"}.jpg` : diamond?.diamond?.image} 
-                                    alt="" 
+                                    <img className='absolute w-full h-full top-0 left-0 object-contain'
+                                        src={diamond?.diamond?.v360?.url ? `${diamond?.diamond?.v360?.url}/${diamond?.diamond?.v360?.top_index ? diamond?.diamond?.v360?.top_index : "0"}.jpg` : diamond?.diamond?.image}
+                                        alt="diamond"
                                     />
                                 </div>
                                 <a className="absolute inset-0 opacity-0 hidden md:block" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">0.5 Carat I SI1 Round Natural Diamond</a>
@@ -198,19 +175,6 @@ const DiamondProductListCard = () => {
                                     </div>
                                     <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-borders pointer-events-none"></div>
                                 </div>
-                            </div>
-                            <div className="flex justify-center gap-2 flex-wrap mt-2">
-                                <a className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">More Info</a>
-                                <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
-                                    <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
-                                        <span>Complete your ring</span>
-                                        <svg className="w-3 h-3">
-                                            <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                </button>
                             </div>
                             <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
                         </div>
