@@ -48,7 +48,7 @@ const CaratFilter = () => {
       </div>
 
       {/* Material-UI Slider */}
-      <div className="px-3.5">
+      <div className="p-0">
         <Slider
           value={values}
           onChange={handleSliderChange}

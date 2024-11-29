@@ -10335,6 +10335,18 @@ textarea+.DAH-form-label {
     margin-top: 100px;
 }
 
+.collection-range-item .MuiSlider-colorPrimary {
+    color: #000;
+    height: 3px;
+}
+
+.collection-range-item .css-bn3cda-MuiSlider-root .MuiSlider-thumb {
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 28px;
+    height: 28px;
+}
+
 @media (max-width:767px) {
     .load-more-btn-sec {
         margin-top: 50px;
