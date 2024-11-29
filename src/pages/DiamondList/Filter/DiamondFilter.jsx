@@ -2,6 +2,8 @@ import React from 'react'
 import { updateFilter } from '../../../store/slices/diamondFilterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import DiamondShapeFilter from './DiamondShapeFilter';
+import CertificateFilter from './CertificateFilter';
+import PriceFilter from './PriceFilter';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
@@ -11,23 +13,7 @@ const DiamondFilter = () => {
     const handleRingTypeSelection = (isLabGrown) => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
     };
-
-    const handleLabSelection = (selectedLab) => {
-        const newLabSelection = [...filters.lab]; // Clone the current array to avoid mutating state
-
-        if (newLabSelection.includes(selectedLab)) {
-            // If it's already selected, remove it from the array
-            const index = newLabSelection.indexOf(selectedLab);
-            newLabSelection.splice(index, 1);
-        } else {
-            // Otherwise, add it to the array
-            newLabSelection.push(selectedLab);
-        }
-
-        dispatch(updateFilter({ lab: newLabSelection })); // Update Redux with the new array
-    };
-
-
+    
 
     return (
         <>
@@ -220,79 +206,8 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
-                <div className='collection-range-item'>
-                    <div className="mb-2"><div className="text-base font-bold text-black leading-none">Budget</div></div>
-                    <div className="flex justify-between gap-2 items-center pt-1">
-                        <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
-                            <div className="relative flex-grow border-r border-borders">
-                                <div className="absolute top-3 left-3 right-3 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none ">Minimum</div>
-                                <input type="text" inputmode="decimal" className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent xl:pt-7.5" value="$ 176" />
-                            </div>
-                            <div className="w-8 flex flex-col shrink-0 ">
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center border-b border-borders text-customGray-300">
-                                    <svg className="w-3 h-3 -rotate-90 ">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center text-customGray-300">
-                                    <svg className="w-3 h-3 rotate-90 ">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="flex-1 h-2 border-r border-l border-borders flex items-center">
-                            <div className="h-px w-full bg-borders"></div>
-                        </div>
-                        <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
-                            <div className="relative flex-grow border-r border-borders">
-                                <div className="absolute top-3 left-3 right-3 text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none ">Maximum</div>
-                                <input type="text" inputmode="decimal" className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent xl:pt-7.5" value="$ 29,351,322" />
-                            </div>
-                            <div className="w-8 flex flex-col shrink-0 ">
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center border-b border-borders text-customGray-300">
-                                    <svg className="w-3 h-3 -rotate-90 ">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                                <button type="button" className="h-1/2 w-full flex items-center justify-center text-customGray-300">
-                                    <svg className="w-3 h-3 rotate-90 ">
-                                        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.49316 11.2867L8.77971 6.00017L3.49316 0.713623" stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="collection-range-item">
-                    <div className="mb-2">
-                        <div className="text-base font-bold text-black leading-none">Certificate</div>
-                    </div>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2 md:mt-3">
-                        <button
-                            className={`flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders ${filters.lab.includes('IGI') ? 'border-black' : 'text-customGray-500 bg-customGray-75'} md:min-h-[4rem]`}
-                            onClick={() => handleLabSelection('IGI')}
-                        >
-                            IGI
-                        </button>
-                        <button
-                            className={`flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders ${filters.lab.includes('GIA') ? 'border-black' : 'text-customGray-500 bg-customGray-75'} md:min-h-[4rem]`}
-                            onClick={() => handleLabSelection('GIA')}
-                        >
-                            GIA
-                        </button>
-                    </div>
-                </div>
+               <PriceFilter />
+               <CertificateFilter />
             </div>
 
 
