@@ -28,7 +28,7 @@ const DiamondList = () => {
 
     fetchProduct();
   }, [dispatch, filters]);
-  
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -82,8 +82,8 @@ const DiamondList = () => {
           </button>
           <button
             className={`flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs md:p-2.5 md:gap-1.5 md:text-sm ${filters.labgrown
-                ? 'bg-white text-black ring-1 md:ring-2 ring-black'
-                : 'bg-transparent text-gray-500'
+              ? 'bg-white text-black ring-1 md:ring-2 ring-black'
+              : 'bg-transparent text-gray-500'
               }`}
             onClick={() => handleRingTypeSelection(true)}
           >            <svg className="block relative w-5 h-5 md:w-7 md:h-7">
@@ -184,13 +184,6 @@ const DiamondList = () => {
           <div className='collection-range-item'>
             <div className="mb-6"><div className="text-base font-bold text-black leading-none">Carat</div></div>
             <div class="px-3.5">
-              {/* <div role="button" tabindex="0" style="transform:scale(1);cursor:inherit;height:28px;display:flex;width:100%" aria-hidden="false">
-                  <div style="height:4px;width:100%;border-radius:100px;background:linear-gradient(to right, #F5F5F5 0%, #F5F5F5 0%, #000 0%, #000 100%, #F5F5F5 100%, #F5F5F5 100%);border:1px solid var(--color-borders);align-self:center;position:relative">
-                    <div style="position: absolute; z-index: 0; cursor: grab; touch-action: none; user-select: none; height: 28px; width: 28px; background-color: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0); border-radius: 50%; transform: translate(-15px, -13px);" tabindex="0" aria-valuemax="11" aria-valuemin="0.5" aria-valuenow="0.5" draggable="false" role="slider"></div>
-                    <div style="position: absolute; z-index: 1; cursor: grab; touch-action: none; user-select: none; height: 28px; width: 28px; background-color: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0); border-radius: 50%; transform: translate(476.344px, -13px);" tabindex="0" aria-valuemax="11" aria-valuemin="0.5" aria-valuenow="11" draggable="false" role="slider"></div>
-                  </div>
-              </div> */}
-
               <div className='range-main'>
                 <div className='range-circel-left'></div>
                 <div className='range-circel-right'></div>
