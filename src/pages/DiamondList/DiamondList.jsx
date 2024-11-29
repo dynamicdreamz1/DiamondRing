@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateFilter } from '../../store/slices/diamondFilterSlice';
 import { fetchDiamondList } from '../../store/actions/diamondFilterAction';
 import DiamondProductListCard from './DiamondProductListCard';
+import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter';
 
 
 const DiamondList = () => {
@@ -373,6 +374,9 @@ const DiamondList = () => {
           </div>
         </div>
         <DiamondProductListCard />
+      </div>
+      <div className="mt-8">
+        <NewsletterFooter />
       </div>
     </div>
   )

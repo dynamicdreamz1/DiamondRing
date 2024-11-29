@@ -2,12 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 const DiamondProductListCard = () => {
-
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
-
-
-    console.log("diamonds", diamonds?.data?.diamonds_by_query?.items);
-
 
     if (error) return <p>Error: {error}</p>;
 
