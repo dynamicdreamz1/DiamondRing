@@ -12,6 +12,23 @@ const DiamondFilter = () => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
     };
 
+    const handleLabSelection = (selectedLab) => {
+        const newLabSelection = [...filters.lab]; // Clone the current array to avoid mutating state
+
+        if (newLabSelection.includes(selectedLab)) {
+            // If it's already selected, remove it from the array
+            const index = newLabSelection.indexOf(selectedLab);
+            newLabSelection.splice(index, 1);
+        } else {
+            // Otherwise, add it to the array
+            newLabSelection.push(selectedLab);
+        }
+
+        dispatch(updateFilter({ lab: newLabSelection })); // Update Redux with the new array
+    };
+
+
+
     return (
         <>
             <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative  md:max-w-[31rem] mx-auto md:z-10 my-3 md:my-6'>
@@ -255,9 +272,26 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
-                <div className='collection-range-item'>
-                    <div className="mb-2"><div className="text-base font-bold text-black leading-none">Certificate</div></div>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2 md:mt-3"><button className="flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders text-customGray-500 bg-customGray-75 md:min-h-[4rem]">IGI</button><button className="flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders text-customGray-500 bg-customGray-75 md:min-h-[4rem]">GIA</button></div>
+
+
+                <div className="collection-range-item">
+                    <div className="mb-2">
+                        <div className="text-base font-bold text-black leading-none">Certificate</div>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 md:mt-3">
+                        <button
+                            className={`flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders ${filters.lab.includes('IGI') ? 'border-black' : 'text-customGray-500 bg-customGray-75'} md:min-h-[4rem]`}
+                            onClick={() => handleLabSelection('IGI')}
+                        >
+                            IGI
+                        </button>
+                        <button
+                            className={`flex-1 px-2 h-10 transition-colors border rounded-lg uppercase text-center flex justify-center items-center text-1.5sm leading-tight border-borders ${filters.lab.includes('GIA') ? 'border-black' : 'text-customGray-500 bg-customGray-75'} md:min-h-[4rem]`}
+                            onClick={() => handleLabSelection('GIA')}
+                        >
+                            GIA
+                        </button>
+                    </div>
                 </div>
             </div>
 
