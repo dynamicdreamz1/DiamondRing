@@ -1,7 +1,7 @@
 import {
-    diamondFetchStart,
-    diamondFetchSuccess,
-    diamondFetchFailure,
+    diamondsFetchStart,
+    diamondsFetchSuccess,
+    diamondsFetchFailure,
 } from "../slices/diamondSlice";
 import axios from "axios";
 
@@ -9,7 +9,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 export const fetchDiamondList = (filter) => async (dispatch) => {
     try {
-        dispatch(diamondFetchStart());
+        dispatch(diamondsFetchStart());
 
         console.log("filter", filter);
 
@@ -31,14 +31,14 @@ export const fetchDiamondList = (filter) => async (dispatch) => {
         });
 
         dispatch(
-            diamondFetchSuccess({
+            diamondsFetchSuccess({
                 diamonds: response.data, // Access the `product` field in the response
             })
         );
 
         return response?.data;
     } catch (error) {
-        dispatch(diamondFetchFailure(error.message));
+        dispatch(diamondsFetchFailure(error.message));
         console.error("Error fetching product:", error);
         throw error;
     }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { shapeOptions } from '../../../Utility/Constant'
 import { useDispatch, useSelector } from 'react-redux';
-import { openFilter, closeFilter } from '../../../store/slices/productSlice';
-import { setFilter } from '../../../store/slices/productFilterSlice';
+import { openFilter, closeFilter } from '../../../store/slices/ringsSlice';
+import { setFilter } from '../../../store/slices/ringsFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();

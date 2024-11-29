@@ -3,7 +3,7 @@ import {
   fetchProductsStart,
   fetchProductsSuccess,
   fetchProductsFailure,
-} from "../slices/productSlice";
+} from "../slices/ringsSlice";
 
 const client = createStorefrontApiClient({
   storeDomain: process.env.REACT_APP_SHOP_DOMAIN,

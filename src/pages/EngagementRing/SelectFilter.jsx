@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShapeFilter } from './FilterSection/ShapeFilter';
 import MetalFilter from './FilterSection/MetalFilter';
-import { setFilter } from '../../store/slices/productFilterSlice';
+import { setFilter } from '../../store/slices/ringsFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const SelectFilter = () => {

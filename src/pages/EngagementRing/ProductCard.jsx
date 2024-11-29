@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
-import { addProduct } from "../../store/slices/productSlice"
+import { addProduct } from "../../store/slices/ringsSlice"
 import LeftSideModal from './FilterSection/LeftSideModal';
 import { Link } from "react-router-dom";
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import { ringStyles } from '../../Utility/Constant'
-import { setFilter } from '../../store/slices/productFilterSlice';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { setFilter } from '../../store/slices/ringsFilterSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const RingStyleFilter = () => {
   const dispatch = useDispatch();
@@ -19,7 +18,7 @@ const RingStyleFilter = () => {
       {ringStyles.map((style) => (
         <div
           key={style.id}
-          className={`text-center cursor-pointer ring-1 ${filters.ringType === style.name ? "ring-black" : '' } engagement-ring-shape  md:ring-2  shadow-none pt-1.25 p-2 pb-1.75 md:min-w-[6rem] md:p-3 md:pt-1.5 md:border-none text-center text-black select-none rounded-lg border transition-colors bg-customGray-75 border-borders md:bg-white md:hover:bg-customGray-75`}
+          className={`text-center cursor-pointer ring-1 ${filters.ringType === style.name ? "ring-black" : ''} engagement-ring-shape  md:ring-2  shadow-none pt-1.25 p-2 pb-1.75 md:min-w-[6rem] md:p-3 md:pt-1.5 md:border-none text-center text-black select-none rounded-lg border transition-colors bg-customGray-75 border-borders md:bg-white md:hover:bg-customGray-75`}
           onClick={() => handleRingTypeSelection(style)}
         >
           <div className="mb-2"> {style.icon}</div>

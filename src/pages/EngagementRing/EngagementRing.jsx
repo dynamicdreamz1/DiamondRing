@@ -7,7 +7,7 @@ import RingStyleFilter from "./RingStyleFilter";
 import ProductCard from "./ProductCard";
 import SelectFilter from "./SelectFilter";
 import { metalOptions, ringStyles, shapeOptions } from "../../Utility/Constant";
-import { resetFilters, setFilter } from "../../store/slices/productFilterSlice";
+import { resetFilters, setFilter } from "../../store/slices/ringsFilterSlice";
 import { useLocation, useNavigate } from "react-router-dom";
 import NewsletterFooter from "../../Component/Common/Footer/NewsletterFooter";
 
