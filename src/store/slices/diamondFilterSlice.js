@@ -3,15 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     labgrown: false, // Single string for diamond type
     shape: '', // Single string for shape
-    color: [], // Array for multiple colors
-    clarity: [], // Array for multiple clarity values
-    cut: [], // Array for multiple cut values
-    carat: { min: 0, max: 0 }, // Range for carat weight
-    budget: { min: 0, max: 0 }, // Range for budget
-    certificate: [], // Array for multiple certificates
+    // color: [], // Array for multiple colors
+    // clarity: [], // Array for multiple clarity values
+    // cut: [], // Array for multiple cut values
+    // carat: { min: 0, max: 0 }, // Range for carat weight
+    // budget: { min: 0, max: 0 }, // Range for budget
+    // certificate: [], // Array for multiple certificates
 };
 
-const diamondSlice = createSlice({
+const diamondFilterSlice = createSlice({
     name: 'diamond',
     initialState,
     reducers: {
@@ -27,6 +27,6 @@ const diamondSlice = createSlice({
     },
 });
 
-export const { updateFilter, resetFilters } = diamondSlice.actions;
+export const { updateFilter, resetFilters } = diamondFilterSlice.actions;
 
-export default diamondSlice.reducer;
+export default diamondFilterSlice.reducer;

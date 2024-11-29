@@ -3,6 +3,8 @@ import productReducer from './slices/productSlice';
 import productFilterReducer from './slices/productFilterSlice';
 import singleProductReducer from './slices/singleProductSlice';
 import diamondFilterReducer from './slices/diamondFilterSlice';
+import diamondReducer from './slices/diamondSlice';
+
 
 
 
@@ -12,6 +14,7 @@ export const store = configureStore({
     products: productReducer,
     productFilter :productFilterReducer,
     singleProduct : singleProductReducer,
-    diamondFilter : diamondFilterReducer
+    diamondFilter : diamondFilterReducer,
+    diamond : diamondReducer
   },
 });

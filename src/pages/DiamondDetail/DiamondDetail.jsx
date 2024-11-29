@@ -10,8 +10,6 @@ import { diamondData } from '../../Utility/Constant'
 
 const DiamondDetail = () => {
 
-  console.log("diamondData", diamondData);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}

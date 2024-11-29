@@ -25,7 +25,6 @@ const EngagementRingDetail = () => {
     if (productId) {
       // Reconstruct the full GraphQL ID
       const graphQLId = `gid://shopify/Product/${productId}`;
-      console.log('productId');
       dispatch(fetchSingleProducts(graphQLId));
     }
   }, [dispatch, productId]);
