@@ -1,7 +1,7 @@
 import React from 'react'
 import TabComponent from '../../Component/Common/TabComponent'
 import DiamondShapeFilter from './DiamondShapeFilter'
-import { useDispatch , useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateFilter } from '../../store/slices/diamondFilterSlice';
 
 const DiamondList = () => {
@@ -9,11 +9,9 @@ const DiamondList = () => {
   const dispatch = useDispatch();
 
   const handleRingTypeSelection = (isLabGrown) => {
-    dispatch(updateFilter({ labgrown : isLabGrown })); // Update the Redux state with true/false
+    dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
   };
 
-  console.log("filters",);
-  
 
   return (
     <div className="min-h-screen bg-white">
@@ -38,8 +36,19 @@ const DiamondList = () => {
         </div>
 
         <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative md:px-2 md:max-w-[31rem] mx-auto md:z-10 px-5 my-3 md:my-6'>
-          <div className="absolute w-1/2 top-0 -bottom-0 pointer-events-none bg-white ring-1 md:ring-2 ring-black transition-all duration-300 rounded-md left-1/2"></div>
-        <button className="bg-transparent flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs text-black before:absolute before:inset-0 md:p-2.5 md:gap-1.5 md:text-sm before:visible">
+          <div
+            className={`absolute w-1/2 top-0 bottom-0 pointer-events-none transition-all duration-300 rounded-md ${!filters.labgrown
+              ? 'left-0 bg-white ring-1 md:ring-2 ring-black'
+              : 'left-1/2 bg-gray-200 ring-0'
+              }`}
+          ></div>
+          <button
+            className={`flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs md:p-2.5 md:gap-1.5 md:text-sm ${!filters.labgrown
+              ? 'bg-white text-black ring-1 md:ring-2 ring-black'
+              : 'bg-transparent text-gray-500'
+              }`}
+            onClick={() => handleRingTypeSelection(false)}
+          >
             <svg className="block relative w-5 h-5 md:w-7 md:h-7">
               <svg viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.3711 31.6668L26.3115 26.7114H36.7596L41.7 31.6668L31.5306 40.7114L21.3711 31.6668Z" stroke="currentColor" stroke-miterlimit="10"></path>
@@ -54,8 +63,13 @@ const DiamondList = () => {
             </svg>
             <span className="leading-none relative">Lab Grown</span>
           </button>
-          <button className="bg-transparent flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs text-black before:absolute before:inset-0 md:p-2.5 md:gap-1.5 md:text-sm before:invisible">
-            <svg className="block relative w-5 h-5 md:w-7 md:h-7">
+          <button
+            className={`flex justify-center items-center gap-1 p-1 rounded-md w-1/2 transition ease-in-out duration-300 text-xs md:p-2.5 md:gap-1.5 md:text-sm ${filters.labgrown
+                ? 'bg-white text-black ring-1 md:ring-2 ring-black'
+                : 'bg-transparent text-gray-500'
+              }`}
+            onClick={() => handleRingTypeSelection(true)}
+          >            <svg className="block relative w-5 h-5 md:w-7 md:h-7">
               <svg viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.983 24.5301C26.085 24.7867 26.3757 24.912 26.6323 24.81C26.8889 24.708 27.0142 24.4173 26.9122 24.1607L25.983 24.5301ZM24.5 19.7131H24V19.8088L24.0354 19.8978L24.5 19.7131ZM26.9122 24.1607C26.4453 22.9861 26.1874 22.4047 25.9308 21.8265C25.6772 21.2549 25.425 20.6864 24.9646 19.5284L24.0354 19.8978C24.5023 21.0724 24.7602 21.6538 25.0168 22.232C25.2704 22.8036 25.5226 23.372 25.983 24.5301L26.9122 24.1607ZM25 19.7131C25 17.3572 26.91 15.4473 29.2658 15.4473V14.4473C26.3577 14.4473 24 16.805 24 19.7131H25ZM29.2658 15.4473H34.0386V14.4473H29.2658V15.4473Z" fill="currentColor"></path>
                 <path d="M24.5 38C21.83 38 19.2199 37.2082 16.9998 35.7248C14.7797 34.2414 13.0494 32.133 12.0276 29.6662C11.0058 27.1994 10.7385 24.485 11.2594 21.8663C11.7803 19.2475 13.066 16.8421 14.9541 14.9541C16.8421 13.066 19.2475 11.7803 21.8663 11.2594C24.485 10.7385 27.1994 11.0058 29.6662 12.0276C32.133 13.0494 34.2414 14.7797 35.7248 16.9998C37.2082 19.2199 38 21.83 38 24.5" stroke="currentColor" stroke-linecap="round"></path>
