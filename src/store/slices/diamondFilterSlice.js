@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     labgrown: false, // Single string for diamond type
-    shape: 'ROUND', // Single string for shape
+    shape: 'Round', // Single string for shape
     lab: [],
     price_from: 200,
     price_to: 100000,
