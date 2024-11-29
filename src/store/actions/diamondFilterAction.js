@@ -10,9 +10,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 export const fetchDiamondList = (filter) => async (dispatch) => {
     try {
         dispatch(diamondsFetchStart());
-
-        console.log("filter", filter);
-
+        
         // Create a new FormData instance
         const formData = new FormData();
 
