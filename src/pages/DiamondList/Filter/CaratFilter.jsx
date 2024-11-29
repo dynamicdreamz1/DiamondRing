@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Range } from 'react-range';
-import { updateFilter } from './actions'; // Your Redux action
+import Slider from '@mui/material/Slider';
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
 
 const CaratFilter = () => {
   const dispatch = useDispatch();
@@ -9,41 +9,34 @@ const CaratFilter = () => {
   // Get initial values from Redux state
   const { carat_from, carat_to } = useSelector((state) => state.diamondFilter);
 
-  // Local state for the slider
+  // Local state for slider values
   const [values, setValues] = useState([carat_from || 1, carat_to || 10]);
 
-  const handleSliderChange = (newValues) => {
-    setValues(newValues);
+  const handleSliderChange = (event, newValue) => {
+    setValues(newValue);
   };
 
-  const handleSliderFinalChange = (newValues) => {
-    dispatch(updateFilter({ carat_from: newValues[0], carat_to: newValues[1] }));
+  const handleSliderCommit = (event, newValue) => {
+    dispatch(updateFilter({ carat_from: newValue[0], carat_to: newValue[1] }));
   };
 
   const handleMinInputChange = (e) => {
-    const newMin = parseFloat(e.target.value) || 0;
+    const newMin = parseFloat(e.target.value) || 0.5;
     if (newMin <= values[1]) {
       setValues([newMin, values[1]]);
     }
   };
 
   const handleMaxInputChange = (e) => {
-    const newMax = parseFloat(e.target.value) || 0;
+    const newMax = parseFloat(e.target.value) || 15;
     if (newMax >= values[0]) {
       setValues([values[0], newMax]);
     }
   };
 
-  const handleMinInputBlur = () => {
+  const handleBlur = () => {
     if (values[0] > values[1]) {
       setValues([values[1], values[1]]);
-    }
-    dispatch(updateFilter({ carat_from: values[0], carat_to: values[1] }));
-  };
-
-  const handleMaxInputBlur = () => {
-    if (values[1] < values[0]) {
-      setValues([values[0], values[0]]);
     }
     dispatch(updateFilter({ carat_from: values[0], carat_to: values[1] }));
   };
@@ -54,50 +47,22 @@ const CaratFilter = () => {
         <div className="text-base font-bold text-black leading-none">Carat</div>
       </div>
 
-      {/* Slider */}
+      {/* Material-UI Slider */}
       <div className="px-3.5">
-        <Range
-          step={0.01}
+        <Slider
+          value={values}
+          onChange={handleSliderChange}
+          onChangeCommitted={handleSliderCommit}
+          valueLabelDisplay="auto"
           min={0.5}
           max={15}
-          values={values}
-          onChange={handleSliderChange}
-          onFinalChange={handleSliderFinalChange}
-          renderTrack={({ props, children }) => (
-            <div
-              {...props}
-              style={{
-                ...props.style,
-                height: '6px',
-                background: '#ddd',
-                position: 'relative',
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  height: '100%',
-                  background: '#0f834d',
-                  left: `${((values[0] - 0.5) / (15 - 0.5)) * 100}%`,
-                  right: `${100 - ((values[1] - 0.5) / (15 - 0.5)) * 100}%`,
-                }}
-              />
-              {children}
-            </div>
-          )}
-          renderThumb={({ props }) => (
-            <div
-              {...props}
-              style={{
-                ...props.style,
-                height: '20px',
-                width: '20px',
-                borderRadius: '50%',
-                backgroundColor: '#0f834d',
-                border: '2px solid white',
-              }}
-            />
-          )}
+          step={0.01}
+          sx={{
+            color: '#0f834d',
+            '& .MuiSlider-thumb': {
+              backgroundColor: '#0f834d',
+            },
+          }}
         />
       </div>
 
@@ -117,7 +82,7 @@ const CaratFilter = () => {
               className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent"
               value={values[0]}
               onChange={handleMinInputChange}
-              onBlur={handleMinInputBlur}
+              onBlur={handleBlur}
             />
           </div>
         </div>
@@ -140,7 +105,7 @@ const CaratFilter = () => {
               className="reset-input reset-styles border-none p-3 pt-8 text-base leading-tight text-black tracking-wide w-full bg-transparent"
               value={values[1]}
               onChange={handleMaxInputChange}
-              onBlur={handleMaxInputBlur}
+              onBlur={handleBlur}
             />
           </div>
         </div>
