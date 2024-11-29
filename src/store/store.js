@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import productReducer from './slices/ringsSlice';
 import productFilterReducer from './slices/ringsFilterSlice';
-import singleProductReducer from './slices/singleProductSlice';
+import singleProductReducer from './slices/singleRingSlice';
 import diamondFilterReducer from './slices/diamondFilterSlice';
 import diamondReducer from './slices/diamondSlice';
 

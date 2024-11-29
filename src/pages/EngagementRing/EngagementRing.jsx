@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./ringStyle.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../store/actions/productActions";
+import { fetchProducts } from "../../store/actions/ringActions";
 import TabComponent from "../../Component/Common/TabComponent";
 import RingStyleFilter from "./RingStyleFilter";
 import ProductCard from "./ProductCard";

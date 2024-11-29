@@ -3,7 +3,7 @@ import {
     fetchSingleRingStart,
     fetchSingleRingSuccess,
     fetchSingleRingFailure,
-} from "../slices/singleProductSlice";
+} from "../slices/singleRingSlice";
 
 const client = createStorefrontApiClient({
   storeDomain: process.env.REACT_APP_SHOP_DOMAIN,
