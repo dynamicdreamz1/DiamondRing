@@ -53,7 +53,7 @@ const DiamondProductListCard = () => {
                                     </button>
                                 </div>
                                 <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
-                                    <img className='absolute w-full h-full top-0 left-0 object-contain' src={"https://nivoda-images.nivodaapi.net/aHR0cHM6Ly9zdGFybGlnaHRkaWFtb25kcy5pbi9zZC1waG90b3MvdmlzaW9uMzYwLmh0bWw/ZD0zMTQ4NTU=29.webp"} alt="" />
+                                    <img className='absolute w-full h-full top-0 left-0 object-contain' src={diamond.diamond.image} alt="" />
                                 </div>
                                 <a className="absolute inset-0 opacity-0 hidden md:block" href="/products/0-50-round-i-si1-hrnd-round-gia-6502791850" aria-hidden="false">0.5 Carat I SI1 Round Natural Diamond</a>
                             </div>
