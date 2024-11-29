@@ -11,7 +11,24 @@ export const fetchDiamondList = (filter) => async (dispatch) => {
     try {
         dispatch(diamondFetchStart());
 
-        const response = await axios.post(API_URL, filter);
+        console.log("filter", filter);
+
+        // Create a new FormData instance
+        const formData = new FormData();
+
+        // Iterate over the filter object and append each key-value pair to FormData
+        for (const key in filter) {
+            if (filter.hasOwnProperty(key)) {
+                formData.append(key, filter[key]);
+            }
+        }
+
+        // Send the formData with a POST request
+        const response = await axios.post(API_URL, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
 
         dispatch(
             diamondFetchSuccess({
@@ -26,5 +43,4 @@ export const fetchDiamondList = (filter) => async (dispatch) => {
         throw error;
     }
 };
-
 
