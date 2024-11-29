@@ -42,7 +42,6 @@ const DiamondDetail = () => {
                   </iframe>
                 </div>
 
-
                 <div className='customer-product-zoom-img'>
                   <img src="/lexie-side-img2.webp" />
                 </div>
@@ -119,10 +118,6 @@ const DiamondDetail = () => {
                     </svg>
                   </div>
                 </a>
-                {/* <a href="#" className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
-                          <div className="text-sm leading-tight font-semibold">Buy Setting Only*</div>
-                          <div className="text-1.5xs leading-tight">*center stone not included</div>
-                        </a> */}
                 <h5 className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 12 interest-free installments of <span>$95.50</span> <button type="button" className="underline cursor-pointer">Learn more</button></h5>
               </div>
               <div className="hidden lg:block mt-6 text-center">
