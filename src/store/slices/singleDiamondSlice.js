@@ -4,22 +4,24 @@ import { createSlice } from '@reduxjs/toolkit';
 const productSlice = createSlice({
   name: 'products',
   initialState: {
-    product: {},
+    diamond: {},
     loading: false,
     error: null,
-    pageInfo: null,
   },
   reducers: {
     fetchSingleDiamondStart: (state) => {
       state.loading = true;
       state.error = null;
+
+      console.log("shubham");
+      
     },
     fetchSingleDiamondSuccess: (state, action) => {
-      const { product } = action.payload;
+      const { diamond } = action.payload;      
 
       state.loading = false;
         // Replace products
-        state.product = product;
+        state.diamond = diamond.data.diamonds_by_query.items[0];
 
     },
     fetchSingleDiamondFailure: (state, action) => {

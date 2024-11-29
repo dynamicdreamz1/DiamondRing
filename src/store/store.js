@@ -4,15 +4,18 @@ import productFilterReducer from './slices/ringsFilterSlice';
 import singleProductReducer from './slices/singleRingSlice';
 import diamondFilterReducer from './slices/diamondFilterSlice';
 import diamondReducer from './slices/diamondSlice';
+import singleDiamondReducer from './slices/singleDiamondSlice';
+
 
 
 
 export const store = configureStore({
   reducer: {
     products: productReducer,
-    productFilter :productFilterReducer,
-    singleProduct : singleProductReducer,
-    diamondFilter : diamondFilterReducer,
-    diamond : diamondReducer
+    productFilter: productFilterReducer,
+    singleProduct: singleProductReducer,
+    diamondFilter: diamondFilterReducer,
+    diamond: diamondReducer,
+    singleDiamond: singleDiamondReducer
   },
 });

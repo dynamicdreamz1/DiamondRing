@@ -14,7 +14,6 @@ export const fetchSingleDiamondList = (filter) => async (dispatch) => {
         // Create a new FormData instance
         const formData = new FormData();
 
-        // Iterate over the filter object and append each key-value pair to FormData
         for (const key in filter) {
             if (filter.hasOwnProperty(key)) {
                 formData.append(key, filter[key]);
@@ -30,7 +29,7 @@ export const fetchSingleDiamondList = (filter) => async (dispatch) => {
 
         dispatch(
             fetchSingleDiamondSuccess({
-                diamonds: response.data, // Access the `product` field in the response
+                diamond: response.data, // Access the `product` field in the response
             })
         );
 
