@@ -10340,8 +10340,8 @@ textarea+.DAH-form-label {
     height: 3px;
 }
 
-.collection-range-item .css-bn3cda-MuiSlider-root .MuiSlider-thumb {
-    background-color: #fff;
+.collection-range-item .MuiSlider-thumb {
+    background-color: #fff !important;
     border: 1px solid #000;
     width: 28px;
     height: 28px;
