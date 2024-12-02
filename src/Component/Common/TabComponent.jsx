@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 const TabComponent = () => {
     const [open, setOpen] = React.useState(false);
     const { tabs } = useSelector((state) => state.getTabsProduct);
-    
+
     const toggleDrawer = (newOpen) => {
         setOpen(newOpen);
     };
@@ -139,7 +139,8 @@ const TabComponent = () => {
                             <div className={`${currentStep === step.number ? "absolute left-full after:content-[''] after:absolute border-y-[21px] border-l-[13px] border-y-[transparent] border-l-black after:border-y-[18px] after:border-l-[11px] after:border-y-[transparent] after:border-l-white after:-top-[18px] after:-left-[13px] md:border-l-[16px] md:border-y-[36px] md:after:border-y-[34px] md:after:border-l-[15px] md:after:-top-[34px] md:after:-left-[17px] -top-0.5 -bottom-0.5"
                                 : "absolute right-0  after:content-[''] after:absolute bg-white border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px "
                                 }
-                                `}></div>
+                                `}>
+                            </div>
                         </div>
                     ))}
                 </div>
