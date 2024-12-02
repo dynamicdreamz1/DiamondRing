@@ -12,12 +12,11 @@ import CompleteProduct from './pages/CompleteProduct/CompleteProduct'; // Create
 
 
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Routes>
-          {/* Default Route */}
           <Route path="ring-select" element={<RingSelector />} />
           <Route path="/ring-select/:productId" element={<RingDetails />} />
           <Route path="/diamond-list" element={<DiamondList />} />
