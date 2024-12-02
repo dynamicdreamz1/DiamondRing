@@ -10364,6 +10364,16 @@ textarea+.DAH-form-label {
     transform: rotate(45deg);
 } 
 
+.MuiBox-root.css-1ybhoyd {
+    -webkit-animation: slideLeft 0.5s ease-out;
+    animation: slideLeft 0.5s ease-out;
+}
+
+
+@keyframes slideLeft {
+    from {left: 0px;}
+    to {left: 50%;}
+  }
 
 
 @media (max-width:767px) {
