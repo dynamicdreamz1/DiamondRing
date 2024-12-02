@@ -4,15 +4,18 @@ import { useDispatch } from 'react-redux';
 import LeftSideModal from './FilterSection/LeftSideModal';
 import { Link } from "react-router-dom";
 import { addProductTabs } from "../../store/slices/TabProductSlice"
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 const ProductCard = ({ node }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const getTabsProduct = useSelector((state) => state.getTabsProduct);
+  const diamondExists = getTabsProduct?.tabs?.diamond;
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(0);
   const [selectedProductModel, setselectedProductModel] = useState(false);
-
-
   const images = node?.images?.edges;
   const variants = node?.variants?.edges;
 
@@ -27,11 +30,17 @@ const ProductCard = ({ node }) => {
   const handleAddRingClick = (product) => {
     const productWithType = {
       ring: { ...product, type: 'ring' },
-      currentStep : 1
+      diamond: diamondExists,
+      currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1
     };
-  
+
     dispatch(addProductTabs(productWithType));
     setselectedProductModel(true);
+
+    if (getTabsProduct?.tabs?.diamond && product) {
+      navigate('/complete-product');
+  }
+
   };
 
   const firstVariant = variants[selectedVariant]?.node;
@@ -149,7 +158,9 @@ const ProductCard = ({ node }) => {
           <Link to={`/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
             More Info
           </Link>
-          <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">Add Diamond</button>
+          <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
+            <span>{diamondExists ? "Complete your ring" : "Add Diamond"}</span>
+          </button>
         </div>
 
         <div className="flex items-center space-x-2">

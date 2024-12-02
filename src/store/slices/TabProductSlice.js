@@ -15,7 +15,6 @@ const tabManageProduct = createSlice({
   initialState,
   reducers: {
     addProductTabs(state, action) {
-      console.log("action", action);
     
       const { diamond, ring, currentStep } = action.payload;
     

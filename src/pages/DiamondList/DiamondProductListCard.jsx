@@ -18,7 +18,7 @@ const DiamondProductListCard = () => {
         const productWithType = {
             diamond: { ...diamond, type: 'diamond' },
             ring : getTabsProduct?.tabs?.ring,
-            currentStep: 1
+            currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
         };
         dispatch(addProductTabs(productWithType));
         if (getTabsProduct?.tabs?.ring && diamond) {
@@ -48,7 +48,6 @@ const DiamondProductListCard = () => {
     return (
         <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
             {diamonds?.data?.diamonds_by_query?.items.length > 0 && diamonds?.data?.diamonds_by_query?.items.map((diamond) => (
-
                 <div className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
                     <>
                         <div className='border-borders border rounded-lg overflow-hidden md:block'>
