@@ -12,12 +12,17 @@ const ProductCard = ({ node }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const getTabsProduct = useSelector((state) => state.getTabsProduct);
-  const diamondExists = getTabsProduct?.tabs?.diamond;
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(0);
   const [selectedProductModel, setselectedProductModel] = useState(false);
   const images = node?.images?.edges;
   const variants = node?.variants?.edges;
+  const diamondPrice = getTabsProduct.tabs.diamond && parseFloat(getTabsProduct.tabs.diamond.price);
+  const ringPrice = getTabsProduct.tabs.ring && parseFloat(getTabsProduct.tabs.ring.variants.edges[0].node.price.amount);
+
+  console.log(diamondPrice, ringPrice);
+
+
 
   const handleImageHover = (index) => {
     setSelectedImage(index);
@@ -30,7 +35,7 @@ const ProductCard = ({ node }) => {
   const handleAddRingClick = (product) => {
     const productWithType = {
       ring: { ...product, type: 'ring' },
-      diamond: diamondExists,
+      diamond: getTabsProduct?.tabs?.diamond,
       currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1
     };
 
@@ -38,10 +43,15 @@ const ProductCard = ({ node }) => {
     setselectedProductModel(true);
 
     if (getTabsProduct?.tabs?.diamond && product) {
+      dispatch(addProductTabs({
+        ...productWithType,
+        finelProduct: { price: (diamondPrice + ringPrice), type: 'finelProduct' },
+        currentStep: 3
+      }));
       navigate('/complete-product');
-  }
-
+    }
   };
+
 
   const firstVariant = variants[selectedVariant]?.node;
   const price = firstVariant?.price?.amount || "0.00";
@@ -159,7 +169,7 @@ const ProductCard = ({ node }) => {
             More Info
           </Link>
           <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
-            <span>{diamondExists ? "Complete your ring" : "Add Diamond"}</span>
+            <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Diamond"}</span>
           </button>
         </div>
 

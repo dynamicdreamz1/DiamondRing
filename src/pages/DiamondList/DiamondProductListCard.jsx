@@ -12,18 +12,28 @@ const DiamondProductListCard = () => {
 
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
+    const diamondPrice = getTabsProduct.tabs.diamond && parseFloat(getTabsProduct.tabs.diamond.price);
+    const ringPrice = getTabsProduct.tabs.ring && parseFloat(getTabsProduct.tabs.ring.variants.edges[0].node.price.amount);
     const ringExists = getTabsProduct?.tabs?.ring;
 
-    const handleRingAction = (diamond) => {
+
+    const handleDiamondAction = (diamond) => {
         const productWithType = {
             diamond: { ...diamond, type: 'diamond' },
-            ring : getTabsProduct?.tabs?.ring,
+            ring: getTabsProduct?.tabs?.ring,
             currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
         };
         dispatch(addProductTabs(productWithType));
         if (getTabsProduct?.tabs?.ring && diamond) {
-            // Redirect to /complete-product
-            navigate('/complete-product');
+
+            if (getTabsProduct?.tabs?.ring && diamond) {
+                dispatch(addProductTabs({
+                    ...productWithType,
+                    finelProduct: { price: (diamondPrice + ringPrice), type: 'finelProduct' },
+                    currentStep: 3
+                }));
+                navigate('/complete-product');
+            }
         }
     }
 
@@ -205,7 +215,7 @@ const DiamondProductListCard = () => {
                                 <Link to={`/diamond-list/${diamond.diamond.certificate.certNumber}`} className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" aria-hidden="false">
                                     More Info
                                 </Link>
-                                <button onClick={()=>handleRingAction(diamond.diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+                                <button onClick={() => handleDiamondAction(diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
                                     <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden">
                                         <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
                                         <svg className="w-3 h-3" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
