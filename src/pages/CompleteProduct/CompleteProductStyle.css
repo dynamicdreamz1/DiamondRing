@@ -11,13 +11,14 @@
 
 .InTheBox__content .in-the-box-left-img {
     display: flex;
-    gap: 8px;
+    row-gap: 8px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 0px -4px;
 }
 
 .InTheBox__content .in-the-box-left-img > div {
-    width: 49%;
+    width: 50%;
+    padding: 0px 4px;
 }
 
 
@@ -29,11 +30,6 @@
     width: 100%;
 }
 
-@media (max-width:1024px) {
-    .InTheBox__content .in-the-box-left-img > div {
-        width: 48%;
-    }
-}
 
 @media (max-width:767px) {
     .InTheBox__content {
