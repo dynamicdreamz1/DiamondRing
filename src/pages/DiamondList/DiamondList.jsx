@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import TabComponent from '../../Component/Common/TabComponent'
-import DiamondShapeFilter from './Filter/DiamondShapeFilter'
 import { useDispatch, useSelector } from 'react-redux';
-import { updateFilter } from '../../store/slices/diamondFilterSlice';
 import { fetchDiamondList } from '../../store/actions/diamondFilterAction';
 import DiamondProductListCard from './DiamondProductListCard';
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter';
@@ -50,10 +48,6 @@ const DiamondList = () => {
             </p>
           </header>
         </div>
-
-
-
-
         <DiamondFilter />
         <DiamondProductListCard />
       </div>

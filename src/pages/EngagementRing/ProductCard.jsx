@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
-import { addProduct } from "../../store/slices/TabProductSlice"
 import LeftSideModal from './FilterSection/LeftSideModal';
 import { Link } from "react-router-dom";
+import { addProductTabs } from "../../store/slices/TabProductSlice"
+
 
 const ProductCard = ({ node }) => {
   const dispatch = useDispatch();
@@ -24,8 +25,12 @@ const ProductCard = ({ node }) => {
   };
 
   const handleAddRingClick = (product) => {
-    // Dispatch product to Redux store
-    dispatch(addProduct(product));
+    const productWithType = {
+      ring: { ...product, type: 'ring' },
+      currentStep : 1
+    };
+  
+    dispatch(addProductTabs(productWithType));
     setselectedProductModel(true);
   };
 

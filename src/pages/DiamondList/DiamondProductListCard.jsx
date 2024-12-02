@@ -2,9 +2,32 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import WishList from './DiamondWishList';
 import { Link } from "react-router-dom"
+import { addProductTabs } from '../../store/slices/TabProductSlice';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const DiamondProductListCard = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
+    const getTabsProduct = useSelector((state) => state.getTabsProduct);
+    const ringExists = getTabsProduct?.tabs?.ring;
+
+    const handleRingAction = (diamond) => {
+        const productWithType = {
+            diamond: { ...diamond, type: 'diamond' },
+            ring : getTabsProduct?.tabs?.ring,
+            currentStep: 1
+        };
+        dispatch(addProductTabs(productWithType));
+        if (getTabsProduct?.tabs?.ring && diamond) {
+            // Redirect to /complete-product
+            navigate('/complete-product');
+        }
+    }
+
+
 
     if (error) return <p>Error: {error}</p>;
 
@@ -183,13 +206,15 @@ const DiamondProductListCard = () => {
                                 <Link to={`/diamond-list/${diamond.diamond.certificate.certNumber}`} className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" aria-hidden="false">
                                     More Info
                                 </Link>
-                                <button className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
-                                    <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden ">
-                                        <span>Complete your ring</span>
-                                        <svg className="w-3 h-3">
-                                            <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
-                                            </svg>
+                                <button onClick={()=>handleRingAction(diamond.diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+                                    <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden">
+                                        <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
+                                        <svg className="w-3 h-3" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.5 15.8298L12 9.3298L5.5 2.8298"
+                                                stroke="currentColor"
+                                                strokeWidth="2.5"
+                                            ></path>
                                         </svg>
                                     </div>
                                 </button>
