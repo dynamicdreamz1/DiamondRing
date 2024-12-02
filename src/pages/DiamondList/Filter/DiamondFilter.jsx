@@ -20,11 +20,7 @@ const DiamondFilter = () => {
     const handleResetFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
-
-    console.log("filters",filters);
     
-
-
     return (
         <>
             <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative  md:max-w-[31rem] mx-auto md:z-10 my-3 md:my-6'>

@@ -5,6 +5,8 @@ import singleProductReducer from './slices/singleRingSlice';
 import diamondFilterReducer from './slices/diamondFilterSlice';
 import diamondReducer from './slices/diamondSlice';
 import singleDiamondReducer from './slices/singleDiamondSlice';
+import tabProductSliceReducer from './slices/TabProductSlice';
+
 
 
 
@@ -16,6 +18,7 @@ export const store = configureStore({
     singleProduct: singleProductReducer,
     diamondFilter: diamondFilterReducer,
     diamond: diamondReducer,
-    singleDiamond: singleDiamondReducer
+    singleDiamond: singleDiamondReducer,
+    getTabsProduct : tabProductSliceReducer
   },
 });

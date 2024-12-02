@@ -11,10 +11,7 @@ const productSlice = createSlice({
   reducers: {
     fetchSingleDiamondStart: (state) => {
       state.loading = true;
-      state.error = null;
-
-      console.log("shubham");
-      
+      state.error = null;      
     },
     fetchSingleDiamondSuccess: (state, action) => {
       const { diamond } = action.payload;      

@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
-import { addProduct } from "../../store/slices/ringsSlice"
+import { addProduct } from "../../store/slices/TabProductSlice"
 import LeftSideModal from './FilterSection/LeftSideModal';
 import { Link } from "react-router-dom";
 
@@ -26,13 +26,6 @@ const ProductCard = ({ node }) => {
   const handleAddRingClick = (product) => {
     // Dispatch product to Redux store
     dispatch(addProduct(product));
-
-    // Save product to localStorage
-    const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-    savedProducts.push(product);
-    localStorage.setItem('cartProducts', JSON.stringify(savedProducts));
-
-    // Show model
     setselectedProductModel(true);
   };
 
@@ -47,19 +40,6 @@ const ProductCard = ({ node }) => {
     style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
   }).format(compareAtPrice)
     : null;
-
-
-  useEffect(() => {
-    // Retrieve products from localStorage
-    const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-
-    // Dispatch each product to Redux if there's any data in localStorage
-    if (savedProducts.length > 0) {
-      savedProducts.forEach(product => {
-        dispatch(addProduct(product));
-      });
-    }
-  }, [dispatch]);
 
 
   return (

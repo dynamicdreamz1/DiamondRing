@@ -12,8 +12,6 @@ const DiamondDetailData = () => {
 
     const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
     
-    console.log(diamond);
-
     if (error) return <p>Error: {error}</p>;
 
     if (loading)
