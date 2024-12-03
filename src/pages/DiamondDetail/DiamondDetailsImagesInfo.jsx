@@ -4,7 +4,9 @@ import { useSelector } from 'react-redux';
 const DiamondDetailsImagesInfo = () => {
 
   const { diamond } = useSelector((state) => state.singleDiamond);
-  
+
+  console.log('diamond', diamond);
+
 
   return (
     <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>
@@ -55,11 +57,13 @@ const DiamondDetailsImagesInfo = () => {
             className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
             src={`${diamond?.diamond?.certificate.lab === "IGI" ?
               "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
-              : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
+              : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/kzr-icon-igi-crt-GAZVFCK3.svg"
               }`} alt=""
           />
-          <p className="text-[#937D67] mt-4 text-2xl leading-tight uppercase font-bold">Natural Diamond</p>
-          <a className="cursor-pointer text-customGray-500 text-base leading-tight font-medium mt-2 underline" href="https://www.gia.edu/report-check?reportno=5216550995" target="_blank">View Certificate</a>
+          <p className="text-[#937D67] mt-4 text-2xl leading-tight uppercase font-bold">{diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
+          <button className="cursor-pointer text-customGray-500 text-base leading-tight font-medium mt-2 underline">
+            View Certificate
+          </button>
         </div>
       </div>
     </div>

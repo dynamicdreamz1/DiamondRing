@@ -2,9 +2,17 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 const DiamondDetailsInfo = () => {
-
   const { diamond } = useSelector((state) => state.singleDiamond);
 
+  const handleViewCertificateClick = () => {
+    if (diamond.diamond.certificate.lab === "GIA") {
+      window.open(`https://www.gia.edu/report-check-landing?reportno=${diamond.diamond.certificate.certNumber}`, '_blank');
+    } else if (diamond.diamond.certificate.lab === "IGI") {
+      window.open(`https://www.igi.org/verify-your-report/?r=${diamond.diamond.certificate.certNumber}`, '_blank');
+    } else {
+      console.error("Unknown certificate lab");
+    }
+  };
 
 
   return (
@@ -111,17 +119,17 @@ const DiamondDetailsInfo = () => {
               <p className="StoneDetailBlock__content-value" tabindex="-1">{diamond?.diamond?.certificate.lab}</p>
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
                 <img
-                  className="StoneDetailBlock__content-image"
-                  src={`${diamond?.diamond?.certificate.lab === "IGI" ? 
-                      "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
+                  className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
+                  src={`${diamond?.diamond?.certificate.lab === "IGI" ?
+                    "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/kzr-icon-igi-crt-GAZVFCK3.svg"
                     : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
                     }`} alt=""
                 />
-                <div className="StoneDetailBlock__certificate-title whitespace-pre-line">Natural Diamond</div>
+                <div className="StoneDetailBlock__certificate-title whitespace-pre-line">{diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</div>
               </div>
             </div>
             <div className="StoneDetailBlock__desc">
-              <a href="#">View Certificate</a>
+              <button onClick={handleViewCertificateClick}>View Certificate</button>
             </div>
           </div>
         </div>
