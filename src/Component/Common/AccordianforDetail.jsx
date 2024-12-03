@@ -80,7 +80,7 @@ const AccordianforDetail = () => {
                                             <div className="cpcst-certificate-image-wrapper w-20 h-20 relative mx-auto">
                                                 <CertificateImage
                                                     lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
-                                                    className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
+                                                    className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover"
                                                 />
                                             </div>
                                             <ViewCertificate diamond={diamond} className="cpcst-certificate-text" />

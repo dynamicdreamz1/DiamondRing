@@ -121,9 +121,11 @@ const DiamondDetailsInfo = () => {
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
                 <CertificateImage
                   lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
-                  className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
+                  className="StoneDetailBlock__content-image"
                 />
-                <div className="StoneDetailBlock__certificate-title whitespace-pre-line">{diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</div>
+                <div className="StoneDetailBlock__certificate-title whitespace-pre-line">
+                  {diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}
+                  </div>
               </div>
             </div>
             <div className="StoneDetailBlock__desc">
