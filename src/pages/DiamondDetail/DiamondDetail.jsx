@@ -5,6 +5,7 @@ import OurWork from '../../Component/Common/OurWork'
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter'
 import DiamondDetailData from './DiamondDetailData'
 import { fetchSingleDiamondList } from '../../store/actions/singleDiamondAction'
+import DiamondQualities from './DiamondQualities'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
