@@ -34,7 +34,7 @@ const EngagementRingDetailData = () => {
 
     if (error) return <p>Error: {error}</p>;
 
-    if (!loading)
+    if (loading)
         return (
             <Stack spacing={1}>
             {/* For variant="text", adjust the height via font-size */}

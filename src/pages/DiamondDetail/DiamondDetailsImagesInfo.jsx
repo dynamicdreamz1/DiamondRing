@@ -8,14 +8,30 @@ const DiamondDetailsImagesInfo = () => {
   return (
     <div className='customer-product-side-img-sec'>
       <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
-        <div className='customer-product-zoom-img custom-zoom-wrapper-scale pointer-events-none mix-blend-multiply transition-transform duration-300 ease-in-out'>
-          <div class="bg-white md:bg-customGray-50 w-full relative pb-square flex justify-center items-center round stone-prop ">
-            <div class="size ver absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">5.12mm</div>
-            <div class="size hor absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">5.09mm</div>
-            <div class="prop hor absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">59%</div>
-            <div class="prop ver absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">61.4%</div>
+        <div className="customer-product-zoom-img custom-zoom-wrapper-scale pointer-events-none mix-blend-multiply transition-transform duration-300 ease-in-out">
+          <div className="bg-white md:bg-customGray-50 w-full relative pb-square flex justify-center items-center round stone-prop">
+            {/* Vertical Size */}
+            <div className="size ver absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
+              {diamond?.diamond?.certificate?.length ? `${parseFloat(diamond.diamond.certificate.length).toFixed(2)}mm` : "N/A"}
+            </div>
+
+            {/* Horizontal Size */}
+            <div className="size hor absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
+              {diamond?.diamond?.certificate?.width ? `${parseFloat(diamond.diamond.certificate.width).toFixed(2)}mm` : "N/A"}
+            </div>
+
+            {/* Horizontal Property (e.g., Table %) */}
+            <div className="prop hor absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
+              {diamond?.diamond?.certificate?.table ? `${parseFloat(diamond.diamond.certificate.table).toFixed(1)}%` : "N/A"}
+            </div>
+
+            {/* Vertical Property (e.g., Depth %) */}
+            <div className="prop ver absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
+              {diamond?.diamond?.certificate?.depthPercentage ? `${parseFloat(diamond.diamond.certificate.depthPercentage).toFixed(1)}%` : "N/A"}
+            </div>
           </div>
         </div>
+
         <div className='customer-product-zoom-img'>
           <iframe
             src={diamond?.diamond?.video}
@@ -34,7 +50,13 @@ const DiamondDetailsImagesInfo = () => {
           <img src="/lexie-side-img2.webp" />
         </div>
         <div className='customer-product-zoom-img'>
-          <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1164770/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg" />
+          <img
+            className="StoneDetailBlock__content-image"
+            src={`${diamond?.diamond?.certificate.lab === "IGI" ?
+              "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
+              : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
+              }`} alt=""
+          />
         </div>
       </div>
     </div>
