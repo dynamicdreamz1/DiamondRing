@@ -60,7 +60,7 @@ const TabComponent = () => {
                 <div className="steps-configuration-wrapper grid grid-cols-3 w-full items-center">
                     {steps.map((step) => (
                         <div className={`${currentStep === step.number ? "flex w-full items-center gap-1 md:gap-4 md:p-2 relative border-r-0 pr-1 z-30 bg-white z-20 pl-2.5 py-1.75 md:pl-6 md:py-1.5 border-2 rounded-l-lg" :
-                            "flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 z-20 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg"} `}>
+                            "flex w-full items-center gap-1 md:gap-4 relative border-r-0 pr-1 bg-customGray-50 border-steps-configuration-border py-1.25 pl-2 md:pl-6 md:py-0.75 border rounded-l-lg"} `}>
                             <div className="ml-[2px] md:ml-0 step-config-number text-2xl leading-none md:text-4.25xl basis-4 shrink-0 font-normal">
                                 {step.number}
                             </div>
@@ -99,7 +99,7 @@ const TabComponent = () => {
                                     </>
                                 )}
                             </div>
-                            <div className="step-config-image-container">
+                            <div className="step-config-image-container pr-0 lg:pr-3">
                                 <div className="step-config-image relative w-5 h-5 md:w-10 md:h-14">
                                     <svg
                                         className="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:w-3/4 md:h-3/4"
@@ -137,7 +137,7 @@ const TabComponent = () => {
                                 </div>
                             </div>
                             <div className={`${currentStep === step.number ? "absolute left-full after:content-[''] after:absolute border-y-[21px] border-l-[13px] border-y-[transparent] border-l-black after:border-y-[18px] after:border-l-[11px] after:border-y-[transparent] after:border-l-white after:-top-[18px] after:-left-[13px] md:border-l-[16px] md:border-y-[36px] md:after:border-y-[34px] md:after:border-l-[15px] md:after:-top-[34px] md:after:-left-[17px] -top-0.5 -bottom-0.5"
-                                : "absolute right-0  after:content-[''] after:absolute bg-white border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px "
+                                : "absolute left-[100%] z-20  after:content-[''] after:absolute  border-y-[18px] border-l-[12px] border-y-[transparent] border-l-steps-configuration-border after:border-y-[17px] after:border-l-[11px] after:border-y-[transparent] after:border-l-customGray-50 after:-top-[17px] after:-left-[12px] md:border-l-[16px] md:border-y-[32px] md:after:border-y-[31px] md:after:border-l-[15px] md:after:-top-[31px] md:after:-left-[16px] -top-px -bottom-px "
                                 }
                                 `}>
                             </div>
