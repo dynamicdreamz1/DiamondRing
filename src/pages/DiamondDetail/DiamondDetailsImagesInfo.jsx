@@ -6,7 +6,7 @@ const DiamondDetailsImagesInfo = () => {
   const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
 
   return (
-    <div className='customer-product-side-img-sec'>
+    <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>
       <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
         <div className="customer-product-zoom-img custom-zoom-wrapper-scale pointer-events-none mix-blend-multiply transition-transform duration-300 ease-in-out">
           <div className="bg-white md:bg-customGray-50 w-full relative pb-square flex justify-center items-center round stone-prop">
@@ -49,14 +49,16 @@ const DiamondDetailsImagesInfo = () => {
         <div className='customer-product-zoom-img'>
           <img src="/lexie-side-img2.webp" />
         </div>
-        <div className='customer-product-zoom-img'>
+        <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <img
-            className="StoneDetailBlock__content-image"
+            className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
             src={`${diamond?.diamond?.certificate.lab === "IGI" ?
               "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
               : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
               }`} alt=""
           />
+          <p className="text-[#937D67] mt-4 text-2xl leading-tight uppercase font-bold">Natural Diamond</p>
+          <a className="cursor-pointer text-customGray-500 text-base leading-tight font-medium mt-2 underline" href="https://www.gia.edu/report-check?reportno=5216550995" target="_blank">View Certificate</a>
         </div>
       </div>
     </div>
