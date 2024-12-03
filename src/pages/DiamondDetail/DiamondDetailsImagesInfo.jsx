@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 
 const DiamondDetailsImagesInfo = () => {
 
-  const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
+  const { diamond } = useSelector((state) => state.singleDiamond);
+  
 
   return (
     <div className='customer-product-side-img-sec'>
