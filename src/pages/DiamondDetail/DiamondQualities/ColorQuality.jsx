@@ -53,10 +53,11 @@ const ColorQuality = () => {
                   ${activeTab.id === tab.id
                     ? 'bg-white text-black font-bold border-2 border-black'
                     : 'bg-transparent text-customGray-500 hover:bg-customGray-100'}
-                  ${index < colorTabsPanel.length - 1 ? 'border-r border-borders' : ''}
+                  ${index < colorTabsPanel.length - 1 ? 'border-borders' : ''}
                 `}
               >
                 <span>{tab.name}</span>
+                <span class="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
               </button>
             ))}
           </div>

@@ -40,7 +40,7 @@ const DiamondClarityComponent = () => {
                   ${activeTab.id === tab.id
                     ? 'bg-white text-black font-bold border-2 border-black'
                     : 'bg-transparent text-customGray-500 hover:bg-customGray-100'}
-                  ${index < ClarityTabsPanel.length - 1 ? 'border-r border-borders' : ''}
+                  ${index < ClarityTabsPanel.length - 1 ? 'border-borders' : ''}
                 `}
               >
                 <span>{tab.name}</span>
