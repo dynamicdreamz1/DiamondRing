@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { cutTabsPanel } from '../../../Utility/Constant';
 
-const DiamondCutComponent = () => {
+const DiamondQuality = () => {
   const [activeTab, setActiveTab] = useState(cutTabsPanel[0]);
   
 
@@ -67,4 +67,4 @@ const DiamondCutComponent = () => {
   );
 };
 
-export default DiamondCutComponent;
+export default DiamondQuality;
