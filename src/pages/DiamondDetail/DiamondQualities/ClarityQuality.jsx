@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { cutTabsPanel } from '../../../Utility/Constant';
+import { ClarityTabsPanel } from '../../../Utility/Constant';
 
-const DiamondCutComponent = () => {
-  const [activeTab, setActiveTab] = useState(cutTabsPanel[0]);
-  
+const DiamondClarityComponent = () => {
+  const [activeTab, setActiveTab] = useState(ClarityTabsPanel[0]);
 
   return (
     <div className='colorRangeBlock md:flex md:flex-col md:justify-between md:w-1/2-gap-4 md:p-3 xl:w-1/3-gap-4 md:bg-customGray-50 md:rounded-2.5xl'>
       <div className='hidden md:block mb-2'>
         <div className='flex flex-wrap gap-2 items-center whitespace-nowrap'>
           <div className='flex items-center gap-2 text-base leading-none rounded-lg justify-between py-2 pl-3 pr-2 text-customGray-600 bg-white shadow shrink-0 font-semibold'>
-            <span className="uppercase">Cut</span>
+            <span className="uppercase">Clarity</span>
             <span className="text-black font-bold py-1.5 px-2 bg-borders rounded-sm">{activeTab.name}</span>
           </div>
         </div>
@@ -20,16 +19,16 @@ const DiamondCutComponent = () => {
         <div className='StoneEducationItem__ImageContainer mb-2 w-full'>
           <div className='StoneEducationItem__ImageWrapper relative pt-[60%]'>
             <img 
-              className='absolute w-full h-full object-contain transition-opacity duration-300 top-0 left-0 z-10'  
+              className='absolute w-full h-full object-contain transition-opacity duration-300 top-0 left-0'  
               src={activeTab.icon} 
-              alt={`${activeTab.name} cut diamond`} 
+              alt="" 
             />
           </div>
         </div>
         
         <div className='mb-2 diamond-quality-shape-sec'>
           <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
-            {cutTabsPanel.map((tab, index) => (
+            {ClarityTabsPanel.map((tab, index) => (
               <button 
                 key={tab.id}
                 type="button"
@@ -41,7 +40,7 @@ const DiamondCutComponent = () => {
                   ${activeTab.id === tab.id
                     ? 'bg-white text-black font-bold border-2 border-black'
                     : 'bg-transparent text-customGray-500 hover:bg-customGray-100'}
-                  ${index < cutTabsPanel.length - 1 ? 'border-r border-borders' : ''}
+                  ${index < ClarityTabsPanel.length - 1 ? 'border-r border-borders' : ''}
                 `}
               >
                 <span>{tab.name}</span>
@@ -59,11 +58,11 @@ const DiamondCutComponent = () => {
       
       <div className="StoneEducationItem__PopupFooter pt-2 pb-3 px-1">
         <div className="text-xs leading-tight text-customGray-250">
-          Cut refers to a diamond's proportions, symmetry, and polish. It's crucial in determining a diamond's brilliance and sparkle.
+          Color refers to the natural tint of a diamond. The closer the diamond is to "colorless" the rarer it is. The industry standard to grading color in a diamond is to assign a letter grade from D (colorless) to J (nearly colorless)
         </div>
       </div>
     </div>
   );
 };
 
-export default DiamondCutComponent;
+export default DiamondClarityComponent;

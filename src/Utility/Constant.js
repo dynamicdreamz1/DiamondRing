@@ -190,7 +190,7 @@ export const shapeStyles = [
 
 ];
 
-export const colorTabsPanel = [
+export const ClarityTabsPanel = [
   { id: 1, name: "SI1", des : "Slightly Included. Inclusions are easy to see under 10x magnification. Some are visible to the naked eye.", icon:  claritySi1},
   { id: 2, name: "VS2", des : "Very Slightly Included. inclusions are present, but hard to see under 10x magnification.", icon:  claritySi2},
   { id: 3, name: "VS1", des : "Very Slightly Included. inclusions are present, but hard to see under 10x magnification.", icon:  claritySi3},
@@ -207,3 +207,42 @@ export const cutTabsPanel = [
   { id: 3, name: "Excellent", des : "Incredible fire, brilliance, and diamond anatomy.", icon:cutgoodimg3},
 ];
 
+
+
+export const colorTabsPanel = [
+  { 
+    id: 1, 
+    name: "J", 
+    des: "Near colorless with a slight yellow or brown tint. More affordable option.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
+  { 
+    id: 2, 
+    name: "I", 
+    des: "Near colorless with a very slight yellow or brown tint. Good value.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
+  { 
+    id: 3, 
+    name: "H", 
+    des: "Near colorless with minimal yellow tint. Popular for balance of quality and price.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
+  { 
+    id: 4, 
+    name: "G", 
+    des: "Near colorless with very slight color. Excellent value and quality.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
+  { 
+    id: 5, 
+    name: "F", 
+    des: "Completely colorless, these diamonds are rare and highly sought after. A good choice when money is no object.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
+];
