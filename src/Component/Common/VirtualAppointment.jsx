@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
+import { PopupWidget } from 'react-calendly';
 
 const VirtualAppointment = () => {
-    
+
   const handlePopupOpen = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: "https://calendly.com/programmer121-dynamicdreamz/30min", // Replace with your actual Calendly URL
-      });
-    } else {
-      console.error("Calendly script is not loaded.");
-    }
+    // Initialize the Calendly popup widget
+    window.Calendly.initPopupWidget({
+      url: 'https://calendly.com/programmer121-dynamicdreamz/30min', // Replace with your actual Calendly URL
+    });
   };
 
   return (
@@ -21,12 +19,20 @@ const VirtualAppointment = () => {
             <strong>See Keyzar's jewelry</strong> up close with a personal appointment. Explore engagement rings, diamonds, and fine jewelry in person through your device.
           </p>
         </div>
+
+        {/* Button to open the popup */}
         <button
           className="va-button text-black underline inline-block"
           onClick={handlePopupOpen}
         >
           Book Appointment
         </button>
+
+        {/* PopupWidget is not rendered until the button is clicked */}
+        <PopupWidget
+          url="https://calendly.com/programmer121-dynamicdreamz/30min"
+          rootElement={document.getElementById('root')} // This is required for it to render correctly
+        />
       </div>
     </div>
   );
