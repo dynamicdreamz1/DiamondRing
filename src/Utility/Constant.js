@@ -245,4 +245,18 @@ export const colorTabsPanel = [
     stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
     solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
+  { 
+    id: 6, 
+    name: "E", 
+    des: "Completely colorless, these diamonds are rare and highly sought after. A good choice when money is no object.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
+  { 
+    id: 7, 
+    name: "D", 
+    des: "Completely colorless, these diamonds are rare and highly sought after. A good choice when money is no object.", 
+    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
+    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+  },
 ];
