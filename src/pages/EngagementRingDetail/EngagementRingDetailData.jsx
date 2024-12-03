@@ -34,7 +34,7 @@ const EngagementRingDetailData = () => {
 
     if (error) return <p>Error: {error}</p>;
 
-    if (!loading)
+    if (loading)
         return (
         <div className='container mx-auto px-4 ring-skeleton-main'>
             <div class="skeleton customer-product-side-img-text CustomProduct__container CustomCompleteProduct__container grid grid-cols-1 items-start md:gap-0 lg:mb-9 lg:gap-8 xl:gap-x-8">
