@@ -99,7 +99,7 @@ const TabComponent = () => {
                                     </>
                                 )}
                             </div>
-                            <div className="step-config-image-container">
+                            <div className="step-config-image-container pr-0 lg:pr-3">
                                 <div className="step-config-image relative w-5 h-5 md:w-10 md:h-14">
                                     <svg
                                         className="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:w-3/4 md:h-3/4"

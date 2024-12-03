@@ -34,16 +34,17 @@ const DiamondClarityComponent = () => {
                 type="button"
                 onClick={() => setActiveTab(tab)}
                 className={`
-                  flex-1 px-2 h-full transition-all duration-300 ease-in-out 
+                  flex-1 px-2 h-full transition-colors 
                   uppercase text-center flex justify-center items-center 
                   text-1.5sm leading-tight relative z-10 font-proximaNovaCondensed
                   ${activeTab.id === tab.id
                     ? 'bg-white text-black font-bold border-2 border-black'
                     : 'bg-transparent text-customGray-500 hover:bg-customGray-100'}
-                  ${index < colorTabsPanel.length - 1 ? 'border-r border-borders' : ''}
+                  ${index < colorTabsPanel.length - 1 ? 'border-borders' : ''}
                 `}
               >
                 <span>{tab.name}</span>
+                <span class="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
               </button>
             ))}
           </div>
