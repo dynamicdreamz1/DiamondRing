@@ -4,6 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSelector } from 'react-redux';
+import { CertificateImage, ViewCertificate } from './ViewCertification';
 
 const AccordianforDetail = () => {
     const { diamond } = useSelector((state) => state.singleDiamond);
@@ -77,15 +78,12 @@ const AccordianforDetail = () => {
                                             <div className="cpcst-certificate-title whitespace-pre-line">{diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}
                                             </div>
                                             <div className="cpcst-certificate-image-wrapper w-20 h-20 relative mx-auto">
-                                                <img
+                                                <CertificateImage
+                                                    lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
                                                     className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
-                                                    src={`${diamond?.diamond?.certificate.lab === "IGI" ?
-                                                        "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/kzr-icon-igi-crt-GAZVFCK3.svg"
-                                                        : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
-                                                        }`} alt=""
                                                 />
                                             </div>
-                                            <div onClick={handleViewCertificateClick} className="cpcst-certificate-text">View Certificate</div>
+                                            <ViewCertificate diamond={diamond} className="cpcst-certificate-text" />
                                         </div>
 
                                     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import { CertificateImage, ViewCertificate } from '../../Component/Common/ViewCertification';
 
 const DiamondDetailsInfo = () => {
   const { diamond } = useSelector((state) => state.singleDiamond);
@@ -118,18 +119,15 @@ const DiamondDetailsInfo = () => {
             <div className="StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3">
               <p className="StoneDetailBlock__content-value" tabindex="-1">{diamond?.diamond?.certificate.lab}</p>
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
-                <img
+                <CertificateImage
+                  lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
                   className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
-                  src={`${diamond?.diamond?.certificate.lab === "IGI" ?
-                    "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/kzr-icon-igi-crt-GAZVFCK3.svg"
-                    : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
-                    }`} alt=""
                 />
                 <div className="StoneDetailBlock__certificate-title whitespace-pre-line">{diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</div>
               </div>
             </div>
             <div className="StoneDetailBlock__desc">
-              <button onClick={handleViewCertificateClick}>View Certificate</button>
+            <ViewCertificate diamond={diamond} className="cpcst-certificate-text" />
             </div>
           </div>
         </div>

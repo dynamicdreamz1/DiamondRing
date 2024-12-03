@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import { CertificateImage, ViewCertificate } from "../../Component/Common/ViewCertification"
 
 const DiamondDetailsImagesInfo = () => {
 
@@ -53,17 +54,12 @@ const DiamondDetailsImagesInfo = () => {
           <img src="/lexie-side-img2.webp" />
         </div>
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
-          <img
+          <CertificateImage
+            lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
             className="DiamondCertificate__Image w-full aspect-square fadeIn object-cover max-w-[8rem]"
-            src={`${diamond?.diamond?.certificate.lab === "IGI" ?
-              "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-icon-gia-crt-N3UI7WNQ.svg"
-              : "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/kzr-icon-igi-crt-GAZVFCK3.svg"
-              }`} alt=""
           />
           <p className="text-[#937D67] mt-4 text-2xl leading-tight uppercase font-bold">{diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
-          <button className="cursor-pointer text-customGray-500 text-base leading-tight font-medium mt-2 underline">
-            View Certificate
-          </button>
+          <ViewCertificate diamond={diamond} className="cpcst-certificate-text" />
         </div>
       </div>
     </div>
