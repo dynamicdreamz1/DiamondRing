@@ -1,6 +1,15 @@
 
 
 import claritySi1 from "../Component/assets/Images/claritySi1.svg";
+import claritySi2 from "../Component/assets/Images/claritySi2.svg";
+import claritySi3 from "../Component/assets/Images/claritySi3.svg";
+import claritySi4 from "../Component/assets/Images/claritySi4.svg";
+import claritySi5 from "../Component/assets/Images/claritySi5.svg";
+import claritySi6 from "../Component/assets/Images/claritySi6.svg";
+import claritySi7 from "../Component/assets/Images/claritySi7.svg";
+import cutgoodimg1 from "../Component/assets/Images/cutgoodimg1.svg";
+import cutgoodimg2 from "../Component/assets/Images/cutgoodimg2.svg";
+import cutgoodimg3 from "../Component/assets/Images/cutgoodimg3.svg";
 
 
 
@@ -183,8 +192,18 @@ export const shapeStyles = [
 
 export const colorTabsPanel = [
   { id: 1, name: "SI1", des : "Slightly Included. Inclusions are easy to see under 10x magnification. Some are visible to the naked eye.", icon:  claritySi1},
-  
-
+  { id: 2, name: "VS2", des : "Very Slightly Included. inclusions are present, but hard to see under 10x magnification.", icon:  claritySi2},
+  { id: 3, name: "VS1", des : "Very Slightly Included. inclusions are present, but hard to see under 10x magnification.", icon:  claritySi3},
+  { id: 4, name: "VVS2", des : "Very, Very Slightly Included. Inclusions are present, but extremely hard to see - even under 10x magnification.", icon:  claritySi4},
+  { id: 5, name: "VVS1", des : "Very, Very Slightly Included. Inclusions are present, but extremely hard to see - even under 10x magnification.", icon:  claritySi5},
+  { id: 6, name: "IF", des : "Internally Flawless The diamond is internally flawless but has tiny external blemishes. Rare, hard to find, and beautiful.", icon:  claritySi6},
+  { id: 7, name: "FL", des : "Flawless. The diamond is flawless. Stones like this are extremely rare, expensive, and difficult to buy.", icon:  claritySi7},
 ];
 
+
+export const cutTabsPanel = [
+  { id: 1, name: "Good", des : "Decent proportions and sparkle.", icon:cutgoodimg1},
+  { id: 2, name: "Very Good", des : "Close to perfect in terms of light reflection and proportions.", icon:cutgoodimg2},
+  { id: 3, name: "Excellent", des : "Incredible fire, brilliance, and diamond anatomy.", icon:cutgoodimg3},
+];
 
