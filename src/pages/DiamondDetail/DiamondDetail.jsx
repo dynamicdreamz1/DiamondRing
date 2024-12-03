@@ -3,9 +3,7 @@ import TabComponent from '../../Component/Common/TabComponent'
 import GetInTouch from '../../Component/Common/GetInTouch'
 import OurWork from '../../Component/Common/OurWork'
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter'
-
 import DiamondDetailData from './DiamondDetailData'
-
 import { fetchSingleDiamondList } from '../../store/actions/singleDiamondAction'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -31,8 +29,12 @@ const DiamondDetail = () => {
       </div>
       <TabComponent />
 
-      
-      <DiamondDetailData />
+      <section className='customer-product-sec md:pt-8'>
+        <div className='container mx-auto px-4'>
+          <DiamondDetailData />
+          <DiamondQualities />
+        </div>
+      </section>
       <GetInTouch />
       <OurWork />
       <NewsletterFooter />
