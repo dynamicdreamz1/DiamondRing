@@ -49,31 +49,48 @@ const CompleteDetailsData = () => {
                 </div>
 
                 <div class="flex flex-col items-center justify-center ">
-                    <div class="bg-white  rounded-lg p-6 w-full max-w-md">
-                        <div class="mt-4">
-                            <div class="flex justify-between items-center">
+                    <div class="bg-white  rounded-lg w-full">
+                        <div class="mt-0">
+                            <div class="flex justify-between items-center cpst-complete-info-block cpst-complete-info-setting rounded-lg p-3 border transition duration-300 border-transparent bg-customGray-150">
                                 <div>
-                                    <h3 class="text-lg font-medium">{diamond?.ring?.title}</h3>
-                                    <p class="text-gray-500">{diamond?.ring?.handle}</p>
-                                    <a href="#" class="text-blue-500 hover:text-blue-700">Change</a> | <a href="#" class="text-blue-500 hover:text-blue-700">View Details</a>
+                                    <h3 class="text-sm  font-medium">{diamond?.ring?.title}</h3>
+                                    <p class="text-sm text-gray-500">{diamond?.ring?.handle}</p>
+                                    <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> | <a href="#" class="text-xs leading-tight text-customGray-500 underline">View Details</a>
                                 </div>
                                 <p class="text-2xl font-bold">${ringPrice}</p>
                             </div>
                         </div>
                         <div class="mt-4">
-                            <div class="flex justify-between items-center">
+                            <div class="flex justify-between items-center cpst-complete-info-block cpst-complete-info-setting rounded-lg p-3 border transition duration-300 border-transparent bg-customGray-150">
                                 <div>
-                                    <h3 class="text-lg font-medium">Round</h3>
-                                    <p class="text-gray-500">{diamond?.diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.diamond?.certificate?.color} {diamond?.diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.diamond?.certificate?.shape} {diamond?.diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
-                                    <a href="#" class="text-blue-500 hover:text-blue-700">Change</a> | <a href="#" class="text-blue-500 hover:text-blue-700">View Details</a>
+                                    <h3 class="text-sm font-medium">Round</h3>
+                                    <p class="text-sm text-gray-500">{diamond?.diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.diamond?.certificate?.color} {diamond?.diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.diamond?.certificate?.shape} {diamond?.diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
+                                    <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> | <a href="#" class="text-xs leading-tight text-customGray-500 underline">View Details</a>
                                 </div>
                                 <p class="text-2xl font-bold">${diamondPrice}</p>
                             </div>
                         </div>
-                        <div class="mt-6">
-                            <p class="text-gray-500">Total Price</p>
+                        <div class="mt-6 text-center ">
+                            <p class="cpst-total-price-title text-customGray-300 mb-1.5">Total Price</p>
                             <p class="text-2xl font-bold">${TotalPrice}</p>
-                            <p class="text-gray-500">Ships in 2-4 weeks</p>
+                            <p class="cpst-total-price-text text-1.5sm leading-none flex items-center justify-center gap-2 py-1.5 px-3 mx-auto mt-2 text-black bg-customGray-150 w-fit rounded-100">
+                            <svg className="w-5 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 19 12">
+                                <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#ReadyToShipNew)">
+                                        <path d="M3.29395 1.74342V0.940002H12.9739V9.74H7.52626" stroke="black" stroke-miterlimit="10" stroke-linecap="round"></path>
+                                        <path d="M4.74047 9.73999H3.29395V8.67578" stroke="black" stroke-miterlimit="10" stroke-linecap="round"></path>
+                                        <path d="M14.1619 9.74002H12.9741V4.46002H16.9902L18.2541 7.23409V9.74002H16.8645" stroke="black" stroke-miterlimit="10"></path>
+                                        <path d="M6.25896 11.06C6.98798 11.06 7.57897 10.469 7.57897 9.73998C7.57897 9.01097 6.98798 8.41998 6.25896 8.41998C5.52995 8.41998 4.93896 9.01097 4.93896 9.73998C4.93896 10.469 5.52995 11.06 6.25896 11.06Z" stroke="black" stroke-miterlimit="10"></path>
+                                        <path d="M15.6139 11.06C16.343 11.06 16.9339 10.469 16.9339 9.73998C16.9339 9.01097 16.343 8.41998 15.6139 8.41998C14.8849 8.41998 14.2939 9.01097 14.2939 9.73998C14.2939 10.469 14.8849 11.06 15.6139 11.06Z" stroke="black" stroke-miterlimit="10"></path>
+                                        <path d="M4.74035 7.31256H1.97119" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M6.80497 3.09613H2.47461" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M2.5979 5.26129H0.746094" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M4.73451 5.26129H4.05078" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                                </svg>
+                                Ships in 2-4 weeks
+                            </p>
                         </div>
                         <div class="mt-4 space-y-2">
                             <button class="bg-black text-white px-4 py-2 rounded-md w-full">Secure Checkout</button>
