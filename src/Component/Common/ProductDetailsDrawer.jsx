@@ -19,13 +19,9 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
     localStorage.setItem('cartProducts', JSON.stringify(updatedProducts));
     toggleDrawer(false)
   };
-  console.log("productData", productData.diamond);
 
 
   if (!productData) return null;
-
-
-
 
   // Extract product details
   const variant = productData.variants?.edges[0]?.node;
@@ -99,8 +95,6 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                     <div className="text-black font-bold text-base leading-tight">{variant?.sku || 'N/A'}</div>
                   </div>
 
-                  {/* Add more attribute tiles as needed, parsing from productData */}
-
                   {/* Vendor */}
                   <div className="rounded-xl bg-white shadow-3sc-tile p-2.5 flex flex-col justify-between min-h-[5rem]">
                     <div className="flex items-center w-full gap-1">
@@ -141,11 +135,6 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
           :
           <>
             <div className="relative pt-[70%] DiamondImageContainer">
-              {/* <img
-                className="w-full h-full absolute inset-0 object-contain"
-                src={primaryImage?.src || ''}
-                alt={primaryImage?.altText || productData.title}
-              /> */}
               <img className='absolute w-full h-full top-0 left-0 object-cover'
                 src={productData?.diamond?.v360?.url ? `${productData?.diamond?.v360?.url}/${productData?.diamond?.v360?.top_index ? productData?.diamond?.v360?.top_index : "0"}.jpg` : productData?.diamond?.image}
                 alt="diamond"
@@ -163,10 +152,6 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
 
               <div className="flex-1 overflow-auto px-3 pt-3 pb-21">
                 <div className="p-2 bg-customGray-50 rounded-2xl grid grid-cols-2 gap-2">
-
-
-                  {/* Diamond Shape */}
-
 
                   {/* Carat Weight */}
                   <div className="rounded-xl bg-white shadow-3sc-tile p-2.5 flex flex-col justify-between min-h-[5rem]">
@@ -236,21 +221,8 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                       {productData.diamond.certificate.lab}
                     </div>
                   </div>
-
-
-
                 </div>
               </div>
-
-              {/* <div className="flex justify-center gap-2 flex-wrap p-3 fixed bottom-0 left-0 right-0 z-10 md:flex-col-reverse max-w-[300px]">
-                <button
-                  type="button"
-                  className="w-12 h-12 md:h-auto md:w-full rounded-full text-base font-semibold leading-tight bg-white text-black md:p-2 text-center flex justify-center items-center border-2 border-black md:px-5 shadow-floating-button md:shadow-none"
-                // onClick={() => handleRemoveProductClick(productData)}
-                >
-                  Remove
-                </button>
-              </div> */}
               <div className="flex justify-center gap-2 flex-wrap p-3 fixed bottom-0 left-0 right-0 z-10 md:flex-col-reverse max-w-[300px]">
                 <button
                   type="button"
@@ -270,7 +242,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                 </button>
                 <Link
                   className="grow rounded-full text-base font-semibold leading-tight bg-black text-white p-3.5 text-center flex justify-center items-center md:w-full md:px-5 md:font-normal shadow-floating-button md:shadow-none"
-                  to={`/ring-select/${productData?.id?.split("/").pop()}`}
+                  to={`/diamond-list/${productData.diamond.certificate.certNumber}`}
                   aria-hidden="false"
                 >
                   <div className="hidden md:block">View / Edit</div>
