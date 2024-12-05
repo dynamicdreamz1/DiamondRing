@@ -17,12 +17,6 @@ const ProductCard = ({ node }) => {
   const [selectedProductModel, setselectedProductModel] = useState(false);
   const images = node?.images?.edges;
   const variants = node?.variants?.edges;
-  const diamondPrice = getTabsProduct.tabs.diamond && parseFloat(getTabsProduct.tabs.diamond.price);
-  const ringPrice = getTabsProduct.tabs.ring && parseFloat(getTabsProduct.tabs.ring.variants.edges[0].node.price.amount);
-
-  console.log(diamondPrice, ringPrice);
-
-
 
   const handleImageHover = (index) => {
     setSelectedImage(index);
@@ -45,7 +39,7 @@ const ProductCard = ({ node }) => {
     if (getTabsProduct?.tabs?.diamond && product) {
       dispatch(addProductTabs({
         ...productWithType,
-        finelProduct: { price: (diamondPrice + ringPrice), type: 'finelProduct' },
+        finelProduct: { price: "", type: 'finelProduct' },
         currentStep: 3
       }));
       navigate('/complete-product');

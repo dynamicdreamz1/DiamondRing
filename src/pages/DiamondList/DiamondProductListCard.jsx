@@ -12,8 +12,6 @@ const DiamondProductListCard = () => {
 
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
-    const diamondPrice = getTabsProduct.tabs.diamond && parseFloat(getTabsProduct.tabs.diamond.price);
-    const ringPrice = getTabsProduct.tabs.ring && parseFloat(getTabsProduct.tabs.ring.variants.edges[0].node.price.amount);
     const ringExists = getTabsProduct?.tabs?.ring;
 
 
@@ -29,7 +27,7 @@ const DiamondProductListCard = () => {
             if (getTabsProduct?.tabs?.ring && diamond) {
                 dispatch(addProductTabs({
                     ...productWithType,
-                    finelProduct: { price: (diamondPrice + ringPrice), type: 'finelProduct' },
+                    finelProduct: { price: "", type: 'finelProduct' },
                     currentStep: 3
                 }));
                 navigate('/complete-product');

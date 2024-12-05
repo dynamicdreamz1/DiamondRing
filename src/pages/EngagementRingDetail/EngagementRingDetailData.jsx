@@ -6,17 +6,22 @@ import BadgeComponent from '../../Component/Common/BadgeComponent';
 import AccordianforDetail from '../../Component/Common/AccordianforDetail';
 import VirtualAppointment from '../../Component/Common/VirtualAppointment';
 import { Link } from "react-router-dom"
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
 import SkeltoneDetailPage from '../../Component/Common/SkeltoneDetailPage';
+import { addProductTabs } from '../../store/slices/TabProductSlice';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import LeftSideModal from '../EngagementRing/FilterSection/LeftSideModal';
 
 
 const EngagementRingDetailData = () => {
     const { product, loading, error } = useSelector((state) => state.singleProduct);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const getTabsProduct = useSelector((state) => state.getTabsProduct);
     const [selectedVariant] = useState(0);
     const variants = product?.variants?.edges;
     const images = product?.images?.edges.map((edge) => edge.node);
-
+    const [selectedProductModel, setselectedProductModel] = useState(false);
 
     const firstVariant = variants && variants[selectedVariant]?.node;
     const price = firstVariant?.price?.amount || "0.00";
@@ -31,6 +36,27 @@ const EngagementRingDetailData = () => {
         style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
     }).format(compareAtPrice)
         : null;
+
+
+    const handleAddRingClick = (product) => {
+        const productWithType = {
+            ring: { ...product, type: 'ring' },
+            diamond: getTabsProduct?.tabs?.diamond,
+            currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1
+        };
+
+        dispatch(addProductTabs(productWithType));
+        setselectedProductModel(true);
+
+        if (getTabsProduct?.tabs?.diamond && product) {
+            dispatch(addProductTabs({
+                ...productWithType,
+                finelProduct: { price: "", type: 'finelProduct' },
+                currentStep: 3
+            }));
+            navigate('/complete-product');
+        }
+    };
 
 
     if (error) return <p>Error: {error}</p>;
@@ -169,7 +195,7 @@ const EngagementRingDetailData = () => {
                             </div>
                         </div>
                         <div className='production-button mt-8'>
-                            <Link to={"/diamond-list"} className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
+                            <div className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
                                 <div className="transition-transform duration-500 text-ellipsis overflow-hidden flex items-center justify-between gap-2 md:gap-4 ">
                                     <svg className="w-6 h-6" aria-hidden="true" focusable="false">
                                         <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,14 +206,18 @@ const EngagementRingDetailData = () => {
                                             <path d="M23.0797 9.99799C25.4403 11.2008 27.3273 13.1634 28.4365 15.5695C29.5458 17.9756 29.8126 20.685 29.1941 23.2613C28.5756 25.8376 27.1078 28.1306 25.0271 29.7708C22.9464 31.4111 20.3741 32.3031 17.7247 32.3031C15.0752 32.3031 12.5029 31.4111 10.4222 29.7708C8.34157 28.1305 6.87373 25.8375 6.25523 23.2613C5.63672 20.685 5.90358 17.9756 7.01281 15.5695C8.12203 13.1634 10.009 11.2008 12.3697 9.99799" stroke="currentColor" stroke-linecap="round"></path>
                                         </svg>
                                     </svg>
-                                    Add Center Stone
+
+                                    <button onClick={() => handleAddRingClick(product)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
+                                        <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Center Stone"}</span>
+                                    </button>
+
                                     <svg className="w-6 h-6 p-1" aria-hidden="true" focusable="false">
                                         <svg viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.87891 24.5722L18.1213 14.3298L7.87891 4.0874" stroke="currentColor" stroke-width="2.5"></path>
                                         </svg>
                                     </svg>
                                 </div>
-                            </Link>
+                            </div>
                             <a href="#" className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
                                 <div className="text-sm leading-tight font-semibold">Buy Setting Only*</div>
                                 <div className="text-1.5xs leading-tight">*center stone not included</div>
@@ -298,6 +328,8 @@ const EngagementRingDetailData = () => {
                         </div>
                         <AccordianforDetail />
                         <VirtualAppointment />
+                        <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
+
                     </div>
                 </div>
             </div>
