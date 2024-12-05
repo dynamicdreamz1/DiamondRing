@@ -5,14 +5,9 @@ import RingDetails from '../pages/EngagementRingDetail/EngagementRingDetail'; //
 import DiamondList from '../pages/DiamondList/DiamondList'; // Create this component for detailed view
 import DiamondDetail from '../pages/DiamondDetail/DiamondDetail'; // Create this component for detailed view
 import CompleteProduct from '../pages/CompleteProduct/CompleteProduct'; // Create this component for detailed view
-import { useSelector } from 'react-redux';
 
 
-const RoutesPage = () => {
-    const getTabsProduct = useSelector((state) => state.getTabsProduct);
-
-    console.log("getTabsProduct", getTabsProduct);
-  
+const RoutesPage = () => {  
 
     return (
         <Router>

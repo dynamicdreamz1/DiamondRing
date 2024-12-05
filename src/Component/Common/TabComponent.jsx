@@ -1,7 +1,8 @@
 import React from 'react'
 import ProductDetailsDrawer from './ProductDetailsDrawer'
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 const TabComponent = () => {
     const [open, setOpen] = React.useState(false);
@@ -9,7 +10,8 @@ const TabComponent = () => {
     const { tabs } = useSelector((state) => state.getTabsProduct);
     const location = useLocation();
 
-    const toggleDrawer = (newOpen,product) => {
+
+    const toggleDrawer = (newOpen, product) => {
         setOpen(newOpen);
         setproductData(product)
     };
@@ -27,8 +29,11 @@ const TabComponent = () => {
     const stonePrice = tabs?.diamond?.markup_price || null;
     const finalPrice = tabs?.finelProduct?.price || null;
 
+    console.log("tabs?.diamond",tabs.ring);
+    
+
     // Step configuration
-    const steps = [
+    let steps = [
         {
             number: 1,
             title: 'Select your',
@@ -56,6 +61,20 @@ const TabComponent = () => {
         }
     ];
 
+
+    console.log("location", location);
+
+
+
+    if ((location.pathname === "/diamond-list" ||location.pathname ===  `/diamond-list/${tabs?.diamond.diamond.certificate.certNumber}}`) && !hasSettingDetails) {
+        steps = [steps[1], steps[0], steps[2]];
+    }else if((location.pathname === "/diamond-list" ||location.pathname ===  '/diamond-list/542234640') && hasSettingDetails){
+        steps = [steps[0], steps[1], steps[2]];
+    }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs.ring?.id?.split("/").pop()}}`) && !hasStoneDetails){
+        steps = [steps[0], steps[1], steps[2]];
+    }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs.ring?.id?.split("/").pop()}}`) && hasStoneDetails){
+        steps = [steps[1], steps[0], steps[2]];
+    }
 
 
     return (
@@ -89,7 +108,7 @@ const TabComponent = () => {
                                                 type="button"
                                                 className="text-customGray-200 underline text-xs leading-none"
                                                 onClick={() => toggleDrawer(true, step.number === 1 ? tabs?.ring || {} : tabs?.diamond || {})}
-                                                >
+                                            >
                                                 {currentStep === step.number ? "Change" : 'View'}
                                             </button>
                                             {step.price && (
