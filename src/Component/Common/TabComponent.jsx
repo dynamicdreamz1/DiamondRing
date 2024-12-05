@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductDetailsDrawer from './ProductDetailsDrawer'
 import { useSelector } from 'react-redux';
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 const TabComponent = () => {

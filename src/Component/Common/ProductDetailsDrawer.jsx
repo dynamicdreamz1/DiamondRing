@@ -1,9 +1,8 @@
 import { Drawer } from '@mui/material';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { addProduct } from '../../store/slices/ringsSlice';
 import { useDispatch } from 'react-redux';
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import { addProductTabs } from '../../store/slices/TabProductSlice';
 
 
@@ -20,6 +19,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
         currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
       };
       dispatch(addProductTabs(productWithType));
+
     } else {
       const productWithType = {
         diamond: {},
