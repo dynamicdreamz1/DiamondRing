@@ -51,7 +51,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
 
         {productData.type === 'ring' ?
           <>
-            <div className="relative pt-[70%] DiamondImageContainer">
+            <div className="relative pt-[100%] DiamondImageContainer">
               <img
                 className="w-full h-full absolute inset-0 object-contain"
                 src={primaryImage?.src || ''}
@@ -140,7 +140,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
           </>
           :
           <>
-            <div className="relative pt-[70%] DiamondImageContainer">
+            <div className="relative pt-[100%] DiamondImageContainer">
               {/* <img
                 className="w-full h-full absolute inset-0 object-contain"
                 src={primaryImage?.src || ''}
