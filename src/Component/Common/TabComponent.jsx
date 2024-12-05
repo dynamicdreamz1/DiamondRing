@@ -5,11 +5,13 @@ import { useLocation } from 'react-router-dom';
 
 const TabComponent = () => {
     const [open, setOpen] = React.useState(false);
+    const [productData, setproductData] = React.useState({});
     const { tabs } = useSelector((state) => state.getTabsProduct);
     const location = useLocation();
 
-    const toggleDrawer = (newOpen) => {
+    const toggleDrawer = (newOpen,product) => {
         setOpen(newOpen);
+        setproductData(product)
     };
 
     // Determine active steps based on available data
@@ -23,8 +25,7 @@ const TabComponent = () => {
     // Get price details
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
     const stonePrice = tabs?.diamond?.markup_price || null;
-    const finalPrice = tabs?.finelProduct?.price || null;    
-
+    const finalPrice = tabs?.finelProduct?.price || null;
 
     // Step configuration
     const steps = [
@@ -35,7 +36,7 @@ const TabComponent = () => {
             hasDetails: hasSettingDetails,
             productTitle: tabs?.ring?.title || '',
             price: settingPrice,
-            text : ""
+            text: ""
         },
         {
             number: 2,
@@ -84,13 +85,13 @@ const TabComponent = () => {
                                             {step.productTitle}
                                         </div>
                                         <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
-                                                <button
-                                                    type="button"
-                                                    className="text-customGray-200 underline text-xs leading-none"
-                                                    onClick={() => toggleDrawer(true)}
+                                            <button
+                                                type="button"
+                                                className="text-customGray-200 underline text-xs leading-none"
+                                                onClick={() => toggleDrawer(true, step.number === 1 ? tabs?.ring || {} : tabs?.diamond || {})}
                                                 >
-                                                  {currentStep === step.number ?   "Change" : 'View'}
-                                                </button>
+                                                {currentStep === step.number ? "Change" : 'View'}
+                                            </button>
                                             {step.price && (
                                                 <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
                                                     <div>${step.price}</div>
@@ -146,7 +147,7 @@ const TabComponent = () => {
                     ))}
                 </div>
             </div>
-            <ProductDetailsDrawer toggleDrawer={toggleDrawer} open={open} />
+            {productData && open && <ProductDetailsDrawer toggleDrawer={toggleDrawer} open={open} productData={productData} />}
         </>
     )
 }
