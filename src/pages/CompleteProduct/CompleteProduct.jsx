@@ -4,13 +4,25 @@ import TabComponent from '../../Component/Common/TabComponent';
 import GetInTouch from '../../Component/Common/GetInTouch';
 import OurWork from '../../Component/Common/OurWork';
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter';
+import { useSelector } from 'react-redux';
+import CompleteDetailsQuality from './CompleteDetailsQuality';
+import CompleteDetailsData from './CompleteDetailsData';
 
 const CompleteProduct = () => {
+  const { tabs } = useSelector((state) => state.getTabsProduct);
 
+  console.log("tabs", tabs);
 
   return (
     <>
       <TabComponent />
+
+      <section className='customer-product-sec md:pt-8'>
+        <div className='container mx-auto px-4'>
+          <CompleteDetailsData />
+        </div>
+      </section>
+
       <section className='complete-product-ib-box-sec'>
         <div className='container mx-auto px-4'>
           <div className='in-the-box-des'>
@@ -37,6 +49,7 @@ const CompleteProduct = () => {
           </div>
         </div>
       </section>
+
 
       <GetInTouch />
       <OurWork />
