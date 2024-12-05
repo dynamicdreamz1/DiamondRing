@@ -28,8 +28,6 @@ const TabComponent = () => {
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
     const stonePrice = tabs?.diamond?.markup_price || null;
     const finalPrice = tabs?.finelProduct?.price || null;
-
-    console.log("tabs?.diamond",tabs.ring);
     
 
     // Step configuration
@@ -62,15 +60,11 @@ const TabComponent = () => {
     ];
 
 
-    console.log("location", location);
-
-
-
-    if ((location.pathname === "/diamond-list" ||location.pathname ===  `/diamond-list/${tabs?.diamond.diamond.certificate.certNumber}}`) && !hasSettingDetails) {
+    if ((location.pathname === "/diamond-list" ||location.pathname ===  `/diamond-list/${tabs?.diamond?.diamond?.certificate?.certNumber}}`) && !hasSettingDetails) {
         steps = [steps[1], steps[0], steps[2]];
     }else if((location.pathname === "/diamond-list" ||location.pathname ===  '/diamond-list/542234640') && hasSettingDetails){
         steps = [steps[0], steps[1], steps[2]];
-    }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs.ring?.id?.split("/").pop()}}`) && !hasStoneDetails){
+    }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs?.ring?.id?.split("/").pop()}}`) && !hasStoneDetails){
         steps = [steps[0], steps[1], steps[2]];
     }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs.ring?.id?.split("/").pop()}}`) && hasStoneDetails){
         steps = [steps[1], steps[0], steps[2]];

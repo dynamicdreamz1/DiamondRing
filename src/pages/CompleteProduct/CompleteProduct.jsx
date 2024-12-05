@@ -11,8 +11,6 @@ import CompleteDetailsData from './CompleteDetailsData';
 const CompleteProduct = () => {
   const { tabs } = useSelector((state) => state.getTabsProduct);
 
-  console.log("tabs", tabs);
-
   return (
     <>
       <TabComponent />

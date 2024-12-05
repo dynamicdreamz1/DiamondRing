@@ -6,9 +6,6 @@ const CompleteDetailsImagesInfo = () => {
 
   const { tabs:diamond, loading, error } = useSelector((state) => state.getTabsProduct);
 
-  console.log('diamond', diamond);
-
-
   return (
     <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>
       <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>

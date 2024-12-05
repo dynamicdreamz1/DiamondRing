@@ -4,21 +4,32 @@ import { useSelector } from 'react-redux';
 import { addProduct } from '../../store/slices/ringsSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
+import { addProductTabs } from '../../store/slices/TabProductSlice';
 
 
 const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
   const dispatch = useDispatch();
+  const getTabsProduct = useSelector((state) => state.getTabsProduct);
 
-  const handleRemoveRingClick = (product) => {
-    // 1. Dispatch the action to remove the product from Redux
-    dispatch(addProduct(product));
+  
+  const handleRemoveAction = (type) => {
+    if (type === "ring") {
+      const productWithType = {
+        diamond: getTabsProduct?.tabs?.diamond,
+        ring: {},
+        currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+      };
+      dispatch(addProductTabs(productWithType));
+    } else {
+      const productWithType = {
+        diamond: {},
+        ring: getTabsProduct?.tabs?.ring,
+        currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+      };
+      dispatch(addProductTabs(productWithType));
+    }
+  }
 
-    // 2. Remove the product from localStorage
-    const savedProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-    const updatedProducts = savedProducts.filter(item => item.id !== product.id); // Filter out the product by ID
-    localStorage.setItem('cartProducts', JSON.stringify(updatedProducts));
-    toggleDrawer(false)
-  };
 
 
   if (!productData) return null;
@@ -108,7 +119,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                 <button
                   type="button"
                   className="w-12 h-12 md:h-auto md:w-full rounded-full text-base font-semibold leading-tight bg-white text-black md:p-2 text-center flex justify-center items-center border-2 border-black md:px-5 shadow-floating-button md:shadow-none"
-                  onClick={() => handleRemoveRingClick({})}
+                  onClick={() => handleRemoveAction("ring")}
                 >
                   <svg className="block w-7 h-7 text-black" aria-hidden="true" focusable="false" viewBox="0 0 25 24">
                     <svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,9 +216,9 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                       <div className="text-1.25xs leading-none text-customGray-400 uppercase font-semibold">DIMENSIONS (MM)</div>
                     </div>
                     <div className="text-black font-bold text-base leading-tight">
-                    {productData?.diamond?.certificate
-                  ? `${parseFloat(productData.diamond.certificate.length).toFixed(2)} / ${parseFloat(productData.diamond.certificate.width).toFixed(2)}`
-                  : "N/A"}
+                      {productData?.diamond?.certificate
+                        ? `${parseFloat(productData.diamond.certificate.length).toFixed(2)} / ${parseFloat(productData.diamond.certificate.width).toFixed(2)}`
+                        : "N/A"}
                     </div>
                   </div>
 
@@ -227,7 +238,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                 <button
                   type="button"
                   className="w-12 h-12 md:h-auto md:w-full rounded-full text-base font-semibold leading-tight bg-white text-black md:p-2 text-center flex justify-center items-center border-2 border-black md:px-5 shadow-floating-button md:shadow-none"
-                  onClick={() => handleRemoveRingClick({})}
+                  onClick={() => handleRemoveAction("diamond")}
                 >
                   <svg className="block w-7 h-7 text-black" aria-hidden="true" focusable="false" viewBox="0 0 25 24">
                     <svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

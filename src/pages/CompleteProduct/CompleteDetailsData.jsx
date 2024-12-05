@@ -17,7 +17,6 @@ const CompleteDetailsData = () => {
     const ringPrice = diamond?.ring && parseFloat(diamond?.ring?.variants.edges[0].node.price.amount);
     const TotalPrice = diamondPrice + ringPrice;
 
-    console.log(diamond);
     if (error) return <p>Error: {error}</p>;
 
     if (loading)
