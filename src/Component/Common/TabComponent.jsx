@@ -1,10 +1,12 @@
 import React from 'react'
 import ProductDetailsDrawer from './ProductDetailsDrawer'
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 const TabComponent = () => {
     const [open, setOpen] = React.useState(false);
     const { tabs } = useSelector((state) => state.getTabsProduct);
+    const location = useLocation();
 
     const toggleDrawer = (newOpen) => {
         setOpen(newOpen);
@@ -21,7 +23,7 @@ const TabComponent = () => {
     // Get price details
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
     const stonePrice = tabs?.diamond?.markup_price || null;
-    const finalPrice = tabs?.finelProduct?.price || null;
+    const finalPrice = tabs?.finelProduct?.price || null;    
 
 
     // Step configuration
@@ -32,7 +34,8 @@ const TabComponent = () => {
             subtitle: 'SETTING',
             hasDetails: hasSettingDetails,
             productTitle: tabs?.ring?.title || '',
-            price: settingPrice
+            price: settingPrice,
+            text : ""
         },
         {
             number: 2,
@@ -81,15 +84,13 @@ const TabComponent = () => {
                                             {step.productTitle}
                                         </div>
                                         <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
-                                            {step.number === 1 && (
                                                 <button
                                                     type="button"
                                                     className="text-customGray-200 underline text-xs leading-none"
                                                     onClick={() => toggleDrawer(true)}
                                                 >
-                                                    Change
+                                                  {currentStep === step.number ?   "Change" : 'View'}
                                                 </button>
-                                            )}
                                             {step.price && (
                                                 <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
                                                     <div>${step.price}</div>
