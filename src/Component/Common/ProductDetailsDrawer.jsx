@@ -58,7 +58,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
 
         {productData.type === 'ring' ?
           <>
-            <div className="relative pt-[70%] DiamondImageContainer">
+            <div className="relative pt-[100%] DiamondImageContainer">
               <img
                 className="w-full h-full absolute inset-0 object-contain"
                 src={primaryImage?.src || ''}
@@ -145,7 +145,12 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
           </>
           :
           <>
-            <div className="relative pt-[70%] DiamondImageContainer">
+            <div className="relative pt-[100%] DiamondImageContainer">
+              {/* <img
+                className="w-full h-full absolute inset-0 object-contain"
+                src={primaryImage?.src || ''}
+                alt={primaryImage?.altText || productData.title}
+              /> */}
               <img className='absolute w-full h-full top-0 left-0 object-cover'
                 src={productData?.diamond?.v360?.url ? `${productData?.diamond?.v360?.url}/${productData?.diamond?.v360?.top_index ? productData?.diamond?.v360?.top_index : "0"}.jpg` : productData?.diamond?.image}
                 alt="diamond"
