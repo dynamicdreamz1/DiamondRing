@@ -129,7 +129,7 @@ const DiamondDetailData = () => {
                   <path d="M23.0797 9.99799C25.4403 11.2008 27.3273 13.1634 28.4365 15.5695C29.5458 17.9756 29.8126 20.685 29.1941 23.2613C28.5756 25.8376 27.1078 28.1306 25.0271 29.7708C22.9464 31.4111 20.3741 32.3031 17.7247 32.3031C15.0752 32.3031 12.5029 31.4111 10.4222 29.7708C8.34157 28.1305 6.87373 25.8375 6.25523 23.2613C5.63672 20.685 5.90358 17.9756 7.01281 15.5695C8.12203 13.1634 10.009 11.2008 12.3697 9.99799" stroke="currentColor" stroke-linecap="round"></path>
                 </svg>
               </svg>
-              <button onClick={() => handleDiamondAction(diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
+              <button onClick={() => handleDiamondAction(diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white  text-center border-2 border-black whitespace-nowrap relative overflow-hidden">
                 <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden">
                   <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
                 </div>

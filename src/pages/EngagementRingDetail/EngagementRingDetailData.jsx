@@ -207,7 +207,7 @@ const EngagementRingDetailData = () => {
                                         </svg>
                                     </svg>
 
-                                    <button onClick={() => handleAddRingClick(product)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
+                                    <button onClick={() => handleAddRingClick(product)} className="rounded-full text-sm font-semibold leading-tight text-white text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
                                         <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Center Stone"}</span>
                                     </button>
 
