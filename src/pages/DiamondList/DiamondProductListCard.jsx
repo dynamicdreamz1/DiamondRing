@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import WishList from './DiamondWishList';
 import { Link } from "react-router-dom"
 import { addProductTabs } from '../../store/slices/TabProductSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import LeftSideDiamondModel from './Filter/LeftSideDiamondModel';
+
 
 const DiamondProductListCard = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [selectedProductModel, setselectedProductModel] = useState(false);
+
 
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
@@ -22,6 +26,8 @@ const DiamondProductListCard = () => {
             currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
         };
         dispatch(addProductTabs(productWithType));
+        setselectedProductModel(true);
+
         if (getTabsProduct?.tabs?.ring && diamond) {
 
             if (getTabsProduct?.tabs?.ring && diamond) {
@@ -228,6 +234,8 @@ const DiamondProductListCard = () => {
                             </div>
                             <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
                         </div>
+                        <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
+
                     </>
                 </div>
             ))}
