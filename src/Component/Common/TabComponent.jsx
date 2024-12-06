@@ -13,10 +13,7 @@ const TabComponent = () => {
 
     const diamondPrice = tabs?.diamond && parseFloat(tabs?.diamond?.price);
     const ringPrice = tabs?.ring && parseFloat(tabs?.ring?.variants.edges[0].node.price.amount);
-    const TotalPrice = diamondPrice + ringPrice;
-
-    // console.log('TotalPrice',TotalPrice);
-    
+    const TotalPrice =(diamondPrice &&ringPrice) ? diamondPrice + ringPrice : "";    
 
     const toggleDrawer = (newOpen, product) => {
         setOpen(newOpen);
@@ -28,7 +25,7 @@ const TabComponent = () => {
     const hasStoneDetails = tabs?.diamond && tabs.diamond.markup_price;
 
     // Determine current step 
-    const currentStep = tabs?.currentStep || 0;
+    let currentStep = tabs?.currentStep || 0;
 
     // Get price details
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
@@ -66,16 +63,29 @@ const TabComponent = () => {
     ];
 
 
-    if ((location.pathname === "/diamond-list" ||location.pathname ===  `/diamond-list/${tabs?.diamond?.diamond?.certificate?.certNumber}}`) && !hasSettingDetails) {
-        steps = [steps[1], steps[0], steps[2]];
-    }else if((location.pathname === "/diamond-list" ||location.pathname ===  '/diamond-list/542234640') && hasSettingDetails){
-        steps = [steps[0], steps[1], steps[2]];
-    }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs?.ring?.id?.split("/").pop()}}`) && !hasStoneDetails){
-        steps = [steps[0], steps[1], steps[2]];
-    }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs.ring?.id?.split("/").pop()}}`) && hasStoneDetails){
-        steps = [steps[1], steps[0], steps[2]];
-    }
     
+    const updateStepNumbers = (steps) => {
+        return steps.map((step, index) => ({
+            ...step,
+            number: index + 1
+        }));
+    };
+        
+    // Reordering steps based on conditions
+    if ((location.pathname === "/diamond-list" || location.pathname === `/diamond-list/${tabs?.diamond?.diamond?.certificate?.certNumber}`) && !hasSettingDetails) {
+        steps = updateStepNumbers([steps[1], steps[0], steps[2]]);
+        currentStep = 1;
+    } else if ((location.pathname === "/diamond-list" || location.pathname === `/diamond-list/${tabs?.diamond?.diamond?.certificate?.certNumber}`) && hasSettingDetails) {
+        steps = updateStepNumbers([steps[0], steps[1], steps[2]]);
+        currentStep = 2;
+    } else if ((location.pathname === "/" || location.pathname === "/ring-select" || location.pathname === `/ring-select/${tabs?.ring?.id?.split("/").pop()}`) && !hasStoneDetails) {
+        steps = updateStepNumbers([steps[0], steps[1], steps[2]]);
+        currentStep = 1;
+    } else if ((location.pathname === "/" || location.pathname === "/ring-select" || location.pathname === `/ring-select/${tabs?.ring?.id?.split("/").pop()}`) && hasStoneDetails) {
+        steps = updateStepNumbers([steps[1], steps[0], steps[2]]);
+        currentStep = 2;
+    }
+        
 
     return (
         <>
@@ -100,7 +110,6 @@ const TabComponent = () => {
                             <div className="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
                                 {step.hasDetails && (
                                     <>
-                                    {console.log("step.price",step)}
                                         <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
                                             {step.productTitle}
                                         </div>
