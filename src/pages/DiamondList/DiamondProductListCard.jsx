@@ -234,11 +234,12 @@ const DiamondProductListCard = () => {
                             </div>
                             <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
                         </div>
-                        <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
 
                     </>
                 </div>
             ))}
+            <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
+
         </div>
     )
 }
