@@ -8,6 +8,7 @@ import { addProductTabs } from '../../store/slices/TabProductSlice';
 
 const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const getTabsProduct = useSelector((state) => state.getTabsProduct);
 
   
@@ -19,7 +20,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
         currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
       };
       dispatch(addProductTabs(productWithType));
-
+      navigate("/")
     } else {
       const productWithType = {
         diamond: {},
@@ -27,6 +28,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
         currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
       };
       dispatch(addProductTabs(productWithType));
+      navigate("/diamond-list")
     }
   }
 

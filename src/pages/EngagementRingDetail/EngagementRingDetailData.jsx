@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import BadgeComponent from '../../Component/Common/BadgeComponent';
 import AccordianforDetail from '../../Component/Common/AccordianforDetail';
 import VirtualAppointment from '../../Component/Common/VirtualAppointment';
-import { Link } from "react-router-dom"
 import SkeltoneDetailPage from '../../Component/Common/SkeltoneDetailPage';
 import { addProductTabs } from '../../store/slices/TabProductSlice';
 import { useDispatch } from 'react-redux';
