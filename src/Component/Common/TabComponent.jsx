@@ -31,8 +31,6 @@ const TabComponent = () => {
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
     const stonePrice = tabs?.diamond?.markup_price || null;
     
-    console.log("tabs",tabs.diamond.type === "diamond");
-    
 
     // Step configuration
     let steps = [
@@ -87,8 +85,6 @@ const TabComponent = () => {
         currentStep = 2;
     }
         
-    console.log("sasasa", tabs?.diamond?.type === "diamond");
-    
 
     return (
         <>
