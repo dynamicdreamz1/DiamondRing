@@ -8,20 +8,6 @@ import { CertificateImage, ViewCertificate } from './ViewCertification';
 
 const AccordianforDetail = () => {
     const { diamond } = useSelector((state) => state.singleDiamond);
-
-
-    const handleViewCertificateClick = () => {
-        if (diamond.diamond.certificate.lab === "GIA") {
-            window.open(`https://www.gia.edu/report-check-landing?reportno=${diamond.diamond.certificate.certNumber}`, '_blank');
-        } else if (diamond.diamond.certificate.lab === "IGI") {
-            window.open(`https://www.igi.org/verify-your-report/?r=${diamond.diamond.certificate.certNumber}`, '_blank');
-        } else {
-            console.error("Unknown certificate lab");
-        }
-    };
-
-
-
     return (
         <div className="mt-4 accordian-main-sec">
             <Accordion>

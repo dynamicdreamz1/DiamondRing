@@ -2,13 +2,11 @@ import React from 'react'
 import BadgeComponent from '../../Component/Common/BadgeComponent'
 import AccordianforDetail from '../../Component/Common/AccordianforDetail'
 import VirtualAppointment from '../../Component/Common/VirtualAppointment'
-import DiamondDetailsImagesInfo from './CompleteDetailsImagesInfo'
-import DiamondDetailsInfo from './CompleteDetailsInfo'
 import { useSelector } from 'react-redux'
 import SkeltoneDetailPage from '../../Component/Common/SkeltoneDetailPage'
 import CompleteDetailsInfo from './CompleteDetailsInfo'
 import CompleteDetailsImagesInfo from './CompleteDetailsImagesInfo'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ProductDetailsDrawer from '../../Component/Common/ProductDetailsDrawer'
 
 
@@ -20,9 +18,6 @@ const CompleteDetailsData = () => {
     const diamondPrice = diamond?.diamond && parseFloat(diamond?.diamond?.price);
     const ringPrice = diamond?.ring && parseFloat(diamond?.ring?.variants.edges[0].node.price.amount);
     const TotalPrice = diamondPrice + ringPrice;
-
-
-
 
     const toggleDrawer = (newOpen, product) => {
         setOpen(newOpen);

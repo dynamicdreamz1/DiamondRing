@@ -4,13 +4,9 @@ import TabComponent from '../../Component/Common/TabComponent';
 import GetInTouch from '../../Component/Common/GetInTouch';
 import OurWork from '../../Component/Common/OurWork';
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter';
-import { useSelector } from 'react-redux';
-import CompleteDetailsQuality from './CompleteDetailsQuality';
 import CompleteDetailsData from './CompleteDetailsData';
 
 const CompleteProduct = () => {
-  const { tabs } = useSelector((state) => state.getTabsProduct);
-
   return (
     <>
       <TabComponent />
