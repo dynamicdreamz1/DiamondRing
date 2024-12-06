@@ -11,6 +11,13 @@ const TabComponent = () => {
     const location = useLocation();
 
 
+    const diamondPrice = tabs?.diamond && parseFloat(tabs?.diamond?.price);
+    const ringPrice = tabs?.ring && parseFloat(tabs?.ring?.variants.edges[0].node.price.amount);
+    const TotalPrice = diamondPrice + ringPrice;
+
+    // console.log('TotalPrice',TotalPrice);
+    
+
     const toggleDrawer = (newOpen, product) => {
         setOpen(newOpen);
         setproductData(product)
@@ -19,7 +26,6 @@ const TabComponent = () => {
     // Determine active steps based on available data
     const hasSettingDetails = tabs?.ring && tabs.ring.title;
     const hasStoneDetails = tabs?.diamond && tabs.diamond.markup_price;
-    const hasFinalProduct = tabs?.finelProduct?.price;
 
     // Determine current step 
     const currentStep = tabs?.currentStep || 0;
@@ -27,7 +33,7 @@ const TabComponent = () => {
     // Get price details
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
     const stonePrice = tabs?.diamond?.markup_price || null;
-    const finalPrice = tabs?.finelProduct?.price || null;
+    
     
 
     // Step configuration
@@ -53,9 +59,9 @@ const TabComponent = () => {
             number: 3,
             title: 'Complete your',
             subtitle: 'RING',
-            hasDetails: hasFinalProduct,
+            hasDetails: TotalPrice,
             productTitle: 'Total Price',
-            price: finalPrice
+            price: String(TotalPrice)
         }
     ];
 
@@ -70,6 +76,9 @@ const TabComponent = () => {
         steps = [steps[1], steps[0], steps[2]];
     }
 
+
+    console.log("steps",steps);
+    
 
     return (
         <>
@@ -94,17 +103,20 @@ const TabComponent = () => {
                             <div className="step-config-product-details flex-1 hidden text-right lg:block overflow-hidden py-2">
                                 {step.hasDetails && (
                                     <>
+                                    {console.log("step.price",step)}
                                         <div className="step-config-product-title text-xs text-black leading-1.1 whitespace-nowrap overflow-hidden text-ellipsis mb-1.5">
                                             {step.productTitle}
                                         </div>
                                         <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
+                                            {step.number === 0 && step.number === 1 &&
                                             <button
                                                 type="button"
                                                 className="text-customGray-200 underline text-xs leading-none"
                                                 onClick={() => toggleDrawer(true, step.number === 1 ? tabs?.ring || {} : tabs?.diamond || {})}
                                             >
                                                 {currentStep === step.number ? "Change" : 'View'}
-                                            </button>
+                                            </button>}
+
                                             {step.price && (
                                                 <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
                                                     <div>${step.price}</div>

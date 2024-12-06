@@ -16,16 +16,16 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
     if (type === "ring") {
       const productWithType = {
         diamond: getTabsProduct?.tabs?.diamond,
-        ring: {},
-        currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+        ring: null,
+        currentStep: 1
       };
       dispatch(addProductTabs(productWithType));
       navigate("/")
     } else {
       const productWithType = {
-        diamond: {},
+        diamond: null,
         ring: getTabsProduct?.tabs?.ring,
-        currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+        currentStep: 1
       };
       dispatch(addProductTabs(productWithType));
       navigate("/diamond-list")
