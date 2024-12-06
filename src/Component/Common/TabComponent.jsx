@@ -87,6 +87,8 @@ const TabComponent = () => {
         currentStep = 2;
     }
         
+    console.log("sasasa", tabs?.diamond?.type === "diamond");
+    
 
     return (
         <>
@@ -119,7 +121,7 @@ const TabComponent = () => {
                                             <button
                                                 type="button"
                                                 className="text-customGray-200 underline text-xs leading-none"
-                                                onClick={() => toggleDrawer(true, tabs?.diamond?.type === "diamond" ? tabs?.diamond || {} : tabs?.ring || {} )}
+                                                onClick={() => toggleDrawer(true, step?.subtitle === "STONE" ? tabs?.diamond || {} : tabs?.ring || {} )}
                                             >
                                                 {currentStep === step.number ? "Change" : 'View'}
                                             </button> : ""}
