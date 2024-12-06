@@ -70,12 +70,12 @@ const CompleteDetailsData = () => {
                                     {/* <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> |  */}
                                     <button
                                         type="button"
-                                        className="text-customGray-200 underline text-xs leading-none"
+                                        className="text-xs leading-tight text-customGray-500 underline"
                                         onClick={() => toggleDrawer(true, diamond?.ring)}
                                     >
                                         Change
                                     </button>
-
+                                    <span className='px-1 text-xs leading-tight text-customGray-500 uppercase'>i</span>
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
                                         to={`/ring-select/${diamond?.ring?.id?.split("/").pop()}`}
@@ -94,11 +94,12 @@ const CompleteDetailsData = () => {
                                     <p class="text-sm text-gray-500">{diamond?.diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.diamond?.certificate?.color} {diamond?.diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.diamond?.certificate?.shape} {diamond?.diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
                                     <button
                                         type="button"
-                                        className="text-customGray-200 underline text-xs leading-none"
+                                        className="text-xs leading-tight text-customGray-500 underline"
                                         onClick={() => toggleDrawer(true, diamond?.diamond)}
                                     >
                                         Change
                                     </button>
+                                    <span className='px-1 text-xs leading-tight text-customGray-500 uppercase'>i</span>
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
                                         to={`/diamond-list/${diamond?.diamond?.diamond?.certificate?.certNumber}`}
