@@ -75,9 +75,6 @@ const TabComponent = () => {
     }else if ((location.pathname === "/" || location.pathname === "/ring-select" ||location.pathname ===  `/ring-select/${tabs.ring?.id?.split("/").pop()}}`) && hasStoneDetails){
         steps = [steps[1], steps[0], steps[2]];
     }
-
-
-    console.log("steps",steps);
     
 
     return (

@@ -9,14 +9,25 @@ import SkeltoneDetailPage from '../../Component/Common/SkeltoneDetailPage'
 import CompleteDetailsInfo from './CompleteDetailsInfo'
 import CompleteDetailsImagesInfo from './CompleteDetailsImagesInfo'
 import { Link, useNavigate } from "react-router-dom";
+import ProductDetailsDrawer from '../../Component/Common/ProductDetailsDrawer'
 
 
 const CompleteDetailsData = () => {
+    const [open, setOpen] = React.useState(false);
+    const [productData, setproductData] = React.useState({});
 
     const { tabs: diamond, loading, error } = useSelector((state) => state.getTabsProduct);
     const diamondPrice = diamond?.diamond && parseFloat(diamond?.diamond?.price);
     const ringPrice = diamond?.ring && parseFloat(diamond?.ring?.variants.edges[0].node.price.amount);
     const TotalPrice = diamondPrice + ringPrice;
+
+
+
+
+    const toggleDrawer = (newOpen, product) => {
+        setOpen(newOpen);
+        setproductData(product)
+    };
 
     if (error) return <p>Error: {error}</p>;
 
@@ -56,8 +67,14 @@ const CompleteDetailsData = () => {
                                     <h3 class="text-sm  font-medium">{diamond?.ring?.title}</h3>
                                     <p class="text-sm text-gray-500">{diamond?.ring?.handle}</p>
 
-                                    <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> | 
-
+                                    {/* <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> |  */}
+                                    <button
+                                        type="button"
+                                        className="text-customGray-200 underline text-xs leading-none"
+                                        onClick={() => toggleDrawer(true, diamond?.ring)}
+                                    >
+                                        Change
+                                    </button>
 
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
@@ -75,10 +92,16 @@ const CompleteDetailsData = () => {
                                 <div>
                                     <h3 class="text-sm font-medium">Round</h3>
                                     <p class="text-sm text-gray-500">{diamond?.diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.diamond?.certificate?.color} {diamond?.diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.diamond?.certificate?.shape} {diamond?.diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
-                                    <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> | 
+                                    <button
+                                        type="button"
+                                        className="text-customGray-200 underline text-xs leading-none"
+                                        onClick={() => toggleDrawer(true, diamond?.diamond)}
+                                    >
+                                        Change
+                                    </button>
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
-                                         to={`/diamond-list/${diamond?.diamond?.diamond?.certificate?.certNumber}`}
+                                        to={`/diamond-list/${diamond?.diamond?.diamond?.certificate?.certNumber}`}
                                         aria-hidden="false"
                                     >
                                         View Details
@@ -152,6 +175,7 @@ const CompleteDetailsData = () => {
                 <AccordianforDetail />
                 <VirtualAppointment />
             </div>
+            {productData && open && <ProductDetailsDrawer toggleDrawer={toggleDrawer} open={open} productData={productData} />}
 
         </div>
     )
