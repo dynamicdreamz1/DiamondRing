@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BadgeComponent from '../../Component/Common/BadgeComponent'
 import AccordianforDetail from '../../Component/Common/AccordianforDetail'
 import VirtualAppointment from '../../Component/Common/VirtualAppointment'
@@ -9,6 +9,7 @@ import SkeltoneDetailPage from '../../Component/Common/SkeltoneDetailPage'
 import { addProductTabs } from '../../store/slices/TabProductSlice'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import LeftSideDiamondModel from '../DiamondList/Filter/LeftSideDiamondModel'
 
 
 const DiamondDetailData = () => {
@@ -17,6 +18,7 @@ const DiamondDetailData = () => {
   const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
   const getTabsProduct = useSelector((state) => state.getTabsProduct);
   const ringExists = getTabsProduct?.tabs?.ring;
+  const [selectedProductModel, setselectedProductModel] = useState(false);
 
 
   const handleDiamondAction = (diamond) => {
@@ -26,6 +28,7 @@ const DiamondDetailData = () => {
         currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
     };
     dispatch(addProductTabs(productWithType));
+    setselectedProductModel(true)
     if (getTabsProduct?.tabs?.ring && diamond) {
 
         if (getTabsProduct?.tabs?.ring && diamond) {
@@ -171,6 +174,7 @@ const DiamondDetailData = () => {
         <AccordianforDetail />
         <VirtualAppointment />
       </div>
+      <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
 
     </div>
   )
