@@ -31,6 +31,7 @@ const TabComponent = () => {
     const settingPrice = tabs?.ring?.variants?.edges?.[0]?.node?.price?.amount || null;
     const stonePrice = tabs?.diamond?.markup_price || null;
     
+    console.log("tabs",tabs.diamond.type === "diamond");
     
 
     // Step configuration
@@ -118,7 +119,7 @@ const TabComponent = () => {
                                             <button
                                                 type="button"
                                                 className="text-customGray-200 underline text-xs leading-none"
-                                                onClick={() => toggleDrawer(true, step.number === 1 ? tabs?.ring || {} : tabs?.diamond || {})}
+                                                onClick={() => toggleDrawer(true, tabs?.diamond?.type === "diamond" ? tabs?.diamond || {} : tabs?.ring || {} )}
                                             >
                                                 {currentStep === step.number ? "Change" : 'View'}
                                             </button> : ""}
