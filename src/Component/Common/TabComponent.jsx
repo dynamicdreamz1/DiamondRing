@@ -108,14 +108,14 @@ const TabComponent = () => {
                                             {step.productTitle}
                                         </div>
                                         <div className="step-config-price-and-buttons flex gap-2 items-center justify-end">
-                                            {step.number === 0 && step.number === 1 &&
+                                            {step.number === 1 || step.number === 2 ?
                                             <button
                                                 type="button"
                                                 className="text-customGray-200 underline text-xs leading-none"
                                                 onClick={() => toggleDrawer(true, step.number === 1 ? tabs?.ring || {} : tabs?.diamond || {})}
                                             >
                                                 {currentStep === step.number ? "Change" : 'View'}
-                                            </button>}
+                                            </button> : ""}
 
                                             {step.price && (
                                                 <div className="step-config-price text-customGray-400 text-xs leading-tight hidden lg:block">
