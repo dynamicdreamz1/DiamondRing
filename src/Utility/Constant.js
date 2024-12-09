@@ -1,15 +1,15 @@
 
 
-import claritySi1 from "../Component/assets/Images/claritySi1.svg";
-import claritySi2 from "../Component/assets/Images/claritySi2.svg";
-import claritySi3 from "../Component/assets/Images/claritySi3.svg";
-import claritySi4 from "../Component/assets/Images/claritySi4.svg";
-import claritySi5 from "../Component/assets/Images/claritySi5.svg";
-import claritySi6 from "../Component/assets/Images/claritySi6.svg";
-import claritySi7 from "../Component/assets/Images/claritySi7.svg";
-import cutgoodimg1 from "../Component/assets/Images/cutgoodimg1.svg";
-import cutgoodimg2 from "../Component/assets/Images/cutgoodimg2.svg";
-import cutgoodimg3 from "../Component/assets/Images/cutgoodimg3.svg";
+import claritySi1 from "../assets/Images/claritySi1.svg";
+import claritySi2 from "../assets/Images/Clarity2.svg";
+import claritySi3 from "../assets/Images/claritySi3.svg";
+import claritySi4 from "../assets/Images/claritySi4.svg";
+import claritySi5 from "../assets/Images/claritySi5.svg";
+import claritySi6 from "../assets/Images/claritySi6.svg";
+import claritySi7 from "../assets/Images/claritySi7.svg";
+import cutgoodimg1 from "../assets/Images/cutgoodimg1.svg";
+import cutgoodimg2 from "../assets/Images/cutgoodimg2.svg";
+import cutgoodimg3 from "../assets/Images/cutgoodimg3.svg";
 
 
 
