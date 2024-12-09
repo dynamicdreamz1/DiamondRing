@@ -11,14 +11,14 @@ const productSlice = createSlice({
   reducers: {
     fetchSingleDiamondStart: (state) => {
       state.loading = true;
-      state.error = null;      
+      state.error = null;
     },
     fetchSingleDiamondSuccess: (state, action) => {
-      const { diamond } = action.payload;      
+      const { diamond } = action.payload;
 
       state.loading = false;
-        // Replace products
-        state.diamond = diamond.data.diamonds_by_query.items[0];
+      // Replace products
+      state.diamond = diamond?.data?.diamonds_by_query?.items[0];
 
     },
     fetchSingleDiamondFailure: (state, action) => {
