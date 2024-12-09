@@ -54,15 +54,15 @@ const CompleteDetailsData = () => {
                     </div>
                 </div>
 
-                <div class="flex flex-col items-center justify-center ">
-                    <div class="bg-white  rounded-lg w-full">
-                        <div class="mt-0">
-                            <div class="flex justify-between items-center cpst-complete-info-block cpst-complete-info-setting rounded-lg p-3 border transition duration-300 border-transparent bg-customGray-150">
+                <div className="flex flex-col items-center justify-center ">
+                    <div className="bg-white  rounded-lg w-full">
+                        <div className="mt-0">
+                            <div className="flex justify-between items-center cpst-complete-info-block cpst-complete-info-setting rounded-lg p-3 border transition duration-300 border-transparent bg-customGray-150">
                                 <div>
-                                    <h3 class="text-sm  font-medium">{diamond?.ring?.title}</h3>
-                                    <p class="text-sm text-gray-500">{diamond?.ring?.handle}</p>
+                                    <h3 className="text-sm  font-medium">{diamond?.ring?.title}</h3>
+                                    <p className="text-sm text-gray-500">{diamond?.ring?.handle}</p>
 
-                                    {/* <a href="#" class="text-xs leading-tight text-customGray-500 underline">Change</a> |  */}
+                                    {/* <a href="#" className="text-xs leading-tight text-customGray-500 underline">Change</a> |  */}
                                     <button
                                         type="button"
                                         className="text-xs leading-tight text-customGray-500 underline"
@@ -79,14 +79,14 @@ const CompleteDetailsData = () => {
                                         View Details
                                     </Link>
                                 </div>
-                                <p class="text-2xl font-bold">${ringPrice}</p>
+                                <p className="text-2xl font-bold">${ringPrice}</p>
                             </div>
                         </div>
-                        <div class="mt-4">
-                            <div class="flex justify-between items-center cpst-complete-info-block cpst-complete-info-setting rounded-lg p-3 border transition duration-300 border-transparent bg-customGray-150">
+                        <div className="mt-4">
+                            <div className="flex justify-between items-center cpst-complete-info-block cpst-complete-info-setting rounded-lg p-3 border transition duration-300 border-transparent bg-customGray-150">
                                 <div>
-                                    <h3 class="text-sm font-medium">Round</h3>
-                                    <p class="text-sm text-gray-500">{diamond?.diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.diamond?.certificate?.color} {diamond?.diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.diamond?.certificate?.shape} {diamond?.diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
+                                    <h3 className="text-sm font-medium">Round</h3>
+                                    <p className="text-sm text-gray-500">{diamond?.diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.diamond?.certificate?.color} {diamond?.diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.diamond?.certificate?.shape} {diamond?.diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</p>
                                     <button
                                         type="button"
                                         className="text-xs leading-tight text-customGray-500 underline"
@@ -103,13 +103,13 @@ const CompleteDetailsData = () => {
                                         View Details
                                     </Link>
                                 </div>
-                                <p class="text-2xl font-bold">${diamondPrice}</p>
+                                <p className="text-2xl font-bold">${diamondPrice}</p>
                             </div>
                         </div>
-                        <div class="mt-6 text-center ">
-                            <p class="cpst-total-price-title text-customGray-300 mb-1.5">Total Price</p>
-                            <p class="text-2xl font-bold">${TotalPrice}</p>
-                            <p class="cpst-total-price-text text-1.5sm leading-none flex items-center justify-center gap-2 py-1.5 px-3 mx-auto mt-2 text-black bg-customGray-150 w-fit rounded-100">
+                        <div className="mt-6 text-center ">
+                            <p className="cpst-total-price-title text-customGray-300 mb-1.5">Total Price</p>
+                            <p className="text-2xl font-bold">${TotalPrice}</p>
+                            <p className="cpst-total-price-text text-1.5sm leading-none flex items-center justify-center gap-2 py-1.5 px-3 mx-auto mt-2 text-black bg-customGray-150 w-fit rounded-100">
                                 <svg className="w-5 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 19 12">
                                     <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#ReadyToShipNew)">
@@ -128,12 +128,12 @@ const CompleteDetailsData = () => {
                                 Ships in 2-4 weeks
                             </p>
                         </div>
-                        <div class="mt-4 space-y-2">
-                            <button class="bg-black text-white px-4 py-2 rounded-md w-full">Secure Checkout</button>
-                            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md w-full">Add to Shopping Bag</button>
+                        <div className="mt-4 space-y-2">
+                            <button className="bg-black text-white px-4 py-2 rounded-md w-full">Secure Checkout</button>
+                            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md w-full">Add to Shopping Bag</button>
                         </div>
-                        <div class="mt-4 text-center">
-                            <p class="text-gray-500">Pay in 12 interest-free installments of $105 <a href="#" class="text-blue-500 hover:text-blue-700">Learn more</a></p>
+                        <div className="mt-4 text-center">
+                            <p className="text-gray-500">Pay in 12 interest-free installments of $105 <a href="#" className="text-blue-500 hover:text-blue-700">Learn more</a></p>
                         </div>
                     </div>
                 </div>
@@ -142,30 +142,30 @@ const CompleteDetailsData = () => {
                 <BadgeComponent />
                 <CompleteDetailsInfo />
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold mb-4">Know your setting</h2>
-                    <div class="flex items-center mb-4">
-                        <span class="material-icons text-gray-500 mr-2">watercolor</span>
-                        <span class="text-gray-700 font-medium">METAL</span>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h2 className="text-xl font-bold mb-4">Know your setting</h2>
+                    <div className="flex items-center mb-4">
+                        <span className="material-icons text-gray-500 mr-2">watercolor</span>
+                        <span className="text-gray-700 font-medium">METAL</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">14k White Gold</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="w-6 h-6 bg-yellow-500 rounded-full mr-2"></div>
-                        <span class="text-gray-700">58.5% Gold</span>
+                    <h3 className="text-2xl font-bold mb-4">14k White Gold</h3>
+                    <div className="flex items-center mb-2">
+                        <div className="w-6 h-6 bg-yellow-500 rounded-full mr-2"></div>
+                        <span className="text-gray-700">58.5% Gold</span>
                     </div>
-                    <div class="flex items-center mb-2">
-                        <div class="w-6 h-6 bg-orange-500 rounded-full mr-2"></div>
-                        <span class="text-gray-700">25.4% Copper</span>
+                    <div className="flex items-center mb-2">
+                        <div className="w-6 h-6 bg-orange-500 rounded-full mr-2"></div>
+                        <span className="text-gray-700">25.4% Copper</span>
                     </div>
-                    <div class="flex items-center mb-2">
-                        <div class="w-6 h-6 bg-gray-400 rounded-full mr-2"></div>
-                        <span class="text-gray-700">8.7% Zinc</span>
+                    <div className="flex items-center mb-2">
+                        <div className="w-6 h-6 bg-gray-400 rounded-full mr-2"></div>
+                        <span className="text-gray-700">8.7% Zinc</span>
                     </div>
-                    <div class="flex items-center mb-2">
-                        <div class="w-6 h-6 bg-gray-500 rounded-full mr-2"></div>
-                        <span class="text-gray-700">7.3% Nickel</span>
+                    <div className="flex items-center mb-2">
+                        <div className="w-6 h-6 bg-gray-500 rounded-full mr-2"></div>
+                        <span className="text-gray-700">7.3% Nickel</span>
                     </div>
-                    <p class="text-gray-500 text-sm mt-4">The secret sauce that makes this piece: All white gold pieces are Rhodium plated</p>
+                    <p className="text-gray-500 text-sm mt-4">The secret sauce that makes this piece: All white gold pieces are Rhodium plated</p>
                 </div>
 
                 <AccordianforDetail />
