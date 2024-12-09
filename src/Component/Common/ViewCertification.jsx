@@ -1,7 +1,7 @@
 // CertificateImage.js
 import React from 'react';
-import GiaImg from "../assets/Images/giaImg.svg"
-import IgiImg from "../assets/Images/igiImg.svg"
+import GiaImg from "../../assets/Images/giaImg.svg"
+import IgiImg from "../../assets/Images/igiImg.svg"
 
 
 export const CertificateImage = ({ className, lab }) => {

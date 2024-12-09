@@ -5,7 +5,12 @@
     --grid-item-width: 355px;
     --header-height: 64px;
     --color-dark: #000;
-    --color-light: #fff
+    --color-light: #fff;
+    --popup_title_color: #000;
+    --popup_close_color: #bcbcbc;
+    --popup_bg_color: #fff;
+    --button_text_color: #fff;
+    --button_bg_color: #000;
 }
 
 aside {
