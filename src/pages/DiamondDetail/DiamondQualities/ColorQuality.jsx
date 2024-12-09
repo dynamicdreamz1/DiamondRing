@@ -15,34 +15,38 @@ const ColorQuality = () => {
           </div>
         </div>
       </div>
-      
+
       <div className='StoneEducationItem__Content w-full bg-white p-4 pb-3 rounded-lg shadow'>
         <div className='StoneEducationItem__ImageContainer mb-2 w-full'>
           <div className='StoneEducationItem__ImageWrapper relative pt-[60%]'>
-            <img 
-              className='absolute w-full h-full object-contain top-0 left-0 z-20' 
-              src={activeTab.stoneImg} 
-              alt={`${activeTab.name} color diamond stone`} 
+            <img
+              className='absolute w-full h-full object-contain top-0 left-0 z-20'
+              src={activeTab.stoneImg}
+              alt={`${activeTab.name} color diamond stone`}
             />
-            <img 
-              className='absolute w-full h-full object-contain top-0 left-0 z-10 transition-opacity duration-500 ease-in-out' 
-              style={{ 
-                opacity: activeTab.name === 'F' ? 0.2 : 
-                         activeTab.name === 'G' ? 0.4 : 
-                         activeTab.name === 'H' ? 0.6 : 
-                         activeTab.name === 'I' ? 0.8 : 
-                         activeTab.name === 'J' ? 1 : 1 
+            <img
+              className="absolute w-full h-full object-contain top-0 left-0 z-10 transition-opacity duration-500 ease-in-out"
+              style={{
+                opacity:
+                  activeTab.name === 'D' ? 0 :
+                    activeTab.name === 'E' ? 0 :
+                      activeTab.name === 'F' ? 0 :
+                        activeTab.name === 'G' ? 0.50 :
+                          activeTab.name === 'H' ? 0.50 :
+                            activeTab.name === 'I' ? 1 :
+                              activeTab.name === 'J' ? 1 : 1, // Default case
               }}
-              src={activeTab.solidImg} 
-              alt={`${activeTab.name} color diamond solid`} 
+              src={activeTab.solidImg}
+              alt={`${activeTab.name} color diamond solid`}
             />
+
           </div>
         </div>
-        
+
         <div className='mb-2 diamond-quality-shape-sec'>
           <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
             {colorTabsPanel.map((tab, index) => (
-              <button 
+              <button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab)}
@@ -62,14 +66,14 @@ const ColorQuality = () => {
             ))}
           </div>
         </div>
-        
+
         <div className="px-1 min-h-[3.25rem]">
           <div className="text-1.5sm text-black font-semibold leading-tight transition-all duration-300 ease-in-out">
             {activeTab.des}
           </div>
         </div>
       </div>
-      
+
       <div className="StoneEducationItem__PopupFooter pt-2 pb-3 px-1">
         <div className="text-xs leading-tight text-customGray-250">
           Color refers to the natural tint of a diamond. The closer the diamond is to "colorless" the rarer it is. The industry standard to grading color in a diamond is to assign a letter grade from D (colorless) to J (nearly colorless)
