@@ -6,7 +6,6 @@ const initialState = {
     lab: [],
     price_from: 200,
     price_to: 100000,
-    carat_from: "",
     carat_from: 1,
     carat_to: 10
     // color: [], // Array for multiple colors

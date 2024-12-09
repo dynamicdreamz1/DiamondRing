@@ -5,6 +5,8 @@ import RingDetails from '../pages/EngagementRingDetail/EngagementRingDetail'; //
 import DiamondList from '../pages/DiamondList/DiamondList'; // Create this component for detailed view
 import DiamondDetail from '../pages/DiamondDetail/DiamondDetail'; // Create this component for detailed view
 import CompleteProduct from '../pages/CompleteProduct/CompleteProduct'; // Create this component for detailed view
+import RingDetailInformation from '../pages/RingDetailInformation/RingDetailInformation'; // Create this component for detailed view
+
 
 
 const RoutesPage = () => {  
@@ -17,6 +19,7 @@ const RoutesPage = () => {
                 <Route path="/diamond-list" element={<DiamondList />} />
                 <Route path="/diamond-list/:diamondId" element={<DiamondDetail />} />
                 <Route path="/complete-product" element={<CompleteProduct />} />
+                <Route path="/ring-select/ring-detail" element={<RingDetailInformation />} />
                 <Route path="*" element={<RingSelector />} />
             </Routes>
         </Router>
