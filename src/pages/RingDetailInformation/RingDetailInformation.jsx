@@ -23,7 +23,7 @@ const RingDetailInformation = () => {
             <div className="text-sm text-customGray-300">November 5, 2023</div>
           </div>
           <div className='hidden md:block relative pt-[46%] overflow-hidden rounded-2xl mb-10'>
-            <img className='absolute inset-0 w-full h-full object-cover' src={ringdetailinfoimg1} />
+            <img className='absolute inset-0 w-full h-full object-cover' src={ringdetailinfoimg1} alt='ringdetailinfoimg1' />
           </div>
         </div>
       </div>
