@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { colorTabsPanel } from '../../../Utility/Constant';
+import colorqualityimg1 from "../../../assets/Images/color-quality-img1.svg";
+import colorqualityimg2 from "../../../assets/Images/color-quality-img2.svg";
 
 
 const ColorQuality = () => {
@@ -21,7 +23,7 @@ const ColorQuality = () => {
           <div className='StoneEducationItem__ImageWrapper relative pt-[60%]'>
             <img
               className='absolute w-full h-full object-contain top-0 left-0 z-20'
-              src={activeTab.stoneImg}
+              src={colorqualityimg1}
               alt={`${activeTab.name} color diamond stone`}
             />
             <img
@@ -36,7 +38,7 @@ const ColorQuality = () => {
                             activeTab.name === 'I' ? 1 :
                               activeTab.name === 'J' ? 1 : 1, // Default case
               }}
-              src={activeTab.solidImg}
+              src={colorqualityimg2}
               alt={`${activeTab.name} color diamond solid`}
             />
 
