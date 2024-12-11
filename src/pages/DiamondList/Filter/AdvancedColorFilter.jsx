@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
+import { useDispatch } from 'react-redux';
 
 const AdvancedColorFilter = () => {
   const optionsColor = ["J", "I", "H", "G", "F", "E", "D"];
-
+  const dispatch = useDispatch();
   const [selectedColor, setSelectedColor] = useState([...optionsColor]);
 
   const handleClickClarity = (clickedOption) => {
@@ -36,6 +38,14 @@ const AdvancedColorFilter = () => {
       }
     }
   };
+
+
+  useEffect(() => {
+    if (selectedColor) {
+        dispatch(updateFilter({ clarity: selectedColor })); // Update the Redux state with true/false
+    }
+}, [selectedColor])
+
 
   return (
     <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative">

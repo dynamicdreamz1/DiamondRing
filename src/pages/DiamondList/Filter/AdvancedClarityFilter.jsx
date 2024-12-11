@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
+import { useDispatch } from 'react-redux';
 
 const ClaritySelection = () => {
   const optionsClarity = ["SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"];
+  const dispatch = useDispatch();
 
   const [selectedClarity, setSelectedClarity] = useState([...optionsClarity]);
 
@@ -36,6 +39,14 @@ const ClaritySelection = () => {
       }
     }
   };
+
+
+  useEffect(() => {
+    if (selectedClarity) {
+        dispatch(updateFilter({ clarity: selectedClarity })); // Update the Redux state with true/false
+    }
+}, [selectedClarity])
+
 
   return (
     <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative">
