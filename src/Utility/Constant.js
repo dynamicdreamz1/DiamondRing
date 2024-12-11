@@ -10,6 +10,16 @@ import claritySi7 from "../assets/Images/claritySi7.svg";
 import cutgoodimg1 from "../assets/Images/cutgoodimg1.svg";
 import cutgoodimg2 from "../assets/Images/cutgoodimg2.svg";
 import cutgoodimg3 from "../assets/Images/cutgoodimg3.svg";
+import slidercoupleimg1 from "../assets/Images/slider-couple-img1.webp";
+import slidercoupleimg2 from "../assets/Images/slider-couple-img2.webp";
+import slidercoupleimg3 from "../assets/Images/slider-couple-img3.webp";
+import slidercoupleimg4 from "../assets/Images/slider-couple-img4.webp";
+import slidercoupleimg5 from "../assets/Images/slider-couple-img5.webp";
+import slidercoupleimg6 from "../assets/Images/slider-couple-img6.webp";
+import slidercoupleimg7 from "../assets/Images/slider-couple-img7.webp";
+import slidercoupleimg8 from "../assets/Images/slider-couple-img8.webp";
+import slidercoupleimg9 from "../assets/Images/slider-couple-img9.webp";
+import slidercoupleimg10 from "../assets/Images/slider-couple-img10.webp";
 
 
 
@@ -80,52 +90,52 @@ export const productSliderBadgesData = [
   {
     title: "Shea & Josh Schmidt",
     description: "Our day was so special filled with family and so much love! My fiancé Josh told me we were going to...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0185_1_1_1.webp?v=1689797224&width=760&height=938&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg1,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Nicole & Joel Van Dyk",
     description: "My fiancée and I flew out east to PEI to visit his family and explore the island. When we decided...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/Couple_2.webp?v=1689797482&width=398&height=508&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg2,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Cristina & Kyle Rankin",
     description: "We got engaged while on vacation in Exuma. Kyle proposed on the most beautiful beach...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/D6B77B56-548D-42F3-BE1B-7723AA89B29C_1_2.webp?v=1689797904&width=807&height=663&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg3,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Sarah & Jalen Bailey",
     description: "Jay and I met on a hinge, and within a day we had our first date at a coffee shop. One of our favorites...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/Couple_1.webp?v=1692182685&width=426&height=508&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg4,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Grace Anne & Chad Byrd",
     description: "We had talked about getting engaged for a while and Chad wanted to surprise me. He knew...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/857927EE-5DBD-4043-9BD6-0E8A8E94DA89_1_1.webp?v=1692182889&width=576&height=864&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg5,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Kiley & Robbie Reynolds",
     description: "About 3 years ago, my mom and sister told me they worked with a guy who would be a perfect...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/383C03F9-2E6D-432B-8693-CEFD8DB1620A_3_1.jpg?v=1692183093&width=1440&height=2160&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg6,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Baylee & Colin Trach",
     description: "We met at a New Year’s Eve party in 2017 and started dating 5 months later, after talking to each other...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/BAE2A357-44DD-4A4F-9A12-C548A9A02EB7_2_1.jpg?v=1692183215&width=1124&height=1406&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg7,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Meagan & Michael Campbell",
     description: "Michael and I had been dating for almost 4 years when he popped the question in Chicago by...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0166_1.jpg?v=1692183479&width=1170&height=1441&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg8,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Dana & Chris Baum",
     description: "Chris and I had been together 5 years, so the proposal wasn’t a surprise, I mean right...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0087_2_1.webp?v=1692183614&width=585&height=669&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg9,  // Replace with the actual SVG path or relevant icon data
   },
   {
     title: "Chloe & Zach Squire",
     description: "We are from Denver, Colorado, and moved to Austin in July of 2022. So the majority of our friends...",
-    icon: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/IMG_0122_3_1.jpg?v=1692183787&width=1170&height=1444&crop=center",  // Replace with the actual SVG path or relevant icon data
+    icon: slidercoupleimg10,  // Replace with the actual SVG path or relevant icon data
   },
 ];
 
@@ -169,49 +179,37 @@ export const colorTabsPanel = [
     id: 1, 
     name: "J", 
     des: "Near colorless with a slight yellow or brown tint. More affordable option.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
   { 
     id: 2, 
     name: "I", 
     des: "Near colorless with a very slight yellow or brown tint. Good value.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
   { 
     id: 3, 
     name: "H", 
     des: "Near colorless with minimal yellow tint. Popular for balance of quality and price.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
   { 
     id: 4, 
     name: "G", 
     des: "Near colorless with very slight color. Excellent value and quality.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
   { 
     id: 5, 
     name: "F", 
     des: "Completely colorless, these diamonds are rare and highly sought after. A good choice when money is no object.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
   { 
     id: 6, 
     name: "E", 
     des: "Completely colorless, these diamonds are rare and highly sought after. A good choice when money is no object.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
   },
   { 
     id: 7, 
     name: "D", 
     des: "Completely colorless, these diamonds are rare and highly sought after. A good choice when money is no object.", 
-    stoneImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-stone-6BRHTXNY.svg",
-    solidImg: "https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/kzr-Color-solid-WWFSS453.svg"
+    stoneImg: "",
+    solidImg: ""
   },
 ];
