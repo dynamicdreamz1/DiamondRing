@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from './ViewCertification';
 
-const AccordianforDetail = () => {
+const AccordianforDetail = ({ring}) => {
     const { diamond } = useSelector((state) => state.singleDiamond);
     return (
         <div className="mt-4 accordian-main-sec">
@@ -18,7 +18,7 @@ const AccordianforDetail = () => {
                 >
                     <div className='flex items-center gap-2'>
                         <svg className="cpst-tab-icon w-6 h-6" aria-hidden="true" focusable="false"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.9085 8H11.0919L2 17.0923L19.9924 33.0628L37.9707 17.1189L38 17.0923L28.9085 8ZM11.916 9.99069H21.8844L27.7042 17.0359L19.6717 30.1165L4.90143 17.0067L11.916 9.99069ZM24.0319 26.8208L30.1461 16.8659L24.4671 9.99069H28.084L35.0986 17.0055L24.0319 26.8208ZM19.6447 26.4863L9.19873 17.2133L14.4772 11.9346L13.4674 16.419L19.6447 26.4863Z" fill="currentColor"></path></svg></svg>
-                        <div className='cpst-tab-toggler-title flex-1 text-black text-left capitalize'>Ring Details</div>
+                        <div className='cpst-tab-toggler-title flex-1 text-black text-left capitalize'>{ring ? ring : "Diamond"} Details</div>
                     </div>
                 </AccordionSummary>
                 <AccordionDetails>
