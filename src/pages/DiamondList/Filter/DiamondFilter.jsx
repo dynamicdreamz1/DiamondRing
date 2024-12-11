@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { resetFilters, updateFilter } from '../../../store/slices/diamondFilterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import DiamondShapeFilter from './DiamondShapeFilter';
@@ -6,9 +6,11 @@ import CertificateFilter from './CertificateFilter';
 import PriceFilter from './PriceFilter';
 import CaratFilter from './CaratFilter';
 import AdvancedFilter from './AdvancedFilter';
+import AdvancedSlideFilter from './AdvancedSlideFilter';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
+    const [cutFilter, setCutFilter] = useState([])
     const dispatch = useDispatch();
 
 
@@ -20,7 +22,15 @@ const DiamondFilter = () => {
     const handleResetFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
-    
+
+
+    useEffect(() => {
+        if (cutFilter) {
+            dispatch(updateFilter({ cut: cutFilter })); // Update the Redux state with true/false
+        }
+    }, [cutFilter])
+
+
     return (
         <>
             <div className='stone-button-main flex rounded-md relative bg-customGray-50 border border-borders max-w-[17.5rem] md:relative  md:max-w-[31rem] mx-auto md:z-10 my-3 md:my-6'>
@@ -76,7 +86,7 @@ const DiamondFilter = () => {
 
             <div className="w-full hidden md:flex justify-center items-center col-span-2 xl:w-full collection-filters-item-with-custom-width-and-order gap-1.5 py-6">
                 <div className="flex-1 h-px bg-borders"></div>
-                <button onClick={()=>handleResetFilter()}  type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">
+                <button onClick={() => handleResetFilter()} type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">
                     <span>Reset</span>
                     <svg className="block w-2.5 h-2.5" viewBox="0 0 14 14">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +120,7 @@ const DiamondFilter = () => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
                         <div className="text-base font-bold text-black leading-none">Color</div>
@@ -146,23 +156,8 @@ const DiamondFilter = () => {
                         </button>
                     </div>
 
-                    <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative md:mt-4">
-                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
-                            <span>Good</span>
-                            <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
-                        </button>
-                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
-                            <span>Very Good</span>
-                            <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
-                        </button>
-                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview">
-                            <span>Excellent</span>
-                            <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
-                        </button>
-                        <div className="absolute top-0 bottom-0 transition-position-width duration-500 pointer-events-none rounded-lg bg-white" style={{ left: "0%", right: "0%" }}>
-                            <div className="absolute w-full h-full transition-width duration-500 border border-black ring-1 ring-black rounded-lg z-20"></div>
-                        </div>
-                    </div>
+                    <AdvancedSlideFilter setFilter={setCutFilter} />
+
                 </div>
             </div>
 

@@ -7,7 +7,10 @@ const initialState = {
     price_from: 200,
     price_to: 100000,
     carat_from: 1,
-    carat_to: 10
+    carat_to: 10,
+    cut: [],
+    polish: [],
+    symmetry: [],
     // color: [], // Array for multiple colors
     // clarity: [], // Array for multiple clarity values
     // cut: [], // Array for multiple cut values

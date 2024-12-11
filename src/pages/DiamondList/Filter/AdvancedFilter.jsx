@@ -2,10 +2,31 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import AdvancedSlideFilter from './AdvancedSlideFilter';
+import { useDispatch } from 'react-redux';
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
 
 
 const AdvancedFilter = () => {
+    const dispatch = useDispatch();
+    const [symmetryFilter, setSymetryFilter] = useState([])
+    const [polishFilter, setPolishFilter] = useState([])
+
+
+    useEffect(() => {
+        if (symmetryFilter) {
+            dispatch(updateFilter({ cut: symmetryFilter })); // Update the Redux state with true/false
+        }
+    }, [symmetryFilter])
+
+
+    useEffect(() => {
+        if (polishFilter) {
+            dispatch(updateFilter({ cut: polishFilter })); // Update the Redux state with true/false
+        }
+    }, [polishFilter])
+
     return (
         <div className='advance-quality-main-sec pb-5'>
             <Accordion>
@@ -44,13 +65,9 @@ const AdvancedFilter = () => {
                                     <div className="text-[#d97ab2] bg-white absolute z-30 invisible opacity-0 transition-all duration-300 rounded-lg shadow-[0_3px_8px_1px_rgba(0,0,0,0.25)] text-sm leading-snug py-4 px-5 left-[150%] top-1/2 w-[58vw] -translate-y-1/2 -translate-x-[6%] group-hover:visible group-hover:opacity-100 group-hover:-translate-x-[2%] md:text-1.5xs md:p-6 md:w-60 md:left-[200%]">Diamond Symmetry refers to how well aligned the facets of a diamond are.</div>
                                 </div>
                             </div>
-                            <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative md:mt-4">
-                                <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>Good</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>Very Good</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>Excellent</span></button>
-                                <div className="absolute top-0 bottom-0 transition-position-width duration-500 pointer-events-none rounded-lg bg-white" style={{ left: "0%", right: "0%" }}>
-                                    <div className="absolute w-full h-full transition-width duration-500 border border-black ring-1 ring-black rounded-lg z-20"></div>
-                                </div>
 
-                            </div>
+                            <AdvancedSlideFilter setFilter={setSymetryFilter} />
+
                         </div>
                         <div className='advance-quality-item-box w-full md:w-1/2-gap-6 xl:w-1/2-gap-10'>
                             <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
@@ -66,12 +83,8 @@ const AdvancedFilter = () => {
                                     <div className="text-[#d97ab2] bg-white absolute z-30 invisible opacity-0 transition-all duration-300 rounded-lg shadow-[0_3px_8px_1px_rgba(0,0,0,0.25)] text-sm leading-snug py-4 px-5 left-[150%] top-1/2 w-[58vw] -translate-y-1/2 -translate-x-[6%] group-hover:visible group-hover:opacity-100 group-hover:-translate-x-[2%] md:text-1.5xs md:p-6 md:w-60 md:left-[200%]">Polish refers to the degree of smoothness of each facet of a diamond.</div>
                                 </div>
                             </div>
-                            <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative md:mt-4">
-                                <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>Good</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>Very Good</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>Excellent</span></button>
-                                <div className="absolute top-0 bottom-0 transition-position-width duration-500 pointer-events-none rounded-lg bg-white" style={{ left: "0%", right: "0%" }}>
-                                    <div className="absolute w-full h-full transition-width duration-500 border border-black ring-1 ring-black rounded-lg z-20"></div>
-                                </div>
-                            </div>
+                            <AdvancedSlideFilter setFilter={setPolishFilter} />
+
                         </div>
                     </div>
                 </AccordionDetails>
