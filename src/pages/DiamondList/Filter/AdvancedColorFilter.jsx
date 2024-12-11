@@ -8,69 +8,32 @@ const AdvancedColorFilter = () => {
   const handleClickClarity = (clickedOption) => {
     const clickedIndex = optionsColor.indexOf(clickedOption);
 
-    // If all options are selected
+    // If all options are selected, reset to select only the clicked option
     if (selectedColor.length === optionsColor.length) {
-      setSelectedColor([clickedOption]); // Select only the clicked option
-      return;
-    }
-
-    // If only one option is selected
-    if (selectedColor.length === 1) {
-      const singleSelectedIndex = optionsColor.indexOf(selectedColor[0]);
-      const newSelection = optionsColor.slice(
-        Math.min(singleSelectedIndex, clickedIndex),
-        Math.max(singleSelectedIndex, clickedIndex) + 1
-      );
-      setSelectedColor(newSelection);
-      return;
-    }
-
-    // If two options are selected
-    if (selectedColor.length === 2) {
-      // If the clicked option is one of the selected options, deselect it and leave the other one selected
-      if (selectedColor.includes(clickedOption)) {
-        const newSelection = selectedColor.filter((opt) => opt !== clickedOption);
-        setSelectedColor(newSelection);
-        return;
-      }
-      // If the clicked option is not one of the selected options, reset to select only the clicked option
       setSelectedColor([clickedOption]);
       return;
     }
 
-    const currentMinIndex = Math.min(...selectedColor.map((opt) => optionsColor.indexOf(opt)));
-    const currentMaxIndex = Math.max(...selectedColor.map((opt) => optionsColor.indexOf(opt)));
-
-    // If the clicked option is already selected
-    if (selectedColor.includes(clickedOption)) {
-      // If it's the last selected option, revert to all options
-      if (selectedColor.length === 1) {
-        setSelectedColor([...optionsColor]);
-        return;
-      }
-
-      // Otherwise, deselect the clicked option
-      const newSelection = selectedColor.filter((opt) => opt !== clickedOption);
-      setSelectedColor(newSelection);
-      return;
-    }
-
-    // If clicked option is adjacent to the current range
-    if (clickedIndex === currentMinIndex - 1 || clickedIndex === currentMaxIndex + 1) {
-      const newSelection = [...new Set([...selectedColor, clickedOption])].sort(
-        (a, b) => optionsColor.indexOf(a) - optionsColor.indexOf(b)
-      );
-      setSelectedColor(newSelection);
-      return;
-    }
-
-    // If clicked option is outside the current range, reset to the range between clicked and current selection
-    if (clickedIndex < currentMinIndex || clickedIndex > currentMaxIndex) {
+    // If only one option is selected, select the range of clarity options between the first selected and the clicked one
+    if (selectedColor.length === 1) {
       const newSelection = optionsColor.slice(
-        Math.min(currentMinIndex, clickedIndex),
-        Math.max(currentMaxIndex, clickedIndex) + 1
+        Math.min(optionsColor.indexOf(selectedColor[0]), clickedIndex),
+        Math.max(optionsColor.indexOf(selectedColor[0]), clickedIndex) + 1
       );
       setSelectedColor(newSelection);
+      return;
+    }
+
+    // If multiple options are selected, toggle the clicked option
+    if (selectedColor.length > 1) {
+      // If the clicked option is already selected, deselect it
+      if (selectedColor.includes(clickedOption)) {
+        const newSelection = selectedColor.filter((opt) => opt !== clickedOption);
+        setSelectedColor(newSelection);
+      } else {
+        // Otherwise, select the clicked option only
+        setSelectedColor([clickedOption]);
+      }
     }
   };
 
