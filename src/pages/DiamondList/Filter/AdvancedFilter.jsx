@@ -16,14 +16,14 @@ const AdvancedFilter = () => {
 
     useEffect(() => {
         if (symmetryFilter) {
-            dispatch(updateFilter({ cut: symmetryFilter })); // Update the Redux state with true/false
+            dispatch(updateFilter({ symmetry: symmetryFilter })); // Update the Redux state with true/false
         }
     }, [symmetryFilter])
 
 
     useEffect(() => {
         if (polishFilter) {
-            dispatch(updateFilter({ cut: polishFilter })); // Update the Redux state with true/false
+            dispatch(updateFilter({ polish: polishFilter })); // Update the Redux state with true/false
         }
     }, [polishFilter])
 
