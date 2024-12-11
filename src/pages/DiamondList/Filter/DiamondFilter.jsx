@@ -7,6 +7,7 @@ import PriceFilter from './PriceFilter';
 import CaratFilter from './CaratFilter';
 import AdvancedFilter from './AdvancedFilter';
 import AdvancedSlideFilter from './AdvancedSlideFilter';
+import ClaritySelection from './AdvancedClarityFilter';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
@@ -22,6 +23,7 @@ const DiamondFilter = () => {
     const handleResetFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
+    
 
 
     useEffect(() => {
@@ -123,7 +125,7 @@ const DiamondFilter = () => {
 
                 <div className='collection-filter-item'>
                     <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
-                        <div className="text-base font-bold text-black leading-none">Color</div>
+                        <div className="text-base font-bold text-black leading-none">Clarity</div>
                         <button className="w-4 h-4 md:w-3 md:h-3 mb-1 cursor-help" title="help">
                             <svg className="w-4 h-4 md:w-3 md:h-3 text-customGray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
@@ -134,12 +136,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative md:mt-4">
-                        <button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>J</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>I</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>H</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>G</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>F</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>E</span><span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span></button><button type="button" className="flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 bg-transparent text-black" title="Preview"><span>D</span></button>
-                        <div className="absolute top-0 bottom-0 transition-position-width duration-500 pointer-events-none rounded-lg bg-white" style={{ left: "0%", right: "0%" }}>
-                            <div className="absolute w-full h-full transition-width duration-500 border border-black ring-1 ring-black rounded-lg z-20"></div>
-                        </div>
-                    </div>
+                    <ClaritySelection />
                 </div>
 
                 <div className='collection-filter-item'>
