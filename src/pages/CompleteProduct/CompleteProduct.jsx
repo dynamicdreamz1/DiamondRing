@@ -5,6 +5,10 @@ import GetInTouch from '../../Component/Common/GetInTouch';
 import OurWork from '../../Component/Common/OurWork';
 import NewsletterFooter from '../../Component/Common/Footer/NewsletterFooter';
 import CompleteDetailsData from './CompleteDetailsData';
+import completeproductleftimg1 from '../../assets/Images/complete-product-left-img1.webp';
+import completeproductleftimg2 from '../../assets/Images/complete-product-left-img2.webp';
+import completeproductleftimg3 from '../../assets/Images/complete-product-left-img3.webp';
+import completeproductleftimg4 from '../../assets/Images/complete-product-left-img4.webp';
 
 const CompleteProduct = () => {
   return (
@@ -26,18 +30,22 @@ const CompleteProduct = () => {
           <div className='InTheBox__content mt-2 md:mt-8'>
             <div className='in-the-box-left-img'>
               <div className='InTheBox__block relative'>
-                <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-1-RZBQU2VJ.png" alt="" />
+                {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-1-RZBQU2VJ.png" alt="" /> */}
+                <img src={completeproductleftimg1} alt="" />
               </div>
               <div className='InTheBox__block relative'>
-                <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-2-344RVWWW.png" alt="" />
+                {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-2-344RVWWW.png" alt="" /> */}
+                <img src={completeproductleftimg2} alt="" />
               </div>
               <div className='InTheBox__block relative'>
-                <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-3-OTCBUBMF.png" alt="" />
+                {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-3-OTCBUBMF.png" alt="" /> */}
+                <img src={completeproductleftimg3} alt="" />
               </div>
             </div>
             <div className='in-the-box-right-img'>
               <div className='InTheBox__block relative'>
-                <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-4-KOBOPSIL.png" alt="" />
+                {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-4-KOBOPSIL.png" alt="" /> */}
+                <img src={completeproductleftimg4} alt="" />
               </div>
             </div>
           </div>
