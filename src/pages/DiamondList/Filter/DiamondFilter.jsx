@@ -148,9 +148,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-
                     <AdvancedSlideFilter setFilter={setCutFilter} />
-
                 </div>
             </div>
 
