@@ -4,7 +4,7 @@ import { CertificateImage, ViewCertificate } from "../../Component/Common/ViewCe
 
 const CompleteDetailsImagesInfo = () => {
 
-  const { tabs:diamond, loading, error } = useSelector((state) => state.getTabsProduct);
+  const { tabs:diamond } = useSelector((state) => state.getTabsProduct);
 
   return (
     <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>

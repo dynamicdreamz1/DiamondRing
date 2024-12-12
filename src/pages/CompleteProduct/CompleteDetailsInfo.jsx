@@ -5,17 +5,7 @@ import stoneClarityBGimg from '../../assets/Images/stoneClarityBGimg.png';
 import stoneDimensionsimg from '../../assets/Images/stoneDimensions-img.webp';
 
 const CompleteDetailsInfo = () => {
-  const { tabs:diamond, loading, error } = useSelector((state) => state.getTabsProduct);
-
-  const handleViewCertificateClick = () => {
-    if (diamond.diamond.certificate.lab === "GIA") {
-      window.open(`https://www.gia.edu/report-check-landing?reportno=${diamond.diamond.certificate.certNumber}`, '_blank');
-    } else if (diamond.diamond.certificate.lab === "IGI") {
-      window.open(`https://www.igi.org/verify-your-report/?r=${diamond.diamond.certificate.certNumber}`, '_blank');
-    } else {
-      console.error("Unknown certificate lab");
-    }
-  };
+  const { tabs:diamond} = useSelector((state) => state.getTabsProduct);
 
 
   return (

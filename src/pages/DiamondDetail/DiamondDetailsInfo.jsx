@@ -6,17 +6,6 @@ import stoneDimensionsimg from '../../assets/Images/stoneDimensions-img.webp';
 const DiamondDetailsInfo = () => {
   const { diamond } = useSelector((state) => state.singleDiamond);
 
-  const handleViewCertificateClick = () => {
-    if (diamond.diamond.certificate.lab === "GIA") {
-      window.open(`https://www.gia.edu/report-check-landing?reportno=${diamond.diamond.certificate.certNumber}`, '_blank');
-    } else if (diamond.diamond.certificate.lab === "IGI") {
-      window.open(`https://www.igi.org/verify-your-report/?r=${diamond.diamond.certificate.certNumber}`, '_blank');
-    } else {
-      console.error("Unknown certificate lab");
-    }
-  };
-
-
   return (
     <div className="StoneProductInfo rounded-2.5xl p-3 bg-customGray-150 mt-4 mb-4">
       <h3 className="StoneProductInfo__title flex items-center gap-2 mb-2" tabIndex="-1">

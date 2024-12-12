@@ -24,7 +24,7 @@ const DiamondFilter = () => {
     const handleResetFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
-    
+
 
 
     useEffect(() => {
@@ -116,7 +116,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                   <AdvancedColorFilter />
+                    <AdvancedColorFilter />
                 </div>
 
                 <div className='collection-filter-item'>
