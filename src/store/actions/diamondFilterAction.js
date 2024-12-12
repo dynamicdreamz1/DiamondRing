@@ -7,10 +7,20 @@ import axios from "axios";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+let cancelTokenSource = null;
+
 export const fetchDiamondList = (filter) => async (dispatch) => {
     try {
+        // Cancel the previous request if it exists
+        if (cancelTokenSource) {
+            cancelTokenSource.cancel("Operation canceled due to a new request.");
+        }
+
+        // Create a new CancelToken source
+        cancelTokenSource = axios.CancelToken.source();
+
         dispatch(diamondsFetchStart());
-        
+
         // Create a new FormData instance
         const formData = new FormData();
 
@@ -26,19 +36,23 @@ export const fetchDiamondList = (filter) => async (dispatch) => {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
+            cancelToken: cancelTokenSource.token,
         });
 
         dispatch(
             diamondsFetchSuccess({
-                diamonds: response.data, // Access the `product` field in the response
+                diamonds: response.data,
             })
         );
 
         return response?.data;
     } catch (error) {
-        dispatch(diamondsFetchFailure(error.message));
-        console.error("Error fetching product:", error);
+        if (axios.isCancel(error)) {
+            console.warn("Request canceled:", error.message);
+        } else {
+            dispatch(diamondsFetchFailure(error.message));
+            console.error("Error fetching product:", error);
+        }
         throw error;
     }
 };
-
