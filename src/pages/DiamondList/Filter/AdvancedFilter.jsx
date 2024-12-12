@@ -18,14 +18,14 @@ const AdvancedFilter = () => {
         if (symmetryFilter) {
             dispatch(updateFilter({ symmetry: symmetryFilter })); // Update the Redux state with true/false
         }
-    }, [symmetryFilter])
+    }, [symmetryFilter, dispatch])
 
 
     useEffect(() => {
         if (polishFilter) {
             dispatch(updateFilter({ polish: polishFilter })); // Update the Redux state with true/false
         }
-    }, [polishFilter])
+    }, [polishFilter, dispatch])
 
     return (
         <div className='advance-quality-main-sec pb-5'>

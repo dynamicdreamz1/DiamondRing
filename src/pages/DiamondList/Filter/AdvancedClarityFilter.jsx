@@ -43,9 +43,9 @@ const ClaritySelection = () => {
 
   useEffect(() => {
     if (selectedClarity) {
-        dispatch(updateFilter({ clarity: selectedClarity })); // Update the Redux state with true/false
+      dispatch(updateFilter({ clarity: selectedClarity })); // Update the Redux state with true/false
     }
-}, [selectedClarity])
+  }, [selectedClarity, dispatch])
 
 
   return (

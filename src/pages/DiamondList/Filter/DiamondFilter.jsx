@@ -31,7 +31,7 @@ const DiamondFilter = () => {
         if (cutFilter) {
             dispatch(updateFilter({ cut: cutFilter })); // Update the Redux state with true/false
         }
-    }, [cutFilter])
+    }, [cutFilter, dispatch])
 
 
     return (
