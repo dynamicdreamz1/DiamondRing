@@ -110,7 +110,7 @@ const EngagementRingDetailData = () => {
                                 </a>
                             </div>
                             <div className="tangiblee-wrapper pdp">
-                                <div className="tangiblee-cta font-medium" data-click-and-touch-bound="true" role="button" tabindex="0" aria-label="tangiblee cta" aria-hidden="false">Try-On</div>
+                                <div className="tangiblee-cta font-medium" data-click-and-touch-bound="true" role="button" tabIndex="0" aria-label="tangiblee cta" aria-hidden="false">Try-On</div>
                             </div>
                             <div className='drop-hint'>
                                 <a href="#" className='inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto DropAHint-button flex flex-col items-center justify-center gap-1 p-0 ml-2 mt-1'>
@@ -242,13 +242,13 @@ const EngagementRingDetailData = () => {
                                             </g>
                                         </svg>
                                     </div>
-                                    <p className="text-base leading-tight" tabindex="-1">Add to wish list</p>
+                                    <p className="text-base leading-tight" tabIndex="-1">Add to wish list</p>
                                 </div>
                             </a>
                         </div>
                         <BadgeComponent />
                         <div className="StoneProductInfo rounded-2.5xl p-3 bg-customGray-150 mt-4 mb-4">
-                            <h3 className="StoneProductInfo__title flex items-center gap-2 mb-2" tabindex="-1">
+                            <h3 className="StoneProductInfo__title flex items-center gap-2 mb-2" tabIndex="-1">
                                 <svg className="w-8 h-8 p-1.5 rounded-full bg-white overflow-visible" aria-hidden="true" focusable="false">
                                     <svg viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.1578 4.461L18.3882 10.0077L24.6247 4.461" stroke="currentColor" stroke-miterlimit="10"></path>
@@ -261,7 +261,7 @@ const EngagementRingDetailData = () => {
                                 <div className='StoneDetailBlock  p-3 flex flex-col justify-between'>
                                     <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
                                         <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6.5H3C2.17157 6.5 1.5 7.17157 1.5 8C1.5 8.82843 2.17157 9.5 3 9.5H13C13.8284 9.5 14.5 8.82843 14.5 8C14.5 7.17157 13.8284 6.5 13 6.5Z" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.71289 3.60535L8.16648 5.06315L10.6201 3.60535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 4.85535V1.10535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M10.6201 12.3946L8.16648 10.9368L5.71289 12.3946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 11.1446V14.8946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path></svg></svg>
-                                        <p className="cpcst-detail-title" tabindex="-1">Width</p>
+                                        <p className="cpcst-detail-title" tabIndex="-1">Width</p>
                                     </div>
                                     <p className='StoneDetailBlock__content-value  flex-1 mb-2 lg:mb-3'>1.8mm</p>
                                     <span className='StoneDetailBlock__desc'>Measured at the base of the ring</span>
@@ -269,7 +269,7 @@ const EngagementRingDetailData = () => {
                                 <div className='StoneDetailBlock  p-3 flex flex-col justify-between'>
                                     <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
                                         <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6.5H3C2.17157 6.5 1.5 7.17157 1.5 8C1.5 8.82843 2.17157 9.5 3 9.5H13C13.8284 9.5 14.5 8.82843 14.5 8C14.5 7.17157 13.8284 6.5 13 6.5Z" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10"></path><path d="M5.71289 3.60535L8.16648 5.06315L10.6201 3.60535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 4.85535V1.10535" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M10.6201 12.3946L8.16648 10.9368L5.71289 12.3946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path><path d="M8.1665 11.1446V14.8946" stroke="#CA0000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path></svg></svg>
-                                        <p className="cpcst-detail-title" tabindex="-1">PROFILE</p>
+                                        <p className="cpcst-detail-title" tabIndex="-1">PROFILE</p>
                                     </div>
                                     <p className='StoneDetailBlock__content-value   mb-2'>Medium</p>
                                     <div className='StoneDetailBlock__content-image-container mb-2 relative flex items-center gap-1'>
@@ -280,7 +280,7 @@ const EngagementRingDetailData = () => {
                                 <div className='StoneDetailBlock StoneDetailBlock__fullwidth p-3 flex flex-col justify-between'>
                                     <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
                                         <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.52005 11.0862L0.930664 9.00729L1.6538 6.88812" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M2.73948 6.25928L1.65369 6.88816L4.5099 8.54243" stroke="#668BAD" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.24255 8.38739L4.52016 11.0862" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M13.9753 7.21783L15.0694 9.13377L8.10916 13.1651L4.51978 11.0862L5.62773 9.18988" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M5.2428 8.96701L8.09901 10.6213L13.9752 7.21785L12.5718 6.40503" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M8.09924 10.6213L8.10928 13.1651" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M11.4784 4.48907L12.5725 6.40501L6.70633 9.81426L3.11694 7.73534L3.84008 5.61618" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M6.69618 7.27048L11.4783 4.48911L8.62205 2.83484L3.83997 5.61622L6.69618 7.27048Z" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M6.69641 7.27045L6.70645 9.81426" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path></svg></svg>
-                                        <p className="cpcst-detail-title" tabindex="-1">METAL</p>
+                                        <p className="cpcst-detail-title" tabIndex="-1">METAL</p>
                                     </div>
                                     <p className='StoneDetailBlock__content-value  flex-1 mb-2 lg:mb-3'>14k White Gold</p>
                                     <div className="SettingDetailBlock__graph-container mt-3 flex items-center gap-4 mb-2 lg:mb-3">
@@ -320,7 +320,7 @@ const EngagementRingDetailData = () => {
                             <div className='add-extra-feature-sec StoneDetailBlock StoneDetailBlock__extras mt-2 p-3 flex items-center justify-between gap-2 text-customGray-500'>
                                 <div className='extra-star-icon flex items-center gap-1'>
                                     <svg className="w-4 h-4" aria-hidden="true" focusable="false" viewBox="0 0 14 14"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.90022 1.46712L8.09914 4.77441L8.21738 5.10059L8.56431 5.10399L12.2173 5.13974L9.31681 7.14024L9.00637 7.35436L9.12693 7.71169L10.226 10.969L7.17558 8.95637L6.90021 8.77468L6.62485 8.95637L3.57446 10.969L4.67351 7.71169L4.79407 7.35436L4.48363 7.14024L1.58315 5.13974L5.23613 5.10399L5.58306 5.10059L5.7013 4.77441L6.90022 1.46712Z" stroke="#D89571"></path></svg></svg>
-                                    <p className="cpcst-detail-title" tabindex="-1">Extras</p>
+                                    <p className="cpcst-detail-title" tabIndex="-1">Extras</p>
                                 </div>
                                 <a href="#" className='ExtrasText text-black underline'>Add Extra Features</a>
                             </div>

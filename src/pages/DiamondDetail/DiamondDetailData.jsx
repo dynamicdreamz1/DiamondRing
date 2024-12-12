@@ -77,35 +77,35 @@ const DiamondDetailData = () => {
         <div className="DiamondInfo__container my-4 md:my-6">
           <div className="DiamondInfo__wrapper flex flex-wrap justify-center items-center text-center">
             <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">
+              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabIndex="-1">
                 {diamond?.diamond?.certificate?.carats}
               </p>
-              <p className="DiamondInfo__block-title" tabindex="-1">Carat</p>
+              <p className="DiamondInfo__block-title" tabIndex="-1">Carat</p>
             </div>
             <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">
+              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabIndex="-1">
                 {diamond?.diamond?.certificate?.color}
               </p>
-              <p className="DiamondInfo__block-title" tabindex="-1">Color</p>
+              <p className="DiamondInfo__block-title" tabIndex="-1">Color</p>
             </div>
             <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">
+              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabIndex="-1">
                 {diamond?.diamond?.certificate?.clarity}
               </p>
-              <p className="DiamondInfo__block-title" tabindex="-1">Clarity</p>
+              <p className="DiamondInfo__block-title" tabIndex="-1">Clarity</p>
             </div>
             <div className="DiamondInfoDivider hidden md:block"></div>
             <div className="DiamondInfo__block px-2 relative w-1/4 md:w-1/3">
-              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">
+              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabIndex="-1">
                 {diamond?.diamond?.certificate?.cut}
               </p>
-              <p className="DiamondInfo__block-title" tabindex="-1">Cut</p>
+              <p className="DiamondInfo__block-title" tabIndex="-1">Cut</p>
             </div>
             <div className="DiamondInfo__block px-2 relative hidden w-1/3 md:block">
-              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabindex="-1">
+              <p className="DiamondInfo__block-value whitespace-nowrap overflow-hidden text-ellipsis" tabIndex="-1">
                 {(diamond?.diamond?.certificate?.length / diamond?.diamond?.certificate?.width).toFixed(2)}
               </p>
-              <p className="DiamondInfo__block-title" tabindex="-1">Ratio</p>
+              <p className="DiamondInfo__block-title" tabIndex="-1">Ratio</p>
             </div>
             <div className="DiamondInfo__block px-2 relative hidden w-1/3 md:block">
               <p
@@ -116,7 +116,7 @@ const DiamondDetailData = () => {
                   ? `${parseFloat(diamond.diamond.certificate.length).toFixed(2)} / ${parseFloat(diamond.diamond.certificate.width).toFixed(2)}`
                   : "N/A"}
               </p>
-              <p className="DiamondInfo__block-title" tabindex="-1">L/W (mm)</p>
+              <p className="DiamondInfo__block-title" tabIndex="-1">L/W (mm)</p>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ const DiamondDetailData = () => {
                   </g>
                 </svg>
               </div>
-              <p className="text-base leading-tight" tabindex="-1">Add to wish list</p>
+              <p className="text-base leading-tight" tabIndex="-1">Add to wish list</p>
             </div>
           </a>
         </div>

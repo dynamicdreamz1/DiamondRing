@@ -86,13 +86,13 @@ const RingSelector = () => {
           <header className="max-w-7xl mx-auto text-center">
             <h1
               className="text-black font-semibold text-1.5lg leading-none mb-1.5 md:text-3xl md:mb-2.5"
-              tabindex="-1"
+              tabIndex="-1"
             >
               Engagement Rings
             </h1>
             <p
               className="leading-tighter text-black/50 text-1.5sm md:text-xl"
-              tabindex="-1"
+              tabIndex="-1"
             >
               Discover our collection of made to order engagement rings and
               customize it to your preference

@@ -18,7 +18,7 @@ const RingDetailInformation = () => {
       <div className='md:px-6'>
         <div className='max-w-3xl mx-auto'>
           <div className='p-8 text-center md:px-5'>
-            <h1 className="text-2.5xl leading-tight md:text-4.25xl" tabindex="-1">Keyzar Jewelry: Where Craftsmanship Meets Creativity</h1>
+            <h1 className="text-2.5xl leading-tight md:text-4.25xl" tabIndex="-1">Keyzar Jewelry: Where Craftsmanship Meets Creativity</h1>
             <div className="w-px h-10 mx-auto my-2.5 bg-borders md:my-2"></div>
             <div className="text-sm text-customGray-300">November 5, 2023</div>
           </div>
@@ -36,7 +36,7 @@ const RingDetailInformation = () => {
                 <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
               </svg>
             </svg>
-            <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Our goal is to simplify engagement ring shopping and make it a more enjoyable experience. We accomplish this by designing sleek, sophisticated pieces that emulate contemporary styles. Our website is interactive and easy-to-use, making the engagement ring shopping process seamless and fun! We never imagined Keyzar would grow so rapidly. Our innovative approach to engagement ring shopping has been a smashing hit with couples worldwide!</strong></h3>
+            <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Our goal is to simplify engagement ring shopping and make it a more enjoyable experience. We accomplish this by designing sleek, sophisticated pieces that emulate contemporary styles. Our website is interactive and easy-to-use, making the engagement ring shopping process seamless and fun! We never imagined Keyzar would grow so rapidly. Our innovative approach to engagement ring shopping has been a smashing hit with couples worldwide!</strong></h3>
           </div>
           <p>
             <span className='font-normal'>Welcome to Keyzar - where creativity, expertise, and modern technology come together to revolutionize online jewelry shopping. Our mission is simple: to make every moment behind each piece of jewelry as special as possible for our customers. Whether it's a proposal, a gift, or a confession of love, we are dedicated to making these moments unforgettable.</span>
@@ -57,7 +57,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Exceptional Jewelry</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Exceptional Jewelry</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>We have worked in every area of the jewelry industry and know what it takes to create meaningful, long lasting jewelry. Our team is composed of high-achieving, creative thinkers, determined to make every piece with the utmost precision and care.</span></p>
           </div>
@@ -85,7 +85,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Growth and Innovation</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Growth and Innovation</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>We pride ourselves on our unwavering dedication to creativity and continuously strive to push the boundaries of design. Our talented artisans are constantly crafting unique and breathtaking jewelry styles that captivate the imagination and celebrate individuality.</span></p>
             <div className="flex items-center gap-2 mb-8">
@@ -94,7 +94,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Customer Care</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Customer Care</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>Our knowledgeable and passionate team provides support and guidance 24-6, making your jewelry purchase experience as effortless as it is memorable. Beyond the sale, we continue to be your trusted partner, helping you get the most out of your cherished pieces.</span></p>
           </div>
@@ -124,7 +124,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>We Reinvent the Way You Shop for Jewelry</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>We Reinvent the Way You Shop for Jewelry</strong></h3>
             </div>
 
             <p className='mb-10'><span className='font-normal'>Customizing your jewelry has never been easier. At Keyzar, you have access to all the resources you need to create the perfect piece! Although our products are made to order, production is fast, thanks to our incorporation of modern technologies at every step.</span></p>
@@ -134,7 +134,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Made To Order, Every Time</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Made To Order, Every Time</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>At Keyzar, all you need to do is imagine your dream ring and place your order – we take care of the rest. Our dedicated team of skilled artisans ensures that every piece of jewelry is crafted to order, bringing your imagination to life with precision and dedication.</span></p>
           </div>
@@ -155,7 +155,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Co-Designing Your Dreams</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Co-Designing Your Dreams</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>We believe that your jewelry should reflect your unique taste and personality. Our virtual tools empower you to become a co-designer, enabling you to create your dream piece exactly the way you envision it. Your jewelry should be as special as the moment it represents, and we are here to bring your vision to life.</span></p>
             <div className="flex items-center gap-2 mb-8">
@@ -164,7 +164,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Conflict-Free Diamonds</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Conflict-Free Diamonds</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>We are proud to state that all the diamonds we sell and use are certified under the Kimberley Process. As a result of our rigorous sourcing practices, we have never used conflict diamonds in our jewelry. Every piece we offer carries a promise of elegance, integrity, and positive impact.</span></p>
           </div>
@@ -184,7 +184,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Unparalleled Quality</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Unparalleled Quality</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>Quality is the cornerstone of our brand. We use the finest materials and follow the highest standards of craftsmanship to ensure that each jewelry piece is a masterpiece of durability and beauty. We stand behind the quality of our products with a lifetime warranty, providing you with the assurance that your Keyzar jewelry will stand the test of time.</span></p>
             <div className="flex items-center gap-2 mb-8">
@@ -193,7 +193,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Total Transparency</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Total Transparency</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>We believe in building trust through transparency. From our clear pricing policies to our detailed product descriptions, we strive to provide you with all the information you need to make informed decisions. Every order comes with a complimentary appraisal to verify the value of your purchase as well as diamond certification from the GIA or IGI (if applicable).</span></p>
           </div>
@@ -212,7 +212,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Hassle-Free Shopping</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Hassle-Free Shopping</strong></h3>
             </div>
 
             <p className='mb-10'><span className='font-normal'>Your satisfaction is our priority, which is why we offer a 30-day money-back guarantee. If for any reason you are not completely satisfied with your purchase, we will refund your money.</span></p>
@@ -222,7 +222,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Expert Advice and Support</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Expert Advice and Support</strong></h3>
             </div>
             <p className='mb-10'><span className='font-normal'>For those seeking a truly personalized experience, we invite you to schedule a virtual appointment with our team of experts. You can consult with a diamond professional without leaving your home. At Keyzar, we are committed to delivering not only exceptional jewelry but also exceptional service, guaranteeing that each interaction with us is a seamless and extraordinary journey tailored just for you.</span></p>
           </div>
@@ -251,7 +251,7 @@ const RingDetailInformation = () => {
                   <path d="M5.5 15.8298L12 9.3298L5.5 2.8298" stroke="currentColor" stroke-width="2.5"></path>
                 </svg>
               </svg>
-              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabindex="-1"><strong>Secure Shipping</strong></h3>
+              <h3 className="mb-0 font-semibold leading-tight text-1.5lg" tabIndex="-1"><strong>Secure Shipping</strong></h3>
             </div>
 
             <p className='mb-10'><span className='font-normal'>We take utmost care in shipping and handling. With free FedEx overnight shipping and insured delivery, you can trust that your purchase will arrive safely and securely at your doorstep, no matter where you are located.</span></p>
@@ -295,7 +295,7 @@ const RingDetailInformation = () => {
               </div>
               <div className='p-4 pt-3 flex flex-col grow'>
                 <div className='mb-4'>
-                  <h3 className="text-base leading-tight font-normal" tabindex="-1">Five Reasons Why You Should Renew Your Vows</h3>
+                  <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
                 <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span class="mx-1.5">|</span><span>4 min read</span></div>
               </div>
@@ -306,7 +306,7 @@ const RingDetailInformation = () => {
               </div>
               <div className='p-4 pt-3 flex flex-col grow'>
                 <div className='mb-4'>
-                  <h3 className="text-base leading-tight font-normal" tabindex="-1">Five Reasons Why You Should Renew Your Vows</h3>
+                  <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
                 <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span class="mx-1.5">|</span><span>4 min read</span></div>
               </div>
@@ -317,7 +317,7 @@ const RingDetailInformation = () => {
               </div>
               <div className='p-4 pt-3 flex flex-col grow'>
                 <div className='mb-4'>
-                  <h3 className="text-base leading-tight font-normal" tabindex="-1">Five Reasons Why You Should Renew Your Vows</h3>
+                  <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
                 <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span class="mx-1.5">|</span><span>4 min read</span></div>
               </div>

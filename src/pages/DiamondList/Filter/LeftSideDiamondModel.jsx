@@ -39,7 +39,7 @@ const LeftSideDiamondModel = ({ selectedProductModel, setselectedProductModel })
             </button>
             <div className="text-center mb-7.5 md:mb-8">
               <div className="text-1.5lg leading-tight text-black mb-1.5">Before we continue</div>
-              <h3 className="m-0 leading-none text-2xl font-bold text-black uppercase" tabindex="-1">CHOOSE YOUR SETTING</h3>
+              <h3 className="m-0 leading-none text-2xl font-bold text-black uppercase" tabIndex="-1">CHOOSE YOUR SETTING</h3>
             </div>
             <div className="w-full grid grid-cols-1 gap-3 max-w-[8.75rem] mx-auto md:grid-cols-2 md:max-w-none text-center text-black">
               <Link to={"/"} className="rounded-lg py-3 px-4 border-borders border bg-customGray-50 md:py-6" href="#" aria-hidden="false">
