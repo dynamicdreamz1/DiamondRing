@@ -31,21 +31,21 @@ const CompleteProduct = () => {
             <div className='in-the-box-left-img'>
               <div className='InTheBox__block relative'>
                 {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-1-RZBQU2VJ.png" alt="" /> */}
-                <img src={completeproductleftimg1} alt="" />
+                <img src={completeproductleftimg1} alt="completeproductleftimg" />
               </div>
               <div className='InTheBox__block relative'>
                 {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-2-344RVWWW.png" alt="" /> */}
-                <img src={completeproductleftimg2} alt="" />
+                <img src={completeproductleftimg2} alt="completeproductleftimg" />
               </div>
               <div className='InTheBox__block relative'>
                 {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-3-OTCBUBMF.png" alt="" /> */}
-                <img src={completeproductleftimg3} alt="" />
+                <img src={completeproductleftimg3} alt="completeproductleftimg" />
               </div>
             </div>
             <div className='in-the-box-right-img'>
               <div className='InTheBox__block relative'>
                 {/* <img src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1178499/build/_assets/in-the-box-4-KOBOPSIL.png" alt="" /> */}
-                <img src={completeproductleftimg4} alt="" />
+                <img src={completeproductleftimg4} alt="completeproductleftimg" />
               </div>
             </div>
           </div>

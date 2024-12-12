@@ -87,13 +87,13 @@ const EngagementRingDetailData = () => {
                             <h2 className='CustomProduct__section-title'>Match Made in Heaven</h2>
                             <div className='made-in-heaven-img-box-main grid grid-cols-3 w-full items-center gap-3'>
                                 <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                                    <img src="/lexie-side-img1.webp" />
+                                    <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
                                 </div>
                                 <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                                    <img src="/lexie-side-img1.webp" />
+                                    <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
                                 </div>
                                 <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                                    <img src="/lexie-side-img1.webp" />
+                                    <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
                                 </div>
                             </div>
                         </div>

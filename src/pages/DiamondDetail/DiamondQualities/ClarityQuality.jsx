@@ -21,7 +21,7 @@ const DiamondClarityComponent = () => {
             <img 
               className='absolute w-full h-full object-contain transition-opacity duration-300 top-0 left-0'  
               src={activeTab.icon} 
-              alt="" 
+              alt="tabimg" 
             />
           </div>
         </div>

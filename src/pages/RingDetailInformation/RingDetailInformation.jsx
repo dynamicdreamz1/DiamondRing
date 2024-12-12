@@ -23,7 +23,7 @@ const RingDetailInformation = () => {
             <div className="text-sm text-customGray-300">November 5, 2023</div>
           </div>
           <div className='hidden md:block relative pt-[46%] overflow-hidden rounded-2xl mb-10'>
-            <img className='absolute inset-0 w-full h-full object-cover' src={ringdetailinfoimg1} />
+            <img className='absolute inset-0 w-full h-full object-cover' src={ringdetailinfoimg1} alt='ringdetailinfoimg' />
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ const RingDetailInformation = () => {
           <div>
             <div className='-mx-5 my-8 md:mx-0 mb-14'>
               <div className='relative image-aspect-container responsive pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg2} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg2} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
                   <a href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>Our bestseller settings</a>
                 </div>
@@ -66,7 +66,7 @@ const RingDetailInformation = () => {
             <div className='-mx-5 md:mx-0'>
               <div className='stl-item-wrapper relative'>
                 <div className='stl-item-image-container pt-[100%]'>
-                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg3} alt="" />
+                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg3} alt="ringdetailinfoimg" />
                 </div>
                 <div className='stl-item-button-container absolute bottom-0 left-0 right-0 p-2 z-10 md:p-6'>
                   <button className='stl-item-button pointer flex items-center overflow-hidden whitespace-nowrap gap-2 py-2 px-5 md:gap-0 md:p-0 uppercase md:normal-case'>
@@ -103,7 +103,7 @@ const RingDetailInformation = () => {
             <div className='-mx-5 md:mx-0'>
               <div className='stl-item-wrapper relative'>
                 <div className='stl-item-image-container pt-[57%]'>
-                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg4} alt="" />
+                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg4} alt="ringdetailinfoimg" />
                 </div>
                 <div className='stl-item-button-container absolute bottom-0 left-0 right-0 p-2 z-10 md:p-6'>
                   <button className='stl-item-button pointer flex items-center overflow-hidden whitespace-nowrap gap-2 py-2 px-5 md:gap-0 md:p-0 uppercase md:normal-case'>
@@ -142,7 +142,7 @@ const RingDetailInformation = () => {
           <div>
             <div className='-mx-5 my-8 md:mx-0 mb-14'>
               <div className='relative image-aspect-container responsive pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg5} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg5} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
                   <a href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>Made To Order Jewelry</a>
                 </div>
@@ -172,7 +172,7 @@ const RingDetailInformation = () => {
           <div>
             <div className='-mx-5 my-8 md:mx-0 mb-14'>
               <div className='relative image-aspect-container responsive pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg6} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg6} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
                   <a href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>We offer only Conflict-Free Diamonds</a>
                 </div>
@@ -202,7 +202,7 @@ const RingDetailInformation = () => {
           <div>
             <div className='stl-item-wrapper relative'>
               <div className='stl-item-image-container pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl' src={ringdetailinfoimg7} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl' src={ringdetailinfoimg7} alt="ringdetailinfoimg" />
               </div>
             </div>
             <div className='p-1.5 text-xs text-left text-black leading-tight mb-8'>Every order comes with a complimentary appraisal and a diamond certification from the GIA or IGI</div>
@@ -232,7 +232,7 @@ const RingDetailInformation = () => {
             <div className='-mx-5 md:mx-0'>
               <div className='stl-item-wrapper relative'>
                 <div className='stl-item-image-container pt-[100%]'>
-                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg8} alt="" />
+                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg8} alt="ringdetailinfoimg" />
                 </div>
                 <div className='stl-item-button-container absolute bottom-0 left-0 right-0 p-2 z-10 md:p-6'>
                   <button className='stl-item-button pointer flex items-center overflow-hidden whitespace-nowrap gap-2 py-2 px-5 md:gap-0 md:p-0 uppercase md:normal-case'>
@@ -263,7 +263,7 @@ const RingDetailInformation = () => {
             <div className='-mx-5 md:mx-0'>
               <div className='stl-item-wrapper relative'>
                 <div className='stl-item-image-container pt-[100%]'>
-                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg9} alt="" />
+                  <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg9} alt="ringdetailinfoimg" />
                 </div>
                 <div className='stl-item-button-container absolute bottom-0 left-0 right-0 p-2 z-10 md:p-6'>
                   <button className='stl-item-button pointer flex items-center overflow-hidden whitespace-nowrap gap-2 py-2 px-5 md:gap-0 md:p-0 uppercase md:normal-case'>
@@ -291,7 +291,7 @@ const RingDetailInformation = () => {
           <div className='flex flex-nowrap gap-3.5 overflow-auto hiddenScroll px-5'>
             <div className='w-3/4-gap-3.5 shrink-0 md:w-1/3-gap-3.5 relative rounded-2xl overflow-hidden border border-borders bg-white text-black flex flex-col'>
               <div className='relative image-aspect-container responsive pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover' src={ringdetailinfoblogimg1} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover' src={ringdetailinfoblogimg1} alt="ringdetailinfoblogimg" />
               </div>
               <div className='p-4 pt-3 flex flex-col grow'>
                 <div className='mb-4'>
@@ -302,7 +302,7 @@ const RingDetailInformation = () => {
             </div>
             <div className='w-3/4-gap-3.5 shrink-0 md:w-1/3-gap-3.5 relative rounded-2xl overflow-hidden border border-borders bg-white text-black flex flex-col'>
               <div className='relative image-aspect-container responsive pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover' src={ringdetailinfoblogimg2} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover' src={ringdetailinfoblogimg2} alt="ringdetailinfoblogimg" />
               </div>
               <div className='p-4 pt-3 flex flex-col grow'>
                 <div className='mb-4'>
@@ -313,7 +313,7 @@ const RingDetailInformation = () => {
             </div>
             <div className='w-3/4-gap-3.5 shrink-0 md:w-1/3-gap-3.5 relative rounded-2xl overflow-hidden border border-borders bg-white text-black flex flex-col'>
               <div className='relative image-aspect-container responsive pt-[100%]'>
-                <img className='absolute top-0 left-0 w-full h-full object-cover' src={ringdetailinfoblogimg3} alt="" />
+                <img className='absolute top-0 left-0 w-full h-full object-cover' src={ringdetailinfoblogimg3} alt="ringdetailinfoblogimg" />
               </div>
               <div className='p-4 pt-3 flex flex-col grow'>
                 <div className='mb-4'>

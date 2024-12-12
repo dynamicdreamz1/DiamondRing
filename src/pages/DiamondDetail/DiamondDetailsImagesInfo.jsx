@@ -48,7 +48,7 @@ const DiamondDetailsImagesInfo = () => {
         </div>
 
         <div className='customer-product-zoom-img'>
-          <img src="/lexie-side-img2.webp" />
+          <img src="/lexie-side-img2.webp" alt='lexie-side-img'/>
         </div>
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <CertificateImage

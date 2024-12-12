@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from '../../Component/Common/ViewCertification';
+import stoneDimensionsimg from '../../assets/Images/stoneDimensions-img.webp';
 
 const DiamondDetailsInfo = () => {
   const { diamond } = useSelector((state) => state.singleDiamond);
@@ -59,7 +60,7 @@ const DiamondDetailsInfo = () => {
             <div className='StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3'>
               <p className='StoneDetailBlock__content-value'>{diamond?.diamond?.certificate?.color}</p>
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
-                <img className='StoneDetailBlock__content-image' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneColorBG-HNKUR277.png" alt="" />
+                <img className='StoneDetailBlock__content-image' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneColorBG-HNKUR277.png" alt="stoneColorimg" />
               </div>
             </div>
             <div className="StoneDetailBlock__desc">Completely colorless</div>
@@ -71,7 +72,7 @@ const DiamondDetailsInfo = () => {
             <div className='StoneDetailBlock__content-container flex-1 mb-2 lg:mb-3'>
               <p className='StoneDetailBlock__content-value'>{diamond?.diamond?.certificate?.clarity}</p>
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
-                <img className='StoneDetailBlock__content-image' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneClarityBG-EISDTFPI.png" alt="" />
+                <img className='StoneDetailBlock__content-image' src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneClarityBG-EISDTFPI.png" alt="stoneClarityimg" />
               </div>
             </div>
             <div className="StoneDetailBlock__desc">Hard to see inclusions even under 10x magnification</div>
@@ -103,7 +104,8 @@ const DiamondDetailsInfo = () => {
                 : "N/A"}
               </p>
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
-                <img className="StoneDetailBlock__content-image" src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneDimensions-V2IG3DFU.png" alt="" />
+                {/* <img className="StoneDetailBlock__content-image" src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneDimensions-V2IG3DFU.png" alt="" /> */}
+                <img className="StoneDetailBlock__content-image" src={stoneDimensionsimg} alt="stoneDimensionsimg" />
               </div>
             </div>
             <div className="StoneDetailBlock__desc">Ratio: 1</div>
