@@ -7,10 +7,7 @@ import DiamondDetail from '../pages/DiamondDetail/DiamondDetail'; // Create this
 import CompleteProduct from '../pages/CompleteProduct/CompleteProduct'; // Create this component for detailed view
 import RingDetailInformation from '../pages/RingDetailInformation/RingDetailInformation'; // Create this component for detailed view
 
-
-
-const RoutesPage = () => {  
-
+const RoutesPage = () => {
     return (
         <Router>
             <Routes>

@@ -16,7 +16,6 @@ export const fetchDiamondList = (filter) => async (dispatch) => {
             cancelTokenSource.cancel("Operation canceled due to a new request.");
         }
 
-        // Create a new CancelToken source
         cancelTokenSource = axios.CancelToken.source();
 
         dispatch(diamondsFetchStart());
