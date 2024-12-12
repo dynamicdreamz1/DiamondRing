@@ -325,7 +325,7 @@ const EngagementRingDetailData = () => {
                                 <a href="#" className='ExtrasText text-black underline'>Add Extra Features</a>
                             </div>
                         </div>
-                        <AccordianforDetail />
+                        <AccordianforDetail ring={"Ring"} />
                         <VirtualAppointment />
                         <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
 

@@ -11,12 +11,9 @@ const initialState = {
     cut: [],
     polish: [],
     symmetry: [],
-    // color: [], // Array for multiple colors
-    // clarity: [], // Array for multiple clarity values
-    // cut: [], // Array for multiple cut values
-    // carat: { min: 0, max: 0 }, // Range for carat weight
+    color : [],
+    clarity : [],
     // budget: { min: 0, max: 0 }, // Range for budget
-    // certificate: [], // Array for multiple certificates
 };
 
 const diamondFilterSlice = createSlice({

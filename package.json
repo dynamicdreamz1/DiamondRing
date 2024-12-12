@@ -9,6 +9,7 @@
     "@mui/material": "^6.1.8",
     "@mui/styled-engine-sc": "^6.1.8",
     "@reduxjs/toolkit": "^2.3.0",
+    "@shopify/graphql-client": "^1.2.1",
     "@shopify/storefront-api-client": "^1.0.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

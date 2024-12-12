@@ -1,59 +1,52 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
+import { useDispatch } from 'react-redux';
 
 const ClaritySelection = () => {
   const optionsClarity = ["SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"];
+  const dispatch = useDispatch();
 
   const [selectedClarity, setSelectedClarity] = useState([...optionsClarity]);
 
   const handleClickClarity = (clickedOption) => {
     const clickedIndex = optionsClarity.indexOf(clickedOption);
-  
-    // If all options are currently selected
+
+    // If all options are selected, reset to select only the clicked option
     if (selectedClarity.length === optionsClarity.length) {
       setSelectedClarity([clickedOption]);
       return;
     }
-  
-    // If the clicked option is already selected
-    if (selectedClarity.includes(clickedOption)) {
-      // If it's the last selected option, revert to all selected
-      if (selectedClarity.length === 1) {
-        setSelectedClarity([...optionsClarity]);
-        return;
+
+    // If only one option is selected, select the range of clarity options between the first selected and the clicked one
+    if (selectedClarity.length === 1) {
+      const newSelection = optionsClarity.slice(
+        Math.min(optionsClarity.indexOf(selectedClarity[0]), clickedIndex),
+        Math.max(optionsClarity.indexOf(selectedClarity[0]), clickedIndex) + 1
+      );
+      setSelectedClarity(newSelection);
+      return;
+    }
+
+    // If multiple options are selected, toggle the clicked option
+    if (selectedClarity.length > 1) {
+      // If the clicked option is already selected, deselect it
+      if (selectedClarity.includes(clickedOption)) {
+        const newSelection = selectedClarity.filter((opt) => opt !== clickedOption);
+        setSelectedClarity(newSelection);
+      } else {
+        // Otherwise, select the clicked option only
+        setSelectedClarity([clickedOption]);
       }
-  
-      // Otherwise, remove the clicked option
-      const newSelection = selectedClarity.filter((opt) => opt !== clickedOption);
-      setSelectedClarity(newSelection);
-      return;
-    }
-  
-    const currentMinIndex = Math.min(...selectedClarity.map((opt) => optionsClarity.indexOf(opt)));
-    const currentMaxIndex = Math.max(...selectedClarity.map((opt) => optionsClarity.indexOf(opt)));
-  
-    // Handle adjacent clicks or clicks within the current range
-    if (
-      clickedIndex === currentMinIndex - 1 ||
-      clickedIndex === currentMaxIndex + 1 ||
-      (clickedIndex >= currentMinIndex && clickedIndex <= currentMaxIndex)
-    ) {
-      const newSelection = [...new Set([...selectedClarity, clickedOption])]
-        .sort((a, b) => optionsClarity.indexOf(a) - optionsClarity.indexOf(b));
-      setSelectedClarity(newSelection);
-      return;
-    }
-  
-    // Handle clicks outside the current range
-    if (
-      clickedIndex < currentMinIndex - 1 || 
-      clickedIndex > currentMaxIndex + 1
-    ) {
-      setSelectedClarity([clickedOption]);
-      return;
     }
   };
-  
-  
+
+
+  useEffect(() => {
+    if (selectedClarity) {
+        dispatch(updateFilter({ clarity: selectedClarity })); // Update the Redux state with true/false
+    }
+}, [selectedClarity])
+
 
   return (
     <div className="flex flex-wrap bg-customGray-75 border-borders border rounded-lg h-10 relative">
@@ -61,7 +54,7 @@ const ClaritySelection = () => {
         <button
           key={idx}
           type="button"
-          className={`flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10 `}
+          className={`flex-1 px-2 h-full transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative z-10`}
           onClick={() => handleClickClarity(option)}
         >
           <span>{option}</span>
