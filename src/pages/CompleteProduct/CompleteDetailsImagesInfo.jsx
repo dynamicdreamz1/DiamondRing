@@ -22,6 +22,7 @@ const CompleteDetailsImagesInfo = () => {
             allow="autoplay; fullscreen" // Allows autoplay and fullscreen
             allowFullScreen
             className="w-full h-full"
+            title="Diamond video" // Descriptive title for the iframe
           >
             Your browser does not support iframes.
           </iframe>

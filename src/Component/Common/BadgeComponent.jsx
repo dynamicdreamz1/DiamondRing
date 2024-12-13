@@ -18,12 +18,12 @@ const BadgeComponent = () => {
     return (
         <div className="product-badge-main flex flex-wrap justify-center gap-y-2 my-6 md:my-8">
             {productBadges.map((badge, index) => (
-                <a  key={index} className="product-badge-item CustomProductBadge" onClick={() => handleClickOpen(badge)}>
+                <button  hre key={index} className="product-badge-item CustomProductBadge" onClick={() => handleClickOpen(badge)}>
                     <div className="CustomBadge__image h-8 mx-auto">
                         {badge.icon}
                     </div>
                     <h5 className="CustomBadge__title mt-4 text-center">{badge.title}</h5>
-                </a>
+                </button>
             ))}
 
             <Dialog

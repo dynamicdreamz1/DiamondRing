@@ -42,13 +42,15 @@ const DiamondDetailsImagesInfo = () => {
             allow="autoplay; fullscreen" // Allows autoplay and fullscreen
             allowFullScreen
             className="w-full h-full"
+            title="Diamond video" // Descriptive title for the iframe
           >
             Your browser does not support iframes.
           </iframe>
+
         </div>
 
         <div className='customer-product-zoom-img'>
-          <img src="/lexie-side-img2.webp" alt='lexie-side-img'/>
+          <img src="/lexie-side-img2.webp" alt='lexie-side-img' />
         </div>
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <CertificateImage

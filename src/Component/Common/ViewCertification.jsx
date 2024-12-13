@@ -9,14 +9,10 @@ export const CertificateImage = ({ className, lab }) => {
         <img
             className={className}
             src={lab ? IgiImg : GiaImg}
-            alt="Certificate Image"
+            alt={lab ? "IGI Certificate" : "GIA Certificate"} // More descriptive alt text
         />
     );
 };
-
-
-
-
 
 export const ViewCertificate = ({ className, diamond }) => {
 
