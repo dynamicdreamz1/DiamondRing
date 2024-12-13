@@ -18,7 +18,7 @@ const BadgeComponent = () => {
     return (
         <div className="product-badge-main flex flex-wrap justify-center gap-y-2 my-6 md:my-8">
             {productBadges.map((badge, index) => (
-                <button  hre key={index} className="product-badge-item CustomProductBadge" onClick={() => handleClickOpen(badge)}>
+                <button hre key={index} className="product-badge-item CustomProductBadge" onClick={() => handleClickOpen(badge)}>
                     <div className="CustomBadge__image h-8 mx-auto">
                         {badge.icon}
                     </div>
@@ -48,9 +48,9 @@ const BadgeComponent = () => {
                         {selectedBadge ? selectedBadge.description : 'Description goes here.'}
                     </p>
                     <DialogActions>
-                    <Button onClick={handleClose} color="secondary" className='CustomBadge__popup-button great-button w-full'>
-                        great
-                    </Button>
+                        <Button onClick={handleClose} color="secondary" className='CustomBadge__popup-button great-button w-full'>
+                            great
+                        </Button>
                     </DialogActions>
                 </DialogContent>
                 {/* <DialogActions>
