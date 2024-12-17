@@ -142,30 +142,44 @@ const CompleteDetailsData = () => {
 
                 <BadgeComponent />
                 <CompleteDetailsInfo />
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <h2 className="text-xl font-bold mb-4">Know your setting</h2>
-                    <div className="flex items-center mb-4">
-                        <span className="material-icons text-gray-500 mr-2">watercolor</span>
-                        <span className="text-gray-700 font-medium">METAL</span>
+                <div className='StoneDetailBlock StoneDetailBlock__fullwidth p-3 flex flex-col justify-between'>
+                    <div className='StoneDetailBlock__title-container flex items-center gap-1 mb-2'>
+                        <svg className="w-4 h-4" aria-hidden="true" focusable="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.52005 11.0862L0.930664 9.00729L1.6538 6.88812" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M2.73948 6.25928L1.65369 6.88816L4.5099 8.54243" stroke="#668BAD" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.24255 8.38739L4.52016 11.0862" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M13.9753 7.21783L15.0694 9.13377L8.10916 13.1651L4.51978 11.0862L5.62773 9.18988" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M5.2428 8.96701L8.09901 10.6213L13.9752 7.21785L12.5718 6.40503" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M8.09924 10.6213L8.10928 13.1651" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M11.4784 4.48907L12.5725 6.40501L6.70633 9.81426L3.11694 7.73534L3.84008 5.61618" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M6.69618 7.27048L11.4783 4.48911L8.62205 2.83484L3.83997 5.61622L6.69618 7.27048Z" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path><path d="M6.69641 7.27045L6.70645 9.81426" stroke="#668BAD" stroke-width="0.75" stroke-linejoin="round"></path></svg></svg>
+                        <p className="cpcst-detail-title" tabIndex="-1">METAL</p>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">14k White Gold</h3>
-                    <div className="flex items-center mb-2">
-                        <div className="w-6 h-6 bg-yellow-500 rounded-full mr-2"></div>
-                        <span className="text-gray-700">58.5% Gold</span>
+                    <p className='StoneDetailBlock__content-value  flex-1 mb-2 lg:mb-3'>14k White Gold</p>
+                    <div className="SettingDetailBlock__graph-container mt-3 flex items-center gap-4 mb-2 lg:mb-3">
+                        <div className="SettingDetailBlock__graph">
+                            <svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 500 500">
+                                <g transform="translate(250, 250)">
+                                    <path d="M250,0A250,250,0,1,1,-214.716,-128.051L-137.418,-81.953A160,160,0,1,0,160,0Z" style={{ fill: 'rgb(240, 230, 140)' }}></path>
+                                    <path d="M250,0L160,0Z" style={{ fill: 'rgb(232, 232, 232)' }}></path>
+                                    <path d="M133.744,-211.217A250,250,0,0,1,224.109,-110.792L143.43,-70.907A160,160,0,0,0,85.596,-135.179Z" style={{ fill: 'rgb(186, 196, 200)' }}></path>
+                                    <path d="M224.109,-110.792A250,250,0,0,1,250,0L160,0A160,160,0,0,0,143.43,-70.907Z" style={{ fill: 'rgb(189, 186, 174)' }}></path>
+                                    <path d="M-214.716,-128.051A250,250,0,0,1,133.744,-211.217L85.596,-135.179A160,160,0,0,0,-137.418,-81.953Z" style={{ fill: 'rgb(184, 115, 51)' }}></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div className="SettingDetailBlock__graph-text-container grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div className="SettingDetailBlock__graph-text flex items-center gap-2">
+                                <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full gold"></div>
+                                58.5% Gold
+                            </div>
+                            <div className="SettingDetailBlock__graph-text flex items-center gap-2">
+                                <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full copper"></div>
+                                25.4% Copper
+                            </div>
+                            <div className="SettingDetailBlock__graph-text flex items-center gap-2">
+                                <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full zinc"></div>
+                                8.7% Zinc
+                            </div>
+                            <div className="SettingDetailBlock__graph-text flex items-center gap-2">
+                                <div className="SettingDetailBlock__graph-text-color w-4 h-4 rounded-full nickel"></div>
+                                7.3% Nickel
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex items-center mb-2">
-                        <div className="w-6 h-6 bg-orange-500 rounded-full mr-2"></div>
-                        <span className="text-gray-700">25.4% Copper</span>
-                    </div>
-                    <div className="flex items-center mb-2">
-                        <div className="w-6 h-6 bg-gray-400 rounded-full mr-2"></div>
-                        <span className="text-gray-700">8.7% Zinc</span>
-                    </div>
-                    <div className="flex items-center mb-2">
-                        <div className="w-6 h-6 bg-gray-500 rounded-full mr-2"></div>
-                        <span className="text-gray-700">7.3% Nickel</span>
-                    </div>
-                    <p className="text-gray-500 text-sm mt-4">The secret sauce that makes this piece: All white gold pieces are Rhodium plated</p>
+                    <span className='StoneDetailBlock__desc'>The secret sauce that makes this piece. <br /> *All white gold pieces are Rhodium plated</span>
                 </div>
                 <AccordianforDetail />
                 <VirtualAppointment />
