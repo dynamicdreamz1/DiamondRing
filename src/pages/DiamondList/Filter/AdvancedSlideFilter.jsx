@@ -69,7 +69,7 @@ const AdvancedSlideFilter = ({ setFilter }) => {
         };
         const mappedFilter = selected.map(name => shorthandMap[name]);
         setFilter(mappedFilter);
-    }, [selected]);
+    }, [selected ,setFilter]);
 
 
     return (

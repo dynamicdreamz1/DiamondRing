@@ -82,8 +82,7 @@ const EngagementRingDetailSlider = () => {
                 <Slider {...settings}>
                     {productSliderBadgesData.map((slide, index) => (
                         <div key={index} className="px-2">
-                            <a
-                                href="#"
+                            <div
                                 className="our-coupeles-boxes cpucb-slide relative rounded-xl overflow-hidden"
                             >
                                 <div className="cpucb-image-container absolute-picture-container overflow-hidden">
@@ -102,7 +101,7 @@ const EngagementRingDetailSlider = () => {
                                         </svg>
                                     </span>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     ))}
                 </Slider>

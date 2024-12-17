@@ -121,7 +121,7 @@ const DiamondDetailData = () => {
           </div>
         </div>
         <div className='production-button mt-8'>
-          <div href="#" className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
+          <div className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
             <div className="transition-transform duration-500 text-ellipsis overflow-hidden flex items-center justify-between gap-2 md:gap-4 ">
               <svg className="w-6 h-6" aria-hidden="true" focusable="false">
                 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,7 +147,7 @@ const DiamondDetailData = () => {
           <h5 className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 12 interest-free installments of <span>$95.50</span> <button type="button" className="underline cursor-pointer">Learn more</button></h5>
         </div>
         <div className="hidden lg:block mt-6 text-center">
-          <a href="#" type="button" className="WishlistButton  stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
+          <div type="button" className="WishlistButton  stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 md:w-7 md:h-7 ">
                 <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
@@ -167,7 +167,7 @@ const DiamondDetailData = () => {
               </div>
               <p className="text-base leading-tight" tabIndex="-1">Add to wish list</p>
             </div>
-          </a>
+          </div>
         </div>
         <BadgeComponent />
         <DiamondDetailsInfo />
@@ -175,7 +175,6 @@ const DiamondDetailData = () => {
         <VirtualAppointment />
       </div>
       <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
-
     </div>
   )
 }
