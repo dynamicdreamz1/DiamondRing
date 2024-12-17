@@ -28,7 +28,7 @@ const DiamondSizeGuide = () => {
             <div className="DiamondCaratSize__header w-full lg:absolute lg:top-0 lg:p-4 lg:text-center text-black lg:text-white">
                 <h3
                     className="font-bold text-1.5lg leading-tight flex items-center gap-2 mb-2 lg:mb-0 lg:justify-center"
-                    tabindex="-1"
+                    tabIndex="-1"
                 >
                     <svg
                         className="w-8 h-8 p-1.5 rounded-full bg-white lg:hidden"
@@ -93,7 +93,7 @@ const DiamondSizeGuide = () => {
                 </h3>
                 <p
                     className="hidden font-medium text-xs leading-tight mb-0 lg:block"
-                    tabindex="-1"
+                    tabIndex="-1"
                 >
                     *The setting in the image is for reference only
                 </p>
@@ -146,7 +146,7 @@ const DiamondSizeGuide = () => {
                         </div>
                     </div>
                     <div className="hidden text-center text-white text-xs leading-tight lg:block">
-                        <p tabindex="-1">
+                        <p tabIndex="-1">
                             Shown with <strong>1.0ct Diamond</strong>{" "}
                             <span className="text-1.5xs leading-tight">
                                 *closest value to your size 0.5ct
@@ -157,7 +157,7 @@ const DiamondSizeGuide = () => {
             </div>
             <p
                 className="mt-1.5 text-black opacity-75 text-1.5xs leading-tight mb-0 lg:hidden"
-                tabindex="-1"
+                tabIndex="-1"
             >
                 *The setting in the image is for reference only
             </p>

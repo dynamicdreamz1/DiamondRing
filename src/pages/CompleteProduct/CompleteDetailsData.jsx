@@ -33,9 +33,7 @@ const CompleteDetailsData = () => {
 
     return (
         <div className='customer-product-side-img-text CustomProduct__container CustomCompleteProduct__container grid grid-cols-1 items-start md:gap-0 lg:mb-9 lg:gap-8 xl:gap-x-8'>
-
             <CompleteDetailsImagesInfo />
-
             <div className='customer-product-side-text-sec'>
                 <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
                     <div className='the-lexie-detail flex-1'>

@@ -15,10 +15,10 @@ import LeftSideDiamondModel from '../DiamondList/Filter/LeftSideDiamondModel'
 const DiamondDetailData = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
-  const getTabsProduct = useSelector((state) => state.getTabsProduct);
-  const ringExists = getTabsProduct?.tabs?.ring;
   const [selectedProductModel, setselectedProductModel] = useState(false);
+  const getTabsProduct = useSelector((state) => state.getTabsProduct);
+  const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
+  const ringExists = getTabsProduct?.tabs?.ring;
 
 
   const handleDiamondAction = (diamond) => {
@@ -52,9 +52,7 @@ const DiamondDetailData = () => {
 
   return (
     <div className='customer-product-side-img-text CustomProduct__container CustomCompleteProduct__container grid grid-cols-1 items-start md:gap-0 lg:mb-9 lg:gap-8 xl:gap-x-8'>
-
       <DiamondDetailsImagesInfo />
-
       <div className='customer-product-side-text-sec'>
         <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
           <div className='the-lexie-detail flex-1'>
