@@ -9,7 +9,6 @@ const DiamondSizeGuide = () => {
         // Simple scaling logic: base scale at 1.0 ct, increase proportionally
         const baseScale = 0.380;
         const scaleFactor = 1 + (carat - 1.0) * 0.1; // 10% increase per carat
-        console.log("scaleFactor",scaleFactor);
         
         return baseScale * scaleFactor;
     };
