@@ -95,8 +95,7 @@ const AdvancedSlideFilter = ({ setFilter }) => {
                     right: `${((options.length - 1 - options.indexOf(selected[selected.length - 1])) /
                         options.length) *
                         100}%`,
-                }}
-            >
+                }}>
                 <div className="absolute w-full h-full transition-width duration-500 border border-black ring-1 ring-black rounded-lg z-20"></div>
             </div>
 

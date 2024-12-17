@@ -7,16 +7,13 @@ import { setFilter } from '../../../store/slices/ringsFilterSlice';
 const MetalFilter = () => {
     const filters = useSelector((state) => state.productFilter);
     const { activeFilter } = useSelector((state) => state.products);
-
     const dispatch = useDispatch();
-
     const filteredOptions = metalOptions.filter(option => option.value === filters.selectedMetal)[0];
 
     const handleMetalSelection = (option, index) => {
         dispatch(setFilter({ key: 'selectedMetal', value: option.value })); // Update metal filter
         dispatch(closeFilter({ activeFilter: null }));
         dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
-
     };
 
     const toggleFilter = (filter) => {

@@ -20,12 +20,9 @@ const DiamondFilter = () => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
     };
 
-
     const handleResetFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
-
-
 
     useEffect(() => {
         if (cutFilter) {
@@ -84,9 +81,7 @@ const DiamondFilter = () => {
                     <span className="leading-none relative">Natural</span>
                 </button>
             </div>
-
             <DiamondShapeFilter />
-
             <div className="w-full hidden md:flex justify-center items-center col-span-2 xl:w-full collection-filters-item-with-custom-width-and-order gap-1.5 py-6">
                 <div className="flex-1 h-px bg-borders"></div>
                 <button onClick={() => handleResetFilter()} type="button" className="p-0 bg-white text-customGray-300 flex items-start gap-1.5 text-xs leading-none font-medium">

@@ -12,7 +12,6 @@ const DiamondShapeFilter = () => {
   };
   
 
-
   return (
     <div className="mb-8 md:mb-0 md:w-full gap-2 whitespace-nowrap snap-start hiddenScroll overflow-x-auto overflow-y-hidden scroll-smooth p-px md:p-0.5  flex gap-2 md:gap-6 md:justify-center snap-center">
       {shapeStyles.map((style) => (

@@ -27,9 +27,7 @@ const ClaritySelection = () => {
       return;
     }
 
-    // If multiple options are selected, toggle the clicked option
     if (selectedClarity.length > 1) {
-      // If the clicked option is already selected, deselect it
       if (selectedClarity.includes(clickedOption)) {
         const newSelection = selectedClarity.filter((opt) => opt !== clickedOption);
         setSelectedClarity(newSelection);

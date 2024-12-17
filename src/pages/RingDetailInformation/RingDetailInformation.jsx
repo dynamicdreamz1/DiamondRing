@@ -297,7 +297,10 @@ const RingDetailInformation = () => {
                 <div className='mb-4'>
                   <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
-                <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span class="mx-1.5">|</span><span>4 min read</span></div>
+                <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span>
+                <span className="mx-1.5">|</span>
+                <span>4 min read</span>
+                </div>
               </div>
             </div>
             <div className='w-3/4-gap-3.5 shrink-0 md:w-1/3-gap-3.5 relative rounded-2xl overflow-hidden border border-borders bg-white text-black flex flex-col'>
@@ -308,7 +311,7 @@ const RingDetailInformation = () => {
                 <div className='mb-4'>
                   <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
-                <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span class="mx-1.5">|</span><span>4 min read</span></div>
+                <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span className="mx-1.5">|</span><span>4 min read</span></div>
               </div>
             </div>
             <div className='w-3/4-gap-3.5 shrink-0 md:w-1/3-gap-3.5 relative rounded-2xl overflow-hidden border border-borders bg-white text-black flex flex-col'>
@@ -319,7 +322,7 @@ const RingDetailInformation = () => {
                 <div className='mb-4'>
                   <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
-                <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span class="mx-1.5">|</span><span>4 min read</span></div>
+                <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span><span className="mx-1.5">|</span><span>4 min read</span></div>
               </div>
             </div>
           </div>

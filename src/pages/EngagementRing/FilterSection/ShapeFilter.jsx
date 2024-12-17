@@ -6,7 +6,6 @@ import { setFilter } from '../../../store/slices/ringsFilterSlice';
 
 export const ShapeFilter = () => {
     const dispatch = useDispatch();
-    
     const filters = useSelector((state) => state.productFilter);
     const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
     const { activeFilter } = useSelector((state) => state.products);
@@ -26,8 +25,6 @@ export const ShapeFilter = () => {
     const toggleClose = (filter) => {
         dispatch(closeFilter({ filter }));
     };
-
-
 
     return (
         <div aria-expanded="true">

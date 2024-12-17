@@ -138,10 +138,8 @@ const CompleteDetailsData = () => {
                     </div>
                 </div>
 
-
                 <BadgeComponent />
                 <CompleteDetailsInfo />
-
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="text-xl font-bold mb-4">Know your setting</h2>
                     <div className="flex items-center mb-4">
@@ -167,7 +165,6 @@ const CompleteDetailsData = () => {
                     </div>
                     <p className="text-gray-500 text-sm mt-4">The secret sauce that makes this piece: All white gold pieces are Rhodium plated</p>
                 </div>
-
                 <AccordianforDetail />
                 <VirtualAppointment />
             </div>

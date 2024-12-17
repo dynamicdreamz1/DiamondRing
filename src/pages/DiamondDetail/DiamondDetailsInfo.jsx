@@ -93,7 +93,6 @@ const DiamondDetailsInfo = () => {
                 : "N/A"}
               </p>
               <div className='StoneDetailBlock__content-image-container mt-2.5 relative flex items-center gap-1'>
-                {/* <img className="StoneDetailBlock__content-image" src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1161720/build/_assets/stoneDimensions-V2IG3DFU.png" alt="" /> */}
                 <img className="StoneDetailBlock__content-image" src={stoneDimensionsimg} alt="stoneDimensionsimg" />
               </div>
             </div>

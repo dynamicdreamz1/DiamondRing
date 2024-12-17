@@ -71,9 +71,7 @@ const CaratFilter = () => {
         />
       </div>
 
-      {/* Input Fields */}
       <div className="flex justify-between gap-2 items-center pt-2">
-        {/* Minimum Carat Input */}
         <div className="flex border border-borders bg-white rounded-lg w-5/12 shrink-0 xl:w-[44%]">
           <div className="relative flex-grow border-r border-borders">
             <div className="absolute top-3 right-10 md:left-3 xl:left-[100px]  text-customGray-500 text-1.25xs leading-tight tracking-wide pointer-events-none">

@@ -71,7 +71,7 @@ const ColorQuality = () => {
               `}
               >
                 <span>{tab.name}</span>
-                <span class="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
+                <span className="absolute right-0 top-0 bottom-0 bg-borders w-px"></span>
               </button>
             ))}
           </div>

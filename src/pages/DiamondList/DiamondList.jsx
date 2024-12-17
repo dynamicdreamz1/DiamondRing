@@ -12,8 +12,6 @@ const DiamondList = () => {
   const filters = useSelector((state) => state.diamondFilter);
   const dispatch = useDispatch();
 
-
-
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -26,7 +24,6 @@ const DiamondList = () => {
     fetchProduct();
   }, [dispatch, filters]);
   
-
   return (
     <div className="min-h-screen bg-white">
       <TabComponent />

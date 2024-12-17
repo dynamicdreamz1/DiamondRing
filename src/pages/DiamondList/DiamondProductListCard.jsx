@@ -12,8 +12,6 @@ const DiamondProductListCard = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [selectedProductModel, setselectedProductModel] = useState(false);
-
-
     const { diamonds, loading, error } = useSelector((state) => state.diamond);
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
     const ringExists = getTabsProduct?.tabs?.ring;

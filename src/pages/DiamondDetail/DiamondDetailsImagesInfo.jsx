@@ -11,22 +11,17 @@ const DiamondDetailsImagesInfo = () => {
       <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
         <div className="customer-product-zoom-img custom-zoom-wrapper-scale pointer-events-none mix-blend-multiply transition-transform duration-300 ease-in-out">
           <div className="bg-white md:bg-customGray-50 w-full relative pb-square flex justify-center items-center round stone-prop">
-            {/* Vertical Size */}
             <div className="size ver absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
               {diamond?.diamond?.certificate?.length ? `${parseFloat(diamond.diamond.certificate.length).toFixed(2)}mm` : "N/A"}
             </div>
 
-            {/* Horizontal Size */}
             <div className="size hor absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
               {diamond?.diamond?.certificate?.width ? `${parseFloat(diamond.diamond.certificate.width).toFixed(2)}mm` : "N/A"}
             </div>
 
-            {/* Horizontal Property (e.g., Table %) */}
             <div className="prop hor absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
               {diamond?.diamond?.certificate?.table ? `${parseFloat(diamond.diamond.certificate.table).toFixed(1)}%` : "N/A"}
             </div>
-
-            {/* Vertical Property (e.g., Depth %) */}
             <div className="prop ver absolute bg-white md:bg-customGray-50 text-center text-base leading-[70%]">
               {diamond?.diamond?.certificate?.depthPercentage ? `${parseFloat(diamond.diamond.certificate.depthPercentage).toFixed(1)}%` : "N/A"}
             </div>
@@ -46,9 +41,7 @@ const DiamondDetailsImagesInfo = () => {
           >
             Your browser does not support iframes.
           </iframe>
-
         </div>
-
         <div className='customer-product-zoom-img'>
           <img src="/lexie-side-img2.webp" alt='lexie-side-img' />
         </div>

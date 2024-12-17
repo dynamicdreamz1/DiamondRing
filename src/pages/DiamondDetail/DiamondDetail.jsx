@@ -24,12 +24,10 @@ const DiamondDetail = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <div className="bg-black text-white text-center py-2 text-sm">
         Order TODAY for Guaranteed Holiday Delivery!
       </div>
       <TabComponent />
-
       <section className='customer-product-sec md:pt-8'>
         <div className='container mx-auto px-4'>
           <DiamondDetailData />
