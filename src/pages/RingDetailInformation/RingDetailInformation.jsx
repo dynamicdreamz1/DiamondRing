@@ -46,7 +46,9 @@ const RingDetailInformation = () => {
               <div className='relative image-aspect-container responsive pt-[100%]'>
                 <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg2} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
-                  <a href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>Our bestseller settings</a>
+                  <div href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>
+                    Our bestseller settings
+                  </div>
                 </div>
               </div>
             </div>
@@ -144,7 +146,9 @@ const RingDetailInformation = () => {
               <div className='relative image-aspect-container responsive pt-[100%]'>
                 <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg5} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
-                  <a href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>Made To Order Jewelry</a>
+                  <div href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>
+                    Made To Order Jewelry
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,7 +178,9 @@ const RingDetailInformation = () => {
               <div className='relative image-aspect-container responsive pt-[100%]'>
                 <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg6} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
-                  <a href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>We offer only Conflict-Free Diamonds</a>
+                  <div className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>
+                    We offer only Conflict-Free Diamonds
+                  </div>
                 </div>
               </div>
             </div>
@@ -298,8 +304,8 @@ const RingDetailInformation = () => {
                   <h3 className="text-base leading-tight font-normal" tabIndex="-1">Five Reasons Why You Should Renew Your Vows</h3>
                 </div>
                 <div className="opacity-60 text-1.5sm leading-4 mt-auto"><span>Nov 16, 2023</span>
-                <span className="mx-1.5">|</span>
-                <span>4 min read</span>
+                  <span className="mx-1.5">|</span>
+                  <span>4 min read</span>
                 </div>
               </div>
             </div>

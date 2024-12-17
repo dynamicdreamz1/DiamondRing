@@ -107,7 +107,7 @@ const DiamondSizeGuide = () => {
                     width="800"
                     height="800"
                     loading="eager"
-                    alt="Diamond carat size hand desktop image "
+                    alt="Diamond-carat-size-hand-desktop-image"
                     class="w-full h-full aspect-square fadeIn object-cover"
                 />
                 <div class="DiamondCaratSize__ShapeImage--Container absolute left-[38.4%] top-[37.5%] w-1/4 h-1/4">
@@ -116,8 +116,8 @@ const DiamondSizeGuide = () => {
                         width="200"
                         height="200"
                         loading="eager"
-                        alt="Diamond carat size Round shape desktop image "
-                        class="DiamondCaratSize__ShapeImage transition-all ease-in-out duration-500 w-full h-full"
+                        alt="Diamond-carat-size-Round-shape-desktop-image"
+                        className="DiamondCaratSize__ShapeImage transition-all ease-in-out duration-500 w-full h-full"
                         style={{
                             transform: `scale(${calculateScale(currentCarat)})`,
                             transformOrigin: '50% 50%'

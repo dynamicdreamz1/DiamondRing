@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from "../../Component/Common/ViewCertification"
 import DiamondSizeGuide from './DiamondQualities/DiamondSizeGuide';

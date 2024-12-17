@@ -104,19 +104,19 @@ const EngagementRingDetailData = () => {
                                 <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>{product?.title}</h2>
                                 <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>{formattedPrice}</h3>
                                 <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With stone:<span>{formattedCompareAtPrice}</span></p>
-                                <a href="#" className='ExtrasButton inline-flex items-center gap-1'>
+                                <div href="#" className='ExtrasButton inline-flex items-center gap-1'>
                                     Extras
                                     <span className="ExtrasButton-circle rounded-full bg-white flex items-center justify-center"><svg className="svg-icon" viewBox="0 0 5 5"><svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.125" width="0.75" height="5" fill="currentColor"></rect><rect y="2.875" width="0.75" height="5" transform="rotate(-90 0 2.875)" fill="currentColor"></rect></svg></svg></span>
-                                </a>
+                                </div>
                             </div>
                             <div className="tangiblee-wrapper pdp">
                                 <div className="tangiblee-cta font-medium" data-click-and-touch-bound="true" role="button" tabIndex="0" aria-label="tangiblee cta" aria-hidden="false">Try-On</div>
                             </div>
                             <div className='drop-hint'>
-                                <a href="#" className='inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto DropAHint-button flex flex-col items-center justify-center gap-1 p-0 ml-2 mt-1'>
+                                <div href="#" className='inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto DropAHint-button flex flex-col items-center justify-center gap-1 p-0 ml-2 mt-1'>
                                     <svg className="block w-8 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 53 40"><svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.9778 1.02103H3.02218C1.90536 1.02103 1 1.92639 1 3.04321V17.9568C1 19.0736 1.90536 19.979 3.02218 19.979H24.9778C26.0946 19.979 27 19.0736 27 17.9568V3.04321C27 1.92639 26.0946 1.02103 24.9778 1.02103Z" stroke="black" stroke-linejoin="round"></path><path d="M20.0291 8.04699L26.2125 1.81387" stroke="black" stroke-linejoin="round"></path><path d="M1.78687 1.81387L7.97045 8.04716" stroke="black" stroke-linejoin="round"></path><path d="M6.51971 9.45243L10.1554 5.93039H17.8442L21.4799 9.45243L13.9962 15.8809L6.51971 9.45243Z" stroke="black" stroke-miterlimit="10"></path><path d="M10.5456 9.45032L13.0569 12.6644L9.44366 9.55854L11.5477 7.52084L10.5456 9.45032Z" fill="black"></path><path d="M13.9963 15.7924L17.3264 9.48366L14.773 5.94107" stroke="black" stroke-miterlimit="10"></path></svg></svg>
                                     <span className="text-1.5xs leading-tight whitespace-nowrap text-black">Drop a Hint</span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div className='cpst-description-container md:mb-8 hidden md:block'>
@@ -217,14 +217,14 @@ const EngagementRingDetailData = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <a href="#" className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
+                            <div className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
                                 <div className="text-sm leading-tight font-semibold">Buy Setting Only*</div>
                                 <div className="text-1.5xs leading-tight">*center stone not included</div>
-                            </a>
+                            </div>
                             <h5 className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$187.50</span> <button type="button" className="underline cursor-pointer">Learn more</button></h5>
                         </div>
                         <div className="hidden lg:block mt-6 text-center">
-                            <a href="#" type="button" className="WishlistButton  stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
+                            <button type="button" className="WishlistButton  stroke-1 md:stroke-2 p-1 rounded-full inline-block bg-[rgba(255,255,255,0.73)]" aria-label="Add to wish list">
                                 <div className="flex items-center gap-2">
                                     <div className="w-6 h-6 md:w-7 md:h-7 ">
                                         <svg className="WishlistHeartIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
@@ -244,7 +244,7 @@ const EngagementRingDetailData = () => {
                                     </div>
                                     <p className="text-base leading-tight" tabIndex="-1">Add to wish list</p>
                                 </div>
-                            </a>
+                            </button>
                         </div>
                         <BadgeComponent />
                         <div className="StoneProductInfo rounded-2.5xl p-3 bg-customGray-150 mt-4 mb-4">
@@ -322,7 +322,7 @@ const EngagementRingDetailData = () => {
                                     <svg className="w-4 h-4" aria-hidden="true" focusable="false" viewBox="0 0 14 14"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.90022 1.46712L8.09914 4.77441L8.21738 5.10059L8.56431 5.10399L12.2173 5.13974L9.31681 7.14024L9.00637 7.35436L9.12693 7.71169L10.226 10.969L7.17558 8.95637L6.90021 8.77468L6.62485 8.95637L3.57446 10.969L4.67351 7.71169L4.79407 7.35436L4.48363 7.14024L1.58315 5.13974L5.23613 5.10399L5.58306 5.10059L5.7013 4.77441L6.90022 1.46712Z" stroke="#D89571"></path></svg></svg>
                                     <p className="cpcst-detail-title" tabIndex="-1">Extras</p>
                                 </div>
-                                <a href="#" className='ExtrasText text-black underline'>Add Extra Features</a>
+                                <div className='ExtrasText text-black underline'>Add Extra Features</div>
                             </div>
                         </div>
                         <AccordianforDetail ring={"Ring"} />

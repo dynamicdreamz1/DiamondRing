@@ -97,11 +97,12 @@ const CompleteDetailsData = () => {
                                     <span className='px-1 text-xs leading-tight text-customGray-500 uppercase'>i</span>
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
-                                        to={`/diamond-list/${diamond?.diamond?.diamond?.certificate?.certNumber}`}
+                                        to={diamond?.diamond?.diamond?.certificate?.certNumber ? `/diamond-list/${diamond.diamond.diamond.certificate.certNumber}` : '#'}
                                         aria-hidden="false"
                                     >
                                         View Details
                                     </Link>
+
                                 </div>
                                 <p className="text-2xl font-bold">${diamondPrice}</p>
                             </div>
