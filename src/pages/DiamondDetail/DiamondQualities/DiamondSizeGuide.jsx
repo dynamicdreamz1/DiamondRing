@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
+import HandRoundRing from "../../../assets/Images/handRoundRing.png"
+import RoundShapeStone from "../../../assets/Images/RoundShapeStone.png"
+
 
 const DiamondSizeGuide = () => {
     const caratSizes = [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0];
     const [currentCarat, setCurrentCarat] = useState(1.0);
 
-    // Calculate scale based on carat size
     const calculateScale = (carat) => {
-        // Simple scaling logic: base scale at 1.0 ct, increase proportionally
         const baseScale = 0.300;
         const scaleFactor = 1 + (carat - 1.0) * 0.2; // 10% increase per carat
         
@@ -103,7 +104,7 @@ const DiamondSizeGuide = () => {
                     <strong>1.0 ct</strong>
                 </div>
                 <img
-                    src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1231583/build/_assets/hand-with-setting-23F6JYZ6.png"
+                    src={HandRoundRing}
                     width="800"
                     height="800"
                     loading="eager"
@@ -112,7 +113,7 @@ const DiamondSizeGuide = () => {
                 />
                 <div className="DiamondCaratSize__ShapeImage--Container absolute left-[38.4%] top-[37.5%] w-1/4 h-1/4">
                     <img
-                        src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1231583/build/_assets/RoundShapeStoneSolo-MHTOVVUU.png"
+                        src={RoundShapeStone}
                         width="200"
                         height="200"
                         loading="eager"

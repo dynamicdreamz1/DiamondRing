@@ -607,9 +607,7 @@
 .CustomProductGallery__container .slick-prev:before,.CustomProductGallery__container .slick-next:before {
     content: "";
     filter: invert(64%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(95%) contrast(95%);
-    /* background: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/arrow-S72QLZSK.svg); */
     background: url(../../assets//Images/slick-next-arrow.svg);
-
     background-repeat: no-repeat;
     background-size: cover;
     width: 34px;
@@ -974,7 +972,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 [data-current-block=color] .StoneDetailBlock__content-image-container:after,[data-current-block=clarity] .StoneDetailBlock__content-image-container:after {
-    /* content: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/divider-arrow-CVT3GWHC.svg); */
     content: url(../../assets/Images/bottom-divider-arrow.svg);
     width: 4px;
     height: 16px;
@@ -1137,7 +1134,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
     padding: 0 3rem 0 1rem;
     width: auto;
     background-color: var(--primary-bg);
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/select_arrow-YBJYSSD6.svg); */
     background-image: url(../../assets/Images/select-box-arrow.svg);
     background-size: 1.5rem 1.5rem;
     background-position: right .75rem center;
@@ -1593,7 +1589,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
     }
 
     .CustomProductGallery__thumb-spin-diamond {
-        /* background: linear-gradient(-110deg,rgba(208,219,231,.87843),rgba(141,160,175,.8902)),url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/diamondImageBackground-VJ7ASVR3.png); */
         background: linear-gradient(-110deg,rgba(208,219,231,.87843),rgba(141,160,175,.8902)),url(../../assets/Images/diamondImage-background-img.webp);
         background-repeat: repeat;
         background-size: cover,40px;
@@ -2690,7 +2685,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-elongated-cushion-TIT6AWU7.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-elongated-cushion-img1.svg);
 }
 
@@ -2704,7 +2698,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .cushion.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-cushion-BNRVIIFB.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-elongated-cushion-img2.svg);
 }
 
@@ -2729,7 +2722,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .round.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-round-C465UOI7.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-round-img1.svg);
 }
 
@@ -2754,7 +2746,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .oval.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-oval-6DMY4L65.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-oval-img1.svg);
 }
 
@@ -2779,7 +2770,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .pear.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-pear-RWWZ4YOW.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-pear-img1.svg);
 }
 
@@ -2804,7 +2794,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .princess.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-princess-GNWZRGQC.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-princess-img1.svg);
 }
 
@@ -2829,7 +2818,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .emerald.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-emerald-QOCPV7UX.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-emerald-img1.svg);
 }
 
@@ -2854,7 +2842,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .heart.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-heart-UXEPIRT3.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-heart-img1.svg);
 }
 
@@ -2879,7 +2866,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .radiant.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-radiant-P5ZZAWUY.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-radiant-img1.svg);
 }
 
@@ -2904,7 +2890,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .marquise.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-marquise-LYRJQBJS.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-marquise-img1.svg);
 }
 
@@ -2929,7 +2914,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .elongated-cushion.stone-prop {
-    /* background-image: url(https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1133111/build/_assets/kzr-shape-proportion-elongated-cushion-TIT6AWU7.svg) */
     background-image: url(../../assets/Images/kzr-shape-proportion-elongated-cushion-bg-img1.svg);
 }
 
@@ -2962,7 +2946,6 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
     display: inline-block;
     width: 24.1px;
     height: 32px;
-    /* background: url(https://cdn.tangiblee.com/integration/3.1/managed/keyzarjewelry.com/revision_3/variation_original/img/icon.png) 50% no-repeat; */
     background: url(../../assets/Images/hand-icon.png) 50% no-repeat;
     background-size: contain;
 }
