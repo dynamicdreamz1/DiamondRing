@@ -130,7 +130,7 @@ const DiamondSizeGuide = () => {
                     </div>
                     <div class="DiamondCaratSize__values relative font-proximaNovaCondensed">
                         <div class="hidden md:inline-flex items-center justify-center flex-nowrap">
-                            {caratSizes.map((carat, index) => (
+                            {caratSizes.map((carat) => (
                                 <button
                                     key={carat}
                                     onClick={() => handleCaratSelect(carat)}
