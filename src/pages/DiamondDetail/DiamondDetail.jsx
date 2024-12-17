@@ -15,7 +15,6 @@ const DiamondDetail = () => {
 
   useEffect(() => {
     if (diamondId) {
-      // Reconstruct the full GraphQL ID
       dispatch(fetchSingleDiamondList({ certificate_numbers: diamondId }));
     }
   }, [dispatch, diamondId]);
