@@ -16,11 +16,8 @@ const productSlice = createSlice({
     },
     fetchSingleRingSuccess: (state, action) => {
       const { product } = action.payload;
-
       state.loading = false;
-        // Replace products
-        state.product = product;
-
+      state.product = product;
     },
     fetchSingleRingFailure: (state, action) => {
       state.loading = false;
