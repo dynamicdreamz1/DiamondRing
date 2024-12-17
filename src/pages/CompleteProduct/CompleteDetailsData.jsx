@@ -134,7 +134,10 @@ const CompleteDetailsData = () => {
                             <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md w-full">Add to Shopping Bag</button>
                         </div>
                         <div className="mt-4 text-center">
-                            <p className="text-gray-500">Pay in 12 interest-free installments of $105 <a href="#" className="text-blue-500 hover:text-blue-700">Learn more</a></p>
+                            <p className="text-gray-500">
+                                Pay in 12 interest-free installments of $105
+                                <div className="text-blue-500 hover:text-blue-700">Learn more</div>
+                            </p>
                         </div>
                     </div>
                 </div>
