@@ -2960,14 +2960,14 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 }
 
 .product-common-sec {
-    background-image: url(../../../public/get-in-touch-img.webp);
+    background-image: url(../../assets/Images/get-in-touch-img.webp);
     background-size: cover;
     background-position: center;
     min-height: 689px;
 }
 
 .our-work-sec {
-    background-image: url(../../../public/our-work-img.webp);
+    background-image: url(../../assets/Images/our-work-img.webp);
 }
 
 .our-work-sec .product-common-text {
@@ -3103,13 +3103,13 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
 
 @media (max-width:575px) {
     .product-common-sec {
-        background-image: url(../../../public/get-in-touch-mob-img.webp);
+        background-image: url(../../assets/Images/get-in-touch-mob-img.webp);
         min-height: 512px;
         align-items: end;
     }
 
     .our-work-sec {
-        background-image: url(../../../public/our-work-mob-img.webp);
+        background-image: url(../../assets/Images/our-work-mob-img.webp);
     }
 }
 
