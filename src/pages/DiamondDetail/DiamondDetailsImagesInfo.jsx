@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from "../../Component/Common/ViewCertification"
+import DiamondSizeGuide from './DiamondQualities/DiamondSizeGuide';
 
 const DiamondDetailsImagesInfo = () => {
 
   const { diamond } = useSelector((state) => state.singleDiamond);
+
+
 
   return (
     <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>
@@ -42,9 +45,9 @@ const DiamondDetailsImagesInfo = () => {
             Your browser does not support iframes.
           </iframe>
         </div>
-        <div className='customer-product-zoom-img'>
-          <img src="/lexie-side-img2.webp" alt='lexie-side-img' />
-        </div>
+
+      <DiamondSizeGuide />
+
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <CertificateImage
             lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
