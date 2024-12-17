@@ -21,16 +21,16 @@ const DiamondSizeGuide = () => {
 
     return (
         <div
-            class="DiamondCaratSize overflow-hidden relative p-3 mt-4 bg-customGray-150 rounded-2.5xl lg:bg-transparent lg:p-0 lg:rounded-none lg:m-0"
+            className="DiamondCaratSize overflow-hidden relative p-3 mt-4 bg-customGray-150 rounded-2.5xl lg:bg-transparent lg:p-0 lg:rounded-none lg:m-0"
         // style="--selector_number: -3; --selector_number_desktop: -4; --zoom: 0.565; --filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)); --zoom_desktop: 0.565; --stone-position: 5.55% 5.4% 5.2% 5.35%; --stone-origin: 50% 50%; --guide: 0;"
         >
-            <div class="DiamondCaratSize__header w-full lg:absolute lg:top-0 lg:p-4 lg:text-center text-black lg:text-white">
+            <div className="DiamondCaratSize__header w-full lg:absolute lg:top-0 lg:p-4 lg:text-center text-black lg:text-white">
                 <h3
-                    class="font-bold text-1.5lg leading-tight flex items-center gap-2 mb-2 lg:mb-0 lg:justify-center"
+                    className="font-bold text-1.5lg leading-tight flex items-center gap-2 mb-2 lg:mb-0 lg:justify-center"
                     tabindex="-1"
                 >
                     <svg
-                        class="w-8 h-8 p-1.5 rounded-full bg-white lg:hidden"
+                        className="w-8 h-8 p-1.5 rounded-full bg-white lg:hidden"
                         aria-hidden="true"
                         focusable="false"
                     >
@@ -91,14 +91,14 @@ const DiamondSizeGuide = () => {
                     Diamond Carat Size Guide
                 </h3>
                 <p
-                    class="hidden font-medium text-xs leading-tight mb-0 lg:block"
+                    className="hidden font-medium text-xs leading-tight mb-0 lg:block"
                     tabindex="-1"
                 >
                     *The setting in the image is for reference only
                 </p>
             </div>
-            <div class="relative overflow-hidden rounded-lg lg:rounded-none">
-                <div class="DiamondCaratSize__ShownWith text-center whitespace-nowrap bg-white/75 text-[#404040] rounded-100 absolute top-3 left-1/2 -translate-x-1/2 py-1 px-2 text-1.5sm leading-tight lg:hidden">
+            <div className="relative overflow-hidden rounded-lg lg:rounded-none">
+                <div className="DiamondCaratSize__ShownWith text-center whitespace-nowrap bg-white/75 text-[#404040] rounded-100 absolute top-3 left-1/2 -translate-x-1/2 py-1 px-2 text-1.5sm leading-tight lg:hidden">
                     Shown with
                     <strong>1.0 ct</strong>
                 </div>
@@ -108,9 +108,9 @@ const DiamondSizeGuide = () => {
                     height="800"
                     loading="eager"
                     alt="Diamond-carat-size-hand-desktop-image"
-                    class="w-full h-full aspect-square fadeIn object-cover"
+                    className="w-full h-full aspect-square fadeIn object-cover"
                 />
-                <div class="DiamondCaratSize__ShapeImage--Container absolute left-[38.4%] top-[37.5%] w-1/4 h-1/4">
+                <div className="DiamondCaratSize__ShapeImage--Container absolute left-[38.4%] top-[37.5%] w-1/4 h-1/4">
                     <img
                         src="https://cdn.shopify.com/oxygen-v2/24658/9071/18525/1231583/build/_assets/RoundShapeStoneSolo-MHTOVVUU.png"
                         width="200"
@@ -124,12 +124,12 @@ const DiamondSizeGuide = () => {
                         }}
                     />
                 </div>
-                <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3 justify-center items-center lg:p-4 lg:gap-2 lg:pb-2">
-                    <div class="text-center text-white text-sm leading-tight lg:hidden">
+                <div className="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3 justify-center items-center lg:p-4 lg:gap-2 lg:pb-2">
+                    <div className="text-center text-white text-sm leading-tight lg:hidden">
                         *closest value to your size 0.5ct
                     </div>
-                    <div class="DiamondCaratSize__values relative font-proximaNovaCondensed">
-                        <div class="hidden md:inline-flex items-center justify-center flex-nowrap">
+                    <div className="DiamondCaratSize__values relative font-proximaNovaCondensed">
+                        <div className="hidden md:inline-flex items-center justify-center flex-nowrap">
                             {caratSizes.map((carat) => (
                                 <button
                                     key={carat}
@@ -144,10 +144,10 @@ const DiamondSizeGuide = () => {
                             ))}
                         </div>
                     </div>
-                    <div class="hidden text-center text-white text-xs leading-tight lg:block">
+                    <div className="hidden text-center text-white text-xs leading-tight lg:block">
                         <p tabindex="-1">
                             Shown with <strong>1.0ct Diamond</strong>{" "}
-                            <span class="text-1.5xs leading-tight">
+                            <span className="text-1.5xs leading-tight">
                                 *closest value to your size 0.5ct
                             </span>
                         </p>
@@ -155,7 +155,7 @@ const DiamondSizeGuide = () => {
                 </div>
             </div>
             <p
-                class="mt-1.5 text-black opacity-75 text-1.5xs leading-tight mb-0 lg:hidden"
+                className="mt-1.5 text-black opacity-75 text-1.5xs leading-tight mb-0 lg:hidden"
                 tabindex="-1"
             >
                 *The setting in the image is for reference only

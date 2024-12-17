@@ -46,7 +46,7 @@ const RingDetailInformation = () => {
               <div className='relative image-aspect-container responsive pt-[100%]'>
                 <img className='absolute top-0 left-0 w-full h-full object-cover md:rounded-2xl' src={ringdetailinfoimg2} alt="ringdetailinfoimg" />
                 <div className='absolute left-0 right-0 top-full -translate-y-1/2 z-10 text-center px-7'>
-                  <div href="#" className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>
+                  <div className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>
                     Our bestseller settings
                   </div>
                 </div>
@@ -283,9 +283,6 @@ const RingDetailInformation = () => {
               <div className='p-1.5 text-xs text-left text-black leading-tight mb-8'>The Amber with a 5 carat Pear cut Diamond in Yellow Gold and the 1.5ct Round Shared Prong Eternity in White Gold, The Pave Crown Kamellie with a 5 carat Elongated Cushion cut Diamond, The Kristen and The Mia bands in White Gold</div>
             </div>
           </div>
-
-
-
         </div>
       </div>
 
