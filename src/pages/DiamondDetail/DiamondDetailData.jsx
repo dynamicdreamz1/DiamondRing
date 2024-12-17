@@ -20,27 +20,29 @@ const DiamondDetailData = () => {
   const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
   const ringExists = getTabsProduct?.tabs?.ring;
 
+  const diamondPrice = diamond && parseFloat(diamond?.price);
+  const ringPrice = ringExists && parseFloat(ringExists?.variants.edges[0].node.price.amount);
+  const TotalPrice = (diamondPrice && ringPrice) ? diamondPrice + ringPrice : "";
 
   const handleDiamondAction = (diamond) => {
     const productWithType = {
-        diamond: { ...diamond, type: 'diamond' },
-        ring: getTabsProduct?.tabs?.ring,
-        currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+      diamond: { ...diamond, type: 'diamond' },
+      ring: getTabsProduct?.tabs?.ring,
+      currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
     };
     dispatch(addProductTabs(productWithType));
     setselectedProductModel(true)
     if (getTabsProduct?.tabs?.ring && diamond) {
-
-        if (getTabsProduct?.tabs?.ring && diamond) {
-            dispatch(addProductTabs({
-                ...productWithType,
-                finelProduct: { price: "", type: 'finelProduct' },
-                currentStep: 3
-            }));
-            navigate('/complete-product');
-        }
+      if (getTabsProduct?.tabs?.ring && diamond) {
+        dispatch(addProductTabs({
+          ...productWithType,
+          finelProduct: { price: "", type: 'finelProduct' },
+          currentStep: 3
+        }));
+        navigate('/complete-product');
+      }
     }
-}
+  }
 
 
   if (error) return <p>Error: {error}</p>;
@@ -59,7 +61,7 @@ const DiamondDetailData = () => {
             <h2 className='max-w-prose font-bold text-heading cpst-title whitespace-normal pb-1'>
               {diamond?.diamond?.certificate?.carats} Carat {diamond?.diamond?.certificate?.color} {diamond?.diamond?.certificate?.clarity} {diamond?.diamond?.certificate?.shape} {diamond?.diamond?.certificate?.labgrown === true ? "Natural Diamond" : "Lab Diamond"}</h2>
             <h3 className='tangiblee-price text-lg mb-1 leading-none text-black font-semibold md:text-1.5xl'>${diamond?.price}</h3>
-            <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With setting:<span>${diamond?.markup_price}</span></p>
+            {TotalPrice && <p className='text-customGray-300 mb-2 text-1.5sm leading-none'>With setting:<span>${TotalPrice}</span></p>}
           </div>
           <div className="cpst-title-icon-container flex items-start gap-1 shrink-0">
             <svg className="cpst-title-icon w-16 h-auto shrink-0" viewBox="0 0 81 77">

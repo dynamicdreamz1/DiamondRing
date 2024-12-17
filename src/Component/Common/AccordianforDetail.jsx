@@ -6,8 +6,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from './ViewCertification';
 
-const AccordianforDetail = ({ring}) => {
+const AccordianforDetail = ({ ring }) => {
+
     const { diamond } = useSelector((state) => state.singleDiamond);
+    
     return (
         <div className="mt-4 accordian-main-sec">
             <Accordion>
