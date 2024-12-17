@@ -10,7 +10,13 @@ const OurWork = () => {
                     <p className='cfpb-fib-text'>We want your jewelry to be flawless and perfect in every detail. That’s why we take the time to hand-craft it individually.</p>
                     <Link to="/ring-select/ring-detail" className='cfpb-fib-link mt-7 flex justify-between items-center gap-3 md:justify-start md:mt-6'>
                         Read More
-                        <svg className="w-8 h-3" viewBox="0 0 34 14"><svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="6.5" width="32" height="1" rx="0.5" fill="currentColor"></rect><path d="M26.3555 12.7271L32.1226 7.00005L26.3555 1.27295" stroke="currentColor" stroke-linecap="round"></path></svg></svg>
+                        <svg className="w-8 h-3" viewBox="0 0 34 14">
+                            <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="6.5" width="32" height="1" rx="0.5" fill="currentColor">
+                                </rect><path d="M26.3555 12.7271L32.1226 7.00005L26.3555 1.27295" stroke="currentColor" stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </svg>
                     </Link>
                 </div>
             </div>
