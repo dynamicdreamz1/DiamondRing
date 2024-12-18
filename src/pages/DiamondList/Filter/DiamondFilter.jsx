@@ -7,8 +7,7 @@ import PriceFilter from './PriceFilter';
 import CaratFilter from './CaratFilter';
 import AdvancedFilter from './AdvancedFilter';
 import AdvancedSlideFilter from './AdvancedSlideFilter';
-import ClaritySelection from './AdvancedClarityFilter';
-import AdvancedColorFilter from './AdvancedColorFilter';
+import FilterSlide from './FilterSlide';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
@@ -114,7 +113,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <AdvancedColorFilter />
+                    <FilterSlide  label={"color"}  options={["J", "I", "H", "G", "F", "E", "D"]} />
                 </div>
 
                 <div className='collection-filter-item'>
@@ -130,7 +129,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <ClaritySelection />
+                    <FilterSlide label={"clarity"} options={["SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"]} />
                 </div>
 
                 <div className='collection-filter-item'>
