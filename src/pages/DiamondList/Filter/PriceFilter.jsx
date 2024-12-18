@@ -71,6 +71,8 @@ const PriceFilter = () => {
       } else {
         // Dispatch the updated filter values to the Redux store
         dispatch(updateFilter({ price_from: min, price_to: max }));
+        dispatch(updateFilter({ page: 0 }));
+
       }
     };
 

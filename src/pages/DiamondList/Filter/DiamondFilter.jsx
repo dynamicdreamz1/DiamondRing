@@ -112,7 +112,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <FilterSlide  label={"color"}  options={["J", "I", "H", "G", "F", "E", "D"]} />
+                    <FilterSlide  label={"color"}  options={["J", "I", "H", "G", "F", "E", "D"]} filters={filters.color} />
                 </div>
 
                 <div className='collection-filter-item'>
@@ -128,7 +128,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <FilterSlide label={"clarity"} options={["SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"]} />
+                    <FilterSlide label={"clarity"} options={["SI1", "VS2", "VS1", "VVS2", "VVS1", "IF", "FL"]} filters={filters.clarity} />
                 </div>
 
                 <div className='collection-filter-item'>

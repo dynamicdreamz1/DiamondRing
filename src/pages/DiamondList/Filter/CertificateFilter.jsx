@@ -19,6 +19,8 @@ const CertificateFilter = () => {
         }
 
         dispatch(updateFilter({ lab: newLabSelection })); // Update Redux with the new array
+        dispatch(updateFilter({ page: 0 }));
+
     };
 
     return (

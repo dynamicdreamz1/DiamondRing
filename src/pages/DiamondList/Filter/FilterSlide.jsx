@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { updateFilter } from '../../../store/slices/diamondFilterSlice';
 import { useDispatch } from 'react-redux';
 
-const FilterSlide = ({ label, options }) => {
+const FilterSlide = ({ label, options , filters }) => {
   const dispatch = useDispatch();
-  const [selected, setSelected] = useState([...options]);
+  const [selected, setSelected] = useState(filters.length > 0 ? filters :  [...options]);
 
   const handleClick = (clickedOption) => {
     const clickedIndex = options.indexOf(clickedOption);
@@ -55,6 +55,7 @@ const FilterSlide = ({ label, options }) => {
     setSelected([clickedOption]);
   };
 
+  
 
   useEffect(() => {
     if (selected) {

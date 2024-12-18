@@ -39,6 +39,8 @@ const CaratFilter = () => {
       setValues([values[1], values[1]]);
     }
     dispatch(updateFilter({ carat_from: values[0], carat_to: values[1] }));
+    dispatch(updateFilter({ page: 0 }));
+
   };
 
 
