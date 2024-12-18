@@ -13,6 +13,7 @@ const initialState = {
     symmetry: [],
     color : [],
     clarity : [],
+    page : 0
     // budget: { min: 0, max: 0 }, // Range for budget
 };
 

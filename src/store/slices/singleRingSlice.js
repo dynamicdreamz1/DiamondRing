@@ -7,7 +7,6 @@ const productSlice = createSlice({
     product: {},
     loading: false,
     error: null,
-    pageInfo: null,
   },
   reducers: {
     fetchSingleRingStart: (state) => {

@@ -16,6 +16,7 @@ const AdvancedFilter = () => {
     useEffect(() => {
         if (symmetryFilter) {
             dispatch(updateFilter({ symmetry: symmetryFilter })); // Update the Redux state with true/false
+            dispatch(updateFilter({ page: 0 }));
         }
     }, [symmetryFilter, dispatch])
 
@@ -23,6 +24,8 @@ const AdvancedFilter = () => {
     useEffect(() => {
         if (polishFilter) {
             dispatch(updateFilter({ polish: polishFilter })); // Update the Redux state with true/false
+            dispatch(updateFilter({ page: 0 }));
+            
         }
     }, [polishFilter, dispatch])
 

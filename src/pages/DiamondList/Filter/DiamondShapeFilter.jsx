@@ -9,6 +9,8 @@ const DiamondShapeFilter = () => {
 
   const handleRingTypeSelection = (option) => {
     dispatch(updateFilter({ shape: option.name })); // Update only the shape in the Redux state
+    dispatch(updateFilter({ page: 0 }));
+
   };
   
 

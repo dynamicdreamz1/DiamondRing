@@ -60,6 +60,8 @@ const AdvancedColorFilter = () => {
   useEffect(() => {
     if (selectedColor) {
       dispatch(updateFilter({ clarity: selectedColor })); // Update the Redux state with true/false
+      dispatch(updateFilter({ page: 0 }));
+
     }
   }, [selectedColor, dispatch])
 

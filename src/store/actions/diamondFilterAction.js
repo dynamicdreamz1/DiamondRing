@@ -9,7 +9,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 let cancelTokenSource = null;
 
-export const fetchDiamondList = (filter) => async (dispatch) => {
+export const fetchDiamondList = (filter,page) => async (dispatch) => {
     try {
         // Cancel the previous request if it exists
         if (cancelTokenSource) {
@@ -41,10 +41,13 @@ export const fetchDiamondList = (filter) => async (dispatch) => {
         dispatch(
             diamondsFetchSuccess({
                 diamonds: response.data,
+                append : page > 0 ? true : false
             })
         );
 
         return response?.data;
+
+        
     } catch (error) {
         if (axios.isCancel(error)) {
             console.warn("Request canceled:", error.message);

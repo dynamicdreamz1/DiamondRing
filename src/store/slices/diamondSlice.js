@@ -6,7 +6,6 @@ const diamondSlice = createSlice({
     diamonds: [],
     loading: false,
     error: null,
-    // pageInfo: null,
   },
   reducers: {
     diamondsFetchStart: (state) => {
@@ -14,20 +13,13 @@ const diamondSlice = createSlice({
       state.error = null;
     },
     diamondsFetchSuccess: (state, action) => {
-      const { diamonds, append } = action.payload;
-
-      state.loading = false;
-    //   state.pageInfo = diamonds.pageInfo;
-        
-      if (append) {
-        // Append new diamonds
-        state.diamonds = {
-          ...diamonds,
-          edges: [...state.diamonds.edges, ...diamonds.edges],
-        };
+      const { diamonds, append } = action.payload;      
+      state.loading = false; 
+      
+      if (append) {     
+        state.diamonds = [...state.diamonds, ...diamonds.data.diamonds_by_query.items]
       } else {
-        // Replace diamonds
-        state.diamonds = diamonds;
+        state.diamonds = diamonds.data.diamonds_by_query.items;
       }
     },
     diamondsFetchFailure: (state, action) => {
