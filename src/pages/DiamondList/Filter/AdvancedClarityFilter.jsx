@@ -17,8 +17,16 @@ const ClaritySelection = () => {
       return;
     }
 
-    // If only one option is selected, select the range of clarity options between the first selected and the clicked one
+    // If only one option is selected
     if (selectedClarity.length === 1) {
+      // If the clicked option is the same as the currently selected option
+      if (selectedClarity[0] === clickedOption) {
+        // Reset to just this single option
+        setSelectedClarity([clickedOption]);
+        return;
+      }
+
+      // Select range between the current selection and the clicked option
       const newSelection = optionsClarity.slice(
         Math.min(optionsClarity.indexOf(selectedClarity[0]), clickedIndex),
         Math.max(optionsClarity.indexOf(selectedClarity[0]), clickedIndex) + 1
@@ -27,17 +35,27 @@ const ClaritySelection = () => {
       return;
     }
 
-    if (selectedClarity.length > 1) {
-      if (selectedClarity.includes(clickedOption)) {
-        const newSelection = selectedClarity.filter((opt) => opt !== clickedOption);
-        setSelectedClarity(newSelection);
-      } else {
-        // Otherwise, select the clicked option only
-        setSelectedClarity([clickedOption]);
-      }
-    }
-  };
+    // If multiple options are selected
+    if (selectedClarity.includes(clickedOption)) {
+      // If the clicked option is already in the selection
+      // Remove it from the selection
+      const newSelection = selectedClarity.filter((opt) => opt !== clickedOption);
 
+      // If only one option remains after removal, keep that single option
+      if (newSelection.length === 1) {
+        setSelectedClarity(newSelection);
+        return;
+      }
+
+      // Otherwise, reset to the clicked option
+      setSelectedClarity([clickedOption]);
+      return;
+    }
+
+    // If the clicked option is not in the selection
+    // Reset to the clicked option
+    setSelectedClarity([clickedOption]);
+  };
 
   useEffect(() => {
     if (selectedClarity) {

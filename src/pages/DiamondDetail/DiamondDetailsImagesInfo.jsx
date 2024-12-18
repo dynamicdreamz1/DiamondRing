@@ -45,9 +45,8 @@ const DiamondDetailsImagesInfo = () => {
             Your browser does not support iframes.
           </iframe>
         </div>
-
-      <DiamondSizeGuide />
-
+        
+        <DiamondSizeGuide />
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <CertificateImage
             lab={diamond?.diamond?.certificate.lab === "IGI" ? true : false}
