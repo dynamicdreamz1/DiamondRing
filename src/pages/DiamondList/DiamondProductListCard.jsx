@@ -38,9 +38,6 @@ const DiamondProductListCard = () => {
             }
         }
     }
-
-
-    console.log("diamonds",diamonds);
     
 
     if (error) return <p>Error: {error}</p>;

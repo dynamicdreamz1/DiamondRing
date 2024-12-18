@@ -18,7 +18,6 @@ const DiamondFilter = () => {
     const handleRingTypeSelection = (isLabGrown) => {
         dispatch(updateFilter({ labgrown: isLabGrown })); // Update the Redux state with true/false
         dispatch(updateFilter({ page: 0 }));
-
     };
 
     const handleResetFilter = () => {
