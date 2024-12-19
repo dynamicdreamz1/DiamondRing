@@ -44,9 +44,7 @@ const DiamondList = () => {
         <DiamondProductListCard />
 
         <div className="">
-          {loading &&
-            <Loading />
-          }
+          {loading && <Loading /> }
         </div>
         <LoadMoreButton handleLoadMore={handleLoadMore} loading={loading} />
       </div>
