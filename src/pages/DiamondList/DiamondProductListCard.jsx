@@ -12,7 +12,7 @@ const DiamondProductListCard = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [selectedProductModel, setselectedProductModel] = useState(false);
-    const { diamonds, error } = useSelector((state) => state.diamond);
+    const { diamonds, error, loading } = useSelector((state) => state.diamond);
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
     const ringExists = getTabsProduct?.tabs?.ring;
 
@@ -216,13 +216,17 @@ const DiamondProductListCard = () => {
                             </div>
                             <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
                         </div>
-
                     </>
                 </div>
             )) :
-                <p>
-                    No Data Found Please reset Filter
-                </p>
+
+                <>
+                    {!loading &&
+                        <p>
+                            No Data Found Please reset Filter
+                        </p>
+                    }
+                </>
             }
             <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
 
