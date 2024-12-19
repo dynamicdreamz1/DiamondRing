@@ -131,6 +131,7 @@ const CaratFilter = () => {
               value={values[1]}
               onChange={handleMaxInputChange}
               onBlur={handleBlur}
+              
             />
           </div>
         </div>
