@@ -15,22 +15,21 @@ const tabManageProduct = createSlice({
   initialState,
   reducers: {
     addProductTabs(state, action) {
-    
-      const { diamond, ring, currentStep , finelProduct } = action.payload;
-    
+
+      const { diamond, ring, currentStep, finelProduct } = action.payload;
+
       // Merge the new keys into the existing tabs object
       state.tabs = {
-        ...state.tabs,       // Retain the existing keys and values
-        diamond: diamond,    // Add or update the 'diamond' key
-        ring: ring,          // Add or update the 'ring' key
-        currentStep: currentStep , // Add or update the 'currentStep' key
-        finelProduct : finelProduct
+        ...state.tabs,
+        diamond: diamond,
+        ring: ring,
+        currentStep: currentStep,
+        finelProduct: finelProduct
       };
-    
+
       // Save the updated tabs data to localStorage
       localStorage.setItem('productTabs', JSON.stringify(state.tabs));
     },
-    
   },
 });
 
