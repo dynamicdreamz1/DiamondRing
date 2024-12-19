@@ -34,7 +34,7 @@ const DiamondProductListCard = () => {
                     finelProduct: { price: "", type: 'finelProduct' },
                     currentStep: 3
                 }));
-                navigate('/complete-product');
+                navigate('/ring-management/complete-product');
             }
         }
     }
@@ -50,7 +50,7 @@ const DiamondProductListCard = () => {
                             <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
                                 <WishList />
                                 <div className='CenterStoneProductCard__ImageWrapper relative pt-[100%]'>
-                                    <Link to={`/diamond-list/${diamond.diamond.certificate.certNumber}`}>
+                                    <Link to={`/ring-management/diamond-list/${diamond.diamond.certificate.certNumber}`}>
                                         <img className='absolute w-full h-full top-0 left-0 object-cover'
                                             src={diamond?.diamond?.v360?.url ? `${diamond?.diamond?.v360?.url}/${diamond?.diamond?.v360?.top_index ? diamond?.diamond?.v360?.top_index : "0"}.jpg` : diamond?.diamond?.image}
                                             alt="diamond"
@@ -198,7 +198,7 @@ const DiamondProductListCard = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center gap-2 flex-wrap mt-2">
-                                <Link to={`/diamond-list/${diamond.diamond.certificate.certNumber}`} className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" aria-hidden="false">
+                                <Link to={`/ring-management/diamond-list/${diamond.diamond.certificate.certNumber}`} className="basis-1/3 grow rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 text-center min-h-[3rem] flex justify-center items-center border-2 border-black" aria-hidden="false">
                                     More Info
                                 </Link>
                                 <button onClick={() => handleDiamondAction(diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">

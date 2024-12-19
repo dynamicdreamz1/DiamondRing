@@ -71,7 +71,7 @@ const CompleteDetailsData = () => {
                                     <span className='px-1 text-xs leading-tight text-customGray-500 uppercase'>i</span>
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
-                                        to={`/ring-select/${diamond?.ring?.id?.split("/").pop()}`}
+                                        to={`/ring-management/ring-select/${diamond?.ring?.id?.split("/").pop()}`}
                                         aria-hidden="false"
                                     >
                                         View Details
@@ -95,7 +95,7 @@ const CompleteDetailsData = () => {
                                     <span className='px-1 text-xs leading-tight text-customGray-500 uppercase'>i</span>
                                     <Link
                                         className='text-xs leading-tight text-customGray-500 underline'
-                                        to={diamond?.diamond?.diamond?.certificate?.certNumber ? `/diamond-list/${diamond.diamond.diamond.certificate.certNumber}` : '#'}
+                                        to={diamond?.diamond?.diamond?.certificate?.certNumber ? `/ring-management/diamond-list/${diamond.diamond.diamond.certificate.certNumber}` : '#'}
                                         aria-hidden="false"
                                     >
                                         View Details

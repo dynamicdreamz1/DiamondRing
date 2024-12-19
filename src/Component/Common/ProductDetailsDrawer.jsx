@@ -28,7 +28,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
         currentStep: 1
       };
       dispatch(addProductTabs(productWithType));
-      navigate("/diamond-list")
+      navigate("/ring-management/diamond-list")
     }
   }
 
@@ -136,7 +136,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                 </button>
                 <Link
                   className="grow rounded-full text-base font-semibold leading-tight bg-black text-white p-3.5 text-center flex justify-center items-center md:w-full md:px-5 md:font-normal shadow-floating-button md:shadow-none"
-                  to={`/ring-select/${productData?.id?.split("/").pop()}`}
+                  to={`/ring-management/ring-select/${productData?.id?.split("/").pop()}`}
                   aria-hidden="false"
                 >
                   <div className="hidden md:block">View / Edit</div>
@@ -260,7 +260,7 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
                 </button>
                 <Link
                   className="grow rounded-full text-base font-semibold leading-tight bg-black text-white p-3.5 text-center flex justify-center items-center md:w-full md:px-5 md:font-normal shadow-floating-button md:shadow-none"
-                  to={`/diamond-list/${productData.diamond.certificate.certNumber}`}
+                  to={`/ring-management/diamond-list/${productData.diamond.certificate.certNumber}`}
                   aria-hidden="false"
                 >
                   <div className="hidden md:block">View / Edit</div>
