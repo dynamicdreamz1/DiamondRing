@@ -20,30 +20,50 @@ const CaratFilter = () => {
     dispatch(updateFilter({ carat_from: newValue[0], carat_to: newValue[1] }));
   };
 
-  const handleMinInputChange = (e) => {
-    const newMin = parseFloat(e.target.value) || 0.5;
-    if (newMin <= values[1]) {
-      setValues([newMin, values[1]]);
-    }
-  };
-
-  const handleMaxInputChange = (e) => {
-    const newMax = parseFloat(e.target.value) || 15;
-    if (newMax >= values[0]) {
-      setValues([values[0], newMax]);
-    }
-  };
 
   const handleBlur = () => {
-    if (values[0] > values[1]) {
-      setValues([values[1], values[1]]);
+    let [min, max] = values;
+  
+    // Check and reset minimum value
+    if (!min || min < 1) {
+      min = 1;
     }
-    dispatch(updateFilter({ carat_from: values[0], carat_to: values[1] }));
+  
+    // Check and reset maximum value
+    if (!max || max > 10) {
+      max = 10;
+    }
+  
+    // Ensure min is not greater than max
+    if (min > max) {
+      min = max;
+    }
+  
+    setValues([min, max]);
+  
+    // Dispatch updates to Redux
+    dispatch(updateFilter({ carat_from: min, carat_to: max }));
     dispatch(updateFilter({ page: 0 }));
-
   };
-
-
+  
+  const handleMinInputChange = (e) => {
+    const newMin = parseFloat(e.target.value);
+    if (!isNaN(newMin) && newMin <= values[1]) {
+      setValues([newMin, values[1]]);
+    } else if (e.target.value === '') {
+      setValues(['', values[1]]);
+    }
+  };
+  
+  const handleMaxInputChange = (e) => {
+    const newMax = parseFloat(e.target.value);
+    if (!isNaN(newMax) && newMax >= values[0]) {
+      setValues([values[0], newMax]);
+    } else if (e.target.value === '') {
+      setValues([values[0], '']);
+    }
+  };
+  
   useEffect(() => {
     setValues([carat_from || 1, carat_to || 10]);
   }, [carat_from, carat_to]);
@@ -84,7 +104,7 @@ const CaratFilter = () => {
               step="0.01"
               min={0.5}
               max={values[1]}
-              className="reset-input reset-styles border-none p-3 py-2 md:py-6 xl:py-2 focus:shadow-none	 text-base leading-tight text-black tracking-wide w-full bg-transparent"
+              className="reset-input reset-styles border-none p-3 py-2 md:py-6 xl:py-2 focus:shadow-none text-base leading-tight text-black tracking-wide w-full bg-transparent"
               value={values[0]}
               onChange={handleMinInputChange}
               onBlur={handleBlur}
@@ -107,7 +127,7 @@ const CaratFilter = () => {
               step="0.01"
               min={values[0]}
               max={15}
-              className="reset-input reset-styles border-none p-3 py-2 md:py-6 xl:py-2  text-base leading-tight text-black tracking-wide w-full bg-transparent"
+              className="reset-input reset-styles border-none p-3 py-2 md:py-6 xl:py-2 text-base leading-tight text-black tracking-wide w-full bg-transparent"
               value={values[1]}
               onChange={handleMaxInputChange}
               onBlur={handleBlur}
