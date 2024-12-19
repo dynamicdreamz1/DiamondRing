@@ -42,7 +42,7 @@ const ProductCard = ({ node }) => {
         finelProduct: { price: "", type: 'finelProduct' },
         currentStep: 3
       }));
-      navigate('/ring-management/complete-product');
+      navigate('/complete-product');
     }
   };
 
@@ -115,7 +115,7 @@ const ProductCard = ({ node }) => {
 
           <div className='mb-5'>
             {images.map((image, index) => (
-              <Link to={`/ring-management/ring-select/${node?.id?.split("/").pop()}`} >
+              <Link to={`/ring-select/${node?.id?.split("/").pop()}`} >
                 <img
                   key={image.node.id}
                   src={image.node.src}
@@ -159,7 +159,7 @@ const ProductCard = ({ node }) => {
         </div>
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
-          <Link to={`/ring-management/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
+          <Link to={`/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
             More Info
           </Link>
           <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">

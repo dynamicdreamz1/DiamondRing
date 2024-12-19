@@ -39,7 +39,7 @@ const DiamondDetailData = () => {
           finelProduct: { price: "", type: 'finelProduct' },
           currentStep: 3
         }));
-        navigate('/ring-management/complete-product');
+        navigate('/complete-product');
       }
     }
   }
