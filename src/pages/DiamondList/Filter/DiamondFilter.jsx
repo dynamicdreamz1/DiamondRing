@@ -8,6 +8,7 @@ import CaratFilter from './CaratFilter';
 import AdvancedFilter from './AdvancedFilter';
 import AdvancedSlideFilter from './AdvancedSlideFilter';
 import FilterSlide from './FilterSlide';
+import SortDropdown from './AscDscFilter';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
@@ -112,7 +113,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <FilterSlide  label={"color"}  options={["J", "I", "H", "G", "F", "E", "D"]} filters={filters.color} />
+                    <FilterSlide label={"color"} options={["J", "I", "H", "G", "F", "E", "D"]} filters={filters.color} />
                 </div>
 
                 <div className='collection-filter-item'>
@@ -147,31 +148,13 @@ const DiamondFilter = () => {
                     <AdvancedSlideFilter setFilter={setCutFilter} />
                 </div>
             </div>
-
-
             <div className='collection-range-main grid grid-cols-1 md:grid-cols-3 w-full items-center gap-6 py-6'>
                 <CaratFilter />
                 <PriceFilter />
                 <CertificateFilter />
             </div>
             <AdvancedFilter />
-
-            <div className="hidden md:block text-right collection-filters-item-with-custom-width-and-order md:col-span-2 xl:w-full">
-                <div className="FilterRelativeContainer relative inline-flex min-w-[10rem]">
-                    <button className="flex items-center w-full gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-all duration-300">
-                        <div className="flex-1">
-                            <div className="text-black text-sm leading-none">Price (low-to-high)</div>
-                        </div>
-                        <div className="relative w-6 h-6 text-black transition-all duration-300 rotate-180">
-                            <svg className="w-2.5 h-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                <svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.696693 0.646447C0.501431 0.841709 0.501431 1.15829 0.696693 1.35355L5.64644 6.3033C5.8417 6.49856 6.15829 6.49856 6.35355 6.3033C6.35371 6.30314 6.35388 6.30297 6.35404 6.30281L11.3033 1.35355C11.4986 1.15829 11.4986 0.841709 11.3033 0.646447C11.108 0.451184 10.7915 0.451184 10.5962 0.646447L5.99999 5.24264L1.4038 0.646447C1.20854 0.451184 0.891955 0.451184 0.696693 0.646447Z" fill="currentColor"></path>
-                                </svg>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-            </div>
+            <SortDropdown />
         </>
     )
 }

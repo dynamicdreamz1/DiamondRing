@@ -11,9 +11,11 @@ const initialState = {
     cut: [],
     polish: [],
     symmetry: [],
-    color : [],
-    clarity : [],
-    page : 0
+    color: [],
+    clarity: [],
+    page: 0,
+    order_by: "",
+    order: "",
     // budget: { min: 0, max: 0 }, // Range for budget
 };
 
