@@ -38,12 +38,12 @@ const DiamondProductListCard = () => {
             }
         }
     }
-    
+
     if (error) return <p>Error: {error}</p>;
 
     return (
         <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
-            {diamonds?.length > 0 && diamonds?.map((diamond, key) => (
+            {diamonds?.length > 0 ? diamonds?.map((diamond, key) => (
                 <div key={key} className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
                     <>
                         <div className='border-borders border rounded-lg overflow-hidden md:block'>
@@ -219,7 +219,11 @@ const DiamondProductListCard = () => {
 
                     </>
                 </div>
-            ))}
+            )) :
+                <p>
+                    No Data Found Please reset Filter
+                </p>
+            }
             <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
 
         </div>
