@@ -14,13 +14,9 @@ const SortDropdown = () => {
         setIsDropdownOpen(false);
     };
 
-    const getDisplayText = (sortValue) => {
-        const [field, direction] = sortValue.split('-');
-        return `${field.charAt(0).toUpperCase() + field.slice(1)} (${direction.replace(/-/g, ' ')})`;
-    };
 
     return (
-        <div className="ml-auto inline-block">
+        <div className="ml-auto inline-block asc-dsc-filter">
             <div className="FilterRelativeContainer relative">
                 <button
                     onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -28,7 +24,7 @@ const SortDropdown = () => {
                 >
                     <div className="flex-1">
                         <div className="text-black text-sm leading-none">
-                            {getDisplayText(selectedSort)}
+                            {selectedSort}
                         </div>
                     </div>
                     <div
@@ -55,7 +51,7 @@ const SortDropdown = () => {
                         <div className="border-2 border-solid border-customGray-50 rounded-md bg-white overflow-hidden w-max">
                             {[
                                 { field: 'price', label: 'Price' },
-                                { field: 'carat', label: 'Carat' },
+                                { field: 'size', label: 'Carat' },
                                 { field: 'color', label: 'Color' },
                                 { field: 'clarity', label: 'Clarity' },
                                 { field: 'cut', label: 'Cut' }
