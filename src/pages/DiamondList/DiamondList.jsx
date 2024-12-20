@@ -44,7 +44,7 @@ const DiamondList = () => {
         <DiamondProductListCard />
 
         <div className="">
-          {loading && <Loading /> }
+          {loading && filters.page === 0 && <Loading /> }
         </div>
         <LoadMoreButton handleLoadMore={handleLoadMore} loading={loading} />
       </div>
