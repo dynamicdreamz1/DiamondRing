@@ -213,3 +213,39 @@ export const colorTabsPanel = [
     solidImg: ""
   },
 ];
+
+
+export const reviews = [
+  {
+      rating: 5,
+      title: "Love it",
+      content: "I purchased this ring on April 12 2023, The Penelope set with a 2.37 carat F",
+      author: "Angelica King",
+      date: "August 8",
+      verified: true
+  },
+  {
+      rating: 5,
+      title: "10/10",
+      content: "I was nervous about getting an engagement ring online at first but",
+      author: "Joshua F",
+      date: "August 6",
+      verified: true
+  },
+  {
+      rating: 5,
+      title: "brought my dream ring to life ❤",
+      content: "Keyzar did an absolutely amazing job. I'm stunned at how beautiful my ring",
+      author: "Aaliyah",
+      date: "August 1",
+      verified: false
+  },
+  {
+      rating: 5,
+      title: "Great experience especially being online",
+      content: "Great experience especially being online. I was hesitant to make a",
+      author: "Brandon",
+      date: "August 1",
+      verified: true
+  }
+];

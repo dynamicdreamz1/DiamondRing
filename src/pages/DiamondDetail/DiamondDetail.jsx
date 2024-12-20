@@ -8,6 +8,7 @@ import { fetchSingleDiamondList } from '../../store/actions/singleDiamondAction'
 import DiamondQualities from './DiamondQualities'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import ReviewSlider from '../../Component/Common/ReviewSlider'
 
 const DiamondDetail = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const DiamondDetail = () => {
           <DiamondQualities />
         </div>
       </section>
+      <ReviewSlider />
       <GetInTouch />
       <OurWork />
       <NewsletterFooter />
