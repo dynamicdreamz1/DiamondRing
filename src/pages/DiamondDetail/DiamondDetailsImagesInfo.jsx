@@ -4,10 +4,7 @@ import { CertificateImage, ViewCertificate } from "../../Component/Common/ViewCe
 import DiamondSizeGuide from './DiamondQualities/DiamondSizeGuide';
 
 const DiamondDetailsImagesInfo = () => {
-
   const { diamond } = useSelector((state) => state.singleDiamond);
-
-
 
   return (
     <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>
@@ -32,20 +29,24 @@ const DiamondDetailsImagesInfo = () => {
         </div>
 
         <div className='customer-product-zoom-img'>
-          <iframe
-            src={diamond?.diamond?.video}
-            width="100%" // Set the width to full
-            height="100%" // Set the height to full
-            frameBorder="0" // Removes the border
-            allow="autoplay; fullscreen" // Allows autoplay and fullscreen
-            allowFullScreen
-            className="w-full h-full"
-            title="Diamond video" // Descriptive title for the iframe
-          >
-            Your browser does not support iframes.
-          </iframe>
+          {diamond?.diamond?.video ?
+            <iframe
+              src={diamond?.diamond?.video}
+              width="100%" // Set the width to full
+              height="100%" // Set the height to full
+              frameBorder="0" // Removes the border
+              allow="autoplay; fullscreen" // Allows autoplay and fullscreen
+              allowFullScreen
+              className="w-full h-full"
+              title="Diamond video" // Descriptive title for the iframe
+            >
+              Your browser does not support iframes.
+            </iframe>
+            :
+            <img src={diamond?.diamond?.image} alt='Diamondi-image' className="w-full h-full" />
+          }
         </div>
-        
+
         <DiamondSizeGuide />
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <CertificateImage

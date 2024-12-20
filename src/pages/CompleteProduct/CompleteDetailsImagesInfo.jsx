@@ -14,18 +14,22 @@ const CompleteDetailsImagesInfo = () => {
         </div>
 
         <div className='customer-product-zoom-img'>
-          <iframe
-            src={diamond?.diamond?.diamond?.video}
-            width="100%" // Set the width to full
-            height="100%" // Set the height to full
-            frameBorder="0" // Removes the border
-            allow="autoplay; fullscreen" // Allows autoplay and fullscreen
-            allowFullScreen
-            className="w-full h-full"
-            title="Diamond video" // Descriptive title for the iframe
-          >
-            Your browser does not support iframes.
-          </iframe>
+          {diamond.diamond?.diamond?.video ?
+            <iframe
+              src={diamond.diamond?.diamond?.video}
+              width="100%" // Set the width to full
+              height="100%" // Set the height to full
+              frameBorder="0" // Removes the border
+              allow="autoplay; fullscreen" // Allows autoplay and fullscreen
+              allowFullScreen
+              className="w-full h-full"
+              title="Diamond video" // Descriptive title for the iframe
+            >
+              Your browser does not support iframes.
+            </iframe>
+            :
+            <img src={diamond.diamond?.diamond?.image} alt='Diamondi-image'   className="w-full h-full" />
+          }
         </div>
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
           <CertificateImage
