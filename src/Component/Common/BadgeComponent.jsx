@@ -53,11 +53,6 @@ const BadgeComponent = () => {
                         </Button>
                     </DialogActions>
                 </DialogContent>
-                {/* <DialogActions>
-                    <Button onClick={handleClose} color="secondary">
-                        Great
-                    </Button>
-                </DialogActions> */}
             </Dialog>
         </div>
     );
