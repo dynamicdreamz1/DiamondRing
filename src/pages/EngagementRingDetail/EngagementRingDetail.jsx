@@ -11,6 +11,7 @@ import EngagementRingDetailData from './EngagementRingDetailData';
 import GetInTouch from '../../Component/Common/GetInTouch';
 import OurWork from '../../Component/Common/OurWork';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import ReviewSlider from '../../Component/Common/ReviewSlider';
 
 const EngagementRingDetail = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const EngagementRingDetail = () => {
       </div>
       <TabComponent />
       <EngagementRingDetailData />
+      <ReviewSlider />
       <GetInTouch />
       <OurWork />
       <EngagementRingDetailSlider />

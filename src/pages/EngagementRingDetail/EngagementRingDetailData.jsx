@@ -83,7 +83,7 @@ const EngagementRingDetailData = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className='made-in-heaven-sec EngagementCompleteYourLook lg:pt-8 lg:pb-0 grid gap-2.5 grid-cols-1 py-6 bg-white mx-auto w-full relative md:gap-4 xl:gap-8'>
+                        {/* <div className='made-in-heaven-sec EngagementCompleteYourLook lg:pt-8 lg:pb-0 grid gap-2.5 grid-cols-1 py-6 bg-white mx-auto w-full relative md:gap-4 xl:gap-8'>
                             <h2 className='CustomProduct__section-title'>Match Made in Heaven</h2>
                             <div className='made-in-heaven-img-box-main grid grid-cols-3 w-full items-center gap-3'>
                                 <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
@@ -96,7 +96,7 @@ const EngagementRingDetailData = () => {
                                     <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='customer-product-side-text-sec'>
                         <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
