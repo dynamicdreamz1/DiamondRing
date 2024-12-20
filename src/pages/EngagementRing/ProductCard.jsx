@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { ArrowLeft, ArrowRight, Heart } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import LeftSideModal from './FilterSection/LeftSideModal';
 import { Link } from "react-router-dom";
 import { addProductTabs } from "../../store/slices/TabProductSlice"
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { ArrowLeftIcon, ArrowRightIcon, HeartIcon } from '../../Utility/Constant';
 
 
 const ProductCard = ({ node }) => {
@@ -66,7 +66,7 @@ const ProductCard = ({ node }) => {
         className="absolute right-6 top-6 z-[9] transition-colors duration-200 ease-in-out"
         aria-label="Add to wishlist"
       >
-        <Heart className="h-6 w-6 text-gray-400 group-hover:text-red-500" />
+        <HeartIcon />
       </button>
       <div className="hidden z-[1] bg-white  md:block absolute  -top-5 -left-5 -right-5 xl:-top-6 xl:-left-6 xl:-right-6 border-2 border-black rounded-4xl shadow-[0px_6px_20px_0_#00000060] -bottom-48"></div>
       <div className="relative  aspect-square mb-4 overflow-hidden rounded-md ">
@@ -77,7 +77,7 @@ const ProductCard = ({ node }) => {
                 onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)}
                 className="left-arrow text-customGray-500 bg-customGray-75 p-1 rounded-full shrink-0 flex items-center justify-center"
               >
-                <ArrowLeft className="h-4 w-4 text-gray-500" />
+                <ArrowLeftIcon />
               </button>
             )}
             <button
@@ -107,7 +107,7 @@ const ProductCard = ({ node }) => {
                 onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
                 className="right-arrow ml-2 text-customGray-500 bg-customGray-75 rounded-full shrink-0 p-1 flex items-center justify-center"
               >
-                <ArrowRight className="h-4 w-4 text-gray-500" />
+                <ArrowRightIcon />
               </button>
             )}
           </div>
