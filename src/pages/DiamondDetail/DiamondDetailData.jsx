@@ -44,9 +44,6 @@ const DiamondDetailData = () => {
     }
   }
 
-  console.log("diamond?.diamond?.certificate?.carats", diamond?.diamond?.certificate.labgrown);
-
-
   if (error) return <p>Error: {error}</p>;
 
   if (loading)

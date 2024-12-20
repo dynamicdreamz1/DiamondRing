@@ -152,7 +152,12 @@ const DiamondDetailsInfo = () => {
                 <img className="StoneDetailBlock__content-image" src={stoneDimensionsimg} alt="stoneDimensionsimg" />
               </div>
             </div>
-            <div className="StoneDetailBlock__desc">Ratio: 1</div>
+            <div className="StoneDetailBlock__desc">
+              Ratio: {diamond?.diamond?.certificate
+                ? (parseFloat(diamond.diamond.certificate.length) / parseFloat(diamond.diamond.certificate.width)).toFixed(2)
+                : "N/A"}
+            </div>
+
           </div>
           <div className="StoneDetailBlock p-3 flex flex-col justify-between" data-current-block="dimensions (mm)">
             <div className="StoneDetailBlock__header-container flex items-center justify-between gap-2 text-customGray-500 mb-2">
