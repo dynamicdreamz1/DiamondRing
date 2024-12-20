@@ -86,46 +86,48 @@ const ReviewSlider = () => {
     };
 
     return (
-        <div className="max-w-6xl mx-auto px-8 py-6 relative">
-            <div className="mb-8">
-                <div className="flex items-center gap-2 mb-2">
-                    <h2 className="text-xl font-semibold">Excellent</h2>
-                    <div className="flex">
-                        {[...Array(5)].map((_, i) => (
-                            <StarIcon key={i} />
-                        ))}
+        <section className="sai-container newsletter-sec">
+            <div className="container mx-auto px-4">
+                <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-2">
+                        <h2 className="text-xl font-semibold">Excellent</h2>
+                        <div className="flex">
+                            {[...Array(5)].map((_, i) => (
+                                <StarIcon key={i} />
+                            ))}
+                        </div>
                     </div>
+                    <p className="text-sm text-gray-600">Based on 815 reviews</p>
                 </div>
-                <p className="text-sm text-gray-600">Based on 815 reviews</p>
-            </div>
 
-            <Slider {...settings} className="review-slider">
-                {reviews.map((review, index) => (
-                    <div key={index} className="px-2">
-                        <div className="bg-white p-6 rounded-lg shadow-sm border min-h-[200px]">
-                            <div className="flex mb-3">
-                                {[...Array(review.rating)].map((_, i) => (
-                                    <StarIcon key={i} />
-                                ))}
-                            </div>
-                            <h3 className="font-semibold mb-2">{review.title}</h3>
-                            <p className="text-gray-600 mb-4 text-sm">{review.content}...</p>
-                            <div className="flex items-center justify-between text-sm text-gray-500">
-                                <span>{review.author}</span>
-                                <div className="flex items-center gap-2">
-                                    <span>{review.date}</span>
-                                    {review.verified && (
-                                        <span className="bg-gray-100 px-2 py-1 rounded-full text-xs">
-                                            Verified
-                                        </span>
-                                    )}
+                <Slider {...settings} className="review-slider">
+                    {reviews.map((review, index) => (
+                        <div key={index} className="px-2">
+                            <div className="bg-white p-6 rounded-lg shadow-sm border min-h-[200px]">
+                                <div className="flex mb-3">
+                                    {[...Array(review.rating)].map((_, i) => (
+                                        <StarIcon key={i} />
+                                    ))}
+                                </div>
+                                <h3 className="font-semibold mb-2">{review.title}</h3>
+                                <p className="text-gray-600 mb-4 text-sm">{review.content}...</p>
+                                <div className="flex items-center justify-between text-sm text-gray-500">
+                                    <span>{review.author}</span>
+                                    <div className="flex items-center gap-2">
+                                        <span>{review.date}</span>
+                                        {review.verified && (
+                                            <span className="bg-gray-100 px-2 py-1 rounded-full text-xs">
+                                                Verified
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </Slider>
-        </div>
+                    ))}
+                </Slider>
+            </div>
+        </section>
     );
 };
 
