@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -40,9 +44,8 @@ const DiamondSelector = () => {
         {caratSizes.map((size) => (
           <button
             key={size}
-            className={`px-4 py-1 rounded-lg border ${
-              size === 3.0 ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
-            }`}
+            className={`px-4 py-1 rounded-lg border ${size === 3.0 ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+              }`}
           >
             {size}
           </button>
@@ -80,74 +83,83 @@ const DiamondSelector = () => {
 
   return (
     <div className="max-w-lg mx-auto p-4 border border-customGray-25 rounded-lg shadow-sm mt-10">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Quick Checkout</h2>
-        <span className="cursor-pointer text-gray-500 hover:text-gray-700">X</span>
-      </div>
-      
-      <p className="text-sm text-gray-600 mb-4">
-        Choose your center stone's origin & size and let our experts handpick the perfect diamond for you
-      </p>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-lg font-semibold">Quick Checkout</h2>
+            <span className="cursor-pointer text-gray-500 hover:text-gray-700">X</span>
+          </div>
+          <p className="text-sm text-gray-600 mb-4">
+            Choose your center stone's origin & size and let our experts handpick the perfect diamond for you
+          </p>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Box sx={{ width: '100%' }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="diamond type tabs"
+                variant="fullWidth"
+                className='quick-check-out-tab'
+                sx={{
+                  '& .MuiTab-root': {
+                    textTransform: 'none',
+                    minWidth: 'auto',
+                    padding: '0px',
+                    margin: '0 4px',
+                  },
+                  '& .Mui-selected': {
+                    backgroundColor: '#ebf5ff',
+                    borderRadius: '8px',
+                    borderColor: '#3b82f6',
+                  }
+                }}
+              >
+                <Tab
+                  label={
+                    <div className={`px-4 py-2 rounded-lg ${value === 0 ? 'border-2 border-blue-500 bg-blue-50' : 'border'}`}>
+                      Lab Diamond
+                    </div>
+                  }
+                />
+                <Tab
+                  label={
+                    <div className={`px-4 py-2 rounded-lg border`}>
+                      Moissanite
+                    </div>
+                  }
+                />
+                <Tab
+                  label={
+                    <div className={`px-4 py-2 rounded-lg border`}>
+                      Natural Diamonds
+                    </div>
+                  }
+                />
+              </Tabs>
+            </Box>
 
-      <Box sx={{ width: '100%' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs 
-            value={value} 
-            onChange={handleChange}
-            aria-label="diamond type tabs"
-            variant="fullWidth"
-            className='quick-check-out-tab'
-            sx={{
-              '& .MuiTab-root': {
-                textTransform: 'none',
-                minWidth: 'auto',
-                padding: '0px',
-                margin: '0 4px',
-              },
-              '& .Mui-selected': {
-                backgroundColor: '#ebf5ff',
-                borderRadius: '8px',
-                borderColor: '#3b82f6',
-              }
-            }}
-          >
-            <Tab 
-              label={
-                <div className={`px-4 py-2 rounded-lg ${value === 0 ? 'border-2 border-blue-500 bg-blue-50' : 'border'}`}>
-                  Lab Diamond
-                </div>
-              } 
-            />
-            <Tab 
-              label={
-                <div className={`px-4 py-2 rounded-lg border`}>
-                  Moissanite
-                </div>
-              }
-            />
-            <Tab 
-              label={
-                <div className={`px-4 py-2 rounded-lg border`}>
-                  Natural Diamonds
-                </div>
-              }
-            />
-          </Tabs>
-        </Box>
+            <div className='tab-panel-main'>
 
-        <div className='tab-panel-main'>
-        
-        <TabPanel value={value} index={0}>
-          <StoneContent />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <StoneContent />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          {/* Empty content as requested */}
-        </TabPanel>
-        </div>
-      </Box>
+              <TabPanel value={value} index={0}>
+                <StoneContent />
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <StoneContent />
+              </TabPanel>
+              <TabPanel value={value} index={2}>
+                {/* Empty content as requested */}
+              </TabPanel>
+            </div>
+          </Box>
+        </AccordionDetails>
+      </Accordion>
+
     </div>
   );
 };
