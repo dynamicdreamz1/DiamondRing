@@ -33,8 +33,8 @@ const DiamondQuality = () => {
         </div>
 
         <div className="mb-2 diamond-quality-shape-sec relative">
-          <div className="relative flex items-center">
-            {/* Sliding Full Box Border */}
+        <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
+        {/* Sliding Full Box Border */}
             <div
               className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300"
               style={{

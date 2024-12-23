@@ -33,8 +33,8 @@ const DiamondClarityComponent = () => {
         </div>
 
         <div className="mb-2 diamond-quality-shape-sec relative">
-          <div className="relative flex items-center">
-            {/* Sliding Full Box Border */}
+        <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
+        {/* Sliding Full Box Border */}
             <div
               className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300"
               style={{
@@ -50,9 +50,9 @@ const DiamondClarityComponent = () => {
                 type="button"
                 onClick={() => handleTabClick(tab, index)}
                 className={`
-                flex-1 px-2 h-10 transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative font-proximaNovaCondensed
-                ${activeTab.id === tab.id ? 'font-bold text-black' : 'text-customGray-500 hover:text-black'}
-              `}
+                  flex-1 px-2 h-10 transition-colors uppercase text-center flex justify-center items-center text-1.5sm leading-tight relative font-proximaNovaCondensed
+                  ${activeTab.id === tab.id ? 'font-bold text-black' : 'text-customGray-500 hover:text-black'}
+                `}
               >
                 <span>{tab.name}</span>
               </button>
