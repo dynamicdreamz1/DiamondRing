@@ -135,7 +135,7 @@ const DiamondSizeGuide = () => {
                                 <button
                                     key={carat}
                                     onClick={() => handleCaratSelect(carat)}
-                                    className={`px-3 py-2 m-1 rounded-full transition-all duration-300 ${currentCarat === carat
+                                    className={`border-solid w-9 h-9 flex items-center justify-center cursor-pointer border-r  ${currentCarat === carat
                                         ? 'bg-black text-white'
                                         : 'text-gray-600 hover:bg-gray-100'
                                         }`}

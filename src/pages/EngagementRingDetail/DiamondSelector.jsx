@@ -35,7 +35,7 @@ const DiamondSelector = () => {
   };
 
   const StoneContent = () => (
-    <div className="p-4">
+    <div className="p-0">
       <div className="flex gap-2 mb-4 flex-wrap">
         {caratSizes.map((size) => (
           <button
@@ -53,7 +53,9 @@ const DiamondSelector = () => {
       </div>
 
       <div className="mt-6">
-        <h3 className="text-sm text-gray-500 text-center mb-4">CENTER STONE QUALITY</h3>
+        <h3 className="text-sm text-gray-500 text-center mb-4 center-quality-heading">
+          <span className='text-customGray-300 uppercase text-1.25xs leading-tight bg-white p-2 inline-block relative'>CENTER STONE QUALITY</span>
+        </h3>
         <div className="flex justify-between">
           <div className="text-center">
             <div className="font-semibold">Carat</div>
@@ -70,7 +72,7 @@ const DiamondSelector = () => {
         </div>
       </div>
 
-      <button className="w-full text-center text-blue-500 mt-4">
+      <button className="w-full text-center text-blue-500 mt-4 text-1.5sm leading-tight underline text-center text-customGray-500 cursor-pointer">
         choose your own center stone
       </button>
     </div>
@@ -94,11 +96,12 @@ const DiamondSelector = () => {
             onChange={handleChange}
             aria-label="diamond type tabs"
             variant="fullWidth"
+            className='quick-check-out-tab'
             sx={{
               '& .MuiTab-root': {
                 textTransform: 'none',
                 minWidth: 'auto',
-                padding: '8px',
+                padding: '0px',
                 margin: '0 4px',
               },
               '& .Mui-selected': {
@@ -131,6 +134,8 @@ const DiamondSelector = () => {
             />
           </Tabs>
         </Box>
+
+        <div className='tab-panel-main'>
         
         <TabPanel value={value} index={0}>
           <StoneContent />
@@ -141,6 +146,7 @@ const DiamondSelector = () => {
         <TabPanel value={value} index={2}>
           {/* Empty content as requested */}
         </TabPanel>
+        </div>
       </Box>
     </div>
   );
