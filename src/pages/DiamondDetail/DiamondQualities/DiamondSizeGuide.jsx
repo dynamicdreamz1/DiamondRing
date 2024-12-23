@@ -6,17 +6,20 @@ import RoundShapeStone from "../../../assets/Images/RoundShapeStone.png"
 const DiamondSizeGuide = () => {
     const caratSizes = [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0];
     const [currentCarat, setCurrentCarat] = useState(1.0);
+    const [currentIndex, setCurrentIndex] = useState(1.0);
+
 
     const calculateScale = (carat) => {
         const baseScale = 0.300;
         const scaleFactor = 1 + (carat - 1.0) * 0.2; // 10% increase per carat
-        
+
         return baseScale * scaleFactor;
     };
 
     // Handle carat size selection
-    const handleCaratSelect = (carat) => {
+    const handleCaratSelect = (carat,index) => {
         setCurrentCarat(carat);
+        setCurrentIndex(index)
     };
 
 
@@ -131,10 +134,17 @@ const DiamondSizeGuide = () => {
                     </div>
                     <div className="DiamondCaratSize__values relative font-proximaNovaCondensed">
                         <div className="hidden md:inline-flex items-center justify-center flex-nowrap">
-                            {caratSizes.map((carat) => (
+                            <div
+                                className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300"
+                                style={{
+                                    width: `${100 / caratSizes.length}%`,
+                                    transform: `translateX(${currentIndex * 100}%)`,
+                                }}
+                            ></div>
+                            {caratSizes.map((carat,index) => (
                                 <button
                                     key={carat}
-                                    onClick={() => handleCaratSelect(carat)}
+                                    onClick={() => handleCaratSelect(carat,index)}
                                     className={`border-solid w-9 h-9 flex items-center justify-center cursor-pointer border-r  ${currentCarat === carat
                                         ? 'bg-black text-white'
                                         : 'text-gray-600 hover:bg-gray-100'
