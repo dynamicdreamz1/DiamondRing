@@ -79,7 +79,7 @@ const DiamondSelector = () => {
   );
 
   return (
-    <div className="max-w-lg mx-auto p-4 border rounded-lg shadow-sm">
+    <div className="max-w-lg mx-auto p-4 border border-customGray-25 rounded-lg shadow-sm mt-10">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold">Quick Checkout</h2>
         <span className="cursor-pointer text-gray-500 hover:text-gray-700">X</span>
