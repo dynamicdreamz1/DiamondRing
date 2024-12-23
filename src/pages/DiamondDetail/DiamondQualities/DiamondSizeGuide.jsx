@@ -135,7 +135,7 @@ const DiamondSizeGuide = () => {
                     <div className="DiamondCaratSize__values relative font-proximaNovaCondensed">
                         <div className="hidden md:inline-flex items-center justify-center flex-nowrap">
                             <div
-                                className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300"
+                                className="absolute top-0 left-0 h-full w-full rounded-full bg-white transition-transform duration-300"
                                 style={{
                                     width: `${100 / caratSizes.length}%`,
                                     transform: `translateX(${currentIndex * 100}%)`,

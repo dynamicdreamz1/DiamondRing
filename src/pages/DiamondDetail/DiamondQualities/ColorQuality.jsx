@@ -54,7 +54,7 @@ const ColorQuality = () => {
         <div className='mb-2 diamond-quality-shape-sec'>
           <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
             <div
-              className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300"
+              className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300 bg-white"
               style={{
                 width: `${100 / colorTabsPanel.length}%`,
                 transform: `translateX(${activeIndex * 100}%)`,

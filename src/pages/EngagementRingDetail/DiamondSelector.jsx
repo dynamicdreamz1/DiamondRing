@@ -82,22 +82,22 @@ const DiamondSelector = () => {
   );
 
   return (
-    <div className="max-w-lg mx-auto p-4 border border-customGray-25 rounded-lg shadow-sm mt-10">
+    <div className="max-w-lg mx-auto p-4 border border-customGray-25 accordionsummary-sec rounded-lg shadow-sm mt-10">
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-1">
             <h2 className="text-lg font-semibold">Quick Checkout</h2>
-            <span className="cursor-pointer text-gray-500 hover:text-gray-700">X</span>
+            {/* <span className="cursor-pointer text-gray-500 hover:text-gray-700">X</span> */}
           </div>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm text-gray-600">
             Choose your center stone's origin & size and let our experts handpick the perfect diamond for you
           </p>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className='mt-3'>
           <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs
