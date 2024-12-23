@@ -16,11 +16,12 @@ const SortDropdown = () => {
 
 
     return (
-        <div className="ml-auto inline-block asc-dsc-filter">
+        <div className="ml-auto  asc-dsc-filter">
             <div className="FilterRelativeContainer relative">
                 <button
                     onClick={() => setIsDropdownOpen((prev) => !prev)}
                     className="flex items-center gap-2 text-left py-1.5 pl-4 pr-1 bg-customGray-50 rounded-md transition-shadow duration-300 whitespace-nowrap"
+                    style={{margin: "0 0 0 auto"}}
                 >
                     <div className="flex-1">
                         <div className="text-black text-sm leading-none">
