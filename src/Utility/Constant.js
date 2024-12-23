@@ -214,41 +214,97 @@ export const colorTabsPanel = [
   },
 ];
 
-
 export const reviews = [
   {
-      rating: 5,
-      title: "Love it",
-      content: "I purchased this ring on April 12 2023, The Penelope set with a 2.37 carat F",
-      author: "Angelica King",
-      date: "August 8",
-      verified: true
+    rating: 5,
+    title: "Love it",
+    content: "I purchased this ring on April 12, 2023. The Penelope set with a 2.37 carat F.",
+    author: "Angelica King",
+    date: "August 8",
+    verified: true,
   },
   {
-      rating: 5,
-      title: "10/10",
-      content: "I was nervous about getting an engagement ring online at first but",
-      author: "Joshua F",
-      date: "August 6",
-      verified: true
+    rating: 5,
+    title: "10/10",
+    content: "I was nervous about getting an engagement ring online at first, but it turned out perfect.",
+    author: "Joshua F",
+    date: "August 6",
+    verified: true,
   },
   {
-      rating: 5,
-      title: "brought my dream ring to life ❤",
-      content: "Keyzar did an absolutely amazing job. I'm stunned at how beautiful my ring",
-      author: "Aaliyah",
-      date: "August 1",
-      verified: false
+    rating: 5,
+    title: "Brought my dream ring to life ❤",
+    content: "Keyzar did an absolutely amazing job. I'm stunned at how beautiful my ring is.",
+    author: "Aaliyah",
+    date: "August 1",
+    verified: false,
   },
   {
-      rating: 5,
-      title: "Great experience especially being online",
-      content: "Great experience especially being online. I was hesitant to make a",
-      author: "Brandon",
-      date: "August 1",
-      verified: true
-  }
+    rating: 5,
+    title: "Great experience, especially being online",
+    content: "I was hesitant to make a purchase online, but the process was seamless.",
+    author: "Brandon",
+    date: "August 1",
+    verified: true,
+  },
+  {
+    rating: 4,
+    title: "Beautiful ring, slight delay",
+    content: "The ring is gorgeous, but the shipping took longer than expected.",
+    author: "Sophia R",
+    date: "July 30",
+    verified: true,
+  },
+  {
+    rating: 5,
+    title: "Exceeded expectations!",
+    content: "The quality and craftsmanship of the ring are beyond what I imagined.",
+    author: "Michael T",
+    date: "July 28",
+    verified: true,
+  },
+  {
+    rating: 4,
+    title: "Almost perfect",
+    content: "The ring is stunning, but the size was slightly off. Customer service was helpful.",
+    author: "Jessica L",
+    date: "July 26",
+    verified: true,
+  },
+  {
+    rating: 5,
+    title: "Absolutely love it",
+    content: "The customization options were fantastic, and the final product was perfect.",
+    author: "Emily K",
+    date: "July 20",
+    verified: true,
+  },
+  {
+    rating: 3,
+    title: "Good, but room for improvement",
+    content: "The ring is nice, but the packaging could have been better.",
+    author: "Henry P",
+    date: "July 18",
+    verified: false,
+  },
+  {
+    rating: 5,
+    title: "A gift of love",
+    content: "I gifted this to my partner, and they couldn’t stop smiling. Stunning piece!",
+    author: "Olivia H",
+    date: "July 15",
+    verified: true,
+  },
+  {
+    rating: 5,
+    title: "Top-notch service",
+    content: "Customer service was outstanding and helped me find the perfect ring.",
+    author: "Daniel C",
+    date: "July 12",
+    verified: true,
+  },
 ];
+
 
 export const ArrowLeftIcon = () => (
   <svg 
