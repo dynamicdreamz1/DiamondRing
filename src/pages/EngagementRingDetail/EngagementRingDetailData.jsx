@@ -10,6 +10,7 @@ import { addProductTabs } from '../../store/slices/TabProductSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import LeftSideModal from '../EngagementRing/FilterSection/LeftSideModal';
+import DiamondSelector from './DiamondSelector';
 
 
 const EngagementRingDetailData = () => {
@@ -193,6 +194,9 @@ const EngagementRingDetailData = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <DiamondSelector  />
+
                         <div className='production-button mt-8'>
                             <div className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
                                 <div className="transition-transform duration-500 text-ellipsis overflow-hidden flex items-center justify-between gap-2 md:gap-4 ">
