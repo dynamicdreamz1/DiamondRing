@@ -175,7 +175,9 @@ const DiamondSelector = () => {
                 <StoneContent />
               </TabPanel>
               <TabPanel value={value} index={2}>
-                {/* Empty content as requested */}
+              <Link to={`/diamond-list`} >
+              *Natural diamond needs to be specifically selected by you
+              </Link>
               </TabPanel>
             </div>
           </Box>
