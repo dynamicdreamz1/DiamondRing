@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Accordion from '@mui/material/Accordion';
+import { Link } from "react-router-dom";
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -27,6 +28,8 @@ const TabPanel = (props) => {
 
 const DiamondSelector = () => {
   const [value, setValue] = useState(0);
+  const [selectSize, setSelectSize] = useState(3.0);
+
   const caratSizes = [1.0, 1.5, 2.0, 2.5, 3.0];
   const specs = {
     carat: "3.0ct",
@@ -38,20 +41,27 @@ const DiamondSelector = () => {
     setValue(newValue);
   };
 
+  const handleSelectSize = (size) => {
+    setSelectSize(size);
+  };
+
   const StoneContent = () => (
     <div className="p-0">
       <div className="flex gap-2 mb-4 flex-wrap">
         {caratSizes.map((size) => (
           <button
             key={size}
-            className={`px-4 py-1 rounded-lg border ${size === 3.0 ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+            onClick={()=>handleSelectSize(size)}
+            className={`px-4 py-1 rounded-lg border ${size === selectSize ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
               }`}
           >
             {size}
           </button>
         ))}
         <button className="px-4 py-1 rounded-lg border border-gray-200">
-          See full inventory
+          <Link to={`/diamond-list`} >
+            See full inventory
+          </Link>
         </button>
       </div>
 
@@ -62,7 +72,7 @@ const DiamondSelector = () => {
         <div className="flex justify-between">
           <div className="text-center">
             <div className="font-semibold">Carat</div>
-            <div className="text-gray-600">{specs.carat}</div>
+            <div className="text-gray-600">{selectSize}</div>
           </div>
           <div className="text-center">
             <div className="font-semibold">Color</div>
@@ -76,7 +86,9 @@ const DiamondSelector = () => {
       </div>
 
       <button className="w-full text-center text-blue-500 mt-4 text-1.5sm leading-tight underline text-center text-customGray-500 cursor-pointer">
-        choose your own center stone
+        <Link to={`/diamond-list`} >
+          choose your own center stone
+        </Link>
       </button>
     </div>
   );
@@ -122,25 +134,35 @@ const DiamondSelector = () => {
               >
                 <Tab
                   label={
-                    <div className={`px-4 py-2 rounded-lg ${value === 0 ? 'border-2 border-blue-500 bg-blue-50' : 'border'}`}>
+                    <div
+                      className={`px-4 py-2 rounded-lg ${value === 0 ? 'border border-gray-300' : 'deactive-tab'
+                        }`}
+                    >
                       Lab Diamond
                     </div>
                   }
                 />
                 <Tab
                   label={
-                    <div className={`px-4 py-2 rounded-lg border`}>
+                    <div
+                      className={`px-4 py-2 rounded-lg ${value === 1 ? 'border border-gray-300' : 'deactive-tab'
+                        }`}
+                    >
                       Moissanite
                     </div>
                   }
                 />
                 <Tab
                   label={
-                    <div className={`px-4 py-2 rounded-lg border`}>
+                    <div
+                      className={`px-4 py-2 rounded-lg ${value === 2 ? 'border border-gray-300' : 'deactive-tab'
+                        }`}
+                    >
                       Natural Diamonds
                     </div>
                   }
                 />
+
               </Tabs>
             </Box>
 
