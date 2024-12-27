@@ -25,12 +25,6 @@ const DiamondFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
 
-    useEffect(() => {
-        if (cutFilter) {
-            dispatch(updateFilter({ cut: cutFilter })); // Update the Redux state with true/false
-            dispatch(updateFilter({ page: 0 }));
-        }
-    }, [cutFilter, dispatch])
 
 
     return (
@@ -145,7 +139,7 @@ const DiamondFilter = () => {
                             </svg>
                         </button>
                     </div>
-                    <AdvancedSlideFilter setFilter={setCutFilter} />
+                    <AdvancedSlideFilter label={"cut"} />
                 </div>
             </div>
             <div className='collection-range-main grid grid-cols-1 md:grid-cols-3 w-full items-center gap-6 py-6'>

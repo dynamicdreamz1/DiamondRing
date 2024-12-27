@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { updateFilter } from '../../../store/slices/diamondFilterSlice';
+import { useDispatch } from 'react-redux';
 
-const AdvancedSlideFilter = ({ setFilter }) => {
+const AdvancedSlideFilter = ({ label, setFilter }) => {
     const options = ["Good", "Very Good", "Excellent"];
     const [selected, setSelected] = useState([...options]); // Default: All selected
+    const dispatch = useDispatch();
 
     const handleClick = (option) => {
         const isAllSelected = selected.length === options.length;
@@ -68,8 +71,9 @@ const AdvancedSlideFilter = ({ setFilter }) => {
             "Good": "GD"
         };
         const mappedFilter = selected.map(name => shorthandMap[name]);
-        setFilter(mappedFilter);
-    }, [selected ,setFilter]);
+        dispatch(updateFilter({ [label]: mappedFilter })); // Update the Redux state with true/false
+        dispatch(updateFilter({ page: 0 }));
+    }, [selected, setFilter]);
 
 
     return (

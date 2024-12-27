@@ -1,33 +1,12 @@
+import React from 'react'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import React, { useEffect, useState } from 'react'
 import AdvancedSlideFilter from './AdvancedSlideFilter';
-import { useDispatch } from 'react-redux';
-import { updateFilter } from '../../../store/slices/diamondFilterSlice';
 
 
 const AdvancedFilter = () => {
-    const dispatch = useDispatch();
-    const [symmetryFilter, setSymetryFilter] = useState([])
-    const [polishFilter, setPolishFilter] = useState([])
-
-    useEffect(() => {
-        if (symmetryFilter) {
-            dispatch(updateFilter({ symmetry: symmetryFilter })); // Update the Redux state with true/false
-            dispatch(updateFilter({ page: 0 }));
-        }
-    }, [symmetryFilter, dispatch])
-
-
-    useEffect(() => {
-        if (polishFilter) {
-            dispatch(updateFilter({ polish: polishFilter })); // Update the Redux state with true/false
-            dispatch(updateFilter({ page: 0 }));
-            
-        }
-    }, [polishFilter, dispatch])
 
     return (
         <div className='advance-quality-main-sec pb-5'>
@@ -67,7 +46,7 @@ const AdvancedFilter = () => {
                                     <div className="text-[#d97ab2] bg-white absolute z-30 invisible opacity-0 transition-all duration-300 rounded-lg shadow-[0_3px_8px_1px_rgba(0,0,0,0.25)] text-sm leading-snug py-4 px-5 left-[150%] top-1/2 w-[58vw] -translate-y-1/2 -translate-x-[6%] group-hover:visible group-hover:opacity-100 group-hover:-translate-x-[2%] md:text-1.5xs md:p-6 md:w-60 md:left-[200%]">Diamond Symmetry refers to how well aligned the facets of a diamond are.</div>
                                 </div>
                             </div>
-                            <AdvancedSlideFilter setFilter={setSymetryFilter} />
+                            <AdvancedSlideFilter label={"symmetry"} />
                         </div>
                         <div className='advance-quality-item-box w-full md:w-1/2-gap-6 xl:w-1/2-gap-10'>
                             <div className="flex gap-1 items-end mb-3 md:gap-0.5 md:mb-2 ">
@@ -83,7 +62,7 @@ const AdvancedFilter = () => {
                                     <div className="text-[#d97ab2] bg-white absolute z-30 invisible opacity-0 transition-all duration-300 rounded-lg shadow-[0_3px_8px_1px_rgba(0,0,0,0.25)] text-sm leading-snug py-4 px-5 left-[150%] top-1/2 w-[58vw] -translate-y-1/2 -translate-x-[6%] group-hover:visible group-hover:opacity-100 group-hover:-translate-x-[2%] md:text-1.5xs md:p-6 md:w-60 md:left-[200%]">Polish refers to the degree of smoothness of each facet of a diamond.</div>
                                 </div>
                             </div>
-                            <AdvancedSlideFilter setFilter={setPolishFilter} />
+                            <AdvancedSlideFilter label={"polish"} />
                         </div>
                     </div>
                 </AccordionDetails>
