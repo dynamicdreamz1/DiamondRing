@@ -335,7 +335,12 @@ const EngagementRingDetailData = () => {
                             </div>
                             <div className='add-extra-feature-sec StoneDetailBlock StoneDetailBlock__extras mt-2 p-3 flex items-center justify-between gap-2 text-customGray-500'>
                                 <div className='extra-star-icon flex items-center gap-1'>
-                                    <svg className="w-4 h-4" aria-hidden="true" focusable="false" viewBox="0 0 14 14"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.90022 1.46712L8.09914 4.77441L8.21738 5.10059L8.56431 5.10399L12.2173 5.13974L9.31681 7.14024L9.00637 7.35436L9.12693 7.71169L10.226 10.969L7.17558 8.95637L6.90021 8.77468L6.62485 8.95637L3.57446 10.969L4.67351 7.71169L4.79407 7.35436L4.48363 7.14024L1.58315 5.13974L5.23613 5.10399L5.58306 5.10059L5.7013 4.77441L6.90022 1.46712Z" stroke="#D89571"></path></svg></svg>
+                                    <svg className="w-4 h-4" aria-hidden="true" focusable="false" viewBox="0 0 14 14">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.90022 1.46712L8.09914 4.77441L8.21738 5.10059L8.56431 5.10399L12.2173 5.13974L9.31681 7.14024L9.00637 7.35436L9.12693 7.71169L10.226 10.969L7.17558 8.95637L6.90021 8.77468L6.62485 8.95637L3.57446 10.969L4.67351 7.71169L4.79407 7.35436L4.48363 7.14024L1.58315 5.13974L5.23613 5.10399L5.58306 5.10059L5.7013 4.77441L6.90022 1.46712Z" stroke="#D89571">
+                                            </path>
+                                        </svg>
+                                    </svg>
                                     <p className="cpcst-detail-title" tabIndex="-1">Extras</p>
                                 </div>
                                 <div className='ExtrasText text-black underline'>Add Extra Features</div>
@@ -344,7 +349,6 @@ const EngagementRingDetailData = () => {
                         <AccordianforDetail ring={"Ring"} />
                         <VirtualAppointment />
                         <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
-
                     </div>
                 </div>
             </div>
