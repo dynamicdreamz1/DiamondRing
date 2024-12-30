@@ -10,8 +10,6 @@ import Loading from '../../Component/Common/Loading';
 import LoadMoreButton from '../../Component/Common/LoadMoreButton';
 import HeaderContain from '../../Component/Common/HeaderContain';
 
-
-
 const DiamondList = () => {
   const filters = useSelector((state) => state.diamondFilter);
   const { loading } = useSelector((state) => state.diamond);

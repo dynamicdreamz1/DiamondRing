@@ -12,7 +12,7 @@ const ColorQuality = () => {
     setActiveTab(tab);
     setActiveIndex(index);
   };
-  
+
   return (
     <div className='colorRangeBlock md:flex md:flex-col md:justify-between md:w-1/2-gap-4 md:p-3 xl:w-1/3-gap-4 md:bg-customGray-50 md:rounded-2.5xl'>
       <div className='hidden md:block mb-2'>
@@ -42,7 +42,7 @@ const ColorQuality = () => {
                         activeTab.name === 'G' ? 0.50 :
                           activeTab.name === 'H' ? 0.50 :
                             activeTab.name === 'I' ? 1 :
-                              activeTab.name === 'J' ? 1 : 1, // Default case
+                              activeTab.name === 'J' ? 1 : 1,
               }}
               src={colorqualityimg2}
               alt={`${activeTab.name} color diamond solid`}

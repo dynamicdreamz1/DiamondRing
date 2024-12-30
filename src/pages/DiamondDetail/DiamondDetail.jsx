@@ -20,8 +20,6 @@ const DiamondDetail = () => {
     }
   }, [dispatch, diamondId]);
 
-
-
   return (
     <div className="min-h-screen bg-white">
       <div className="bg-black text-white text-center py-2 text-sm">

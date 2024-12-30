@@ -16,7 +16,6 @@ const DiamondProductListCard = () => {
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
     const ringExists = getTabsProduct?.tabs?.ring;
 
-
     const handleDiamondAction = (diamond) => {
         const productWithType = {
             diamond: { ...diamond, type: 'diamond' },
@@ -27,7 +26,6 @@ const DiamondProductListCard = () => {
         setselectedProductModel(true);
 
         if (getTabsProduct?.tabs?.ring && diamond) {
-
             if (getTabsProduct?.tabs?.ring && diamond) {
                 dispatch(addProductTabs({
                     ...productWithType,

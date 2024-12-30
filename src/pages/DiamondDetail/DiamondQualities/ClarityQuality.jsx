@@ -3,7 +3,7 @@ import { ClarityTabsPanel } from '../../../Utility/Constant';
 
 const DiamondClarityComponent = () => {
   const [activeTab, setActiveTab] = useState(ClarityTabsPanel[0]);
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active tab index
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleTabClick = (tab, index) => {
     setActiveTab(tab);
@@ -33,8 +33,7 @@ const DiamondClarityComponent = () => {
         </div>
 
         <div className="mb-2 diamond-quality-shape-sec relative">
-        <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
-        {/* Sliding Full Box Border */}
+          <div className='grid-with-variables bg-customGray-75 border-borders border rounded-lg h-10 relative flex'>
             <div
               className="absolute top-0 left-0 h-full w-full rounded-lg border-2 border-black transition-transform duration-300 bg-white"
               style={{
@@ -42,8 +41,6 @@ const DiamondClarityComponent = () => {
                 transform: `translateX(${activeIndex * 100}%)`,
               }}
             ></div>
-
-            {/* Tabs */}
             {ClarityTabsPanel.map((tab, index) => (
               <button
                 key={tab.id}
