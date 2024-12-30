@@ -15,6 +15,8 @@ const ProductCard = ({ node }) => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(0);
   const [selectedProductModel, setselectedProductModel] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const images = node?.images?.edges;
   const variants = node?.variants?.edges;
 
@@ -27,23 +29,33 @@ const ProductCard = ({ node }) => {
   };
 
   const handleAddRingClick = (product) => {
-    const productWithType = {
-      ring: { ...product, type: 'ring' },
-      diamond: getTabsProduct?.tabs?.diamond,
-      currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1
-    };
+    setIsLoading(true);
 
-    dispatch(addProductTabs(productWithType));
-    setselectedProductModel(true);
+    // Delay the action by 2 seconds
+    setTimeout(() => {
+      setIsLoading(false);
 
-    if (getTabsProduct?.tabs?.diamond && product) {
-      dispatch(addProductTabs({
-        ...productWithType,
-        finelProduct: { price: "", type: 'finelProduct' },
-        currentStep: 3
-      }));
-      navigate('/complete-product');
-    }
+      const productWithType = {
+        ring: { ...product, type: "ring" },
+        diamond: getTabsProduct?.tabs?.diamond,
+        currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1,
+      };
+
+      dispatch(addProductTabs(productWithType));
+      setselectedProductModel(true);
+
+      if (getTabsProduct?.tabs?.diamond && product) {
+        dispatch(
+          addProductTabs({
+            ...productWithType,
+            finelProduct: { price: "", type: "finelProduct" },
+            currentStep: 3,
+          })
+        );
+        navigate("/complete-product");
+      }
+      
+    }, 2000); // Delay for 2 seconds
   };
 
 
@@ -159,13 +171,27 @@ const ProductCard = ({ node }) => {
         </div>
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
-          <Link to={`/ring-select/${node?.id?.split("/").pop()}`} className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center  flex justify-center items-center border-2 border-black" aria-hidden="false">
-            More Info
-          </Link>
-          <button onClick={() => handleAddRingClick(node)} className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
-            <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Diamond"}</span>
-          </button>
-        </div>
+      <Link
+        to={`/ring-select/${node?.id?.split("/").pop()}`}
+        className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center flex justify-center items-center border-2 border-black"
+        aria-hidden="false"
+      >
+        More Info
+      </Link>
+      <button
+        onClick={() => handleAddRingClick(node)}
+        className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center flex justify-center items-center border-2 border-black bg-black"
+        aria-hidden="false"
+        disabled={isLoading} // Disable the button during loading
+      >
+        {isLoading ? (
+          <span className="loaders">Loading...</span> // Add a loader component or animation here
+        ) : (
+          <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Diamond"}</span>
+        )}
+      </button>
+    </div>
+
 
         <div className="flex items-center space-x-2">
           {variants.map((variant, index) => (

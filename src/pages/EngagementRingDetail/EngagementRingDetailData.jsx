@@ -22,6 +22,8 @@ const EngagementRingDetailData = () => {
     const variants = product?.variants?.edges;
     const images = product?.images?.edges.map((edge) => edge.node);
     const [selectedProductModel, setselectedProductModel] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+
 
     const firstVariant = variants && variants[selectedVariant]?.node;
     const price = firstVariant?.price?.amount || "0.00";
@@ -39,23 +41,30 @@ const EngagementRingDetailData = () => {
 
 
     const handleAddRingClick = (product) => {
-        const productWithType = {
-            ring: { ...product, type: 'ring' },
-            diamond: getTabsProduct?.tabs?.diamond,
-            currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1
-        };
 
-        dispatch(addProductTabs(productWithType));
-        setselectedProductModel(true);
+        setIsLoading(true);
 
-        if (getTabsProduct?.tabs?.diamond && product) {
-            dispatch(addProductTabs({
-                ...productWithType,
-                finelProduct: { price: "", type: 'finelProduct' },
-                currentStep: 3
-            }));
-            navigate('/complete-product');
-        }
+        // Delay the action by 2 seconds
+        setTimeout(() => {
+            setIsLoading(false);
+            const productWithType = {
+                ring: { ...product, type: 'ring' },
+                diamond: getTabsProduct?.tabs?.diamond,
+                currentStep: getTabsProduct?.tabs?.diamond ? 2 : 1
+            };
+
+            dispatch(addProductTabs(productWithType));
+            setselectedProductModel(true);
+
+            if (getTabsProduct?.tabs?.diamond && product) {
+                dispatch(addProductTabs({
+                    ...productWithType,
+                    finelProduct: { price: "", type: 'finelProduct' },
+                    currentStep: 3
+                }));
+                navigate('/complete-product');
+            }
+        }, 2000); // Delay for 2 seconds
     };
 
 
@@ -195,7 +204,7 @@ const EngagementRingDetailData = () => {
                             </div>
                         </div>
 
-                        <DiamondSelector  />
+                        <DiamondSelector />
 
                         <div className='production-button mt-8'>
                             <div className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>
@@ -211,9 +220,12 @@ const EngagementRingDetailData = () => {
                                     </svg>
 
                                     <button onClick={() => handleAddRingClick(product)} className="rounded-full text-sm font-semibold leading-tight text-white text-center  flex justify-center items-center border-2 border-black bg-black" aria-hidden="false">
-                                        <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Center Stone"}</span>
+                                        {isLoading ? (
+                                            <span className="loaders">Loading...</span> // Add a loader component or animation here
+                                        ) : (
+                                            <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Diamond"}</span>
+                                        )}
                                     </button>
-
                                     <svg className="w-6 h-6 p-1" aria-hidden="true" focusable="false">
                                         <svg viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.87891 24.5722L18.1213 14.3298L7.87891 4.0874" stroke="currentColor" stroke-width="2.5"></path>
