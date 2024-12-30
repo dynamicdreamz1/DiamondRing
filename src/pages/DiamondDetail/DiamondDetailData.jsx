@@ -16,6 +16,7 @@ const DiamondDetailData = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [selectedProductModel, setselectedProductModel] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const getTabsProduct = useSelector((state) => state.getTabsProduct);
   const { diamond, loading, error } = useSelector((state) => state.singleDiamond);
   const ringExists = getTabsProduct?.tabs?.ring;
@@ -25,23 +26,29 @@ const DiamondDetailData = () => {
   const TotalPrice = (diamondPrice && ringPrice) ? diamondPrice + ringPrice : "";
 
   const handleDiamondAction = (diamond) => {
-    const productWithType = {
-      diamond: { ...diamond, type: 'diamond' },
-      ring: getTabsProduct?.tabs?.ring,
-      currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
-    };
-    dispatch(addProductTabs(productWithType));
-    setselectedProductModel(true)
-    if (getTabsProduct?.tabs?.ring && diamond) {
+    setIsLoading(true);
+
+    // Delay the action by 2 seconds
+    setTimeout(() => {
+      setIsLoading(false);
+      const productWithType = {
+        diamond: { ...diamond, type: 'diamond' },
+        ring: getTabsProduct?.tabs?.ring,
+        currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+      };
+      dispatch(addProductTabs(productWithType));
+      setselectedProductModel(true)
       if (getTabsProduct?.tabs?.ring && diamond) {
-        dispatch(addProductTabs({
-          ...productWithType,
-          finelProduct: { price: "", type: 'finelProduct' },
-          currentStep: 3
-        }));
-        navigate('/complete-product');
+        if (getTabsProduct?.tabs?.ring && diamond) {
+          dispatch(addProductTabs({
+            ...productWithType,
+            finelProduct: { price: "", type: 'finelProduct' },
+            currentStep: 3
+          }));
+          navigate('/complete-product');
+        }
       }
-    }
+    }, 2000); // Delay for 2 seconds
   }
 
   if (error) return <p>Error: {error}</p>;
@@ -145,7 +152,11 @@ const DiamondDetailData = () => {
               </svg>
               <button onClick={() => handleDiamondAction(diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white  text-center border-2 border-black whitespace-nowrap relative overflow-hidden">
                 <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden">
-                  <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
+                  {isLoading ? (
+                    <span className="loaders">Loading...</span> // Add a loader component or animation here
+                  ) : (
+                    <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
+                  )}
                 </div>
               </button>
               <svg className="w-6 h-6 p-1" aria-hidden="true" focusable="false">

@@ -12,29 +12,36 @@ const DiamondProductListCard = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [selectedProductModel, setselectedProductModel] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const { diamonds, error, loading } = useSelector((state) => state.diamond);
     const getTabsProduct = useSelector((state) => state.getTabsProduct);
     const ringExists = getTabsProduct?.tabs?.ring;
 
     const handleDiamondAction = (diamond) => {
-        const productWithType = {
-            diamond: { ...diamond, type: 'diamond' },
-            ring: getTabsProduct?.tabs?.ring,
-            currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
-        };
-        dispatch(addProductTabs(productWithType));
-        setselectedProductModel(true);
+        setIsLoading(true);
 
-        if (getTabsProduct?.tabs?.ring && diamond) {
+        // Delay the action by 2 seconds
+        setTimeout(() => {
+            setIsLoading(false);
+            const productWithType = {
+                diamond: { ...diamond, type: 'diamond' },
+                ring: getTabsProduct?.tabs?.ring,
+                currentStep: getTabsProduct?.tabs?.ring ? 2 : 1
+            };
+            dispatch(addProductTabs(productWithType));
+            setselectedProductModel(true);
+
             if (getTabsProduct?.tabs?.ring && diamond) {
-                dispatch(addProductTabs({
-                    ...productWithType,
-                    finelProduct: { price: "", type: 'finelProduct' },
-                    currentStep: 3
-                }));
-                navigate('/complete-product');
+                if (getTabsProduct?.tabs?.ring && diamond) {
+                    dispatch(addProductTabs({
+                        ...productWithType,
+                        finelProduct: { price: "", type: 'finelProduct' },
+                        currentStep: 3
+                    }));
+                    navigate('/complete-product');
+                }
             }
-        }
+        }, 2000); // Delay for 2 seconds
     }
 
     if (error) return <p>Error: {error}</p>;
@@ -201,7 +208,12 @@ const DiamondProductListCard = () => {
                                 </Link>
                                 <button onClick={() => handleDiamondAction(diamond)} className="basis-3/5 grow rounded-full text-sm font-semibold leading-tight bg-black text-white p-3 text-center min-h-[3rem] border-2 border-black whitespace-nowrap relative overflow-hidden">
                                     <div className="flex justify-center items-center gap-1 transition-transform duration-500 text-ellipsis overflow-hidden">
-                                        <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
+                                        {isLoading ? (
+                                            <span className="loaders">Loading...</span> // Add a loader component or animation here
+                                        ) : (
+                                            <span>{ringExists ? "Complete your ring" : "Add setting"}</span>
+                                        )}
+
                                         <svg className="w-3 h-3" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M5.5 15.8298L12 9.3298L5.5 2.8298"
