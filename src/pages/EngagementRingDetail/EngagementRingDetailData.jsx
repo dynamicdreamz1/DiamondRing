@@ -132,7 +132,7 @@ const EngagementRingDetailData = () => {
                         <div className='cpst-description-container md:mb-8 hidden md:block'>
                             <p className='cpst-description text-customGray-500'>{product.description}</p>
                         </div>
-                        <div className='production-option-main'>
+                        {/* <div className='production-option-main'>
                             <div className='production-option-heading-img'>
                                 <h3 className='py-1 px-2 cmsi-item-options-header-title text-customGray-500 md:text-black md:font-bold md:p-0 md:mb-1.5'>Center Stone Shape: <span className='text-customGray-500 font-normal ml-1'>Round</span></h3>
                                 <div className='production-item-option -mx-1 flex overflow-auto ccfi-round-buttons-wrapper lg:-mx-1 lg:overflow-hidden lg:flex-wrap gap-2'>
@@ -202,7 +202,7 @@ const EngagementRingDetailData = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <DiamondSelector />
 
