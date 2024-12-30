@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from './ViewCertification';
+import RingAccordianInformation from './RingAccordianInformation';
 
 const AccordianforDetail = ({ ring }) => {
     const { diamond } = useSelector((state) => state.singleDiamond);
@@ -23,6 +24,8 @@ const AccordianforDetail = ({ ring }) => {
                     </div>
                 </AccordionSummary>
                 <AccordionDetails>
+                
+                {!ring ?
                     <div className='cpst-tab-content'>
                         <div className="cpst-tab-content-wrapper text-customGray-450 py-4 pr-10 pl-3">
                             <div className="MoissaniteDetails flex items-stretch">
@@ -78,6 +81,9 @@ const AccordianforDetail = ({ ring }) => {
                             </div>
                         </div>
                     </div>
+                    :
+                   <RingAccordianInformation />
+                }
                 </AccordionDetails>
             </Accordion>
             <Accordion>
