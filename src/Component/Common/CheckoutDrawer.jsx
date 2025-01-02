@@ -8,8 +8,6 @@ const CheckoutDrawer = ({ isOpen, setIsOpen }) => {
     if (!isOpen) {
         return null;
     }
-
-    console.log("isOpen",isOpen);
     
     return (
         <Drawer anchor="right" open={isOpen} >
