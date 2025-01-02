@@ -10436,6 +10436,11 @@ textarea+.DAH-form-label {
     background-color: unset !important;
 }
 
+.quick-check-out-tab button div.deactive-tab {
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));;
+}
+
 
 .quick-check-out-tab .css-1qltlow-MuiTabs-indicator {
     display: none;
@@ -10445,7 +10450,7 @@ textarea+.DAH-form-label {
     border: 0;
 }
 
-.quick-check-out-tab  .css-s2t35c-MuiTabs-scroller {
+.quick-check-out-tab  .MuiTabs-scroller {
     width: auto;
     flex: unset;
 }
@@ -10514,6 +10519,7 @@ textarea+.DAH-form-label {
 .accordionsummary-sec .MuiAccordionSummary-content {
     display: block !important;
     padding: 0px !important;
+    margin: 0px !important;
 }
 
 .quick-check-out-tab  .MuiTabs-indicator {
@@ -10526,6 +10532,10 @@ textarea+.DAH-form-label {
 
 .tab-panel-main button a {
     color: rgb(102, 102, 102);
+}
+
+.accordionsummary-sec h3 .css-jqes4x {
+    padding: 0px !important;
 }
 
 
