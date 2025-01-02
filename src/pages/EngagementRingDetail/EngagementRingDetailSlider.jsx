@@ -73,7 +73,7 @@ const EngagementRingDetailSlider = () => {
     }
 
     return (
-        <section className="our-coupeles-sec py-16 px-5 md:py-24">
+        <section className="our-coupeles-sec py-16 md:px-5 md:py-24">
             <div className="container mx-auto px-4">
                 <div className="our-coupeles-heading text-center uppercase mb-8 md:mb-12 xl:mb-20 md:flex md:justify-between md:gap-4">
                     <h2 className="cfpb-fib-title font-seasons font-bold text-white" tabIndex="-1">OUR COUPLES</h2>

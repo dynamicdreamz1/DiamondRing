@@ -307,6 +307,12 @@
   right: -10px;
 }
 
+@media (max-width:991px) {
+  .review-slider-sec {
+    padding-bottom: 50px;
+  }
+}
+
 @media (max-width:767px) {
 
   .review-slider-sub {

@@ -3207,4 +3207,7 @@ input.cpfi-newsletter-form-input:not(.reset-input):not([type="submit"]):not([typ
     .great-button {
         padding: 10px 12px;
     }
+    .our-coupeles-sec .slick-slider button {
+        display: none;
+    }
 }
