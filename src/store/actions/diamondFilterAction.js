@@ -23,7 +23,6 @@ export const fetchDiamondList = (filter,page) => async (dispatch) => {
         // Create a new FormData instance
         const formData = new FormData();
 
-        // Iterate over the filter object and append each key-value pair to FormData
         for (const key in filter) {
             if (filter.hasOwnProperty(key)) {
                 formData.append(key, filter[key]);
