@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback, useRef } from "react";
 import "./ringStyle.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/actions/ringActions";
@@ -8,72 +8,92 @@ import ProductCard from "./ProductCard";
 import SelectFilter from "./SelectFilter";
 import { metalOptions, ringStyles, shapeOptions } from "../../Utility/Constant";
 import { resetFilters, setFilter } from "../../store/slices/ringsFilterSlice";
-import { useLocation, useNavigate } from "react-router-dom";
 import NewsletterFooter from "../../Component/Common/Footer/NewsletterFooter";
 import Loading from "../../Component/Common/Loading";
 import LoadMoreButton from "../../Component/Common/LoadMoreButton";
 import HeaderContain from "../../Component/Common/HeaderContain";
+import debounce from 'lodash/debounce';
 
 const RingSelector = () => {
   const dispatch = useDispatch();
-  const location = useLocation();
-  const navigate = useNavigate();
-
   const filters = useSelector((state) => state.productFilter);
   const { products, loading, pageInfo } = useSelector((state) => state.products);
+  const isInitialMount = useRef(true);
 
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const initialFilters = {
-      selectedMetal: params.get("selectedMetal") || "",
-      selectShape: params.get("selectShape") || "",
-      price: params.get("price") || "",
-      ringType: params.get("ringType") || "",
-      activeFilter: params.get("activeFilter") || "",
-    };
-
-    // Dispatch individual actions only for non-empty values
-    Object.keys(initialFilters).forEach((key) => {
-      // Only dispatch if the filter value is not empty
-      if (initialFilters[key]) {
-        dispatch(setFilter({ key, value: initialFilters[key] }));
-      }
-    });
-  }, [location.search, dispatch]);
-
-  useEffect(() => {
-    // Only update the query string and dispatch fetchProducts if filters have valid values
-    const params = new URLSearchParams();
-
-    // Add only non-empty filters to the query string
-    Object.keys(filters).forEach((key) => {
-      if (filters[key] && !filters.page) {
-        params.set(key, filters[key]);
-      }
-    });
-
-    // Update the URL with the current filters
-    navigate(`?${params.toString()}`, { replace: true });
-
-    // Fetch products with the current filters
-    dispatch(fetchProducts(filters));
-  }, [filters, navigate, dispatch]);
-
-
-  const handleLoadMore = () => {
-    if (pageInfo?.hasNextPage) {
-      dispatch(setFilter({ key: 'page', value: pageInfo.endCursor })); // Update metal filter
+  const getInitialFilters = () => {
+    const savedFilters = localStorage.getItem('filters');
+    if (savedFilters) {
+      return JSON.parse(savedFilters);
     }
+    return {
+      selectedMetal: '',
+      selectShape: '',
+      price: '',
+      ringType: '',
+      activeFilter: ''
+    };
   };
 
-  const handleClearFilter = (type) => {
-    dispatch(setFilter({ key: type, value: "" })); // Update shape filter
-  }
+  // Create debounced version of fetchProducts
+  const debouncedFetchProducts = useCallback(
+    debounce((filters) => {
+      dispatch(fetchProducts(filters));
+    }, 300),
+    [dispatch]
+  );
 
-  const handleResetFilters = () => {
-    dispatch(resetFilters()); // Dispatch the reset action
-  };
+  // Combined useEffect for initialization and updates
+  useEffect(() => {
+    if (isInitialMount.current) {
+      // On initial mount, load from localStorage
+      const initialFilters = getInitialFilters();
+      
+      if (Object.keys(initialFilters).some(key => initialFilters[key])) {
+        Object.keys(initialFilters).forEach((key) => {
+          if (initialFilters[key]) {
+            dispatch(setFilter({ key, value: initialFilters[key] }));
+          }
+        });
+      } else {
+        // If no saved filters, fetch initial products
+        dispatch(fetchProducts({}));
+      }
+      
+      isInitialMount.current = false;
+    } else {
+      // On filter updates
+      if (filters && Object.keys(filters).length > 0) {
+        // Remove page from filters before saving
+        const { page, ...filtersToSave } = filters;
+        
+        // Save to localStorage
+        localStorage.setItem('filters', JSON.stringify(filtersToSave));
+        
+        // Debounced API call
+        debouncedFetchProducts(filters);
+      }
+    }
+
+    // Cleanup
+    return () => {
+      debouncedFetchProducts.cancel();
+    };
+  }, [filters, dispatch, debouncedFetchProducts]);
+
+  const handleLoadMore = useCallback(() => {
+    if (pageInfo?.hasNextPage) {
+      dispatch(setFilter({ key: 'page', value: pageInfo.endCursor }));
+    }
+  }, [pageInfo, dispatch]);
+
+  const handleClearFilter = useCallback((type) => {
+    dispatch(setFilter({ key: type, value: "" }));
+  }, [dispatch]);
+
+  const handleResetFilters = useCallback(() => {
+    localStorage.removeItem('filters');
+    dispatch(resetFilters());
+  }, [dispatch]);
 
   if (!products?.edges) return null;
 
@@ -86,7 +106,7 @@ const RingSelector = () => {
       <TabComponent />
       <div className="container mx-auto px-4">
         <HeaderContain title={"Engagement Rings"} desc={"Discover our collection of made to order engagement rings and customize it to your preference"} />
-        
+
         <RingStyleFilter />
         <SelectFilter />
         <div className="hidden md:block col-span-2 mb-10">
@@ -188,6 +208,7 @@ const RingSelector = () => {
           <LoadMoreButton handleLoadMore={handleLoadMore} loading={loading} />
         )}
       </div>
+      
       <div className="mt-8">
         <NewsletterFooter />
       </div>
