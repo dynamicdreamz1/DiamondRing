@@ -10546,7 +10546,7 @@ textarea+.DAH-form-label {
 }
 
 .cpcst-details-wrapper .StoneDetailBlock div strong {
-    font-size: 15px;
+    /* font-size: 15px; */
     color: #232323;
 }
 
