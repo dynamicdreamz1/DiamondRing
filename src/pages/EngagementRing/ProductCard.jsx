@@ -54,7 +54,7 @@ const ProductCard = ({ node }) => {
         );
         navigate("/complete-product");
       }
-      
+
     }, 2000); // Delay for 2 seconds
   };
 
@@ -171,27 +171,26 @@ const ProductCard = ({ node }) => {
         </div>
 
         <div className="flex flex-wrap gap-2 items-center space-x-2 py-3">
-      <Link
-        to={`/ring-select/${node?.id?.split("/").pop()}`}
-        className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center flex justify-center items-center border-2 border-black"
-        aria-hidden="false"
-      >
-        More Info
-      </Link>
-      <button
-        onClick={() => handleAddRingClick(node)}
-        className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center flex justify-center items-center border-2 border-black bg-black"
-        aria-hidden="false"
-        disabled={isLoading} // Disable the button during loading
-      >
-        {isLoading ? (
-          <span className="loaders">Loading...</span> // Add a loader component or animation here
-        ) : (
-          <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Diamond"}</span>
-        )}
-      </button>
-    </div>
-
+          <Link
+            to={`/ring-select/${node?.id?.split("/").pop()}`}
+            className="rounded-full text-sm font-semibold leading-tight bg-white text-black p-3 px-6 text-center flex justify-center items-center border-2 border-black"
+            aria-hidden="false"
+          >
+            More Info
+          </Link>
+          <button
+            onClick={() => handleAddRingClick(node)}
+            className="rounded-full text-sm font-semibold leading-tight text-white p-3 px-6 text-center flex justify-center items-center border-2 border-black bg-black"
+            aria-hidden="false"
+            disabled={isLoading}
+          >
+            {isLoading ? (
+              <span className="loaders">Loading...</span>
+            ) : (
+              <span>{getTabsProduct?.tabs?.diamond ? "Complete your ring" : "Add Diamond"}</span>
+            )}
+          </button>
+        </div>
 
         <div className="flex items-center space-x-2">
           {variants.map((variant, index) => (

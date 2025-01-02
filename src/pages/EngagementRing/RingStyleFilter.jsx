@@ -8,10 +8,9 @@ const RingStyleFilter = () => {
   const filters = useSelector((state) => state.productFilter);
 
   const handleRingTypeSelection = (option) => {
-    dispatch(setFilter({ key: 'ringType', value: option.name })); // Update metal filter
-    dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
+    dispatch(setFilter({ key: 'ringType', value: option.name }));
+    dispatch(setFilter({ key: 'page', value: '' }));
   };
-
 
   return (
     <div className="mb-8 md:mb-0 md:w-full gap-2 whitespace-nowrap snap-start hiddenScroll overflow-x-auto overflow-y-hidden scroll-smooth p-px md:p-0.5  flex gap-2 md:gap-6 md:justify-center snap-center">
