@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { resetFilters, updateFilter } from '../../../store/slices/diamondFilterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import DiamondShapeFilter from './DiamondShapeFilter';
@@ -12,7 +12,6 @@ import SortDropdown from './AscDscFilter';
 
 const DiamondFilter = () => {
     const filters = useSelector((state) => state.diamondFilter);
-    const [cutFilter, setCutFilter] = useState([])
     const dispatch = useDispatch();
 
 
@@ -24,8 +23,6 @@ const DiamondFilter = () => {
     const handleResetFilter = () => {
         dispatch(resetFilters()); // Update the Redux state with true/false
     };
-
-
 
     return (
         <>

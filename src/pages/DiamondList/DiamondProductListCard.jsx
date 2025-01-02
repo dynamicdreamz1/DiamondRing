@@ -229,7 +229,6 @@ const DiamondProductListCard = () => {
                     </>
                 </div>
             )) :
-
                 <>
                     {!loading &&
                         <p>
@@ -239,7 +238,6 @@ const DiamondProductListCard = () => {
                 </>
             }
             <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
-
         </div>
     )
 }
