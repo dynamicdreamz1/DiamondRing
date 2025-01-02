@@ -132,7 +132,7 @@ const EngagementRingDetailData = () => {
                         <div className='cpst-description-container md:mb-8 hidden md:block'>
                             <p className='cpst-description text-customGray-500'>{product.description}</p>
                         </div>
-                        <DiamondSelector />
+                        <DiamondSelector handleAddRingClick={handleAddRingClick} />
 
                         <div className='production-button mt-8'>
                             <div className='w-full block bg-black py-4 px-8 leading-tight rounded-full text-sm font-semibold capitalize text-white md:leading-none md:py-[13px] relative overflow-hidden'>

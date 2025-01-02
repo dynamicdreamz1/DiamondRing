@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useSelector } from 'react-redux';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -26,9 +27,11 @@ const TabPanel = (props) => {
   );
 };
 
-const DiamondSelector = () => {
+const DiamondSelector = ({ handleAddRingClick }) => {
   const [value, setValue] = useState(0);
   const [selectSize, setSelectSize] = useState(3.0);
+  const { product } = useSelector((state) => state.singleProduct);
+
 
   const caratSizes = [1.0, 1.5, 2.0, 2.5, 3.0];
   const specs = {
@@ -51,17 +54,15 @@ const DiamondSelector = () => {
         {caratSizes.map((size) => (
           <button
             key={size}
-            onClick={()=>handleSelectSize(size)}
+            onClick={() => handleSelectSize(size)}
             className={`px-4 py-1 rounded-lg border ${size === selectSize ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
               }`}
           >
             {size}
           </button>
         ))}
-        <button className="px-4 py-1 rounded-lg border border-gray-200">
-          <Link to={`/diamond-list`} >
-            See full inventory
-          </Link>
+        <button onClick={() => handleAddRingClick(product)} className="px-4 py-1 rounded-lg border border-gray-200">
+          See full inventory
         </button>
       </div>
 
@@ -85,10 +86,8 @@ const DiamondSelector = () => {
         </div>
       </div>
 
-      <button className="w-full text-center text-blue-500 mt-4 text-1.5sm leading-tight underline text-center text-customGray-500 cursor-pointer">
-        <Link to={`/diamond-list`} >
-          choose your own center stone
-        </Link>
+      <button onClick={() => handleAddRingClick(product)} className="w-full text-center text-blue-500 mt-4 text-1.5sm leading-tight underline text-center text-customGray-500 cursor-pointer">
+        choose your own center stone
       </button>
     </div>
   );
@@ -175,9 +174,9 @@ const DiamondSelector = () => {
                 <StoneContent />
               </TabPanel>
               <TabPanel value={value} index={2}>
-              <Link to={`/diamond-list`} >
-              *Natural diamond needs to be specifically selected by you
-              </Link>
+                <button onClick={() => handleAddRingClick(product)} className="w-full text-center text-blue-500 mt-4 text-1.5sm leading-tight underline text-center text-customGray-500 cursor-pointer">
+                  *Natural diamond needs to be specifically selected by you
+                </button>
               </TabPanel>
             </div>
           </Box>
