@@ -271,9 +271,6 @@ const ProductDetailsDrawer = ({ open, toggleDrawer, productData }) => {
         }
 
       </div>
-      {/* <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
-      <LeftRingSideModal setselectedProductModel={setselectedRingProductModel} selectedProductModel={selectedRingProductModel} />
-     */}
     </Drawer>
   );
 };

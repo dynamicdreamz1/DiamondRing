@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import LeftSideModal from '../EngagementRing/FilterSection/LeftSideModal';
 import DiamondSelector from './DiamondSelector';
+import CheckoutDrawer from '../../Component/Common/CheckoutDrawer';
 
 
 const EngagementRingDetailData = () => {
@@ -23,7 +24,7 @@ const EngagementRingDetailData = () => {
     const images = product?.images?.edges.map((edge) => edge.node);
     const [selectedProductModel, setselectedProductModel] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-
+    const [isOpen, setIsOpen] = useState(false);
 
     const firstVariant = variants && variants[selectedVariant]?.node;
     const price = firstVariant?.price?.amount || "0.00";
@@ -31,20 +32,17 @@ const EngagementRingDetailData = () => {
         style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
     }).format(price);
 
-
-
     const compareAtPrice = firstVariant?.compareAtPrice;
     const formattedCompareAtPrice = compareAtPrice ? new Intl.NumberFormat("en-US", {
         style: "currency", currency: firstVariant?.price?.currencyCode || "USD",
     }).format(compareAtPrice)
         : null;
 
-
+    console.log("isOpen",isOpen);
+    
+        
     const handleAddRingClick = (product) => {
-
         setIsLoading(true);
-
-        // Delay the action by 2 seconds
         setTimeout(() => {
             setIsLoading(false);
             const productWithType = {
@@ -66,7 +64,12 @@ const EngagementRingDetailData = () => {
             }
         }, 2000); // Delay for 2 seconds
     };
+    
+    const handleOpenDrawer = () =>{
 
+
+
+    }
 
     if (error) return <p>Error: {error}</p>;
 
@@ -161,10 +164,10 @@ const EngagementRingDetailData = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <div className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
+                            <button onClick={()=>setIsOpen(true)} className='w-full block bg-white py-2 px-8 text-center rounded-full leading-none text-black border-2 border-black mt-2'>
                                 <div className="text-sm leading-tight font-semibold">Buy Setting Only*</div>
                                 <div className="text-1.5xs leading-tight">*center stone not included</div>
-                            </div>
+                            </button>
                             <h5 className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of
                                 <span>$187.50</span>
                                 <button type="button" className="underline cursor-pointer">Learn more</button>
@@ -281,6 +284,7 @@ const EngagementRingDetailData = () => {
                         <AccordianforDetail ring={"Ring"} />
                         <VirtualAppointment />
                         <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
+                        <CheckoutDrawer setIsOpen={setIsOpen} isOpen={isOpen} />
                     </div>
                 </div>
             </div>
