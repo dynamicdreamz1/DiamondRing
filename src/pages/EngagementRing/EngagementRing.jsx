@@ -199,9 +199,7 @@ const RingSelector = () => {
           }
         </div>
 
-        {pageInfo?.hasNextPage && (
-          <LoadMoreButton handleLoadMore={handleLoadMore} loading={loading} />
-        )}
+        {pageInfo?.hasNextPage && (<LoadMoreButton handleLoadMore={handleLoadMore} loading={loading} />)}
       </div>
       <div className="mt-8">
         <NewsletterFooter />
