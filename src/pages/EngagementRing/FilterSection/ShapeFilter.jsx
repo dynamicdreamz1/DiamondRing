@@ -9,14 +9,12 @@ export const ShapeFilter = () => {
     const filters = useSelector((state) => state.productFilter);
     const filteredShape = shapeOptions.filter(option => option.value === filters.selectShape)[0];
     const { activeFilter } = useSelector((state) => state.products);
-
     
-    const handleShapeSelection = (option, index) => {
-        dispatch(setFilter({ key: 'selectShape', value: option.value })); // Update shape filter
+    const handleShapeSelection = (option) => {
+        dispatch(setFilter({ key: 'selectShape', value: option.value }));
         dispatch(closeFilter({  activeFilter : null }));
-        dispatch(setFilter({ key: 'page', value: '' })); // Update metal filter
+        dispatch(setFilter({ key: 'page', value: '' }));
     };
-
 
     const toggleFilter = (filter) => {
         dispatch(openFilter({ filter }));

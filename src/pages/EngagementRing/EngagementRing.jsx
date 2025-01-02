@@ -34,7 +34,6 @@ const RingSelector = () => {
     };
   };
 
-  // Create debounced version of fetchProducts
   const debouncedFetchProducts = useCallback(
     debounce((filters) => {
       dispatch(fetchProducts(filters));
@@ -42,7 +41,6 @@ const RingSelector = () => {
     [dispatch]
   );
 
-  // Combined useEffect for initialization and updates
   useEffect(() => {
     if (isInitialMount.current) {
       // On initial mount, load from localStorage
@@ -63,13 +61,10 @@ const RingSelector = () => {
     } else {
       // On filter updates
       if (filters && Object.keys(filters).length > 0) {
-        // Remove page from filters before saving
         const { page, ...filtersToSave } = filters;
         
-        // Save to localStorage
         localStorage.setItem('filters', JSON.stringify(filtersToSave));
         
-        // Debounced API call
         debouncedFetchProducts(filters);
       }
     }
@@ -208,7 +203,6 @@ const RingSelector = () => {
           <LoadMoreButton handleLoadMore={handleLoadMore} loading={loading} />
         )}
       </div>
-      
       <div className="mt-8">
         <NewsletterFooter />
       </div>

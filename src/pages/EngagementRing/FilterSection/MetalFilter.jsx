@@ -24,7 +24,6 @@ const MetalFilter = () => {
         dispatch(closeFilter({ filter }));
     };
 
-
     return (
         <div aria-expanded="true">
             <div className={`relative z-10 ${activeFilter === "metal" ? "active-model" : ""}`}>
