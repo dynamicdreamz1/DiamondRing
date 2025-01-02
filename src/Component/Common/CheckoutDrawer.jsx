@@ -88,7 +88,7 @@ const CheckoutDrawer = ({ isOpen, setIsOpen }) => {
                                 <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Visa" className="h-6" />
                                 <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" alt="Mastercard" className="h-6" />
                                 <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" alt="PayPal" className="h-6" />
-                                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968217.png" alt="Shopify" className="h-6" />
+                                {/* <img src="https://cdn-icons-png.flaticon.com/128/5968/5968217.png" alt="Shopify" className="h-6" /> */}
                                 <img src="https://cdn-icons-png.flaticon.com/128/5968/5968155.png" alt="Klarna" className="h-6" />
                             </div>
                             <p className="text-center">Safe Checkout Guaranteed</p>
