@@ -39,8 +39,6 @@ const EngagementRingDetailData = () => {
     }).format(compareAtPrice)
         : null;
 
-    console.log("product", product);
-
 
     const handleAddRingClick = (product) => {
         setIsLoading(true);
