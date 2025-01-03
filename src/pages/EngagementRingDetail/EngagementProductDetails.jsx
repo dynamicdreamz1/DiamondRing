@@ -1,9 +1,6 @@
 import React from 'react'
 
 const EngagementProductDetails = ({ product }) => {
-
-    // Check if the product and required fields are available
-    const productImages = product?.images?.edges || [];
     const productVariants = product?.variants?.edges || [];
 
     return (
