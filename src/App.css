@@ -325,3 +325,68 @@
   }
 
 }
+
+
+
+
+/* diomond detail information sec */
+
+.what-about-diomond-banner-sec {
+  background-image: url(./assets/Images/diomond-detail-desk-img.webp);
+  background-size: cover;
+  background-position: center;
+  min-height: 363px;
+}
+
+.styled-table :not(thead) tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.styled-table tr:not(:first-child) {
+  border-top: 1px solid var(--color-borders);
+}
+
+.styled-table td:first-child {
+  font-weight: 600;
+}
+
+.styled-table td span {
+  font-weight: 400;
+}
+
+.styled-table td:not(:last-child) {
+  border-right: 1px solid var(--color-borders);
+}
+
+.styled-table td {
+  font-size: .8125rem;
+  line-height: 1.4;
+  padding: 1.125rem 1rem;
+  vertical-align: baseline;
+}
+
+
+
+@media (min-width: 48em) {
+
+  .styled-table tr>:first-child {
+    min-width: 20rem;
+}
+
+.styled-table td {
+    font-size: .875rem;
+    line-height: 1.3;
+    padding: 1.5rem 1rem;
+}
+
+}
+
+
+@media (max-width:767px) {
+
+  .what-about-diomond-banner-sec {
+    background-image: url(./assets/Images/diomond-detail-mob-img.webp);
+    min-height: 250px;
+  }
+
+}
