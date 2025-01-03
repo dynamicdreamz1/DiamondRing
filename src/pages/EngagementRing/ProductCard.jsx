@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeftIcon, ArrowRightIcon, HeartIcon } from '../../Utility/Constant';
 
-
 const ProductCard = ({ node }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
