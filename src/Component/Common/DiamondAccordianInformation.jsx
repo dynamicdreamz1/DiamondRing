@@ -3,6 +3,8 @@ import { CertificateImage, ViewCertificate } from './ViewCertification';
 
 
 const DiamondAccordianInformation = ({ diamond }) => {    
+    console.log("diamond",diamond);
+    
     
     return (
         <div className='cpst-tab-content'>

@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RingAccordianInformation from './RingAccordianInformation';
 import DiamondAccordianInformation from './DiamondAccordianInformation';
 
-const AccordianforDetail = ({ ring, ringData, diamondData }) => {
+const AccordianforDetail = ({ ring, diamond, ringData, diamondData }) => {
 
     return (
         <div className="mt-4 accordian-main-sec">
@@ -22,12 +22,9 @@ const AccordianforDetail = ({ ring, ringData, diamondData }) => {
                     </div>
                 </AccordionSummary>
                 <AccordionDetails>
+                    {diamond && <DiamondAccordianInformation diamond={diamondData} />}
 
-                    {!ring ?
-                        <DiamondAccordianInformation diamond={diamondData} />
-                        :
-                        <RingAccordianInformation product={ringData} />
-                    }
+                    {ring && <RingAccordianInformation product={ringData} />}
                 </AccordionDetails>
             </Accordion>
             <Accordion>

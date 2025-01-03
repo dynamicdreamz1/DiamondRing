@@ -20,6 +20,10 @@ const CompleteDetailsData = () => {
     const ringPrice = diamond?.ring && parseFloat(diamond?.ring?.variants.edges[0].node.price.amount);
     const TotalPrice = diamondPrice + ringPrice;
 
+
+    console.log("diamond:---",diamond);
+    
+
     const toggleDrawer = (newOpen, product) => {
         setOpen(newOpen);
         setproductData(product)
@@ -144,7 +148,7 @@ const CompleteDetailsData = () => {
                 <BadgeComponent />
                 <CompleteDetailsInfo />
                 <EngagementProductDetails product={diamond?.ring} />
-                <AccordianforDetail ring={"Ring"} ringData={diamond?.ring} diamondData={diamond.diamond} />
+                <AccordianforDetail ring={"Ring"} diamond={"diamond"}  ringData={diamond?.ring} diamondData={diamond.diamond} />
                 <VirtualAppointment />
             </div>
             {productData && open && <ProductDetailsDrawer toggleDrawer={toggleDrawer} open={open} productData={productData} />}
