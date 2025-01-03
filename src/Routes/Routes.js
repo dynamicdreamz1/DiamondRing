@@ -6,6 +6,8 @@ import DiamondList from '../pages/DiamondList/DiamondList'; // Create this compo
 import DiamondDetail from '../pages/DiamondDetail/DiamondDetail'; // Create this component for detailed view
 import CompleteProduct from '../pages/CompleteProduct/CompleteProduct'; // Create this component for detailed view
 import RingDetailInformation from '../pages/RingDetailInformation/RingDetailInformation'; // Create this component for detailed view
+import DiamondDetailInformation from '../pages/DiamondDetailInformation/DiamondDetailInformation'; // Create this component for detailed view
+
 
 const RoutesPage = () => {
     return (
@@ -17,6 +19,7 @@ const RoutesPage = () => {
                 <Route path="/diamond-list/:diamondId" element={<DiamondDetail />} />
                 <Route path="/complete-product" element={<CompleteProduct />} />
                 <Route path="/ring-select/ring-detail" element={<RingDetailInformation />} />
+                <Route path="/diamond-list/diamond-detail" element={<DiamondDetailInformation />} />
                 <Route path="*" element={<RingSelector />} />
             </Routes>
         </Router>
