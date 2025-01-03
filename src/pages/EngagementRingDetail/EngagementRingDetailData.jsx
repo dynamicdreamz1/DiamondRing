@@ -99,20 +99,6 @@ const EngagementRingDetailData = () => {
                                 </div>
                             ))}
                         </div>
-                        {/* <div className='made-in-heaven-sec EngagementCompleteYourLook lg:pt-8 lg:pb-0 grid gap-2.5 grid-cols-1 py-6 bg-white mx-auto w-full relative md:gap-4 xl:gap-8'>
-                            <h2 className='CustomProduct__section-title'>Match Made in Heaven</h2>
-                            <div className='made-in-heaven-img-box-main grid grid-cols-3 w-full items-center gap-3'>
-                                <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                                    <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
-                                </div>
-                                <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                                    <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
-                                </div>
-                                <div className='made-in-heaven-img-box hidden md:block rounded-lg overflow-hidden border border-borders w-full relative'>
-                                    <img src="/lexie-side-img1.webp" alt='lexie-side-img' />
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                     <div className='customer-product-side-text-sec'>
                         <div className='the-lexie-text-main flex justify-between gap-4 mb-4 md:mb-6 md:gap-1'>
@@ -130,7 +116,13 @@ const EngagementRingDetailData = () => {
                             </div>
                             <div className='drop-hint'>
                                 <div href="#" className='inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto DropAHint-button flex flex-col items-center justify-center gap-1 p-0 ml-2 mt-1'>
-                                    <svg className="block w-8 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 53 40"><svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.9778 1.02103H3.02218C1.90536 1.02103 1 1.92639 1 3.04321V17.9568C1 19.0736 1.90536 19.979 3.02218 19.979H24.9778C26.0946 19.979 27 19.0736 27 17.9568V3.04321C27 1.92639 26.0946 1.02103 24.9778 1.02103Z" stroke="black" stroke-linejoin="round"></path><path d="M20.0291 8.04699L26.2125 1.81387" stroke="black" stroke-linejoin="round"></path><path d="M1.78687 1.81387L7.97045 8.04716" stroke="black" stroke-linejoin="round"></path><path d="M6.51971 9.45243L10.1554 5.93039H17.8442L21.4799 9.45243L13.9962 15.8809L6.51971 9.45243Z" stroke="black" stroke-miterlimit="10"></path><path d="M10.5456 9.45032L13.0569 12.6644L9.44366 9.55854L11.5477 7.52084L10.5456 9.45032Z" fill="black"></path><path d="M13.9963 15.7924L17.3264 9.48366L14.773 5.94107" stroke="black" stroke-miterlimit="10"></path></svg></svg>
+                                    <svg className="block w-8 h-auto" aria-hidden="true" focusable="false" viewBox="0 0 53 40"><svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.9778 1.02103H3.02218C1.90536 1.02103 1 1.92639 1 3.04321V17.9568C1 19.0736 1.90536 19.979 3.02218 19.979H24.9778C26.0946 19.979 27 19.0736 27 17.9568V3.04321C27 1.92639 26.0946 1.02103 24.9778 1.02103Z" stroke="black" stroke-linejoin="round"></path><path d="M20.0291 8.04699L26.2125 1.81387" stroke="black" stroke-linejoin="round"></path><path d="M1.78687 1.81387L7.97045 8.04716" stroke="black" stroke-linejoin="round"></path><path d="M6.51971 9.45243L10.1554 5.93039H17.8442L21.4799 9.45243L13.9962 15.8809L6.51971 9.45243Z" stroke="black" stroke-miterlimit="10"></path><path d="M10.5456 9.45032L13.0569 12.6644L9.44366 9.55854L11.5477 7.52084L10.5456 9.45032Z" fill="black">
+                                        </path>
+                                        <path d="M13.9963 15.7924L17.3264 9.48366L14.773 5.94107" stroke="black" stroke-miterlimit="10">
+                                        </path>
+                                    </svg>
+                                    </svg>
                                     <span className="text-1.5xs leading-tight whitespace-nowrap text-black">Drop a Hint</span>
                                 </div>
                             </div>
