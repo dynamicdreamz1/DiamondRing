@@ -50,7 +50,6 @@ const DiamondProductListCard = () => {
         <div className='pt-5 clone-stone-diomomg-boox-main grid tangiblee-grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 items-start'>
             {diamonds?.length > 0 ? diamonds?.map((diamond, key) => (
                 <div key={key} className='clone-stone-diomomg-item CenterStoneProductCard relative group md:hover:z-30'>
-                    <>
                         <div className='border-borders border rounded-lg overflow-hidden md:block'>
                             <div className='CenterStoneProductCard__ImageContainer relative w-full DiamondImageContainer md:w-full md:group-hover:relative md:group-hover:z-10'>
                                 <WishList />
@@ -226,7 +225,6 @@ const DiamondProductListCard = () => {
                             </div>
                             <div className="text-xs leading-tight text-black text-center pt-1 md:pt-2">Pay in 4 interest-free installments of <span>$193</span> <button type="button" className="underline cursor-pointer">Learn more</button></div>
                         </div>
-                    </>
                 </div>
             )) :
                 <>

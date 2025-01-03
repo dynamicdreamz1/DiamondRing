@@ -5,7 +5,7 @@ const EngagementProductDetails = ({ product }) => {
     // Check if the product and required fields are available
     const productImages = product?.images?.edges || [];
     const productVariants = product?.variants?.edges || [];
-    
+
     return (
         <div className="StoneProductInfo rounded-2.5xl p-3 bg-customGray-150 mt-4 mb-4">
             <h3 className="StoneProductInfo__title flex items-center gap-2 mb-2" tabIndex="-1">
@@ -18,24 +18,24 @@ const EngagementProductDetails = ({ product }) => {
                 Know your setting
             </h3>
             <div className='cpcst-details-wrapper grid grid-cols-2 gap-2 items-stretch md:grid-cols-2'>
-                <div className='StoneDetailBlock  p-3 flex flex-col justify-between'>
-                    {/* First Box Content */}
-                    <div><strong>Title:</strong> {product?.title}</div>
-                    <div><strong>SKU:</strong> {productVariants[0]?.node?.sku}</div>
-                    <div><strong>Barcode:</strong> {productVariants[0]?.node?.barcode}</div>
-                   
+                {/* First Box - Main Info */}
+                <div className='StoneDetailBlock p-3 flex flex-col justify-between bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-indigo-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300'>
+                    <div><strong className="text-indigo-700">Title:</strong> <span className="text-gray-800">{product?.title}</span></div>
+                    <div><strong className="text-indigo-700">SKU:</strong> <span className="text-gray-800">{productVariants[0]?.node?.sku}</span></div>
+                    <div><strong className="text-indigo-700">Barcode:</strong> <span className="text-gray-800">{productVariants[0]?.node?.barcode}</span></div>
                 </div>
 
-                <div className='StoneDetailBlock  p-3 flex flex-col justify-between'>
-                <div><strong>Weight:</strong> {productVariants[0]?.node?.weight} {productVariants[0]?.node?.weightUnit}</div>
-                    <div><strong>Product Type:</strong> {product?.productType}</div>
-                    <div><strong>Vendor:</strong> {product?.vendor}</div>
-                    <div><strong>Price:</strong> {productVariants[0]?.node?.price?.amount} {productVariants[0]?.node?.price?.currencyCode}</div>
+                {/* Second Box - Specifications */}
+                <div className='StoneDetailBlock p-3 flex flex-col justify-between bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-pink-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300'>
+                    <div><strong className="text-purple-700">Weight:</strong> <span className="text-gray-800">{productVariants[0]?.node?.weight} {productVariants[0]?.node?.weightUnit}</span></div>
+                    <div><strong className="text-purple-700">Product Type:</strong> <span className="text-gray-800">{product?.productType}</span></div>
+                    <div><strong className="text-purple-700">Vendor:</strong> <span className="text-gray-800">{product?.vendor}</span></div>
+                    <div><strong className="text-purple-700">Price:</strong> <span className="text-gray-800">{productVariants[0]?.node?.price?.amount} {productVariants[0]?.node?.price?.currencyCode}</span></div>
                 </div>
 
-                <div className='StoneDetailBlock StoneDetailBlock__fullwidth p-3 flex flex-col justify-between'>
-                    {/* Last Box - Description */}
-                    <div dangerouslySetInnerHTML={{ __html: product?.descriptionHtml }} />
+                {/* Description Box - Full Width */}
+                <div className='StoneDetailBlock StoneDetailBlock__fullwidth p-3 flex flex-col justify-between bg-gradient-to-br from-teal-50 to-emerald-50 border-2 border-emerald-200 rounded-lg col-span-2 shadow-sm hover:shadow-md transition-shadow duration-300'>
+                    <div className="prose prose-sm max-w-none text-gray-800" dangerouslySetInnerHTML={{ __html: product?.descriptionHtml }} />
                 </div>
             </div>
             <div className='add-extra-feature-sec StoneDetailBlock StoneDetailBlock__extras mt-2 p-3 flex items-center justify-between gap-2 text-customGray-500'>
