@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { CertificateImage, ViewCertificate } from "../../Component/Common/ViewCertification"
+import InnerImageZoom from 'react-inner-image-zoom'
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 
 const CompleteDetailsImagesInfo = () => {
 
@@ -10,8 +12,16 @@ const CompleteDetailsImagesInfo = () => {
     <div className='customer-product-side-img-sec CustomProductGallery__container relative w-full overflow-hidden EnhancedProductGallery md:static lg:rounded-4xl lg:bg-white'>
       <div className='customer-product-side-img-sub lg:rounded-4xl bg-customGray-50 overflow-hidden relative hidden lg:grid lg:grid-cols-1 lg:gap-2 xl:grid-cols-2 lg:auto-rows-fr '>
         <div className='customer-product-zoom-img'>
-          <img src={diamond?.ring?.images?.edges[0]?.node?.src} alt={diamond?.ring?.handle} width="100%" height={"100%"} />
+          <InnerImageZoom
+            src={diamond?.ring?.images?.edges[0]?.node?.src}
+            alt={diamond?.ring?.handle}
+            zoomType="click" // Enable zoom on click only
+            zoomScale={1} // Scale the zoom level
+            className="custom-image"
+          />
         </div>
+
+
 
         <div className='customer-product-zoom-img'>
           {diamond.diamond?.diamond?.video ?
@@ -28,7 +38,7 @@ const CompleteDetailsImagesInfo = () => {
               Your browser does not support iframes.
             </iframe>
             :
-            <img src={diamond.diamond?.diamond?.image} alt='Diamondi-image'   className="w-full h-full" />
+            <img src={diamond.diamond?.diamond?.image} alt='Diamondi-image' className="w-full h-full" />
           }
         </div>
         <div className='customer-product-zoom-img relative overflow-hidden flex justify-center items-center flex-col text-center h-full'>
@@ -40,7 +50,13 @@ const CompleteDetailsImagesInfo = () => {
           <ViewCertificate diamond={diamond?.diamond} className="cpcst-certificate-text" />
         </div>
         <div className='customer-product-zoom-img'>
-          <img src={diamond?.ring?.images?.edges[1]?.node?.src} alt={diamond?.ring?.handle} width="100%" height={"100%"} />
+          <InnerImageZoom
+            src={diamond?.ring?.images?.edges[1]?.node?.src}
+            alt={diamond?.ring?.handle}
+            zoomType="click" // Enable zoom on click only
+            zoomScale={1} // Scale the zoom level
+            className="custom-image"
+          />
         </div>
 
       </div>
