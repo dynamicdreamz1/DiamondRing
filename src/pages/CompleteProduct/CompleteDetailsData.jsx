@@ -144,7 +144,7 @@ const CompleteDetailsData = () => {
                 <BadgeComponent />
                 <CompleteDetailsInfo />
                 <EngagementProductDetails product={diamond?.ring} />
-                <AccordianforDetail />
+                <AccordianforDetail ring={"Ring"} ringData={diamond?.ring} diamondData={diamond.diamond} />
                 <VirtualAppointment />
             </div>
             {productData && open && <ProductDetailsDrawer toggleDrawer={toggleDrawer} open={open} productData={productData} />}

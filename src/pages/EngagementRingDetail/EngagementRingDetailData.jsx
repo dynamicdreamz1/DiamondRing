@@ -202,7 +202,7 @@ const EngagementRingDetailData = () => {
                         </div>
                         <BadgeComponent />
                         <EngagementProductDetails product={product} />
-                        <AccordianforDetail ring={"Ring"} />
+                        <AccordianforDetail ring={"Ring"} ringData={product} />
                         <VirtualAppointment />
                         <LeftSideModal setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />
                         <CheckoutDrawer setIsOpen={setIsOpen} isOpen={isOpen} />

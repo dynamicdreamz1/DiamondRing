@@ -1,8 +1,7 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
-const RingAccordianInformation = () => {
-    const { product } = useSelector((state) => state.singleProduct);
+const RingAccordianInformation = ({ product }) => {
+
 
     return (
         <div className='cpst-tab-content'>

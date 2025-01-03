@@ -195,7 +195,7 @@ const DiamondDetailData = () => {
         </div>
         <BadgeComponent />
         <DiamondDetailsInfo />
-        <AccordianforDetail />
+        <AccordianforDetail diamondData={diamond} />
         <VirtualAppointment />
       </div>
       <LeftSideDiamondModel setselectedProductModel={setselectedProductModel} selectedProductModel={selectedProductModel} />

@@ -2,9 +2,7 @@ import React from 'react'
 import { CertificateImage, ViewCertificate } from './ViewCertification';
 
 
-const DiamondAccordianInformation = ({ diamond }) => {
-    console.log("diamond",diamond);
-    
+const DiamondAccordianInformation = ({ diamond }) => {    
     
     return (
         <div className='cpst-tab-content'>

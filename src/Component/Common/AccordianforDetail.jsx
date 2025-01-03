@@ -3,12 +3,10 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useSelector } from 'react-redux';
 import RingAccordianInformation from './RingAccordianInformation';
 import DiamondAccordianInformation from './DiamondAccordianInformation';
 
-const AccordianforDetail = ({ ring }) => {
-    const { diamond } = useSelector((state) => state.singleDiamond);
+const AccordianforDetail = ({ ring, ringData, diamondData }) => {
 
     return (
         <div className="mt-4 accordian-main-sec">
@@ -24,12 +22,12 @@ const AccordianforDetail = ({ ring }) => {
                     </div>
                 </AccordionSummary>
                 <AccordionDetails>
-                
-                {!ring ?
-                   <DiamondAccordianInformation diamond={diamond}  />
-                    :
-                   <RingAccordianInformation />
-                }
+
+                    {!ring ?
+                        <DiamondAccordianInformation diamond={diamondData} />
+                        :
+                        <RingAccordianInformation product={ringData} />
+                    }
                 </AccordionDetails>
             </Accordion>
             <Accordion>
