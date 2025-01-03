@@ -48,11 +48,9 @@ const CompleteProduct = () => {
         </div>
       </section>
 
-
       <GetInTouch />
       <OurWork />
       <NewsletterFooter />
-
     </>
   )
 }

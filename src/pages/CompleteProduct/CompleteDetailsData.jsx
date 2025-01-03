@@ -18,11 +18,7 @@ const CompleteDetailsData = () => {
     const { tabs: diamond, loading, error } = useSelector((state) => state.getTabsProduct);
     const diamondPrice = diamond?.diamond && parseFloat(diamond?.diamond?.price);
     const ringPrice = diamond?.ring && parseFloat(diamond?.ring?.variants.edges[0].node.price.amount);
-    const TotalPrice = diamondPrice + ringPrice;
-
-
-    console.log("diamond:---",diamond);
-    
+    const TotalPrice = diamondPrice + ringPrice;    
 
     const toggleDrawer = (newOpen, product) => {
         setOpen(newOpen);
