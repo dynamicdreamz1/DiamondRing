@@ -13,7 +13,6 @@ const CheckoutDrawer = ({ isOpen, setIsOpen }) => {
         <Drawer anchor="right" open={isOpen} >
             <div className="">
                 <div className="flex flex-col h-full">
-                    {/* Header */}
                     <div className="flex items-center justify-between p-4 border-b">
                         <div className="flex items-center gap-2">
                             <h2 className="font-medium">My Shopping Bag</h2>
@@ -28,7 +27,6 @@ const CheckoutDrawer = ({ isOpen, setIsOpen }) => {
                         </button>
                     </div>
 
-                    {/* Content */}
                     <div className="flex-1 overflow-auto p-4">
                         <div className="relative bg-white border rounded-lg p-4">
                             <button
@@ -60,7 +58,6 @@ const CheckoutDrawer = ({ isOpen, setIsOpen }) => {
                         </div>
                     </div>
 
-                    {/* Footer */}
                     <div className="border-t p-4">
                         <div className="mb-4">
                             <button className="w-full p-3 border rounded-lg text-left flex justify-between items-center">
@@ -88,7 +85,6 @@ const CheckoutDrawer = ({ isOpen, setIsOpen }) => {
                                 <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Visa" className="h-6" />
                                 <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" alt="Mastercard" className="h-6" />
                                 <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" alt="PayPal" className="h-6" />
-                                {/* <img src="https://cdn-icons-png.flaticon.com/128/5968/5968217.png" alt="Shopify" className="h-6" /> */}
                                 <img src="https://cdn-icons-png.flaticon.com/128/5968/5968155.png" alt="Klarna" className="h-6" />
                             </div>
                             <p className="text-center">Safe Checkout Guaranteed</p>
