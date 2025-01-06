@@ -14,11 +14,10 @@ import diomondclarityimg4 from "../../assets/Images/diomond-clarity-img4.webp";
 import diomondclarityimg5 from "../../assets/Images/diomond-clarity-img5.webp";
 
 const DiamondDetailInformation = () => {
-  return (
 
+  return (
     <>
       <div className='what-about-diomond-banner-sec flex items-center'>
-
         <div className='container mx-auto px-4'>
           <div className='w-full h-full text-center px-8 py-24  md:text-left text-black'>
             <p className="md:hidden uppercase leading-1.1  text-3xl" tabindex="-1">Education center</p>
@@ -110,8 +109,6 @@ const DiamondDetailInformation = () => {
           <p className='mb-10'>
             <span className='font-normal'>It’s important to note though: clarity has nothing to do with the brilliance and sparkle of a diamond. What could affect a stone’s sparkle factor is cut, which you can read more about under the ‘Cut’ article.</span>
           </p>
-
-
           <div className='-mx-5 my-8 md:mx-0'>
             <div className='w-full'>
               <div className='stl-item-wrapper relative'>
@@ -127,7 +124,6 @@ const DiamondDetailInformation = () => {
                   </button>
                 </div>
               </div>
-
               <div className='p-1.5 text-xs text-left text-black leading-tight mb-8'>The Kamellie with an Oval cut Diamond, The Angelina with a Princess cut Diamond and The Hidden Halo Penelope with a Pear cut Diamond</div>
             </div>
           </div>
@@ -137,7 +133,6 @@ const DiamondDetailInformation = () => {
           </div>
           <p className='mb-10'><span className='font-normal'>Clarity can impact the price of a diamond, which tends to be a top consideration for most diamond buyers. Only the most rare and expensive diamonds have no inclusions. Unless you recently won the lottery, you may want to find out more about optimizing clarity and minimizing cost!</span></p>
           <p className='mb-10'><span className='font-normal'>A more affordable way to get diamonds with little to no inclusions is to go lab-grown. Lab-grown diamonds still have inclusions, but you'll more easily find diamonds with high clarity grades at an affordable price point.</span></p>
-
 
           <div className='my-8 -mx-5 md:mx-0'>
             <div className='overflow-auto flex flex-nowrap gap-14 px-5 hiddenScroll md:px-0 md:flex-wrap md:gap-x-8 md:gap-y-16 lg:gap-x-36'>
