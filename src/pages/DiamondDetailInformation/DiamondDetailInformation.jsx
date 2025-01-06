@@ -95,7 +95,6 @@ const DiamondDetailInformation = () => {
                 <button className='inline-block py-3.5 px-7 rounded-full bg-white font-medium text-base leading-tight shadow-md max-w-full'>Cushion, Radiant, Round and Oval Diamonds</button>
               </div>
             </div>
-
           </div>
           <p className='mb-10'><span className='font-normal'>A diamond with outstanding clarity has few to no inclusions and blemishes. This doesn’t mean you must only shop for flawless stones and nothing else. It’s still possible to get a large, sparkly, eye-clean rock in lower clarity grades. Here at Keyzar, we’re all about sparkle, size, and saving money… Continue reading to learn about inclusions, blemishes, clarity grades, and more!</span></p>
           <div className='flex items-center gap-2 mb-8'>

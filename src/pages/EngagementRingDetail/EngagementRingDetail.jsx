@@ -34,7 +34,7 @@ const EngagementRingDetail = () => {
       <EngagementRingDetailData />
       <ReviewSlider />
       <GetInTouch />
-      <OurWork />
+      <OurWork ring />
       <EngagementRingDetailSlider />
       <NewsletterFooter />
     </div>
